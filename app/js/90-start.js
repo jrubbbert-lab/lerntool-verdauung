@@ -24,6 +24,5 @@
   // Klick auf den abgedunkelten Hintergrund schließt den Dialog
   LT.$('#dialog').addEventListener('click', function (e) { if (e.target === this) LT.dialogZu(); });
 
-  window.addEventListener('hashchange', LT.navigieren);
   LT.navigieren();
 })();

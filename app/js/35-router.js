@@ -5,13 +5,36 @@
   /* ---------- Router ---------- */
   LT.routen = [];
   LT.route = function (muster, ansicht, nav) { LT.routen.push({ muster: muster, ansicht: ansicht, nav: nav || 'start' }); };
-  LT.gehe = function (pfad) { if (location.hash === '#' + pfad) LT.navigieren(); else location.hash = pfad; };
   LT.aufraeumen = null;  // Funktion, die beim Verlassen einer Ansicht läuft (z. B. Timer stoppen)
+
+  /* Die aktuelle Seite merkt sich der Router SELBST. Die Adresszeile (#/…) wird nur zusätzlich
+     aktualisiert, wenn der Browser das erlaubt. In manchen Umgebungen (Datei-Vorschau als data:-Adresse,
+     Lernplattformen mit geschütztem Rahmen) sind Hash-Wechsel verboten – die App funktioniert trotzdem. */
+  var hashPfad = function () { try { return (location.hash || '#/').slice(1) || '/'; } catch (e) { return '/'; } };
+  LT.pfad = hashPfad();
+  LT.gehe = function (pfad) {
+    LT.pfad = pfad;
+    try { if (location.hash !== '#' + pfad) history.pushState(null, '', '#' + pfad); } catch (e) { /* Adresszeile gesperrt */ }
+    LT.navigieren();
+  };
+  // Zurück-Taste des Browsers (nur wo die Adresszeile benutzt werden darf)
+  window.addEventListener('popstate', function () { LT.pfad = hashPfad(); LT.navigieren(); });
+  window.addEventListener('hashchange', function () { if (hashPfad() !== LT.pfad) { LT.pfad = hashPfad(); LT.navigieren(); } });
+
+  // Alle internen Links (#/…) abfangen, statt den Browser navigieren zu lassen
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a || e.defaultPrevented || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    var ziel = a.getAttribute('href').slice(1);
+    e.preventDefault();
+    if (ziel.charAt(0) === '/') LT.gehe(ziel);
+    else { var el = document.getElementById(ziel); if (el) { el.focus(); el.scrollIntoView(); } }  // z. B. „Zum Inhalt springen“
+  });
 
   LT.navigieren = function () {
     if (LT.aufraeumen) { try { LT.aufraeumen(); } catch (e) { /* weiter */ } LT.aufraeumen = null; }
     LT.dialogZu();
-    var pfad = (location.hash || '#/').slice(1) || '/';
+    var pfad = LT.pfad || '/';
     if (!LT.S.form && ['/datenschutz', '/mehr/laden'].indexOf(pfad) < 0) pfad = '/willkommen';
     for (var i = 0; i < LT.routen.length; i++) {
       var m = LT.routen[i].muster.exec(pfad);
