@@ -9,6 +9,7 @@
 .icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;flex:none}
 .icon-btn svg{width:20px;height:20px}
 
+main:focus,main:focus-visible{outline:none}
 main{max-width:980px;margin:0 auto;padding:20px 16px 8px;display:flex;flex-direction:column;gap:24px;outline:none}
 
 .leiste{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(4,1fr);
@@ -22,4 +23,9 @@ main{max-width:980px;margin:0 auto;padding:20px 16px 8px;display:flex;flex-direc
   .leiste a{flex-direction:row;gap:8px;padding:8px 14px;border-radius:10px;font-size:.95rem}
   .leiste a[aria-current="page"]{background:var(--accent-soft);color:var(--fg)}
   .leiste .ni svg{width:20px;height:20px}
+}
+@media (max-width:440px){
+  .logo{font-size:1.05rem}
+  .rang-chip b{max-width:none;font-size:.95rem}
+  .rang-chip .xpz{display:none}
 }

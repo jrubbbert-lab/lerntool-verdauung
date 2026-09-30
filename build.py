@@ -18,9 +18,10 @@ import re
 import sys
 
 PROJEKT = os.path.dirname(os.path.abspath(__file__))
-INHALTE = os.path.join(PROJEKT, "inhalte")
+# Für Tests kann ein anderer Inhaltsordner bzw. Ausgabepfad gesetzt werden (LT_INHALTE, LT_AUSGABE)
+INHALTE = os.environ.get("LT_INHALTE") or os.path.join(PROJEKT, "inhalte")
 APP = os.path.join(PROJEKT, "app")
-AUSGABE_OEFFENTLICH = os.path.join(PROJEKT, "docs", "index.html")
+AUSGABE_OEFFENTLICH = os.environ.get("LT_AUSGABE") or os.path.join(PROJEKT, "docs", "index.html")
 AUSGABE_KURS = os.path.join(PROJEKT, "dist", "lerntool-verdauung-kurs.html")
 
 BUECHER = {"i-care": "I care Anatomie, Physiologie", "MKK": "Mensch Körper Krankheit"}

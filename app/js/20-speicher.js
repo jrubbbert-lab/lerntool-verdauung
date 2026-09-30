@@ -26,7 +26,8 @@
       diagnosen: [],         // IDs richtig gelöster Diagnosefälle
       enzymBest: 0,
       aprilscherz: false,
-      gesichert: null        // Zeitpunkt der letzten Sicherung als Datei
+      gesichert: null,       // Zeitpunkt der letzten Sicherung als Datei
+      rangGesehen: 0         // höchste Rangstufe, deren Aufstieg schon angezeigt wurde
     };
   }
 

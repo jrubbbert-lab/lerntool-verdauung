@@ -1,0 +1,62 @@
+/* Aufgaben: Auswahl, Zuordnung, Reihenfolge, Lückentext, Rückmeldung, Karteikarten, Quiz */
+.aufgabe{max-width:760px;width:100%;margin:0 auto}
+.frage{font-size:1.15rem;font-weight:600;max-width:62ch}
+.kennung{display:block;font-size:.85rem;font-weight:700;color:var(--accent);margin-top:6px;text-transform:uppercase;letter-spacing:.06em}
+fieldset.optionen{border:0;padding:0;margin:0;display:grid;gap:8px}
+fieldset.optionen legend{padding:0;margin-bottom:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);background:var(--surface-2);border-radius:12px;padding:.75rem .9rem;cursor:pointer}
+.opt:hover{border-color:var(--accent)}
+.opt input{width:20px;height:20px;margin-top:.15rem;flex:none;accent-color:var(--accent)}
+
+/* Markierung nach dem Prüfen: Farbe UND Symbol */
+.richtig{background:var(--ok-soft)!important;border-color:var(--ok)!important}
+.falsch{background:var(--bad-soft)!important;border-color:var(--bad)!important}
+.fehlt{border-color:var(--ok)!important;border-style:dashed!important}
+.opt.richtig::after,.zrow.richtig::after,.reihenfolge li.richtig::after{content:"✓";margin-left:auto;font-weight:800;color:var(--ok)}
+.opt.falsch::after,.zrow.falsch::after,.reihenfolge li.falsch::after{content:"✗";margin-left:auto;font-weight:800;color:var(--bad)}
+.opt.fehlt::after{content:"fehlt";margin-left:auto;font-size:.8rem;font-weight:700;color:var(--ok)}
+
+.zuordnung{display:grid;gap:8px}
+.zrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) auto;gap:10px;align-items:center;border:1px solid var(--line);background:var(--surface-2);border-radius:12px;padding:.55rem .8rem}
+.zrow label{font-weight:600}
+@media (max-width:540px){.zrow{grid-template-columns:1fr auto}.zrow select{grid-column:1}}
+
+.reihenfolge{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.reihenfolge li{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface-2);border-radius:12px;padding:.45rem .5rem .45rem .8rem}
+.reihenfolge li:focus-visible{outline:3px solid var(--accent)}
+.reihenfolge .nr{font-family:var(--f-display);font-weight:700;color:var(--muted);width:1.3rem;font-variant-numeric:tabular-nums}
+.reihenfolge .t{flex:1;min-width:0}
+.reihenfolge .icon-btn{width:40px;height:40px}
+.reihenfolge .icon-btn:disabled{opacity:.3}
+
+.lueckentext{line-height:2.4;font-size:1.05rem}
+.luecke{display:inline-block;width:auto;min-height:38px;padding:.2rem .5rem;margin:0 .15rem;border-radius:8px;border:1px solid var(--line);background:var(--surface-2);max-width:100%}
+.korrektur{font-weight:700;color:var(--ok)}
+
+.rueck{border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.rueck.ok{background:var(--ok-soft)}
+.rueck.nein{background:var(--bad-soft)}
+.rueck > b{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-size:1.2rem}
+.rueck > b svg{width:22px;height:22px}
+.loesung{margin:0;padding-left:1.3rem}
+
+.ergebnis{align-items:flex-start}
+.prozent{font-family:var(--f-display);font-size:3.2rem;font-weight:700;line-height:1}
+.prozent.ok{color:var(--ok)}
+.prozent.nein{color:var(--bad)}
+.wiederholen{margin:0;padding-left:1.2rem;display:grid;gap:10px}
+
+/* Karteikarten */
+.faecher{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.fach{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;text-align:center;display:flex;flex-direction:column}
+.fach b{font-family:var(--f-display);font-size:1.3rem}
+.kk{max-width:640px;width:100%;margin:0 auto}
+.kk-text{font-size:1.15rem}
+.kk-hinten{border-top:1px dashed var(--line);padding-top:12px}
+
+/* Quiz auf Zeit */
+.quiz-opts{display:grid;gap:8px;margin-top:10px}
+.opt-btn{text-align:left;border:1px solid var(--line);background:var(--surface-2);border-radius:12px;padding:.8rem 1rem;font-weight:500;min-height:48px}
+.opt-btn:hover:not(:disabled){border-color:var(--accent)}
+.opt-btn:disabled{cursor:default}
+.aufstieg .stufe{font-family:var(--f-display);font-size:1.6rem;font-weight:700}

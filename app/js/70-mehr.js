@@ -92,6 +92,7 @@
     LT.$('#uebernehmen').addEventListener('click', function () {
       LT.uebernehmen(d);
       LT.awardsPruefen(); LT.neueAwards = [];
+      LT.S.rangGesehen = Math.max(LT.S.rangGesehen || 0, LT.rang().stufe); LT.speichern();
       LT.ansage('Spielstand geladen.');
       LT.gehe('/');
     });
