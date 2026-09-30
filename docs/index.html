@@ -276,6 +276,55 @@ fieldset.optionen legend{padding:0;margin-bottom:10px}
 .opt-btn:disabled{cursor:default}
 .aufstieg .stufe{font-family:var(--f-display);font-size:1.6rem;font-weight:700}
 
+/* Operatoraufgaben, Fallarbeit, Spiele, Bildzuordnung */
+.fall{background:var(--surface-2);border-left:4px solid var(--accent);border-radius:10px;padding:12px 14px;font-style:italic;max-width:70ch;display:flex;flex-direction:column;gap:8px}
+.fall .eyebrow{font-style:normal}
+.auftrag{display:flex;flex-direction:column;gap:4px}
+.muster{background:var(--info-soft);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+#datenschutz-op{display:inline-flex;gap:6px;align-items:center}
+#datenschutz-op svg{width:16px;height:16px;flex:none}
+
+/* Fehlerfahndung */
+.bericht{background:var(--surface-2);border-radius:12px;padding:14px;line-height:1.9}
+.satz{display:inline;border:0;background:none;padding:2px 3px;border-radius:6px;text-align:left;line-height:1.9;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.satz:hover:not(:disabled){background:var(--accent-soft)}
+.satz[aria-pressed="true"]{background:var(--accent-soft);outline:2px solid var(--accent)}
+.satz.richtig,.satz.falsch,.satz.fehlt{outline:2px solid}
+.satz.fehlt{background:var(--ok-soft);outline-style:dashed;outline-color:var(--ok)}
+.satz:disabled{cursor:default;color:inherit}
+mark{background:var(--accent-soft);color:inherit;padding:0 3px;border-radius:4px}
+.korr{margin-top:6px}
+
+/* Diagnose */
+.hinweise{margin:0;padding-left:1.3rem;display:grid;gap:8px}
+.hinweise li{background:var(--surface-2);border-radius:10px;padding:8px 10px}
+
+/* Enzym-Spiel */
+.spielfeld{position:relative;height:min(58vh,440px);min-height:300px;background:linear-gradient(180deg,var(--surface-2),var(--surface));
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.teil{position:absolute;transform:translateY(-50%);white-space:nowrap;border:2px solid var(--accent);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:.5rem .95rem;font-weight:700;min-height:44px;box-shadow:var(--shadow)}
+.teil:hover{background:var(--accent-soft)}
+.teil.weg{transform:translateY(-50%) scale(.2);opacity:0;transition:transform .25s ease,opacity .25s ease}
+.teil.falsch{border-color:var(--bad)}
+.spielfeld.ruhig{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start;padding:14px;height:auto;min-height:200px}
+.spielfeld.ruhig .teil{position:static;transform:none}
+
+/* Brötchen-Reise */
+.route{list-style:none;margin:0;padding:0;display:flex;gap:4px;overflow-x:auto;padding-bottom:4px}
+.route li{flex:1 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:.8rem;color:var(--muted);min-width:70px;text-align:center}
+.route .punkt{width:18px;height:18px;border-radius:50%;border:2px solid var(--line);background:var(--surface)}
+.route li.vorbei .punkt{background:var(--ok);border-color:var(--ok)}
+.route li.jetzt{color:var(--fg);font-weight:700}
+.route li.jetzt .punkt{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+
+/* Bildzuordnung */
+.bildbox{position:relative;margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.bildbox img{display:block;width:100%;height:auto}
+.marker{position:absolute;transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-fg);
+  display:grid;place-items:center;font-weight:800;font-size:.9rem;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+
 </style>
 </head>
 <body>
@@ -297,7 +346,7 @@ fieldset.optionen legend{padding:0;margin-bottom:10px}
 <div id="ansage" class="sr-only" aria-live="polite"></div>
 <dialog id="dialog" aria-labelledby="dialog-titel"></dialog>
 <script>
-window.INHALT={"erstellt":"2026-09-30T13:56","variante":"oeffentlich","buecher":{"i-care":"I care Anatomie, Physiologie","MKK":"Mensch Körper Krankheit"},"einstellungen":{"bestehensgrenze":80,"modulcheck_aufgaben":12,"operator_bestehensgrenze":60,"quiz_sekunden":90,"enzym_sekunden":60,"xp":{"richtige_aufgabe":10,"modul_bestanden":50,"modul_erstmals_bestanden":100,"karte_weiter":2,"operator_bestanden":30,"quiz_richtig":5,"enzym_treffer":1,"award":25},"raenge":[{"xp":0,"w":"Praktikantin","m":"Praktikant","n":"Praktikant:in"},{"xp":150,"w":"Famulantin","m":"Famulant","n":"Famulant:in"},{"xp":400,"w":"PJlerin","m":"PJler","n":"PJler:in"},{"xp":800,"w":"Assistenzärztin","m":"Assistenzarzt","n":"Assistenzärzt:in"},{"xp":1400,"w":"Oberärztin","m":"Oberarzt","n":"Oberärzt:in"},{"xp":2200,"w":"Chefärztin","m":"Chefarzt","n":"Chefärzt:in"},{"xp":3200,"w":"Gesundheitsministerin","m":"Gesundheitsminister","n":"Gesundheitsminister:in"}],"bloecke":[{"nr":1,"titel":"Grundlagen"},{"nr":2,"titel":"Organe"},{"nr":3,"titel":"Physiologie"},{"nr":4,"titel":"Erkrankungen"}]},"glossar":{},"awards":[{"id":"nachteule","name":{"w":"Nachteule","m":"Nachteule","n":"Nachteule"},"geheim":true,"regel":["modul_uhrzeit","0","4"],"bedingung":"Schließe ein Modul zwischen 0 und 4 Uhr ab.","fakt":"","quelle":[],"form":"zacken","farbe1":"#3d4f9e","farbe2":"#1b2352","icon":"mond"},{"id":"frueher-vogel","name":{"w":"Früher Vogel","m":"Früher Vogel","n":"Früher Vogel"},"geheim":false,"regel":["modul_uhrzeit","5","7"],"bedingung":"Schließe ein Modul zwischen 5 und 7 Uhr ab.","fakt":"","quelle":[],"form":"rund","farbe1":"#f6c453","farbe2":"#e0782f","icon":"sonne"},{"id":"viszeralchirurgin","name":{"w":"Viszeralchirurgin","m":"Viszeralchirurg","n":"Viszeralchirurg:in"},"geheim":false,"regel":["operatoren_afb","III"],"bedingung":"Bestehe alle Operatoraufgaben aus Anforderungsbereich III.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#5b6b82","farbe2":"#2b3445","icon":"skalpell"},{"id":"darmcharmeur","name":{"w":"Darmcharmeur","m":"Darmcharmeur","n":"Darmcharmeur"},"geheim":false,"regel":["modul_mehrfach","duenndarm,dickdarm","2","80"],"bedingung":"Schaffe Dünndarm und Dickdarm jeweils zweimal mit mindestens 80 %.","fakt":"","quelle":[],"form":"rund","farbe1":"#e57aa6","farbe2":"#9c3466","icon":"darm"},{"id":"gastroenterologin","name":{"w":"Gastroenterologin","m":"Gastroenterologe","n":"Gastroenterolog:in"},"geheim":false,"regel":["bloecke_bestanden","2"],"bedingung":"Bestehe alle Organmodule.","fakt":"","quelle":[],"form":"schild","farbe1":"#2f9e6b","farbe2":"#17573a","icon":"stethoskop"},{"id":"klinge-21","name":{"w":"21er Klinge","m":"21er Klinge","n":"21er Klinge"},"geheim":false,"regel":["serie_richtig","21"],"bedingung":"Beantworte 21 Aufgaben in Folge richtig.","fakt":"","quelle":[],"form":"zacken","farbe1":"#b9c3cf","farbe2":"#5d6978","icon":"klinge"},{"id":"hoch-hinaus","name":{"w":"Hoch hinaus","m":"Hoch hinaus","n":"Hoch hinaus"},"geheim":false,"regel":["verbesserung","30"],"bedingung":"Verbessere dich in einem Modul um mindestens 30 Prozentpunkte.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#56b4e9","farbe2":"#1f5f9e","icon":"pfeil"},{"id":"drei-tage","name":{"w":"3-Tage-Meisterin","m":"3-Tage-Meister","n":"3-Tage-Meister:in"},"geheim":false,"regel":["tage_in_folge","3"],"bedingung":"Übe an drei Tagen in Folge.","fakt":"","quelle":[],"form":"rund","farbe1":"#f2b544","farbe2":"#c9820f","icon":"kalender"},{"id":"ballaststoff","name":{"w":"Ballaststoff","m":"Ballaststoff","n":"Ballaststoff"},"geheim":false,"regel":["tage_in_folge","14"],"bedingung":"Übe an 14 Tagen in Folge.","fakt":"","quelle":[],"form":"zacken","farbe1":"#8fbf4a","farbe2":"#4b7a1f","icon":"aehre"},{"id":"leberwurst","name":{"w":"Beleidigte Leberwurst","m":"Beleidigte Leberwurst","n":"Beleidigte Leberwurst"},"geheim":false,"regel":["unter_dann_ueber","50","90"],"bedingung":"Schaffe ein Modul, in dem du einmal unter 50 % lagst, später mit über 90 %.","fakt":"","quelle":[],"form":"schild","farbe1":"#c47a5a","farbe2":"#7a3a22","icon":"leber"},{"id":"saeurefest","name":{"w":"Säurefest","m":"Säurefest","n":"Säurefest"},"geheim":false,"regel":["modul_prozent","magen","100"],"bedingung":"Schaffe das Modul Magen mit 100 %.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#d6e04a","farbe2":"#8a9a1a","icon":"tropfen"},{"id":"zottenkoenigin","name":{"w":"Zottenkönigin","m":"Zottenkönig","n":"Zottenkönig:in"},"geheim":false,"regel":["modul_mehrfach","duenndarm","2","80"],"bedingung":"Schaffe das Modul Dünndarm zweimal mit mindestens 80 %.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f2b544","farbe2":"#b8478a","icon":"krone"},{"id":"enzym-jaegerin","name":{"w":"Enzym-Jägerin","m":"Enzym-Jäger","n":"Enzym-Jäger:in"},"geheim":false,"regel":["enzym_punkte","25"],"bedingung":"Erreiche im Enzym-Spiel mindestens 25 Punkte in einer Runde.","fakt":"","quelle":[],"form":"rund","farbe1":"#1f8fa3","farbe2":"#0e4f5c","icon":"enzym"},{"id":"karteikarten-koenigin","name":{"w":"Karteikarten-Königin","m":"Karteikarten-König","n":"Karteikarten-König:in"},"geheim":false,"regel":["karten_fach5","100"],"bedingung":"Bringe 100 Karteikarten ins letzte Leitner-Fach.","fakt":"","quelle":[],"form":"schild","farbe1":"#9b7be0","farbe2":"#4d2f9e","icon":"karten"},{"id":"diagnose-detektivin","name":{"w":"Diagnose-Detektivin","m":"Diagnose-Detektiv","n":"Diagnose-Detektiv:in"},"geheim":false,"regel":["diagnosen","5"],"bedingung":"Stelle in fünf Fallbeispielen die richtige Diagnose.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#4a5a73","farbe2":"#1c2533","icon":"lupe"},{"id":"insulin-ass","name":{"w":"Insulin-Ass","m":"Insulin-Ass","n":"Insulin-Ass"},"geheim":false,"regel":["modul_prozent","diabetes","100"],"bedingung":"Schaffe das Modul Diabetes mellitus ohne Fehler.","fakt":"","quelle":[],"form":"rund","farbe1":"#d0a21a","farbe2":"#8a6400","icon":"spritze"},{"id":"pfoertnerin","name":{"w":"Pförtnerin","m":"Pförtner","n":"Pförtner:in"},"geheim":false,"regel":["block_frei","2"],"bedingung":"Schalte den Block „Organe“ frei.","fakt":"","quelle":[],"form":"schild","farbe1":"#c9820f","farbe2":"#7a4a05","icon":"tor"},{"id":"enterohepatisch","name":{"w":"Enterohepatischer Kreislauf","m":"Enterohepatischer Kreislauf","n":"Enterohepatischer Kreislauf"},"geheim":false,"regel":["modul_abschluesse","3"],"bedingung":"Schließe dasselbe Modul dreimal ab.","fakt":"","quelle":[],"form":"rund","farbe1":"#6bbf7a","farbe2":"#2d7a3c","icon":"kreislauf"},{"id":"gut-gekaut","name":{"w":"Gut gekaut ist halb verdaut","m":"Gut gekaut ist halb verdaut","n":"Gut gekaut ist halb verdaut"},"geheim":false,"regel":["modul_prozent","mundhoehle","100"],"bedingung":"Schaffe das Modul Mundhöhle und Speiseröhre mit 100 %.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f07c5a","farbe2":"#b03a1e","icon":"zahn"},{"id":"peristaltik-profi","name":{"w":"Peristaltik-Profi","m":"Peristaltik-Profi","n":"Peristaltik-Profi"},"geheim":false,"regel":["reihenfolge_fehlerfrei","10"],"bedingung":"Löse zehn Reihenfolgeaufgaben ohne Fehler.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#e57aa6","farbe2":"#7a52c7","icon":"welle"},{"id":"mikrovilli","name":{"w":"Mikrovilli-Millionärin","m":"Mikrovilli-Millionär","n":"Mikrovilli-Millionär:in"},"geheim":false,"regel":["xp","1000"],"bedingung":"Sammle 1.000 XP.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f6d365","farbe2":"#d4a017","icon":"mikrovilli"},{"id":"bauchgefuehl","name":{"w":"Bauchgefühl","m":"Bauchgefühl","n":"Bauchgefühl"},"geheim":false,"regel":["quiz_serie","10"],"bedingung":"Beantworte im Quiz auf Zeit zehn Fragen in Folge richtig.","fakt":"","quelle":[],"form":"rund","farbe1":"#ff9a76","farbe2":"#c4452b","icon":"blitz"},{"id":"pechvogel","name":{"w":"Pechvogel-Bezwingerin","m":"Pechvogel-Bezwinger","n":"Pechvogel-Bezwinger:in"},"geheim":true,"regel":["freitag13","80"],"bedingung":"Schaffe an einem Freitag, dem 13., ein Modul mit mindestens 80 %.","fakt":"","quelle":[],"form":"schild","farbe1":"#2b2b2b","farbe2":"#6b6b6b","icon":"kleeblatt"},{"id":"aprilscherz","name":{"w":"Aprilscherz","m":"Aprilscherz","n":"Aprilscherz"},"geheim":true,"regel":["aprilscherz"],"bedingung":"Durchschaue am 1. April die Scherzfrage.","fakt":"","quelle":[],"form":"zacken","farbe1":"#ff6fb5","farbe2":"#7a5cff","icon":"narr"}],"module":[{"id":"naehrstoffe","titel":"Nährstoffe","block":1,"nr":1,"organ":"","beschreibung":"Woraus besteht unsere Nahrung, und wie viel Energie steckt darin?","quellen":"i-care S. 238–248; MKK S. 362","icon":"ernaehrung","farbe":"#2f9e6b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"aufbau","titel":"Aufgaben und Aufbau des Verdauungssystems","block":1,"nr":2,"organ":"","beschreibung":"Vom Mund bis zum After: der Weg der Nahrung im Überblick.","quellen":"i-care S. 188–192; MKK S. 344–347","icon":"verdauungstrakt","farbe":"#3b7dd8","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"mundhoehle","titel":"Mundhöhle und Speiseröhre","block":2,"nr":1,"organ":"","beschreibung":"Zähne, Zunge, Speichel und Schlucken.","quellen":"i-care S. 193–205; MKK S. 347–354","icon":"mund","farbe":"#d8573b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"magen","titel":"Magen","block":2,"nr":2,"organ":"","beschreibung":"Magensaft, Magenschleimhaut und Magenentleerung.","quellen":"i-care S. 205–209; MKK S. 353–357","icon":"magen","farbe":"#c9820f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"duenndarm","titel":"Dünndarm","block":2,"nr":3,"organ":"","beschreibung":"Zotten, Mikrovilli und Resorption.","quellen":"i-care S. 210–214; MKK S. 357–359","icon":"darm","farbe":"#b8478a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"dickdarm","titel":"Dickdarm","block":2,"nr":4,"organ":"","beschreibung":"Kolon, Rektum und Stuhlentleerung.","quellen":"i-care S. 215–220; MKK S. 362–367","icon":"darm","farbe":"#7a52c7","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"pankreas","titel":"Pankreas","block":2,"nr":5,"organ":"","beschreibung":"Die Bauchspeicheldrüse und ihre Verdauungsenzyme.","quellen":"i-care S. 221–223; MKK S. 359, 367–368","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"leber","titel":"Leber und Gallenblase","block":2,"nr":6,"organ":"","beschreibung":"Stoffwechselzentrale und Galle.","quellen":"i-care S. 224–237; MKK S. 359–361, 368–372","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"verdauung","titel":"Verdauung der Nährstoffe","block":3,"nr":1,"organ":"","beschreibung":"Wie Enzyme Kohlenhydrate, Eiweiße und Fette zerlegen.","quellen":"i-care S. 238–241; MKK S. 354, 359–362","icon":"enzym","farbe":"#1f8fa3","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"crohn","titel":"Morbus Crohn","block":4,"nr":1,"organ":"duenndarm, dickdarm","beschreibung":"Chronisch-entzündliche Darmerkrankung.","quellen":"MKK S. 366","icon":"darm","farbe":"#7a52c7","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"adipositas","titel":"Adipositas","block":4,"nr":2,"organ":"naehrstoffe","beschreibung":"Übergewicht und Body-Mass-Index.","quellen":"i-care S. 244–247","icon":"ernaehrung","farbe":"#2f9e6b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"hepatitis","titel":"Hepatitis","block":4,"nr":3,"organ":"leber","beschreibung":"Entzündung der Leber.","quellen":"MKK S. 371; i-care S. 229–231","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"diabetes","titel":"Diabetes mellitus","block":4,"nr":4,"organ":"pankreas","beschreibung":"Zuckerkrankheit.","quellen":"MKK S. 367; i-care S. 223, 231","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"leberzirrhose","titel":"Leberzirrhose","block":4,"nr":5,"organ":"leber","beschreibung":"Der narbige Umbau der Leber.","quellen":"MKK S. 371–372; i-care S. 228","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"pankreatitis","titel":"Pankreatitis","block":4,"nr":6,"organ":"pankreas","beschreibung":"Entzündung der Bauchspeicheldrüse.","quellen":"MKK S. 367; i-care S. 222","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"magenkarzinom","titel":"Magenkarzinom","block":4,"nr":7,"organ":"magen","beschreibung":"Bösartiger Tumor des Magens.","quellen":"MKK S. 356–357","icon":"magen","farbe":"#c9820f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"}],"bilder":{},"spiele":{}};
+window.INHALT={"erstellt":"2026-09-30T14:03","variante":"oeffentlich","buecher":{"i-care":"I care Anatomie, Physiologie","MKK":"Mensch Körper Krankheit"},"einstellungen":{"bestehensgrenze":80,"modulcheck_aufgaben":12,"operator_bestehensgrenze":60,"quiz_sekunden":90,"enzym_sekunden":60,"xp":{"richtige_aufgabe":10,"modul_bestanden":50,"modul_erstmals_bestanden":100,"karte_weiter":2,"operator_bestanden":30,"quiz_richtig":5,"enzym_treffer":1,"award":25},"raenge":[{"xp":0,"w":"Praktikantin","m":"Praktikant","n":"Praktikant:in"},{"xp":150,"w":"Famulantin","m":"Famulant","n":"Famulant:in"},{"xp":400,"w":"PJlerin","m":"PJler","n":"PJler:in"},{"xp":800,"w":"Assistenzärztin","m":"Assistenzarzt","n":"Assistenzärzt:in"},{"xp":1400,"w":"Oberärztin","m":"Oberarzt","n":"Oberärzt:in"},{"xp":2200,"w":"Chefärztin","m":"Chefarzt","n":"Chefärzt:in"},{"xp":3200,"w":"Gesundheitsministerin","m":"Gesundheitsminister","n":"Gesundheitsminister:in"}],"bloecke":[{"nr":1,"titel":"Grundlagen"},{"nr":2,"titel":"Organe"},{"nr":3,"titel":"Physiologie"},{"nr":4,"titel":"Erkrankungen"}]},"glossar":{},"awards":[{"id":"nachteule","name":{"w":"Nachteule","m":"Nachteule","n":"Nachteule"},"geheim":true,"regel":["modul_uhrzeit","0","4"],"bedingung":"Schließe ein Modul zwischen 0 und 4 Uhr ab.","fakt":"","quelle":[],"form":"zacken","farbe1":"#3d4f9e","farbe2":"#1b2352","icon":"mond"},{"id":"frueher-vogel","name":{"w":"Früher Vogel","m":"Früher Vogel","n":"Früher Vogel"},"geheim":false,"regel":["modul_uhrzeit","5","7"],"bedingung":"Schließe ein Modul zwischen 5 und 7 Uhr ab.","fakt":"","quelle":[],"form":"rund","farbe1":"#f6c453","farbe2":"#e0782f","icon":"sonne"},{"id":"viszeralchirurgin","name":{"w":"Viszeralchirurgin","m":"Viszeralchirurg","n":"Viszeralchirurg:in"},"geheim":false,"regel":["operatoren_afb","III"],"bedingung":"Bestehe alle Operatoraufgaben aus Anforderungsbereich III.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#5b6b82","farbe2":"#2b3445","icon":"skalpell"},{"id":"darmcharmeur","name":{"w":"Darmcharmeur","m":"Darmcharmeur","n":"Darmcharmeur"},"geheim":false,"regel":["modul_mehrfach","duenndarm,dickdarm","2","80"],"bedingung":"Schaffe Dünndarm und Dickdarm jeweils zweimal mit mindestens 80 %.","fakt":"","quelle":[],"form":"rund","farbe1":"#e57aa6","farbe2":"#9c3466","icon":"darm"},{"id":"gastroenterologin","name":{"w":"Gastroenterologin","m":"Gastroenterologe","n":"Gastroenterolog:in"},"geheim":false,"regel":["bloecke_bestanden","2"],"bedingung":"Bestehe alle Organmodule.","fakt":"","quelle":[],"form":"schild","farbe1":"#2f9e6b","farbe2":"#17573a","icon":"stethoskop"},{"id":"klinge-21","name":{"w":"21er Klinge","m":"21er Klinge","n":"21er Klinge"},"geheim":false,"regel":["serie_richtig","21"],"bedingung":"Beantworte 21 Aufgaben in Folge richtig.","fakt":"","quelle":[],"form":"zacken","farbe1":"#b9c3cf","farbe2":"#5d6978","icon":"klinge"},{"id":"hoch-hinaus","name":{"w":"Hoch hinaus","m":"Hoch hinaus","n":"Hoch hinaus"},"geheim":false,"regel":["verbesserung","30"],"bedingung":"Verbessere dich in einem Modul um mindestens 30 Prozentpunkte.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#56b4e9","farbe2":"#1f5f9e","icon":"pfeil"},{"id":"drei-tage","name":{"w":"3-Tage-Meisterin","m":"3-Tage-Meister","n":"3-Tage-Meister:in"},"geheim":false,"regel":["tage_in_folge","3"],"bedingung":"Übe an drei Tagen in Folge.","fakt":"","quelle":[],"form":"rund","farbe1":"#f2b544","farbe2":"#c9820f","icon":"kalender"},{"id":"ballaststoff","name":{"w":"Ballaststoff","m":"Ballaststoff","n":"Ballaststoff"},"geheim":false,"regel":["tage_in_folge","14"],"bedingung":"Übe an 14 Tagen in Folge.","fakt":"","quelle":[],"form":"zacken","farbe1":"#8fbf4a","farbe2":"#4b7a1f","icon":"aehre"},{"id":"leberwurst","name":{"w":"Beleidigte Leberwurst","m":"Beleidigte Leberwurst","n":"Beleidigte Leberwurst"},"geheim":false,"regel":["unter_dann_ueber","50","90"],"bedingung":"Schaffe ein Modul, in dem du einmal unter 50 % lagst, später mit über 90 %.","fakt":"","quelle":[],"form":"schild","farbe1":"#c47a5a","farbe2":"#7a3a22","icon":"leber"},{"id":"saeurefest","name":{"w":"Säurefest","m":"Säurefest","n":"Säurefest"},"geheim":false,"regel":["modul_prozent","magen","100"],"bedingung":"Schaffe das Modul Magen mit 100 %.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#d6e04a","farbe2":"#8a9a1a","icon":"tropfen"},{"id":"zottenkoenigin","name":{"w":"Zottenkönigin","m":"Zottenkönig","n":"Zottenkönig:in"},"geheim":false,"regel":["modul_mehrfach","duenndarm","2","80"],"bedingung":"Schaffe das Modul Dünndarm zweimal mit mindestens 80 %.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f2b544","farbe2":"#b8478a","icon":"krone"},{"id":"enzym-jaegerin","name":{"w":"Enzym-Jägerin","m":"Enzym-Jäger","n":"Enzym-Jäger:in"},"geheim":false,"regel":["enzym_punkte","25"],"bedingung":"Erreiche im Enzym-Spiel mindestens 25 Punkte in einer Runde.","fakt":"","quelle":[],"form":"rund","farbe1":"#1f8fa3","farbe2":"#0e4f5c","icon":"enzym"},{"id":"karteikarten-koenigin","name":{"w":"Karteikarten-Königin","m":"Karteikarten-König","n":"Karteikarten-König:in"},"geheim":false,"regel":["karten_fach5","100"],"bedingung":"Bringe 100 Karteikarten ins letzte Leitner-Fach.","fakt":"","quelle":[],"form":"schild","farbe1":"#9b7be0","farbe2":"#4d2f9e","icon":"karten"},{"id":"diagnose-detektivin","name":{"w":"Diagnose-Detektivin","m":"Diagnose-Detektiv","n":"Diagnose-Detektiv:in"},"geheim":false,"regel":["diagnosen","5"],"bedingung":"Stelle in fünf Fallbeispielen die richtige Diagnose.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#4a5a73","farbe2":"#1c2533","icon":"lupe"},{"id":"insulin-ass","name":{"w":"Insulin-Ass","m":"Insulin-Ass","n":"Insulin-Ass"},"geheim":false,"regel":["modul_prozent","diabetes","100"],"bedingung":"Schaffe das Modul Diabetes mellitus ohne Fehler.","fakt":"","quelle":[],"form":"rund","farbe1":"#d0a21a","farbe2":"#8a6400","icon":"spritze"},{"id":"pfoertnerin","name":{"w":"Pförtnerin","m":"Pförtner","n":"Pförtner:in"},"geheim":false,"regel":["block_frei","2"],"bedingung":"Schalte den Block „Organe“ frei.","fakt":"","quelle":[],"form":"schild","farbe1":"#c9820f","farbe2":"#7a4a05","icon":"tor"},{"id":"enterohepatisch","name":{"w":"Enterohepatischer Kreislauf","m":"Enterohepatischer Kreislauf","n":"Enterohepatischer Kreislauf"},"geheim":false,"regel":["modul_abschluesse","3"],"bedingung":"Schließe dasselbe Modul dreimal ab.","fakt":"","quelle":[],"form":"rund","farbe1":"#6bbf7a","farbe2":"#2d7a3c","icon":"kreislauf"},{"id":"gut-gekaut","name":{"w":"Gut gekaut ist halb verdaut","m":"Gut gekaut ist halb verdaut","n":"Gut gekaut ist halb verdaut"},"geheim":false,"regel":["modul_prozent","mundhoehle","100"],"bedingung":"Schaffe das Modul Mundhöhle und Speiseröhre mit 100 %.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f07c5a","farbe2":"#b03a1e","icon":"zahn"},{"id":"peristaltik-profi","name":{"w":"Peristaltik-Profi","m":"Peristaltik-Profi","n":"Peristaltik-Profi"},"geheim":false,"regel":["reihenfolge_fehlerfrei","10"],"bedingung":"Löse zehn Reihenfolgeaufgaben ohne Fehler.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#e57aa6","farbe2":"#7a52c7","icon":"welle"},{"id":"mikrovilli","name":{"w":"Mikrovilli-Millionärin","m":"Mikrovilli-Millionär","n":"Mikrovilli-Millionär:in"},"geheim":false,"regel":["xp","1000"],"bedingung":"Sammle 1.000 XP.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f6d365","farbe2":"#d4a017","icon":"mikrovilli"},{"id":"bauchgefuehl","name":{"w":"Bauchgefühl","m":"Bauchgefühl","n":"Bauchgefühl"},"geheim":false,"regel":["quiz_serie","10"],"bedingung":"Beantworte im Quiz auf Zeit zehn Fragen in Folge richtig.","fakt":"","quelle":[],"form":"rund","farbe1":"#ff9a76","farbe2":"#c4452b","icon":"blitz"},{"id":"pechvogel","name":{"w":"Pechvogel-Bezwingerin","m":"Pechvogel-Bezwinger","n":"Pechvogel-Bezwinger:in"},"geheim":true,"regel":["freitag13","80"],"bedingung":"Schaffe an einem Freitag, dem 13., ein Modul mit mindestens 80 %.","fakt":"","quelle":[],"form":"schild","farbe1":"#2b2b2b","farbe2":"#6b6b6b","icon":"kleeblatt"},{"id":"aprilscherz","name":{"w":"Aprilscherz","m":"Aprilscherz","n":"Aprilscherz"},"geheim":true,"regel":["aprilscherz"],"bedingung":"Durchschaue am 1. April die Scherzfrage.","fakt":"","quelle":[],"form":"zacken","farbe1":"#ff6fb5","farbe2":"#7a5cff","icon":"narr"}],"module":[{"id":"naehrstoffe","titel":"Nährstoffe","block":1,"nr":1,"organ":"","beschreibung":"Woraus besteht unsere Nahrung, und wie viel Energie steckt darin?","quellen":"i-care S. 238–248; MKK S. 362","icon":"ernaehrung","farbe":"#2f9e6b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"aufbau","titel":"Aufgaben und Aufbau des Verdauungssystems","block":1,"nr":2,"organ":"","beschreibung":"Vom Mund bis zum After: der Weg der Nahrung im Überblick.","quellen":"i-care S. 188–192; MKK S. 344–347","icon":"verdauungstrakt","farbe":"#3b7dd8","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"mundhoehle","titel":"Mundhöhle und Speiseröhre","block":2,"nr":1,"organ":"","beschreibung":"Zähne, Zunge, Speichel und Schlucken.","quellen":"i-care S. 193–205; MKK S. 347–354","icon":"mund","farbe":"#d8573b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"magen","titel":"Magen","block":2,"nr":2,"organ":"","beschreibung":"Magensaft, Magenschleimhaut und Magenentleerung.","quellen":"i-care S. 205–209; MKK S. 353–357","icon":"magen","farbe":"#c9820f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"duenndarm","titel":"Dünndarm","block":2,"nr":3,"organ":"","beschreibung":"Zotten, Mikrovilli und Resorption.","quellen":"i-care S. 210–214; MKK S. 357–359","icon":"darm","farbe":"#b8478a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"dickdarm","titel":"Dickdarm","block":2,"nr":4,"organ":"","beschreibung":"Kolon, Rektum und Stuhlentleerung.","quellen":"i-care S. 215–220; MKK S. 362–367","icon":"darm","farbe":"#7a52c7","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"pankreas","titel":"Pankreas","block":2,"nr":5,"organ":"","beschreibung":"Die Bauchspeicheldrüse und ihre Verdauungsenzyme.","quellen":"i-care S. 221–223; MKK S. 359, 367–368","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"leber","titel":"Leber und Gallenblase","block":2,"nr":6,"organ":"","beschreibung":"Stoffwechselzentrale und Galle.","quellen":"i-care S. 224–237; MKK S. 359–361, 368–372","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"verdauung","titel":"Verdauung der Nährstoffe","block":3,"nr":1,"organ":"","beschreibung":"Wie Enzyme Kohlenhydrate, Eiweiße und Fette zerlegen.","quellen":"i-care S. 238–241; MKK S. 354, 359–362","icon":"enzym","farbe":"#1f8fa3","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"crohn","titel":"Morbus Crohn","block":4,"nr":1,"organ":"duenndarm, dickdarm","beschreibung":"Chronisch-entzündliche Darmerkrankung.","quellen":"MKK S. 366","icon":"darm","farbe":"#7a52c7","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"adipositas","titel":"Adipositas","block":4,"nr":2,"organ":"naehrstoffe","beschreibung":"Übergewicht und Body-Mass-Index.","quellen":"i-care S. 244–247","icon":"ernaehrung","farbe":"#2f9e6b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"hepatitis","titel":"Hepatitis","block":4,"nr":3,"organ":"leber","beschreibung":"Entzündung der Leber.","quellen":"MKK S. 371; i-care S. 229–231","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"diabetes","titel":"Diabetes mellitus","block":4,"nr":4,"organ":"pankreas","beschreibung":"Zuckerkrankheit.","quellen":"MKK S. 367; i-care S. 223, 231","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"leberzirrhose","titel":"Leberzirrhose","block":4,"nr":5,"organ":"leber","beschreibung":"Der narbige Umbau der Leber.","quellen":"MKK S. 371–372; i-care S. 228","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"pankreatitis","titel":"Pankreatitis","block":4,"nr":6,"organ":"pankreas","beschreibung":"Entzündung der Bauchspeicheldrüse.","quellen":"MKK S. 367; i-care S. 222","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"magenkarzinom","titel":"Magenkarzinom","block":4,"nr":7,"organ":"magen","beschreibung":"Bösartiger Tumor des Magens.","quellen":"MKK S. 356–357","icon":"magen","farbe":"#c9820f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"}],"bilder":{},"spiele":{}};
 </script>
 <script>
 /* ---- js/10-hilfen.js ---- */
@@ -451,6 +500,7 @@ LT.icon = function (name, klasse) {
       reihenfolgeOk: 0,      // fehlerfrei gelöste Reihenfolgeaufgaben
       operatoren: {},        // Operator-ID → Zeitpunkt des Bestehens (kein Text!)
       diagnosen: [],         // IDs richtig gelöster Diagnosefälle
+      fehlerfahndung: {},    // Bericht-ID → Zeitpunkt der fehlerfreien Lösung
       enzymBest: 0,
       aprilscherz: false,
       gesichert: null,       // Zeitpunkt der letzten Sicherung als Datei
@@ -1256,6 +1306,548 @@ LT.icon = function (name, klasse) {
       };
     }
   });
+})();
+
+/* ---- js/aufgaben/30-bild.js ---- */
+/* Bildzuordnung: nummerierte Marker auf einer Buchabbildung (nur Kursversion).
+   Jeder Marker bekommt eine Auswahlliste – barrierearm und ohne Drag & Drop. */
+(function () {
+  var esc = LT.esc;
+  LT.typ('bildzuordnung', {
+    name: 'Bildzuordnung',
+    bauen: function (a, el) {
+      var begriffe = LT.mischen(a.marker.map(function (k) { return k.begriff; }));
+      el.innerHTML = '<p class="frage">' + LT.txt(a.frage) + '</p>' +
+        '<figure class="bildbox"><img src="' + (LT.D.bilder[a.bild] || '') + '" alt="Abbildung mit ' + a.marker.length + ' nummerierten Markern">' +
+        a.marker.map(function (k, i) {
+          return '<span class="marker" style="left:' + k.x + '%;top:' + k.y + '%" aria-hidden="true">' + (i + 1) + '</span>';
+        }).join('') + '</figure>' +
+        '<div class="zuordnung">' + a.marker.map(function (k, i) {
+          return '<div class="zrow"><label for="bz' + i + '">Marker ' + (i + 1) + '</label><select id="bz' + i + '"><option value="">– bitte wählen –</option>' +
+            begriffe.map(function (b) { return '<option value="' + esc(b) + '">' + esc(b) + '</option>'; }).join('') + '</select></div>';
+        }).join('') + '</div>';
+      var sel = LT.$$('select', el);
+      return {
+        bereit: function () { return sel.every(function (s) { return s.value; }); },
+        pruefen: function () {
+          var n = 0;
+          sel.forEach(function (s, i) {
+            var ok = s.value === a.marker[i].begriff;
+            s.closest('.zrow').classList.add(ok ? 'richtig' : 'falsch');
+            if (ok) n++;
+          });
+          return n / sel.length;
+        },
+        loesung: function () {
+          return '<ol class="loesung">' + a.marker.map(function (k) { return '<li>' + esc(k.begriff) + '</li>'; }).join('') + '</ol>';
+        }
+      };
+    }
+  });
+})();
+
+/* ---- js/aufgaben/40-operator.js ---- */
+/* Operatoraufgaben: Fallbeispiel → Freitext (Mindestlänge) → Selbstcheck → Musterlösung.
+   DATENSCHUTZ: Der Freitext wird NIE gespeichert – weder im localStorage noch in der Spielstand-Datei.
+   Gespeichert wird nur, DASS eine Aufgabe bestanden wurde (für den Award „Viszeralchirurgin“). */
+(function () {
+  var esc = LT.esc, icon = LT.icon;
+
+  LT.modus({
+    id: 'operatoren', titel: 'Operatoraufgaben', icon: 'stift',
+    text: function (m) {
+      var n = m.operatoren.filter(function (o) { return LT.S.operatoren[o.id]; }).length;
+      return m.operatoren.length + ' Fallaufgaben mit Selbstcheck · ' + n + ' bestanden';
+    },
+    verfuegbar: function (m) { return m.operatoren.length > 0; }
+  });
+
+  LT.route(/^\/modul\/([^/]+)\/operatoren$/, function (id) {
+    var m = LT.modul(id);
+    if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+    LT.zeige(LT.seitenkopf('Operatoraufgaben: ' + esc(m.titel), { pfad: '/modul/' + m.id, text: m.titel }) +
+      '<p class="muted">Du schreibst eine Antwort, prüfst sie selbst anhand von Kriterien und vergleichst sie dann mit der Musterlösung. ' +
+      'Bestanden hast du ab ' + LT.E.operator_bestehensgrenze + ' % der Kriterien.</p>' +
+      '<div class="modi">' + m.operatoren.map(function (o) {
+        return '<a class="modus" href="#/modul/' + esc(m.id) + '/operator/' + esc(o.id) + '">' + icon('stift') +
+          '<div><b>' + esc(o.operator.charAt(0).toUpperCase() + o.operator.slice(1)) + ' · AFB ' + esc(o.afb) + '</b><span>' +
+          LT.txt(o.auftrag, { ohneKlammer: true }).replace(/<[^>]+>/g, '') + '</span>' +
+          (LT.S.operatoren[o.id] ? '<span class="chip ok" style="margin-top:6px">' + icon('haken') + 'bestanden</span>' : '') + '</div></a>';
+      }).join('') + '</div>');
+  }, 'start');
+
+  LT.route(/^\/modul\/([^/]+)\/operator\/([^/]+)$/, function (id, opId) {
+    var m = LT.modul(id);
+    if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+    var o = m.operatoren.filter(function (x) { return x.id === opId; })[0];
+    if (!o) { LT.gehe('/modul/' + id + '/operatoren'); return; }
+    LT.modulKontext(m.id);
+    var h = LT.zeige(LT.seitenkopf('Operatoraufgabe', { pfad: '/modul/' + m.id + '/operatoren', text: 'Alle Operatoraufgaben' }, m.titel) +
+      '<section class="karte stapel">' +
+      '<div class="reihe"><span class="chip gold">Operator: ' + esc(o.operator) + '</span><span class="chip">AFB ' + esc(o.afb) + '</span></div>' +
+      '<div class="fall"><p class="eyebrow">Fallbeispiel</p>' + LT.absaetze(o.fall) + '</div>' +
+      '<div class="auftrag"><p class="eyebrow">Aufgabe</p><p class="frage">' + LT.txt(o.auftrag) + '</p></div>' +
+      '<div class="feld"><label for="antwort">Deine Antwort <span class="muted klein">(mindestens ' + o.mindestlaenge + ' Zeichen)</span></label>' +
+      '<textarea id="antwort" spellcheck="true" autocomplete="off" aria-describedby="zaehler datenschutz-op"></textarea>' +
+      '<div class="reihe zw klein"><span id="zaehler" class="muted" aria-live="polite">0 / ' + o.mindestlaenge + ' Zeichen</span>' +
+      '<span id="datenschutz-op" class="muted">' + icon('schild_ds') + ' Dein Text wird nicht gespeichert. Kopiere ihn, wenn du ihn behalten möchtest.</span></div></div>' +
+      '<div><button class="btn primaer" type="button" id="selbstcheck" disabled>Weiter zum Selbstcheck</button></div>' +
+      '<div id="check" hidden></div></section>');
+    var feld = LT.$('#antwort', h), knopf = LT.$('#selbstcheck', h);
+    feld.addEventListener('input', function () {
+      var n = feld.value.trim().length;
+      LT.$('#zaehler').textContent = n + ' / ' + o.mindestlaenge + ' Zeichen' + (n >= o.mindestlaenge ? ' ✓' : '');
+      knopf.disabled = n < o.mindestlaenge;
+    });
+    // Beim Verlassen: Text sicher verwerfen
+    LT.aufraeumen = function () { feld.value = ''; };
+
+    knopf.addEventListener('click', function () {
+      knopf.hidden = true;
+      feld.readOnly = true;
+      var box = LT.$('#check', h);
+      box.hidden = false;
+      box.innerHTML = '<fieldset class="optionen"><legend class="frage">Selbstcheck: Was trifft auf deine Antwort zu?' +
+        '<span class="kennung">Sei ehrlich zu dir – nur du siehst das.</span></legend>' +
+        o.kriterien.map(function (k, i) {
+          return '<label class="opt"><input type="checkbox" value="' + i + '"> <span>' + LT.txt(k, { ohneKlammer: true }) + '</span></label>';
+        }).join('') + '</fieldset><div><button class="btn primaer" type="button" id="auswerten">Auswerten und Musterlösung zeigen</button></div><div id="auswertung" aria-live="polite"></div>';
+      LT.$('.opt input', box).focus();
+      LT.$('#auswerten', box).addEventListener('click', function () {
+        var n = LT.$$('.opt input', box).filter(function (c) { return c.checked; }).length;
+        var prozent = Math.round(n / o.kriterien.length * 100);
+        var bestanden = prozent >= LT.E.operator_bestehensgrenze;
+        var xp = 0;
+        LT.$$('input', box).forEach(function (c) { c.disabled = true; });
+        this.hidden = true;
+        LT.uebungstag();
+        if (bestanden && !LT.S.operatoren[o.id]) { LT.S.operatoren[o.id] = LT.iso(); xp = LT.xpDazu('operator_bestanden'); }
+        LT.speichern();
+        LT.awardsPruefen();
+        LT.kopfAktualisieren();
+        LT.$('#auswertung', box).innerHTML =
+          '<div class="rueck ' + (bestanden ? 'ok' : 'nein') + '"><b>' + icon(bestanden ? 'haken' : 'kreuz') +
+          (bestanden ? 'Bestanden – ' : 'Noch nicht bestanden – ') + prozent + ' % der Kriterien</b>' +
+          (xp ? '<p class="chip gold">+' + xp + ' XP</p>' : '') +
+          (bestanden ? '' : '<p>Vergleiche deine Antwort mit der Musterlösung und versuch es später noch einmal.</p>') + '</div>' +
+          '<div class="muster"><p class="eyebrow">Musterlösung</p>' + LT.absaetze(o.musterloesung, { ohneKlammer: true }) + LT.liesNach(o.quelle) + '</div>' +
+          '<div class="reihe"><a class="btn primaer" href="#/modul/' + esc(m.id) + '/operatoren">Zur Übersicht</a></div>';
+        LT.$('#auswertung', box).scrollIntoView({ block: 'start', behavior: LT.bewegungReduziert() ? 'auto' : 'smooth' });
+        setTimeout(function () { LT.awardsFeiern(); }, 400);
+      });
+    });
+  }, 'start');
+})();
+
+/* ---- js/aufgaben/45-fall.js ---- */
+/* Fallarbeit: Fehlerfahndung (Pflegebericht von Robartina) und Diagnose-Detektivin */
+(function () {
+  var esc = LT.esc, icon = LT.icon;
+  /** Text in Sätze zerlegen (ohne Lookbehind – läuft auch auf älteren iPads).
+      Abkürzungen wie „z. B.“ oder „S.“ beenden keinen Satz. */
+  LT.saetze = function (text) {
+    var t = String(text).replace(/\s+/g, ' ').trim(), aus = [], start = 0;
+    for (var i = 0; i < t.length; i++) {
+      if ('.!?'.indexOf(t[i]) >= 0 && t[i + 1] === ' ' && /[A-ZÄÖÜ„"(]/.test(t[i + 2] || '') &&
+          !/(^|[\s.])([A-Za-zÄÖÜäöü]|ca|bzw|ggf|evtl|vgl|Fr|Hr|Dr|Nr|Abb|Tab)$/.test(t.slice(start, i))) {
+        aus.push(t.slice(start, i + 1)); start = i + 2;
+      }
+    }
+    if (start < t.length) aus.push(t.slice(start));
+    return aus;
+  };
+  var nurTyp = function (m, typ) { return m.aufgaben.filter(function (a) { return a.typ === typ; }); };
+
+  function uebersicht(m, typ, titel, einleitung, erledigt) {
+    var liste = nurTyp(m, typ);
+    LT.zeige(LT.seitenkopf(esc(titel) + ': ' + esc(m.titel), { pfad: '/modul/' + m.id, text: m.titel }) +
+      '<p class="muted">' + einleitung + '</p><div class="modi">' + liste.map(function (a) {
+        return '<a class="modus" href="#/modul/' + esc(m.id) + '/' + typ + '/' + esc(a.id) + '">' + icon(typ === 'diagnose' ? 'lupe' : 'fehler') +
+          '<div><b>' + esc(a.titel) + '</b>' + (erledigt(a) ? '<span class="chip ok" style="margin-top:6px">' + icon('haken') + 'gelöst</span>' : '') + '</div></a>';
+      }).join('') + '</div>');
+  }
+
+  /* =================== Fehlerfahndung =================== */
+  LT.modus({
+    id: 'fehlerfahndung', titel: 'Fehlerfahndung', icon: 'fehler',
+    text: 'Finde und korrigiere die Fachfehler in Robartinas Pflegebericht',
+    verfuegbar: function (m) { return nurTyp(m, 'fehlerfahndung').length > 0; }
+  });
+  LT.route(/^\/modul\/([^/]+)\/fehlerfahndung$/, function (id) {
+    var m = LT.modul(id);
+    if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+    uebersicht(m, 'fehlerfahndung', 'Fehlerfahndung',
+      'Robartina hat einen Pflegebericht geschrieben, aber es haben sich Fachfehler eingeschlichen. Findest du sie?',
+      function (a) { return !!LT.S.fehlerfahndung[a.id]; });
+  }, 'start');
+
+  LT.route(/^\/modul\/([^/]+)\/fehlerfahndung\/([^/]+)$/, function (id, aid) {
+    var m = LT.modul(id);
+    if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+    var a = nurTyp(m, 'fehlerfahndung').filter(function (x) { return x.id === aid; })[0];
+    if (!a) { LT.gehe('/modul/' + id); return; }
+    LT.modulKontext(m.id);
+    // Bericht in Sätze zerlegen; jeder Fehler gehört zu dem Satz, in dem er steht
+    var saetze = LT.saetze(a.bericht);
+    var fehlerIn = saetze.map(function (s) { return a.fehler.filter(function (f) { return s.indexOf(f.links) >= 0; }); });
+    var h = LT.zeige(LT.seitenkopf(esc(a.titel), { pfad: '/modul/' + m.id + '/fehlerfahndung', text: 'Fehlerfahndung' }, m.titel) +
+      '<section class="karte stapel"><p><b>Schritt 1:</b> Tippe alle Sätze an, die einen Fachfehler enthalten. Es sind <b>' + a.fehler.length + ' Fehler</b> versteckt.</p>' +
+      '<div class="bericht" role="group" aria-label="Pflegebericht">' + saetze.map(function (s, i) {
+        return '<button type="button" class="satz" aria-pressed="false" data-i="' + i + '">' + esc(s) + '</button>';
+      }).join(' ') + '</div>' +
+      '<div><button class="btn primaer" type="button" id="ff-pruefen">Auswahl prüfen</button></div><div id="ff-schritt2"></div></section>');
+    LT.$$('.satz', h).forEach(function (b) {
+      b.addEventListener('click', function () { b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); });
+    });
+    LT.$('#ff-pruefen', h).addEventListener('click', function () {
+      this.hidden = true;
+      var gefunden = [], falschMarkiert = 0;
+      LT.$$('.satz', h).forEach(function (b, i) {
+        var an = b.getAttribute('aria-pressed') === 'true', hatFehler = fehlerIn[i].length > 0;
+        b.disabled = true;
+        if (an && hatFehler) { b.classList.add('richtig'); gefunden = gefunden.concat(fehlerIn[i]); }
+        else if (an) { b.classList.add('falsch'); falschMarkiert++; }
+        else if (hatFehler) b.classList.add('fehlt');
+      });
+      var verpasst = a.fehler.filter(function (f) { return gefunden.indexOf(f) < 0; });
+      var ziel = LT.$('#ff-schritt2', h);
+      ziel.innerHTML = '<p><b>Schritt 2:</b> ' + (gefunden.length
+        ? 'Du hast ' + gefunden.length + ' von ' + a.fehler.length + ' Fehlern gefunden. Wie muss es richtig heißen?'
+        : 'Du hast keinen Fehler gefunden. Hier sind die Korrekturen:') + '</p>' +
+        gefunden.map(function (f, k) {
+          return '<div class="feld korr"><label for="korr' + k + '">Statt „<mark>' + esc(f.links) + '</mark>“ richtig:</label>' +
+            '<input type="text" id="korr' + k + '" autocomplete="off" spellcheck="false"></div>';
+        }).join('') +
+        (gefunden.length ? '<div><button class="btn primaer" type="button" id="ff-korr">Korrekturen prüfen</button></div>' : '') +
+        '<div id="ff-ende" aria-live="polite"></div>';
+      function abschluss(korrigiert) {
+        var n = a.fehler.length;
+        var anteil = Math.max(0, Math.min(1, (gefunden.length + korrigiert - falschMarkiert) / (2 * n)));
+        LT.uebungstag();
+        var xp = LT.xpDazu('richtige_aufgabe', korrigiert);
+        if (anteil >= 1) LT.S.fehlerfahndung[a.id] = LT.iso();
+        LT.speichern(); LT.awardsPruefen(); LT.kopfAktualisieren();
+        LT.$('#ff-ende', h).innerHTML = LT.rueckmeldung(anteil, a,
+          '<p><b>Alle Korrekturen:</b></p><ul class="loesung">' + a.fehler.map(function (f) {
+            return '<li><s>' + esc(f.links) + '</s> → <b>' + esc(f.rechts.split('|')[0]) + '</b></li>';
+          }).join('') + '</ul>' + (falschMarkiert ? '<p>' + falschMarkiert + ' Satz/Sätze hast du markiert, obwohl sie richtig sind.</p>' : '') +
+          (xp ? '<p class="chip gold">+' + xp + ' XP</p>' : '')) +
+          '<div class="reihe"><a class="btn primaer" href="#/modul/' + esc(m.id) + '/fehlerfahndung">Zur Übersicht</a></div>';
+        setTimeout(function () { LT.awardsFeiern(); }, 400);
+      }
+      if (!gefunden.length) { abschluss(0); return; }
+      LT.$('#korr0', h).focus();
+      LT.$('#ff-korr', h).addEventListener('click', function () {
+        this.hidden = true;
+        var korrigiert = 0;
+        gefunden.forEach(function (f, k) {
+          var inp = LT.$('#korr' + k, h);
+          var ok = f.rechts.split('|').some(function (r) { return LT.normal(r) === LT.normal(inp.value); });
+          inp.classList.add(ok ? 'richtig' : 'falsch'); inp.disabled = true;
+          if (ok) korrigiert++;
+        });
+        abschluss(korrigiert);
+      });
+      if (verpasst.length) LT.ansage(verpasst.length + ' Fehler hast du übersehen.');
+    });
+  }, 'start');
+
+  /* =================== Diagnose-Detektivin =================== */
+  LT.modus({
+    id: 'diagnose', titel: 'Diagnose-Detektiv:in', icon: 'lupe',
+    text: 'Decke Hinweise auf und stelle die Diagnose',
+    verfuegbar: function (m) { return nurTyp(m, 'diagnose').length > 0; }
+  });
+  LT.route(/^\/modul\/([^/]+)\/diagnose$/, function (id) {
+    var m = LT.modul(id);
+    if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+    uebersicht(m, 'diagnose', 'Diagnose-Detektiv:in',
+      'Symptome, Befunde und Laborwerte werden Schritt für Schritt aufgedeckt. Je weniger Hinweise du brauchst, desto besser.',
+      function (a) { return LT.S.diagnosen.indexOf(a.id) >= 0; });
+  }, 'start');
+
+  LT.route(/^\/modul\/([^/]+)\/diagnose\/([^/]+)$/, function (id, aid) {
+    var m = LT.modul(id);
+    if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+    var a = nurTyp(m, 'diagnose').filter(function (x) { return x.id === aid; })[0];
+    if (!a) { LT.gehe('/modul/' + id); return; }
+    LT.modulKontext(m.id);
+    var offen = 1, fertig = false;
+    var opts = LT.mischen(a.optionen);
+    var h = LT.zeige(LT.seitenkopf(esc(a.titel), { pfad: '/modul/' + m.id + '/diagnose', text: 'Diagnose-Detektiv:in' }, m.titel) +
+      '<section class="karte stapel"><ol class="hinweise" aria-live="polite"></ol>' +
+      '<div><button class="btn" type="button" id="dx-mehr">' + icon('lupe') + 'Nächsten Hinweis aufdecken</button></div>' +
+      '<fieldset class="optionen"><legend class="frage">Deine Diagnose<span class="kennung">Wähle genau eine Antwort</span></legend>' +
+      opts.map(function (o, i) { return '<label class="opt"><input type="radio" name="dx" value="' + i + '"> <span>' + esc(o) + '</span></label>'; }).join('') +
+      '</fieldset><div><button class="btn primaer" type="button" id="dx-stellen" disabled>Diagnose stellen</button></div><div id="dx-ende" aria-live="polite"></div></section>');
+    function hinweise() {
+      LT.$('.hinweise', h).innerHTML = a.hinweise.slice(0, offen).map(function (x) { return '<li>' + LT.txt(x) + '</li>'; }).join('');
+      LT.$('#dx-mehr', h).disabled = offen >= a.hinweise.length || fertig;
+      LT.$('#dx-mehr', h).textContent = offen >= a.hinweise.length ? 'Alle Hinweise aufgedeckt' : 'Nächsten Hinweis aufdecken (' + offen + '/' + a.hinweise.length + ')';
+    }
+    hinweise();
+    LT.$('#dx-mehr', h).addEventListener('click', function () { offen++; hinweise(); });
+    LT.$$('input[name=dx]', h).forEach(function (r) { r.addEventListener('change', function () { LT.$('#dx-stellen', h).disabled = false; }); });
+    LT.$('#dx-stellen', h).addEventListener('click', function () {
+      var w = LT.$('input[name=dx]:checked', h); if (!w) return;
+      fertig = true; this.hidden = true;
+      var richtig = opts[+w.value] === a.diagnose;
+      LT.$$('.opt', h).forEach(function (l, i) {
+        LT.$('input', l).disabled = true;
+        if (opts[i] === a.diagnose) l.classList.add('richtig'); else if (LT.$('input', l).checked) l.classList.add('falsch');
+      });
+      var gebraucht = offen;
+      offen = a.hinweise.length; hinweise();
+      LT.uebungstag();
+      var xp = 0;
+      if (richtig) {
+        xp = LT.xpDazu('richtige_aufgabe');
+        if (LT.S.diagnosen.indexOf(a.id) < 0) LT.S.diagnosen.push(a.id);
+      }
+      LT.speichern(); LT.awardsPruefen(); LT.kopfAktualisieren();
+      LT.$('#dx-ende', h).innerHTML = LT.rueckmeldung(richtig ? 1 : 0, a,
+        '<p>Du hast ' + gebraucht + ' von ' + a.hinweise.length + ' Hinweisen gebraucht.</p>' + (xp ? '<p class="chip gold">+' + xp + ' XP</p>' : '')) +
+        '<div class="reihe"><a class="btn primaer" href="#/modul/' + esc(m.id) + '/diagnose">Zur Übersicht</a></div>';
+      setTimeout(function () { LT.awardsFeiern(); }, 400);
+    });
+  }, 'start');
+})();
+
+/* ---- js/aufgaben/50-spiele.js ---- */
+/* Spiele: Enzym-Spiel und „Die Reise eines Brötchens“.
+   Inhalte: inhalte/spiele/enzym-spiel.md und inhalte/spiele/broetchen-reise.md */
+(function () {
+  var esc = LT.esc, icon = LT.icon;
+  var SP = LT.D.spiele || {};
+  var norm = function (s) { return String(s).toLowerCase().trim(); };
+
+  /* =================== Enzym-Spiel =================== */
+  var ENZ = SP.enzym;
+  if (ENZ && ENZ.enzyme.length) {
+    LT.modus({
+      id: 'enzym', titel: 'Enzym-Spiel', icon: 'enzym',
+      text: function () { return 'Du bist ein Enzym: Klicke nur, was du spalten kannst! Bestwert: ' + LT.S.enzymBest; },
+      verfuegbar: function (m) { return m.id === ENZ.modul; }
+    });
+
+    /** Welche Enzyme spalten dieses Substrat? */
+    var spalter = function (substrat) {
+      return ENZ.enzyme.filter(function (e) { return e.spaltet.some(function (p) { return norm(p.links) === norm(substrat); }); });
+    };
+    /** Erklärung, warum das gewählte Enzym dieses Substrat NICHT spaltet */
+    var erklaerung = function (enzym, substrat) {
+      var eigen = enzym.nicht.filter(function (p) { return norm(p.links) === norm(substrat); })[0];
+      if (eigen) return { text: eigen.rechts, quelle: enzym.quelle };
+      var andere = spalter(substrat);
+      if (andere.length) {
+        var p = andere[0].spaltet.filter(function (x) { return norm(x.links) === norm(substrat); })[0];
+        return { text: '**' + substrat + '** wird nicht durch ' + enzym.name + ' gespalten, sondern durch ' +
+          andere.map(function (e) { return e.name; }).join(' bzw. ') + '. ' + p.rechts, quelle: andere[0].quelle };
+      }
+      return { text: enzym.name + ' spaltet ' + substrat + ' nicht.', quelle: enzym.quelle };
+    };
+
+    LT.route(/^\/modul\/([^/]+)\/enzym$/, function (id) {
+      var m = LT.modul(id);
+      if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+      LT.modulKontext(m.id);
+      var ruhig = LT.bewegungReduziert();
+      var h = LT.zeige(LT.seitenkopf('Enzym-Spiel', { pfad: '/modul/' + m.id, text: m.titel }, 'Bestwert: ' + LT.S.enzymBest + ' Punkte') +
+        (ENZ.einleitung ? '<p>' + LT.txt(ENZ.einleitung) + '</p>' : '') +
+        '<fieldset class="optionen"><legend class="frage">Welches Enzym bist du?</legend>' +
+        ENZ.enzyme.map(function (e, i) {
+          return '<label class="opt"><input type="radio" name="enzym" value="' + i + '"' + (i === 0 ? ' checked' : '') + '> <span><b>' + esc(e.name) + '</b>' +
+            (e.ort ? ' <span class="muted klein">· ' + esc(e.ort) + '</span>' : '') + (e.info ? '<br><span class="klein">' + LT.txt(e.info) + '</span>' : '') + '</span></label>';
+        }).join('') + '</fieldset>' +
+        '<label class="opt"><input type="checkbox" id="ruhig"' + (ruhig ? ' checked' : '') + '> <span><b>Ruhiger Modus</b><br><span class="klein muted">Nichts fliegt – die Stoffe stehen still. Gut mit Tastatur.</span></span></label>' +
+        '<div><button class="btn primaer" type="button" id="enzym-los">' + icon('enzym') + 'Los geht’s (' + LT.E.enzym_sekunden + ' Sekunden)</button></div>');
+      LT.$('#enzym-los', h).addEventListener('click', function () {
+        spielen(m, ENZ.enzyme[+LT.$('input[name=enzym]:checked', h).value], LT.$('#ruhig', h).checked);
+      });
+    }, 'start');
+
+    var spielen = function (m, enzym, ruhig) {
+      var ziele = enzym.spaltet.map(function (p) { return p.links; });
+      var falle = [];
+      ENZ.enzyme.forEach(function (e) { if (e !== enzym) e.spaltet.forEach(function (p) { falle.push(p.links); }); });
+      enzym.nicht.forEach(function (p) { falle.push(p.links); });
+      falle = falle.filter(function (f, i, a) { return a.indexOf(f) === i && !ziele.some(function (z) { return norm(z) === norm(f); }); });
+      var punkte = 0, fehler = 0, rest = LT.E.enzym_sekunden, pause = false, teile = [], raf, uhr, nachschub, zaehler = 0, bahnen = [];
+
+      var h = LT.zeige(LT.seitenkopf('Du bist: ' + esc(enzym.name), { pfad: '/modul/' + m.id + '/enzym', text: 'Enzym-Spiel' }, 'Enzym-Spiel') +
+        '<div class="reihe zw"><span class="chip" role="timer" id="e-zeit">' + rest + ' s</span><span class="chip ok" id="e-punkte">0 Punkte</span></div>' +
+        '<p class="muted klein">Tippe nur auf Stoffe, die ' + esc(enzym.name) + ' spalten kann.</p>' +
+        '<div class="spielfeld' + (ruhig ? ' ruhig' : '') + '" id="feld" role="group" aria-label="Spielfeld"></div>' +
+        '<div id="e-info" aria-live="assertive"></div>');
+      var feld = LT.$('#feld', h);
+
+      function neuesTeil() {
+        var istZiel = Math.random() < 0.45 || !falle.length;
+        var name = istZiel ? ziele[Math.floor(Math.random() * ziele.length)] : falle[Math.floor(Math.random() * falle.length)];
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'teil'; b.textContent = name;
+        b.setAttribute('data-id', ++zaehler);
+        // Feste Bahnen, damit sich die Stoffe nicht überlappen; die zuletzt benutzten Bahnen bleiben frei
+        var frei = [0, 1, 2, 3, 4, 5].filter(function (b) { return bahnen.indexOf(b) < 0; });
+        var bahn = frei[Math.floor(Math.random() * frei.length)];
+        bahnen.push(bahn); if (bahnen.length > 3) bahnen.shift();
+        var t = { el: b, name: name, ziel: istZiel, x: 100, y: 9 + bahn * 16.4, v: 100 / (7000 + Math.random() * 2000) };
+        if (!ruhig) { b.style.top = t.y + '%'; b.style.left = '100%'; }
+        b.addEventListener('click', function () { treffer(t); });
+        feld.appendChild(b);
+        teile.push(t);
+        return t;
+      }
+      function entfernen(t) { t.el.remove(); teile = teile.filter(function (x) { return x !== t; }); }
+
+      function treffer(t) {
+        if (pause || rest <= 0) return;
+        if (t.ziel) {
+          punkte++;
+          LT.$('#e-punkte', h).textContent = punkte + ' Punkte';
+          t.el.classList.add('weg');
+          LT.ansage('Richtig, ' + t.name + ' gespalten. ' + punkte + ' Punkte.');
+          setTimeout(function () { entfernen(t); if (ruhig) neuesTeil(); }, LT.bewegungReduziert() ? 0 : 250);
+        } else {
+          fehler++;
+          pause = true;
+          t.el.classList.add('falsch');
+          var e = erklaerung(enzym, t.name);
+          LT.$('#e-info', h).innerHTML = '<div class="rueck nein"><b>' + icon('kreuz') + esc(t.name) + ' kannst du nicht spalten</b><p>' +
+            LT.txt(e.text) + '</p>' + LT.liesNach(e.quelle) +
+            '<div><button class="btn primaer" type="button" id="e-weiter">Weiter spielen</button></div></div>';
+          var w = LT.$('#e-weiter', h);
+          w.focus({ preventScroll: false });
+          w.addEventListener('click', function () {
+            LT.$('#e-info', h).innerHTML = '';
+            entfernen(t); if (ruhig) neuesTeil();
+            pause = false; letzte = performance.now();
+            var erstes = LT.$('.teil', feld); if (erstes) erstes.focus({ preventScroll: true });
+          });
+        }
+      }
+
+      var letzte = performance.now();
+      function bewegen(jetzt) {
+        var dt = jetzt - letzte; letzte = jetzt;
+        if (!pause) {
+          teile.slice().forEach(function (t) {
+            t.x -= t.v * dt;
+            t.el.style.left = t.x + '%';
+            if (t.x < -30) entfernen(t);
+          });
+        }
+        raf = requestAnimationFrame(bewegen);
+      }
+
+      if (ruhig) { for (var i = 0; i < 6; i++) neuesTeil(); var erstes = LT.$('.teil', feld); if (erstes) erstes.focus(); }
+      else {
+        neuesTeil();
+        nachschub = setInterval(function () { if (!pause) neuesTeil(); }, 1100);
+        raf = requestAnimationFrame(bewegen);
+      }
+      uhr = setInterval(function () {
+        if (pause) return;
+        rest--;
+        LT.$('#e-zeit', h).textContent = rest + ' s';
+        if (rest === 10) LT.ansage('Noch 10 Sekunden.');
+        if (rest <= 0) ende();
+      }, 1000);
+      LT.aufraeumen = stopp;
+      function stopp() { clearInterval(uhr); clearInterval(nachschub); cancelAnimationFrame(raf); }
+
+      function ende() {
+        stopp(); LT.aufraeumen = null;
+        var rekord = punkte > LT.S.enzymBest;
+        LT.S.enzymBest = Math.max(LT.S.enzymBest, punkte);
+        var xp = LT.xpDazu('enzym_treffer', punkte);
+        LT.uebungstag(); LT.speichern(); LT.awardsPruefen();
+        LT.ergebnisSeite({
+          titel: 'Zeit ist um!', eyebrow: 'Enzym-Spiel · ' + enzym.name, zurueck: { pfad: '/modul/' + m.id, text: m.titel },
+          html: '<p class="prozent">' + punkte + '</p><p>Punkte mit ' + esc(enzym.name) + ' · ' + fehler + ' Fehlklick' + (fehler === 1 ? '' : 's') + '.' +
+            (rekord ? ' <b>Neuer Bestwert!</b>' : ' Bestwert: ' + LT.S.enzymBest + '.') + '</p>' +
+            '<p><b>' + esc(enzym.name) + ' spaltet:</b> ' + enzym.spaltet.map(function (p) { return esc(p.links); }).join(', ') + '</p>' + LT.liesNach(enzym.quelle) +
+            (xp ? '<p class="chip gold">+' + xp + ' XP</p>' : ''),
+          knoepfe: '<a class="btn primaer" href="#/modul/' + esc(m.id) + '/enzym">Nochmal / Enzym wechseln</a><a class="btn" href="#/modul/' + esc(m.id) + '">Zum Modul</a>'
+        });
+      }
+    };
+  }
+
+  /* =================== Die Reise eines Brötchens =================== */
+  var REISE = SP.reise;
+  if (REISE && REISE.stationen.length) {
+    var naehrstoffe = REISE.stationen.map(function (s) { return s.naehrstoff; }).filter(function (n, i, a) { return a.indexOf(n) === i; });
+    LT.modus({
+      id: 'reise', titel: 'Die Reise eines Brötchens', icon: 'broetchen',
+      text: 'Begleite ' + naehrstoffe.join(', ') + ' durch den Verdauungstrakt',
+      verfuegbar: function (m) { return m.id === REISE.modul; }
+    });
+
+    LT.route(/^\/modul\/([^/]+)\/reise$/, function (id) {
+      var m = LT.modul(id);
+      if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+      LT.zeige(LT.seitenkopf('Die Reise eines Brötchens', { pfad: '/modul/' + m.id, text: m.titel }) +
+        (REISE.einleitung ? '<div class="karte flach">' + LT.absaetze(REISE.einleitung) + '</div>' : '') +
+        '<h2>Wen begleitest du?</h2><div class="modi">' + naehrstoffe.map(function (n) {
+          var anz = REISE.stationen.filter(function (s) { return s.naehrstoff === n; }).length;
+          return '<a class="modus" href="#/modul/' + esc(m.id) + '/reise/' + encodeURIComponent(n) + '">' + icon('broetchen') +
+            '<div><b>' + esc(n) + '</b><span>' + anz + ' Stationen</span></div></a>';
+        }).join('') + '</div>');
+    }, 'start');
+
+    LT.route(/^\/modul\/([^/]+)\/reise\/(.+)$/, function (id, n) {
+      var m = LT.modul(id);
+      if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+      LT.modulKontext(m.id);
+      var stationen = REISE.stationen.filter(function (s) { return s.naehrstoff === n; });
+      if (!stationen.length) { LT.gehe('/modul/' + id + '/reise'); return; }
+      var i = 0, richtig = 0, xp = 0;
+      var h = LT.zeige(LT.seitenkopf('Reise: ' + esc(n), { pfad: '/modul/' + m.id + '/reise', text: 'Die Reise eines Brötchens' }) +
+        '<ol class="route" aria-label="Stationen">' + stationen.map(function (s, k) {
+          return '<li data-k="' + k + '"><span class="punkt" aria-hidden="true"></span><span>' + esc(s.ort) + '</span></li>';
+        }).join('') + '</ol><div id="station"></div>');
+
+      function zeigen() {
+        LT.$$('.route li', h).forEach(function (li, k) {
+          li.classList.toggle('jetzt', k === i); li.classList.toggle('vorbei', k < i);
+          if (k === i) li.setAttribute('aria-current', 'step'); else li.removeAttribute('aria-current');
+        });
+        if (i >= stationen.length) return ende();
+        var s = stationen[i];
+        var box = LT.$('#station', h);
+        box.innerHTML = '<section class="karte stapel"><p class="eyebrow">Station ' + (i + 1) + ' von ' + stationen.length + ': ' + esc(s.ort) + '</p>' +
+          '<div class="a-inhalt"></div><div class="a-rueck" aria-live="polite"></div>' +
+          '<div><button class="btn primaer" type="button" data-pruefen disabled>Prüfen</button></div></section>';
+        var steuer = LT.typen['single-choice'].bauen(s, LT.$('.a-inhalt', box));
+        var knopf = LT.$('[data-pruefen]', box);
+        LT.$('.a-inhalt', box).addEventListener('change', function () { knopf.disabled = !steuer.bereit(); });
+        knopf.addEventListener('click', function () {
+          if (knopf.getAttribute('data-weiter')) { i++; zeigen(); return; }
+          var anteil = steuer.pruefen();
+          LT.$$('input', box).forEach(function (x) { x.disabled = true; });
+          LT.uebungstag();
+          if (anteil >= 1) { richtig++; xp += LT.xpDazu('richtige_aufgabe'); }
+          LT.speichern();
+          LT.$('.a-rueck', box).innerHTML = LT.rueckmeldung(anteil, s);
+          LT.$('.a-rueck', box).scrollIntoView({ block: 'nearest', behavior: LT.bewegungReduziert() ? 'auto' : 'smooth' });
+          knopf.textContent = i + 1 < stationen.length ? 'Weiter zur nächsten Station' : 'Ziel erreicht';
+          knopf.setAttribute('data-weiter', '1');
+          knopf.focus({ preventScroll: true });
+          LT.kopfAktualisieren();
+        });
+      }
+      function ende() {
+        LT.awardsPruefen();
+        LT.ergebnisSeite({
+          titel: 'Angekommen!', eyebrow: 'Reise: ' + n, zurueck: { pfad: '/modul/' + m.id + '/reise', text: 'Die Reise eines Brötchens' },
+          html: '<p class="prozent">' + richtig + ' / ' + stationen.length + '</p><p>Stationen richtig gemeistert.</p>' + (xp ? '<p class="chip gold">+' + xp + ' XP</p>' : ''),
+          knoepfe: '<a class="btn primaer" href="#/modul/' + esc(m.id) + '/reise">Anderen Nährstoff begleiten</a><a class="btn" href="#/modul/' + esc(m.id) + '">Zum Modul</a>'
+        });
+      }
+      zeigen();
+    }, 'start');
+  }
 })();
 
 /* ---- js/aufgaben/60-modulcheck.js ---- */

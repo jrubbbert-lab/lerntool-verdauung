@@ -435,6 +435,59 @@ def lies_modul(pfad, glossar, kursversion):
     return m
 
 
+
+# ---------------------------------------------------------------------------
+# Spiele: Enzym-Spiel, Brötchen-Reise, Aprilscherz
+# ---------------------------------------------------------------------------
+ENZYM = {"id", "ort", "info", "quelle", "spaltet", "nicht"}
+STATION = {"id", "nährstoff", "ort", "frage", "erklärung", "quelle"}
+
+
+def lies_spiele(glossar):
+    spiele = {}
+    ordner = os.path.join(INHALTE, "spiele")
+
+    pfad = os.path.join(ordner, "enzym-spiel.md")
+    if os.path.exists(pfad):
+        _, kopf, abschnitte = lies_datei(pfad, lambda t: ENZYM if t.startswith("enzym:") else (
+            {"modul", "einleitung"} if t == "kopf" else None))
+        enzyme = []
+        for a in abschnitte:
+            name = a.typ.split(":", 1)[1].strip()
+            spaltet = [e for _, e, _ in liste(a, "spaltet", "paar")]
+            nicht = [e for _, e, _ in liste(a, "nicht", "paar")]
+            if len(spaltet) < 2:
+                fehler(a.ort(), f"Enzym „{name}“ braucht unter „spaltet:“ mindestens 2 Zeilen „- Substrat => Erklärung“.")
+            enzyme.append({"name": name, "id": a.get("id") or name.lower(), "ort": a.get("ort"), "info": a.get("info"),
+                           "quelle": pruefe_quelle(a), "spaltet": spaltet, "nicht": nicht})
+        spiele["enzym"] = {"modul": kopf.get("modul"), "einleitung": kopf.get("einleitung"), "enzyme": enzyme}
+
+    pfad = os.path.join(ordner, "broetchen-reise.md")
+    if os.path.exists(pfad):
+        _, kopf, abschnitte = lies_datei(pfad, lambda t: STATION if t == "station" else (
+            {"modul", "einleitung"} if t == "kopf" else None))
+        stationen = []
+        for a in abschnitte:
+            opts = [e for _, e, _ in liste(a, "_liste", "option")]
+            if sum(o["richtig"] for o in opts) != 1 or len(opts) < 3:
+                fehler(a.ort(), "Station braucht mindestens 3 Antworten, genau eine mit [x].")
+            for f in ("nährstoff", "ort", "frage"):
+                if not a.get(f):
+                    fehler(a.ort(), f"Station braucht „{f}:“.")
+            stationen.append({"typ": "single-choice", "id": a.get("id") or "reise-" + hashlib.sha1(a.get("frage").encode()).hexdigest()[:6],
+                              "naehrstoff": a.get("nährstoff"), "ort": a.get("ort"), "frage": a.get("frage"),
+                              "optionen": opts, "erklaerung": a.get("erklärung"), "quelle": pruefe_quelle(a)})
+        spiele["reise"] = {"modul": kopf.get("modul"), "einleitung": kopf.get("einleitung"), "stationen": stationen}
+
+    pfad = os.path.join(ordner, "aprilscherz.md")
+    if os.path.exists(pfad):
+        _, _, abschnitte = lies_datei(pfad, lambda t: (TYPEN[t] | GEMEINSAM) if t == "single-choice" else None)
+        for a in abschnitte:
+            d = baue_aufgabe(a, "aprilscherz", False)
+            d["id"] = "aprilscherz"
+            spiele["aprilscherz"] = d
+    return spiele
+
 # ---------------------------------------------------------------------------
 # Zusammenbauen
 # ---------------------------------------------------------------------------
@@ -465,14 +518,7 @@ def daten_erzeugen(kursversion):
                 continue
             art = "image/png" if datei.lower().endswith(".png") else "image/jpeg"
             bilder[a["bild"]] = f"data:{art};base64," + base64.b64encode(open(datei, "rb").read()).decode()
-    spiele = {}
-    for name in ("enzym-spiel", "broetchen-reise"):
-        pfad = os.path.join(INHALTE, "spiele", name + ".json")
-        if os.path.exists(pfad):
-            try:
-                spiele[name] = json.load(open(pfad, encoding="utf-8"))
-            except json.JSONDecodeError as e:
-                fehler(f"spiele/{name}.json", f"Zeile {e.lineno}: {e.msg}")
+    spiele = lies_spiele(glossar)
     return {
         "erstellt": datetime.datetime.now().strftime("%Y-%m-%dT%H:%M"),
         "variante": "kurs" if kursversion else "oeffentlich",

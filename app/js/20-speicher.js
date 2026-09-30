@@ -24,6 +24,7 @@
       reihenfolgeOk: 0,      // fehlerfrei gelöste Reihenfolgeaufgaben
       operatoren: {},        // Operator-ID → Zeitpunkt des Bestehens (kein Text!)
       diagnosen: [],         // IDs richtig gelöster Diagnosefälle
+      fehlerfahndung: {},    // Bericht-ID → Zeitpunkt der fehlerfreien Lösung
       enzymBest: 0,
       aprilscherz: false,
       gesichert: null,       // Zeitpunkt der letzten Sicherung als Datei
