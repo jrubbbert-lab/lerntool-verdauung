@@ -26,6 +26,27 @@ Planungsunterlagen: `planung/01_inhaltsuebersicht.md` (Buchseiten je Modul, Lüc
 - Mobile first, barrierearm (Tastatur, Kontrast AA, `prefers-reduced-motion`), Hell- und Dunkelmodus.
 - Reihenfolgeaufgaben müssen ohne Drag & Drop per Tastatur bzw. Pfeiltasten bedienbar sein.
 
+## Werkzeuge und Arbeitsablauf
+- `python3 werkzeuge/texte_erzeugen.py` erzeugt die Buchtexte mit **gedruckten** Seitenzahlen in `quellen/_text/`. Nötig nach neuem Checkout; MKK per macOS-Vision-OCR über `werkzeuge/ocr.swift`.
+- `python3 werkzeuge/suche.py BEGRIFF` sucht in beiden Büchern. `--seite "MKK S. 354"` zeigt eine ganze Seite.
+- `python3 werkzeuge/quellencheck.py [modul-id]` prüft, ob die Wörter der richtigen Antworten auf der zitierten Seite stehen. **Nach jeder neuen Aufgabe ausführen und jeden Treffer von Hand prüfen.**
+- `python3 werkzeuge/abbildungen_holen.py` holt die in `inhalte/abbildungen.md` eingetragenen i-care-Abbildungen. `--liste SEITE` zeigt die Bilder einer Seite. Die Bilder sind im PDF **ohne Beschriftung** eingebettet.
+- Seitengrenzen im MKK: Die Marke „Seite NNN“ steht im Bild **vor** dem Text der neuen Seite. Bei Zweifeln das Originalbild prüfen; Bilder mit pypdf aus dem PDF lösen.
+- Testmodus: `LT_INHALTE=<ordner> LT_AUSGABE=<datei> python3 build.py` baut mit anderen Inhalten, z. B. einem Testmodul im Scratchpad. **Testinhalte nie in `inhalte/` ablegen.**
+- Vorschau: `.claude/launch.json` (nicht in Git). Der Vorschau-Server hat keinen Zugriff auf den Google-Drive-Ordner, deshalb `docs/index.html` vorher in ein temporäres Verzeichnis kopieren.
+- Git-Identität ist repo-lokal neutral gesetzt (`Lerntool Verdauung`, noreply). Nicht durch die private E-Mail ersetzen.
+
+## Bekannte Quellen-Besonderheiten
+- i-care ist in sich widersprüchlich:
+  - S. 192: Muskularis von Magen **und** Speiseröhre dreischichtig.
+  - S. 205: Speiseröhre zweischichtig.
+  - → keine Aufgaben dazu.
+- i-care S. 242: Die Formulierung zur Vitamin-D-Umwandlung („in der Leber in Vitamin D2“) ist missverständlich → nicht verwenden.
+- Die Bücher weichen voneinander ab:
+  - Verweildauer im Magen: i-care S. 209 vs. MKK S. 355.
+  - Menge des Pankreassafts: i-care S. 223 (1,5–2 l) vs. MKK S. 359 (1,5 l).
+  - → Immer das Buch zitieren, dessen Aussage verwendet wird.
+
 ## Datenschutz (zwingend)
 - Keine personenbezogenen Daten: kein Name, keine Klasse, kein Standort, keine Übertragung an Dritte.
 - Fortschritt automatisch im `localStorage`.

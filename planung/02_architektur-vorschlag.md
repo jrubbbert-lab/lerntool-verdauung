@@ -1,6 +1,13 @@
 # Architekturvorschlag und Umsetzungsplan
 
-Stand: 30.09.2026 · **Status: wartet auf Freigabe**
+Stand: 30.09.2026 · **Status: freigegeben und als MVP umgesetzt** (siehe README.md)
+
+**Nachträgliche Entscheidungen:**
+- Öffentliche Version (`docs/index.html`, GitHub Pages) **ohne** Buchabbildungen. Kursversion (`dist/`, `--kursversion`) **mit** Abbildungen, nur im geschlossenen Kurs.
+- Neutrale Formen mit Doppelpunkt (Praktikant:in).
+- Die 21er Klinge bekommt einen anderen Buchfakt (Perforation, MKK S. 357).
+- Planungsunterlagen liegen in `planung/`. `docs/` ist für GitHub Pages reserviert.
+- Spiele-Inhalte im Markdown-Format statt JSON.
 
 ## Entscheidungen (30.09.2026)
 
@@ -10,7 +17,7 @@ Stand: 30.09.2026 · **Status: wartet auf Freigabe**
 | Abbildungen | Nur i-care, Beschriftungen abgedeckt, keine MKK-Bilder |
 | Lücken (Diabetes, Hepatitis, Adipositas) | Lehrkraft liefert Kapitel nach; Module bis dahin „in Vorbereitung“ |
 | Speicherort | Repo bleibt im Google-Drive-Ordner, GitHub als Backup |
-| **OFFEN** | **Öffentliche Pages + Buchabbildungen widersprechen sich** (siehe Chat) |
+| ~~OFFEN~~ gelöst | Öffentliche Pages ohne Abbildungen + separate Kursversion mit Abbildungen |
 
 ## 1. Leitidee
 
