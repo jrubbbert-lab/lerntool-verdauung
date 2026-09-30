@@ -13,3 +13,13 @@
     fremdquelle: falls das Buch die Abbildung aus einem anderen Werk übernommen hat
     verwendet:   in welchem Modul / welcher Aufgabe
 -->
+
+## Innenansicht des Magens
+datei: abb-9-16-magen-innen.jpg
+buch: i-care
+seite: 207
+abbildung: 9.16
+bildnr: 2
+titel: Innenansicht des Magens. Aufgeschnittener Magen von vorn.
+fremdquelle: Aus: Schünke M, Schulte E, Schumacher U: Prometheus LernAtlas der Anatomie. Illustrationen von Voll M und Wesker K. 5. Aufl. Stuttgart: Thieme; 2018.
+verwendet: Modul Magen, Bildzuordnung „magen-bz-innen“ (nur Kursversion)

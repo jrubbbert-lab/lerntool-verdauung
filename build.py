@@ -67,7 +67,7 @@ KUERZEL = {"karteikarte": "kk", "single-choice": "sc", "multiple-choice": "mc", 
 MODULKOPF = {"id", "titel", "block", "nr", "organ", "status", "beschreibung", "quellen", "icon", "farbe"}
 GLOSSAR = {"deutsch", "erklärung", "quelle"}
 AWARD = {"id", "name", "geheim", "regel", "bedingung", "fakt", "quelle", "form", "farbe1", "farbe2", "icon"}
-ABBILDUNG = {"datei", "buch", "seite", "abbildung", "titel", "fremdquelle", "verwendet"}
+ABBILDUNG = {"datei", "buch", "seite", "abbildung", "titel", "fremdquelle", "verwendet", "bildnr"}
 EINSTELLUNGEN = {"bestehensgrenze", "modulcheck_aufgaben", "operator_bestehensgrenze", "quiz_sekunden",
                  "enzym_sekunden", "xp", "raenge", "bloecke"}
 
@@ -86,7 +86,7 @@ RE_OPTION = re.compile(r"^-\s*\[( |x|X)\]\s+(.+)$")
 RE_PAAR = re.compile(r"^-\s+(.+?)\s*=>\s*(.+)$")
 RE_NUMMER = re.compile(r"^\d+\.\s+(.+)$")
 RE_PUNKT = re.compile(r"^-\s+(.+)$")
-RE_QUELLE = re.compile(r"^(i-care|MKK) S\. \d{3}(–\d{3})?$")
+RE_QUELLE = re.compile(r"^(i-care|MKK) S\. \d{3}(–\d{3})?(, \d{3}(–\d{3})?)*$")
 
 
 # ---------------------------------------------------------------------------
@@ -291,6 +291,9 @@ def baue_aufgabe(a, modul_id, kursversion):
         if len(fehlerliste) < 2:
             fehler(a.ort(), "Fehlerfahndung braucht unter „fehler:“ mindestens 2 Zeilen „- falsch => richtig“.")
         for f in fehlerliste:
+            # Format: - falsch => Musterkorrektur || schlüsselwort1|schlüsselwort2
+            if "||" in f["rechts"]:
+                f["loesung"], f["rechts"] = [t.strip() for t in f["rechts"].split("||", 1)]
             if f["links"] not in a.get("bericht"):
                 fehler(a.ort("fehler"), f"Fehler „{f['links']}“ kommt im Bericht nicht wörtlich vor.")
         d.update(titel=a.get("titel"), bericht=a.get("bericht"), fehler=fehlerliste)
@@ -456,8 +459,8 @@ def lies_spiele(glossar):
             name = a.typ.split(":", 1)[1].strip()
             spaltet = [e for _, e, _ in liste(a, "spaltet", "paar")]
             nicht = [e for _, e, _ in liste(a, "nicht", "paar")]
-            if len(spaltet) < 2:
-                fehler(a.ort(), f"Enzym „{name}“ braucht unter „spaltet:“ mindestens 2 Zeilen „- Substrat => Erklärung“.")
+            if not spaltet:
+                fehler(a.ort(), f"Enzym „{name}“ braucht unter „spaltet:“ mindestens eine Zeile „- Substrat => Erklärung“.")
             enzyme.append({"name": name, "id": a.get("id") or name.lower(), "ort": a.get("ort"), "info": a.get("info"),
                            "quelle": pruefe_quelle(a), "spaltet": spaltet, "nicht": nicht})
         spiele["enzym"] = {"modul": kopf.get("modul"), "einleitung": kopf.get("einleitung"), "enzyme": enzyme}

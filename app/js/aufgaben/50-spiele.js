@@ -66,8 +66,11 @@
       var feld = LT.$('#feld', h);
 
       function neuesTeil() {
-        var istZiel = Math.random() < 0.45 || !falle.length;
-        var name = istZiel ? ziele[Math.floor(Math.random() * ziele.length)] : falle[Math.floor(Math.random() * falle.length)];
+        var istZiel, name, versuche = 0;
+        do {   // im ruhigen Modus keinen Stoff doppelt zeigen
+          istZiel = Math.random() < 0.45 || !falle.length;
+          name = istZiel ? ziele[Math.floor(Math.random() * ziele.length)] : falle[Math.floor(Math.random() * falle.length)];
+        } while (ruhig && ++versuche < 12 && teile.some(function (t) { return t.name === name; }));
         var b = document.createElement('button');
         b.type = 'button'; b.className = 'teil'; b.textContent = name;
         b.setAttribute('data-id', ++zaehler);

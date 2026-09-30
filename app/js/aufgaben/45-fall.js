@@ -87,7 +87,7 @@
         LT.speichern(); LT.awardsPruefen(); LT.kopfAktualisieren();
         LT.$('#ff-ende', h).innerHTML = LT.rueckmeldung(anteil, a,
           '<p><b>Alle Korrekturen:</b></p><ul class="loesung">' + a.fehler.map(function (f) {
-            return '<li><s>' + esc(f.links) + '</s> → <b>' + esc(f.rechts.split('|')[0]) + '</b></li>';
+            return '<li><s>' + esc(f.links) + '</s> → <b>' + esc(f.loesung || f.rechts.split('|')[0]) + '</b></li>';
           }).join('') + '</ul>' + (falschMarkiert ? '<p>' + falschMarkiert + ' Satz/Sätze hast du markiert, obwohl sie richtig sind.</p>' : '') +
           (xp ? '<p class="chip gold">+' + xp + ' XP</p>' : '')) +
           '<div class="reihe"><a class="btn primaer" href="#/modul/' + esc(m.id) + '/fehlerfahndung">Zur Übersicht</a></div>';
@@ -100,7 +100,9 @@
         var korrigiert = 0;
         gefunden.forEach(function (f, k) {
           var inp = LT.$('#korr' + k, h);
-          var ok = f.rechts.split('|').some(function (r) { return LT.normal(r) === LT.normal(inp.value); });
+          // Richtig, wenn die Eingabe eines der erlaubten Schlüsselwörter enthält (z. B. „nüchtern“)
+          var eingabe = LT.normal(inp.value);
+          var ok = eingabe.length > 1 && f.rechts.split('|').some(function (r) { return eingabe.indexOf(LT.normal(r)) >= 0; });
           inp.classList.add(ok ? 'richtig' : 'falsch'); inp.disabled = true;
           if (ok) korrigiert++;
         });
