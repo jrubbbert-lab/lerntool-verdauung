@@ -3,7 +3,7 @@
 id: naehrstoffe
 block: 1
 nr: 1
-quellen: i-care S. 214, 241–248; MKK S. 362
+quellen: i-care S. 214, 238–248; MKK S. 361–362
 beschreibung: Woraus besteht unsere Nahrung, und wie viel Energie steckt darin?
 icon: ernaehrung
 farbe: #2f9e6b
@@ -419,3 +419,146 @@ fehler:
 - fettlöslich => wasserlöslich || wasserlöslich
 erklärung: Im Alter sinkt der Energiebedarf, ältere Menschen benötigen aber genauso viele Nährstoffe. Zum Durstlöschen eignen sich Wasser und ungesüßte Tees; Limonaden enthalten viel Zucker. Vitamin C ist wasserlöslich und kommt in Obst, Gemüse und Kartoffeln vor.
 quelle: i-care S. 242, 246, 248
+
+<!-- =============================== KOHLENHYDRATE: EINFACH-, ZWEIFACH-, VIELFACHZUCKER ===============================
+  Geprüft gegen: i-care S. 214, 238, 239, 246, 248 · MKK S. 361, 362, 370
+-->
+
+## Karteikarte
+vorne: Welche drei Gruppen von Kohlenhydraten unterscheidet man?
+hinten: Einfachzucker ([[Monosaccharide]]), Zweifachzucker ([[Disaccharide]]) und Vielfachzucker ([[Polysaccharide]]).
+quelle: i-care S. 238; MKK S. 361
+
+## Karteikarte
+vorne: Nenne drei Einfachzucker ([[Monosaccharide]]).
+hinten: Glukose (Traubenzucker), Fruktose (Fruchtzucker) und Galaktose.
+quelle: i-care S. 238; MKK S. 361–362, 370
+
+## Karteikarte
+vorne: Nenne drei Zweifachzucker ([[Disaccharide]]).
+hinten: Maltose (Malzzucker), Laktose (Milchzucker) und Saccharose (Rohr- bzw. Rübenzucker).
+quelle: i-care S. 238; MKK S. 361
+
+## Karteikarte
+vorne: Nenne einen wichtigen Vielfachzucker ([[Polysaccharide|Polysaccharid]]) und wo er vorkommt.
+hinten: Stärke, z. B. in Kartoffeln und Reis. Sie ist die häufigste Form der Kohlenhydrate in unserer Nahrung.
+quelle: MKK S. 361; i-care S. 238
+
+## Karteikarte
+vorne: Warum lassen Vielfachzucker den Blutzucker langsamer ansteigen als Einfachzucker?
+hinten: Vielfachzucker müssen erst verdaut und zu Einfachzuckern abgebaut werden, bevor sie ins Blut gelangen. Einfachzucker wie Glukose gelangen sehr schnell ins Blut.
+quelle: i-care S. 246
+
+## Karteikarte
+vorne: Aus welchen Einfachzuckern bestehen Maltose, Laktose und Saccharose?
+hinten: Maltose: Glukose + Glukose. Laktose: Galaktose + Glukose. Saccharose: Glukose + Fruktose.
+quelle: i-care S. 238
+
+## Single-Choice
+id: naehrstoffe-sc-kh-glukose
+frage: Zu welcher Gruppe gehört Glukose (Traubenzucker)?
+- [x] Einfachzucker ([[Monosaccharide]])
+- [ ] Zweifachzucker ([[Disaccharide]])
+- [ ] Vielfachzucker ([[Polysaccharide]])
+quelle: i-care S. 238; MKK S. 361
+
+## Single-Choice
+id: naehrstoffe-sc-kh-staerke
+frage: Zu welcher Gruppe gehört Stärke?
+- [x] Vielfachzucker ([[Polysaccharide]])
+- [ ] Zweifachzucker ([[Disaccharide]])
+- [ ] Einfachzucker ([[Monosaccharide]])
+erklärung: Stärke kommt z. B. in Kartoffeln und Reis vor.
+quelle: i-care S. 238; MKK S. 361
+
+## Single-Choice
+id: naehrstoffe-sc-kh-laktose
+frage: Milchzucker (Laktose) ist ein …
+- [x] Zweifachzucker ([[Disaccharide|Disaccharid]])
+- [ ] Einfachzucker ([[Monosaccharide|Monosaccharid]])
+- [ ] Vielfachzucker ([[Polysaccharide|Polysaccharid]])
+erklärung: Laktose besteht aus Galaktose und Glukose.
+quelle: i-care S. 238; MKK S. 361
+
+## Single-Choice
+id: naehrstoffe-sc-kh-aufnahme
+frage: In welcher Form können Kohlenhydrate aus dem Darm ins Blut aufgenommen werden?
+- [x] nur als Einfachzucker
+- [ ] nur als Zweifachzucker
+- [ ] nur als Vielfachzucker
+erklärung: Zweifach- und Vielfachzucker müssen deshalb erst in Einfachzucker zerlegt werden.
+quelle: i-care S. 238; MKK S. 361
+
+## Single-Choice
+id: naehrstoffe-sc-kh-sport
+frage: Einer Läuferin geht kurz vor dem Ziel die Kraft aus. Was hilft am schnellsten?
+- [x] ein Getränk mit Traubenzucker (Glukose)
+- [ ] eine Portion Kartoffeln (Stärke)
+- [ ] ein Vollkornbrot (Ballaststoffe)
+erklärung: Glukose ist ein Einfachzucker und lässt den Blutzucker rasch ansteigen. Stärke muss erst verdaut werden.
+quelle: i-care S. 246, 248
+
+## Multiple-Choice
+id: naehrstoffe-mc-kh-einfach
+frage: Welche dieser Zucker sind Einfachzucker?
+- [x] Glukose
+- [x] Fruktose
+- [x] Galaktose
+- [ ] Saccharose
+- [ ] Stärke
+quelle: i-care S. 238
+
+## Multiple-Choice
+id: naehrstoffe-mc-kh-zweifach
+frage: Welche dieser Zucker sind Zweifachzucker?
+- [x] Maltose
+- [x] Laktose
+- [x] Saccharose
+- [ ] Glukose
+- [ ] Stärke
+quelle: i-care S. 238; MKK S. 361
+
+## Zuordnung
+id: naehrstoffe-zu-kh-gruppe
+frage: Ordne jedem Zucker seine Gruppe zu.
+- Glukose => Einfachzucker
+- Fruktose => Einfachzucker
+- Saccharose => Zweifachzucker
+- Laktose => Zweifachzucker
+- Stärke => Vielfachzucker
+quelle: i-care S. 238; MKK S. 361
+
+## Zuordnung
+id: naehrstoffe-zu-kh-namen
+frage: Ordne jedem Fachbegriff den deutschen Namen zu.
+- Glukose => Traubenzucker
+- Fruktose => Fruchtzucker
+- Laktose => Milchzucker
+- Maltose => Malzzucker
+quelle: i-care S. 238; MKK S. 362, 370
+
+## Zuordnung
+id: naehrstoffe-zu-kh-fachbegriff
+frage: Ordne jedem Fachbegriff die deutsche Bezeichnung zu.
+- [[Monosaccharide]] => Einfachzucker
+- [[Disaccharide]] => Zweifachzucker
+- [[Polysaccharide]] => Vielfachzucker
+quelle: MKK S. 361; i-care S. 238
+
+## Reihenfolge
+id: naehrstoffe-rf-kh-abbau
+frage: Stärke wird bei der Verdauung schrittweise zerlegt. Bring die Stufen in die richtige Reihenfolge.
+1. Vielfachzucker (Stärke)
+2. Zweifachzucker (Maltose)
+3. Einfachzucker (Glukose)
+quelle: i-care S. 238
+
+## Lückentext
+id: naehrstoffe-lt-kh
+text: Stärke ist ein {{Vielfachzucker|Polysaccharid}}. Milchzucker ist ein {{Zweifachzucker|Disaccharid}}. Traubenzucker ist ein {{Einfachzucker|Monosaccharid}} und gelangt sehr schnell ins Blut.
+quelle: i-care S. 238, 246; MKK S. 370
+
+## Lückentext
+id: naehrstoffe-lt-ballast
+text: Ballaststoffe sind meistens unverdauliche {{Vielfachzucker|Polysaccharide}}. Sie kommen vor allem in {{pflanzlichen}} Lebensmitteln vor, z. B. in Getreide und Gemüse.
+quelle: i-care S. 214
