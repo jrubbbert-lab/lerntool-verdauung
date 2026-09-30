@@ -1,0 +1,83 @@
+/* Wiederverwendbare Bausteine */
+.kopf{background:var(--bg)}
+@supports (background:color-mix(in srgb,red 50%,blue)){.kopf{background:color-mix(in srgb,var(--bg) 88%,transparent)}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid var(--line);background:var(--surface);
+  border-radius:12px;padding:.55rem 1rem;font-weight:600;text-decoration:none;text-align:center}
+.btn:hover{background:var(--surface-2)}
+.btn.primaer{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.btn.primaer:hover{filter:brightness(1.07)}
+.btn.gefahr{color:var(--bad);border-color:var(--bad)}
+.btn.klein{min-height:36px;padding:.3rem .75rem;font-size:.9rem}
+.btn:disabled,.btn[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
+.btn svg{width:18px;height:18px}
+
+.karte{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(16px,3vw,24px);box-shadow:var(--shadow)}
+.karte.flach{box-shadow:none}
+.hinweis{border-radius:12px;padding:12px 14px;background:var(--info-soft);font-size:.95rem}
+.hinweis.gold{background:var(--accent-soft)}
+.hinweis.ok{background:var(--ok-soft)}
+.hinweis.nein{background:var(--bad-soft)}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;padding:.18rem .6rem;border-radius:99px;
+  background:var(--surface-2);border:1px solid var(--line);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip.ok{background:var(--ok-soft);border-color:transparent;color:var(--fg)}
+.chip.gold{background:var(--accent-soft);border-color:transparent;color:var(--fg)}
+.chip svg{width:14px;height:14px}
+
+.balken{height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line)}
+.balken i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .6s ease}
+
+/* Kopf einer Seite */
+.seitenkopf{display:flex;flex-direction:column;gap:6px}
+.zurueck{display:inline-flex;align-items:center;gap:4px;font-weight:600;color:var(--muted);text-decoration:none;font-size:.95rem;width:max-content}
+.zurueck svg{width:18px;height:18px}
+
+/* Rangkarte auf der Startseite */
+.rangkarte{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:center}
+.rangkarte .stufe{font-family:var(--f-display);font-size:1.5rem;font-weight:700}
+.rangkarte .balken{grid-column:1/-1}
+
+/* Blöcke und Modulkarten */
+.block-kopf{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px}
+.module{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.modul{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:10px;text-decoration:none;min-width:0}
+a.modul:hover{border-color:var(--accent)}
+.modul.zu{opacity:.6;border-style:dashed;background:transparent}
+.modul .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff}
+.modul .ic svg{width:26px;height:26px}
+.modul h3{font-size:1.12rem}
+.modul .fuss{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+
+/* Übungsmodi auf der Modulseite */
+.modi{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.modus{display:flex;gap:12px;align-items:flex-start;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none}
+.modus:hover{border-color:var(--accent)}
+.modus svg{width:26px;height:26px;flex:none;color:var(--accent)}
+.modus b{display:block;font-family:var(--f-display);font-size:1.08rem}
+.modus span{font-size:.88rem;color:var(--muted)}
+
+/* Fachbegriffe */
+.begriff{border:0;background:none;padding:0;font-weight:600;text-decoration:underline dotted 2px;text-underline-offset:3px;color:inherit;cursor:help}
+.begriff:hover{color:var(--accent)}
+.lies{font-size:.88rem;color:var(--muted);display:flex;gap:6px;align-items:center}
+.lies svg{width:16px;height:16px;flex:none}
+
+/* Dialog */
+dialog{border:1px solid var(--line);border-radius:18px;padding:0;background:var(--surface);color:var(--fg);max-width:min(560px,calc(100vw - 32px));width:100%;box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(10,14,20,.55)}
+dialog .d-innen{padding:20px;display:flex;flex-direction:column;gap:12px;max-height:80vh;overflow:auto}
+dialog .d-kopf{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+
+/* Formulare */
+.feld{display:flex;flex-direction:column;gap:6px}
+select,input[type=text],textarea{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.55rem .7rem;width:100%;min-height:44px}
+textarea{min-height:200px;resize:vertical;line-height:1.55}
+.wahl{display:grid;gap:10px}
+.wahl label{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:.7rem .9rem;background:var(--surface-2);cursor:pointer}
+.wahl input{width:20px;height:20px;accent-color:var(--accent)}
+
+/* Tabelle (Nachweis) */
+table.liste{width:100%;border-collapse:collapse;font-size:.95rem}
+table.liste th,table.liste td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+table.liste th{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.pruefcode{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.6rem;letter-spacing:.12em;font-weight:700}

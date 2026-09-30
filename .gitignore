@@ -1,0 +1,17 @@
+# Urheberrechtlich geschützt – niemals ins (öffentliche) Repository
+quellen/
+inhalte/bilder/
+
+# Kursversion mit Abbildungen – nur im geschlossenen Kurs verteilen
+dist/
+
+# Früher Prototyp, nur lokale Referenz
+referenz/
+
+# Systemdateien
+.DS_Store
+__pycache__/
+*.pyc
+
+# Lokale Werkzeug-Einstellungen
+.claude/

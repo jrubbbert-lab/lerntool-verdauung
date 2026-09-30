@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'">
+<title>Verdauung lernen</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23c9820f'/%3E%3Cpath d='M11 9c6-2 11 1 10 6s-8 3-8 8 5 2 8 1' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+/* Farben, Schriften, Hell/Dunkel – Palette aus dem Prototyp übernommen */
+:root{
+  --bg:#eef1f5; --surface:#ffffff; --surface-2:#f3f5f8; --line:#d3d9e2;
+  --fg:#141b25; --muted:#556275; --accent:#a8680a; --accent-fg:#ffffff; --accent-soft:#f8e7c6;
+  --ok:#17784e; --ok-soft:#dcf1e6; --bad:#b3312f; --bad-soft:#f8dfdf; --info-soft:#e2ecfa;
+  --shadow:0 1px 2px rgba(20,27,37,.06),0 6px 20px rgba(20,27,37,.07);
+  --f-display:"Avenir Next Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+  --f-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --radius:16px; --leiste-h:64px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1319; --surface:#161d26; --surface-2:#1d2631; --line:#2c3845;
+  --fg:#e7ecf2; --muted:#9aa7b8; --accent:#f2b544; --accent-fg:#1b1305; --accent-soft:#3a2e17;
+  --ok:#4cc38a; --ok-soft:#173327; --bad:#ef6b6b; --bad-soft:#3a1d1f; --info-soft:#1a2a40;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1319; --surface:#161d26; --surface-2:#1d2631; --line:#2c3845;
+  --fg:#e7ecf2; --muted:#9aa7b8; --accent:#f2b544; --accent-fg:#1b1305; --accent-soft:#3a2e17;
+  --ok:#4cc38a; --ok-soft:#173327; --bad:#ef6b6b; --bad-soft:#3a1d1f; --info-soft:#1a2a40;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;
+  padding-bottom:calc(var(--leiste-h) + env(safe-area-inset-bottom) + 24px)}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(1.8rem,5.5vw,2.6rem)}
+h2{font-size:1.45rem}
+h3{font-size:1.15rem}
+p{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--surface);padding:8px 12px;border-radius:8px;z-index:50}
+.skip:focus{left:8px}
+.muted{color:var(--muted)}
+.klein{font-size:.88rem}
+.eyebrow{font-family:var(--f-display);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.stapel{display:flex;flex-direction:column;gap:14px}
+.reihe{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.reihe.zw{justify-content:space-between}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* Kopf, Hauptbereich, untere Navigationsleiste */
+.kopf{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.kopf-innen{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.logo{font-family:var(--f-display);font-weight:700;font-size:1.25rem;text-decoration:none;letter-spacing:.01em;margin-right:auto}
+.logo span{color:var(--accent);margin-left:.25em}
+.rang-chip{display:flex;align-items:center;gap:8px;font-size:.85rem;min-width:0}
+.rang-chip b{font-family:var(--f-display);font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw}
+.rang-chip .xpz{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;flex:none}
+.icon-btn svg{width:20px;height:20px}
+
+main{max-width:980px;margin:0 auto;padding:20px 16px 8px;display:flex;flex-direction:column;gap:24px;outline:none}
+
+.leiste{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(4,1fr);
+  background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);height:calc(var(--leiste-h) + env(safe-area-inset-bottom))}
+.leiste a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;font-size:.78rem;font-weight:600;color:var(--muted)}
+.leiste a[aria-current="page"]{color:var(--accent)}
+.leiste .ni svg{width:24px;height:24px}
+@media (min-width:900px){
+  body{padding-bottom:24px}
+  .leiste{position:sticky;top:61px;bottom:auto;height:auto;max-width:980px;margin:0 auto;display:flex;gap:4px;background:transparent;border:0;padding:8px 16px 0}
+  .leiste a{flex-direction:row;gap:8px;padding:8px 14px;border-radius:10px;font-size:.95rem}
+  .leiste a[aria-current="page"]{background:var(--accent-soft);color:var(--fg)}
+  .leiste .ni svg{width:20px;height:20px}
+}
+
+/* Wiederverwendbare Bausteine */
+.kopf{background:var(--bg)}
+@supports (background:color-mix(in srgb,red 50%,blue)){.kopf{background:color-mix(in srgb,var(--bg) 88%,transparent)}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid var(--line);background:var(--surface);
+  border-radius:12px;padding:.55rem 1rem;font-weight:600;text-decoration:none;text-align:center}
+.btn:hover{background:var(--surface-2)}
+.btn.primaer{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.btn.primaer:hover{filter:brightness(1.07)}
+.btn.gefahr{color:var(--bad);border-color:var(--bad)}
+.btn.klein{min-height:36px;padding:.3rem .75rem;font-size:.9rem}
+.btn:disabled,.btn[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
+.btn svg{width:18px;height:18px}
+
+.karte{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(16px,3vw,24px);box-shadow:var(--shadow)}
+.karte.flach{box-shadow:none}
+.hinweis{border-radius:12px;padding:12px 14px;background:var(--info-soft);font-size:.95rem}
+.hinweis.gold{background:var(--accent-soft)}
+.hinweis.ok{background:var(--ok-soft)}
+.hinweis.nein{background:var(--bad-soft)}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;padding:.18rem .6rem;border-radius:99px;
+  background:var(--surface-2);border:1px solid var(--line);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip.ok{background:var(--ok-soft);border-color:transparent;color:var(--fg)}
+.chip.gold{background:var(--accent-soft);border-color:transparent;color:var(--fg)}
+.chip svg{width:14px;height:14px}
+
+.balken{height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line)}
+.balken i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .6s ease}
+
+/* Kopf einer Seite */
+.seitenkopf{display:flex;flex-direction:column;gap:6px}
+.zurueck{display:inline-flex;align-items:center;gap:4px;font-weight:600;color:var(--muted);text-decoration:none;font-size:.95rem;width:max-content}
+.zurueck svg{width:18px;height:18px}
+
+/* Rangkarte auf der Startseite */
+.rangkarte{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:center}
+.rangkarte .stufe{font-family:var(--f-display);font-size:1.5rem;font-weight:700}
+.rangkarte .balken{grid-column:1/-1}
+
+/* Blöcke und Modulkarten */
+.block-kopf{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px}
+.module{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.modul{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:10px;text-decoration:none;min-width:0}
+a.modul:hover{border-color:var(--accent)}
+.modul.zu{opacity:.6;border-style:dashed;background:transparent}
+.modul .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff}
+.modul .ic svg{width:26px;height:26px}
+.modul h3{font-size:1.12rem}
+.modul .fuss{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+
+/* Übungsmodi auf der Modulseite */
+.modi{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.modus{display:flex;gap:12px;align-items:flex-start;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none}
+.modus:hover{border-color:var(--accent)}
+.modus svg{width:26px;height:26px;flex:none;color:var(--accent)}
+.modus b{display:block;font-family:var(--f-display);font-size:1.08rem}
+.modus span{font-size:.88rem;color:var(--muted)}
+
+/* Fachbegriffe */
+.begriff{border:0;background:none;padding:0;font-weight:600;text-decoration:underline dotted 2px;text-underline-offset:3px;color:inherit;cursor:help}
+.begriff:hover{color:var(--accent)}
+.lies{font-size:.88rem;color:var(--muted);display:flex;gap:6px;align-items:center}
+.lies svg{width:16px;height:16px;flex:none}
+
+/* Dialog */
+dialog{border:1px solid var(--line);border-radius:18px;padding:0;background:var(--surface);color:var(--fg);max-width:min(560px,calc(100vw - 32px));width:100%;box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(10,14,20,.55)}
+dialog .d-innen{padding:20px;display:flex;flex-direction:column;gap:12px;max-height:80vh;overflow:auto}
+dialog .d-kopf{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+
+/* Formulare */
+.feld{display:flex;flex-direction:column;gap:6px}
+select,input[type=text],textarea{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.55rem .7rem;width:100%;min-height:44px}
+textarea{min-height:200px;resize:vertical;line-height:1.55}
+.wahl{display:grid;gap:10px}
+.wahl label{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:.7rem .9rem;background:var(--surface-2);cursor:pointer}
+.wahl input{width:20px;height:20px;accent-color:var(--accent)}
+
+/* Tabelle (Nachweis) */
+table.liste{width:100%;border-collapse:collapse;font-size:.95rem}
+table.liste th,table.liste td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+table.liste th{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.pruefcode{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.6rem;letter-spacing:.12em;font-weight:700}
+
+/* Award-Wand, Plaketten, Feier-Animation, Glossar */
+.wand{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
+.award{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 8px 12px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.award:hover{background:var(--surface-2)}
+.award .plakette{width:88px;height:88px;transition:transform .25s ease}
+.award:hover .plakette{transform:scale(1.05) rotate(-3deg)}
+.award.zu .plakette{filter:grayscale(1) brightness(.8);opacity:.38}
+.award .schloss{position:absolute;top:60px;left:50%;transform:translateX(-50%);width:30px;height:30px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--line);display:grid;place-items:center}
+.award .schloss svg{width:16px;height:16px}
+.award .n{font-family:var(--f-display);font-weight:700;font-size:1.02rem;line-height:1.15}
+.award .d{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.mini{width:70%;height:5px;border-radius:99px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line)}
+.mini i{display:block;height:100%;background:var(--muted)}
+
+.feier{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.plakette.gross{width:150px;height:150px}
+.plakette.grau{filter:grayscale(1);opacity:.5}
+.feier .fakt{max-width:44ch}
+dialog[open] .feier .plakette.gross:not(.grau){animation:plakette-rein .9s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes plakette-rein{
+  0%{transform:scale(.2) rotate(-40deg);opacity:0;filter:drop-shadow(0 0 0 transparent)}
+  60%{transform:scale(1.12) rotate(6deg);opacity:1;filter:drop-shadow(0 0 18px var(--accent))}
+  100%{transform:scale(1) rotate(0);filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
+}
+@media (prefers-reduced-motion: reduce){
+  dialog[open] .feier .plakette.gross:not(.grau){animation:plakette-sanft .4s ease both}
+  @keyframes plakette-sanft{from{opacity:0}to{opacity:1}}
+}
+
+.glossar{margin:0;display:grid;gap:10px}
+.g-eintrag{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.g-eintrag dt{font-weight:700}
+.g-eintrag dd{margin:4px 0 0;display:flex;flex-direction:column;gap:4px}
+
+@media print{.nachweis{display:none}.nachweis-druck::after{content:"Der Nachweis wird nur auf dem Bildschirm angezeigt."}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#haupt">Zum Inhalt springen</a>
+<header class="kopf">
+  <div class="kopf-innen">
+    <a class="logo" href="#/" aria-label="Startseite">Verdauung<span>lernen</span></a>
+    <div class="rang-chip" id="rang-chip" aria-live="polite"></div>
+    <button class="icon-btn" id="thema-btn" type="button" aria-label="Hell- oder Dunkelmodus umschalten"></button>
+  </div>
+</header>
+<main id="haupt" tabindex="-1"></main>
+<nav class="leiste" aria-label="Hauptnavigation">
+  <a href="#/" data-nav="start"><span class="ni" data-icon="haus"></span>Lernen</a>
+  <a href="#/awards" data-nav="awards"><span class="ni" data-icon="pokal"></span>Awards</a>
+  <a href="#/glossar" data-nav="glossar"><span class="ni" data-icon="buch"></span>Glossar</a>
+  <a href="#/mehr" data-nav="mehr"><span class="ni" data-icon="menue"></span>Mehr</a>
+</nav>
+<div id="ansage" class="sr-only" aria-live="polite"></div>
+<dialog id="dialog" aria-labelledby="dialog-titel"></dialog>
+<script>
+window.INHALT={"erstellt":"2026-09-30T13:48","variante":"oeffentlich","buecher":{"i-care":"I care Anatomie, Physiologie","MKK":"Mensch Körper Krankheit"},"einstellungen":{"bestehensgrenze":80,"modulcheck_aufgaben":12,"operator_bestehensgrenze":60,"quiz_sekunden":90,"enzym_sekunden":60,"xp":{"richtige_aufgabe":10,"modul_bestanden":50,"modul_erstmals_bestanden":100,"karte_weiter":2,"operator_bestanden":30,"quiz_richtig":5,"enzym_treffer":1,"award":25},"raenge":[{"xp":0,"w":"Praktikantin","m":"Praktikant","n":"Praktikant:in"},{"xp":150,"w":"Famulantin","m":"Famulant","n":"Famulant:in"},{"xp":400,"w":"PJlerin","m":"PJler","n":"PJler:in"},{"xp":800,"w":"Assistenzärztin","m":"Assistenzarzt","n":"Assistenzärzt:in"},{"xp":1400,"w":"Oberärztin","m":"Oberarzt","n":"Oberärzt:in"},{"xp":2200,"w":"Chefärztin","m":"Chefarzt","n":"Chefärzt:in"},{"xp":3200,"w":"Gesundheitsministerin","m":"Gesundheitsminister","n":"Gesundheitsminister:in"}],"bloecke":[{"nr":1,"titel":"Grundlagen"},{"nr":2,"titel":"Organe"},{"nr":3,"titel":"Physiologie"},{"nr":4,"titel":"Erkrankungen"}]},"glossar":{},"awards":[{"id":"nachteule","name":{"w":"Nachteule","m":"Nachteule","n":"Nachteule"},"geheim":true,"regel":["modul_uhrzeit","0","4"],"bedingung":"Schließe ein Modul zwischen 0 und 4 Uhr ab.","fakt":"","quelle":[],"form":"zacken","farbe1":"#3d4f9e","farbe2":"#1b2352","icon":"mond"},{"id":"frueher-vogel","name":{"w":"Früher Vogel","m":"Früher Vogel","n":"Früher Vogel"},"geheim":false,"regel":["modul_uhrzeit","5","7"],"bedingung":"Schließe ein Modul zwischen 5 und 7 Uhr ab.","fakt":"","quelle":[],"form":"rund","farbe1":"#f6c453","farbe2":"#e0782f","icon":"sonne"},{"id":"viszeralchirurgin","name":{"w":"Viszeralchirurgin","m":"Viszeralchirurg","n":"Viszeralchirurg:in"},"geheim":false,"regel":["operatoren_afb","III"],"bedingung":"Bestehe alle Operatoraufgaben aus Anforderungsbereich III.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#5b6b82","farbe2":"#2b3445","icon":"skalpell"},{"id":"darmcharmeur","name":{"w":"Darmcharmeur","m":"Darmcharmeur","n":"Darmcharmeur"},"geheim":false,"regel":["modul_mehrfach","duenndarm,dickdarm","2","80"],"bedingung":"Schaffe Dünndarm und Dickdarm jeweils zweimal mit mindestens 80 %.","fakt":"","quelle":[],"form":"rund","farbe1":"#e57aa6","farbe2":"#9c3466","icon":"darm"},{"id":"gastroenterologin","name":{"w":"Gastroenterologin","m":"Gastroenterologe","n":"Gastroenterolog:in"},"geheim":false,"regel":["bloecke_bestanden","2"],"bedingung":"Bestehe alle Organmodule.","fakt":"","quelle":[],"form":"schild","farbe1":"#2f9e6b","farbe2":"#17573a","icon":"stethoskop"},{"id":"klinge-21","name":{"w":"21er Klinge","m":"21er Klinge","n":"21er Klinge"},"geheim":false,"regel":["serie_richtig","21"],"bedingung":"Beantworte 21 Aufgaben in Folge richtig.","fakt":"","quelle":[],"form":"zacken","farbe1":"#b9c3cf","farbe2":"#5d6978","icon":"klinge"},{"id":"hoch-hinaus","name":{"w":"Hoch hinaus","m":"Hoch hinaus","n":"Hoch hinaus"},"geheim":false,"regel":["verbesserung","30"],"bedingung":"Verbessere dich in einem Modul um mindestens 30 Prozentpunkte.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#56b4e9","farbe2":"#1f5f9e","icon":"pfeil"},{"id":"drei-tage","name":{"w":"3-Tage-Meisterin","m":"3-Tage-Meister","n":"3-Tage-Meister:in"},"geheim":false,"regel":["tage_in_folge","3"],"bedingung":"Übe an drei Tagen in Folge.","fakt":"","quelle":[],"form":"rund","farbe1":"#f2b544","farbe2":"#c9820f","icon":"kalender"},{"id":"ballaststoff","name":{"w":"Ballaststoff","m":"Ballaststoff","n":"Ballaststoff"},"geheim":false,"regel":["tage_in_folge","14"],"bedingung":"Übe an 14 Tagen in Folge.","fakt":"","quelle":[],"form":"zacken","farbe1":"#8fbf4a","farbe2":"#4b7a1f","icon":"aehre"},{"id":"leberwurst","name":{"w":"Beleidigte Leberwurst","m":"Beleidigte Leberwurst","n":"Beleidigte Leberwurst"},"geheim":false,"regel":["unter_dann_ueber","50","90"],"bedingung":"Schaffe ein Modul, in dem du einmal unter 50 % lagst, später mit über 90 %.","fakt":"","quelle":[],"form":"schild","farbe1":"#c47a5a","farbe2":"#7a3a22","icon":"leber"},{"id":"saeurefest","name":{"w":"Säurefest","m":"Säurefest","n":"Säurefest"},"geheim":false,"regel":["modul_prozent","magen","100"],"bedingung":"Schaffe das Modul Magen mit 100 %.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#d6e04a","farbe2":"#8a9a1a","icon":"tropfen"},{"id":"zottenkoenigin","name":{"w":"Zottenkönigin","m":"Zottenkönig","n":"Zottenkönig:in"},"geheim":false,"regel":["modul_mehrfach","duenndarm","2","80"],"bedingung":"Schaffe das Modul Dünndarm zweimal mit mindestens 80 %.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f2b544","farbe2":"#b8478a","icon":"krone"},{"id":"enzym-jaegerin","name":{"w":"Enzym-Jägerin","m":"Enzym-Jäger","n":"Enzym-Jäger:in"},"geheim":false,"regel":["enzym_punkte","25"],"bedingung":"Erreiche im Enzym-Spiel mindestens 25 Punkte in einer Runde.","fakt":"","quelle":[],"form":"rund","farbe1":"#1f8fa3","farbe2":"#0e4f5c","icon":"enzym"},{"id":"karteikarten-koenigin","name":{"w":"Karteikarten-Königin","m":"Karteikarten-König","n":"Karteikarten-König:in"},"geheim":false,"regel":["karten_fach5","100"],"bedingung":"Bringe 100 Karteikarten ins letzte Leitner-Fach.","fakt":"","quelle":[],"form":"schild","farbe1":"#9b7be0","farbe2":"#4d2f9e","icon":"karten"},{"id":"diagnose-detektivin","name":{"w":"Diagnose-Detektivin","m":"Diagnose-Detektiv","n":"Diagnose-Detektiv:in"},"geheim":false,"regel":["diagnosen","5"],"bedingung":"Stelle in fünf Fallbeispielen die richtige Diagnose.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#4a5a73","farbe2":"#1c2533","icon":"lupe"},{"id":"insulin-ass","name":{"w":"Insulin-Ass","m":"Insulin-Ass","n":"Insulin-Ass"},"geheim":false,"regel":["modul_prozent","diabetes","100"],"bedingung":"Schaffe das Modul Diabetes mellitus ohne Fehler.","fakt":"","quelle":[],"form":"rund","farbe1":"#d0a21a","farbe2":"#8a6400","icon":"spritze"},{"id":"pfoertnerin","name":{"w":"Pförtnerin","m":"Pförtner","n":"Pförtner:in"},"geheim":false,"regel":["block_frei","2"],"bedingung":"Schalte den Block „Organe“ frei.","fakt":"","quelle":[],"form":"schild","farbe1":"#c9820f","farbe2":"#7a4a05","icon":"tor"},{"id":"enterohepatisch","name":{"w":"Enterohepatischer Kreislauf","m":"Enterohepatischer Kreislauf","n":"Enterohepatischer Kreislauf"},"geheim":false,"regel":["modul_abschluesse","3"],"bedingung":"Schließe dasselbe Modul dreimal ab.","fakt":"","quelle":[],"form":"rund","farbe1":"#6bbf7a","farbe2":"#2d7a3c","icon":"kreislauf"},{"id":"gut-gekaut","name":{"w":"Gut gekaut ist halb verdaut","m":"Gut gekaut ist halb verdaut","n":"Gut gekaut ist halb verdaut"},"geheim":false,"regel":["modul_prozent","mundhoehle","100"],"bedingung":"Schaffe das Modul Mundhöhle und Speiseröhre mit 100 %.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f07c5a","farbe2":"#b03a1e","icon":"zahn"},{"id":"peristaltik-profi","name":{"w":"Peristaltik-Profi","m":"Peristaltik-Profi","n":"Peristaltik-Profi"},"geheim":false,"regel":["reihenfolge_fehlerfrei","10"],"bedingung":"Löse zehn Reihenfolgeaufgaben ohne Fehler.","fakt":"","quelle":[],"form":"sechseck","farbe1":"#e57aa6","farbe2":"#7a52c7","icon":"welle"},{"id":"mikrovilli","name":{"w":"Mikrovilli-Millionärin","m":"Mikrovilli-Millionär","n":"Mikrovilli-Millionär:in"},"geheim":false,"regel":["xp","1000"],"bedingung":"Sammle 1.000 XP.","fakt":"","quelle":[],"form":"zacken","farbe1":"#f6d365","farbe2":"#d4a017","icon":"mikrovilli"},{"id":"bauchgefuehl","name":{"w":"Bauchgefühl","m":"Bauchgefühl","n":"Bauchgefühl"},"geheim":false,"regel":["quiz_serie","10"],"bedingung":"Beantworte im Quiz auf Zeit zehn Fragen in Folge richtig.","fakt":"","quelle":[],"form":"rund","farbe1":"#ff9a76","farbe2":"#c4452b","icon":"blitz"},{"id":"pechvogel","name":{"w":"Pechvogel-Bezwingerin","m":"Pechvogel-Bezwinger","n":"Pechvogel-Bezwinger:in"},"geheim":true,"regel":["freitag13","80"],"bedingung":"Schaffe an einem Freitag, dem 13., ein Modul mit mindestens 80 %.","fakt":"","quelle":[],"form":"schild","farbe1":"#2b2b2b","farbe2":"#6b6b6b","icon":"kleeblatt"},{"id":"aprilscherz","name":{"w":"Aprilscherz","m":"Aprilscherz","n":"Aprilscherz"},"geheim":true,"regel":["aprilscherz"],"bedingung":"Durchschaue am 1. April die Scherzfrage.","fakt":"","quelle":[],"form":"zacken","farbe1":"#ff6fb5","farbe2":"#7a5cff","icon":"narr"}],"module":[{"id":"naehrstoffe","titel":"Nährstoffe","block":1,"nr":1,"organ":"","beschreibung":"Woraus besteht unsere Nahrung, und wie viel Energie steckt darin?","quellen":"i-care S. 238–248; MKK S. 362","icon":"ernaehrung","farbe":"#2f9e6b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"aufbau","titel":"Aufgaben und Aufbau des Verdauungssystems","block":1,"nr":2,"organ":"","beschreibung":"Vom Mund bis zum After: der Weg der Nahrung im Überblick.","quellen":"i-care S. 188–192; MKK S. 344–347","icon":"verdauungstrakt","farbe":"#3b7dd8","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"mundhoehle","titel":"Mundhöhle und Speiseröhre","block":2,"nr":1,"organ":"","beschreibung":"Zähne, Zunge, Speichel und Schlucken.","quellen":"i-care S. 193–205; MKK S. 347–354","icon":"mund","farbe":"#d8573b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"magen","titel":"Magen","block":2,"nr":2,"organ":"","beschreibung":"Magensaft, Magenschleimhaut und Magenentleerung.","quellen":"i-care S. 205–209; MKK S. 353–357","icon":"magen","farbe":"#c9820f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"duenndarm","titel":"Dünndarm","block":2,"nr":3,"organ":"","beschreibung":"Zotten, Mikrovilli und Resorption.","quellen":"i-care S. 210–214; MKK S. 357–359","icon":"darm","farbe":"#b8478a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"dickdarm","titel":"Dickdarm","block":2,"nr":4,"organ":"","beschreibung":"Kolon, Rektum und Stuhlentleerung.","quellen":"i-care S. 215–220; MKK S. 362–367","icon":"darm","farbe":"#7a52c7","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"pankreas","titel":"Pankreas","block":2,"nr":5,"organ":"","beschreibung":"Die Bauchspeicheldrüse und ihre Verdauungsenzyme.","quellen":"i-care S. 221–223; MKK S. 359, 367–368","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"leber","titel":"Leber und Gallenblase","block":2,"nr":6,"organ":"","beschreibung":"Stoffwechselzentrale und Galle.","quellen":"i-care S. 224–237; MKK S. 359–361, 368–372","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"verdauung","titel":"Verdauung der Nährstoffe","block":3,"nr":1,"organ":"","beschreibung":"Wie Enzyme Kohlenhydrate, Eiweiße und Fette zerlegen.","quellen":"i-care S. 238–241; MKK S. 354, 359–362","icon":"enzym","farbe":"#1f8fa3","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"crohn","titel":"Morbus Crohn","block":4,"nr":1,"organ":"duenndarm, dickdarm","beschreibung":"Chronisch-entzündliche Darmerkrankung.","quellen":"MKK S. 366","icon":"darm","farbe":"#7a52c7","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"adipositas","titel":"Adipositas","block":4,"nr":2,"organ":"naehrstoffe","beschreibung":"Übergewicht und Body-Mass-Index.","quellen":"i-care S. 244–247","icon":"ernaehrung","farbe":"#2f9e6b","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"hepatitis","titel":"Hepatitis","block":4,"nr":3,"organ":"leber","beschreibung":"Entzündung der Leber.","quellen":"MKK S. 371; i-care S. 229–231","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"diabetes","titel":"Diabetes mellitus","block":4,"nr":4,"organ":"pankreas","beschreibung":"Zuckerkrankheit.","quellen":"MKK S. 367; i-care S. 223, 231","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"leberzirrhose","titel":"Leberzirrhose","block":4,"nr":5,"organ":"leber","beschreibung":"Der narbige Umbau der Leber.","quellen":"MKK S. 371–372; i-care S. 228","icon":"leber","farbe":"#9c4a2f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"pankreatitis","titel":"Pankreatitis","block":4,"nr":6,"organ":"pankreas","beschreibung":"Entzündung der Bauchspeicheldrüse.","quellen":"MKK S. 367; i-care S. 222","icon":"pankreas","farbe":"#d0a21a","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"},{"id":"magenkarzinom","titel":"Magenkarzinom","block":4,"nr":7,"organ":"magen","beschreibung":"Bösartiger Tumor des Magens.","quellen":"MKK S. 356–357","icon":"magen","farbe":"#c9820f","aufgaben":[],"karten":[],"operatoren":[],"status":"vorbereitung"}],"bilder":{},"spiele":{}};
+</script>
+<script>
+/* ---- js/10-hilfen.js ---- */
+/* Hilfsfunktionen, die überall gebraucht werden. Alles hängt am Namensraum LT. */
+'use strict';
+var LT = window.LT = {};
+LT.D = window.INHALT;
+
+LT.$ = function (sel, wurzel) { return (wurzel || document).querySelector(sel); };
+LT.$$ = function (sel, wurzel) { return Array.prototype.slice.call((wurzel || document).querySelectorAll(sel)); };
+
+/** HTML-sicher machen */
+LT.esc = function (s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+};
+
+/** Zufällige Reihenfolge (Fisher-Yates), gibt eine Kopie zurück */
+LT.mischen = function (arr) {
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+  return a;
+};
+
+/** Datumshilfen – alles in lokaler Gerätezeit */
+LT.jetzt = function () { return new Date(); };
+LT.iso = function (d) { return (d || new Date()).toISOString(); };
+LT.tag = function (d) {
+  d = d || new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+};
+LT.datum = function (iso) { return new Date(iso).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' }); };
+LT.uhrzeit = function (iso) { return new Date(iso).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' }); };
+LT.zahl = function (n) { return Number(n).toLocaleString('de-DE'); };
+
+/** Einfacher, schneller 53-Bit-Hash (cyrb53). Kein Krypto – reicht gegen Handänderungen. */
+LT.hash = function (str, seed) {
+  var h1 = 0xdeadbeef ^ (seed || 0), h2 = 0x41c6ce57 ^ (seed || 0);
+  for (var i = 0, ch; i < str.length; i++) {
+    ch = str.charCodeAt(i);
+    h1 = Math.imul(h1 ^ ch, 2654435761);
+    h2 = Math.imul(h2 ^ ch, 1597334677);
+  }
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+  return (h2 >>> 0).toString(16).padStart(8, '0') + (h1 >>> 0).toString(16).padStart(8, '0');
+};
+
+/** Screenreader-Ansage */
+LT.ansage = function (text) {
+  var el = LT.$('#ansage');
+  el.textContent = '';
+  setTimeout(function () { el.textContent = text; }, 30);
+};
+
+LT.bewegungReduziert = function () {
+  return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+};
+
+/* ---------------------------------------------------------------------------
+   Icons (24×24, Linien). Eigene Zeichnungen – keine Bildrechte nötig.
+--------------------------------------------------------------------------- */
+LT.ICONS = {
+  haus: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
+  pokal: '<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4"/><path d="M12 13v4M8 20h8M9 20l1-3h4l1 3"/>',
+  buch: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h7"/>',
+  menue: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+  sonne: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  mond: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
+  zurueck: '<path d="M15 5l-7 7 7 7"/>',
+  weiter: '<path d="M9 5l7 7-7 7"/>',
+  schloss: '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+  haken: '<path d="M4 12l5 5L20 6"/>',
+  kreuz: '<path d="M6 6l12 12M18 6L6 18"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
+  download: '<path d="M12 4v11M7 10l5 5 5-5"/><path d="M5 19h14"/>',
+  upload: '<path d="M12 16V5M7 10l5-5 5 5"/><path d="M5 19h14"/>',
+  auge: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  schild_ds: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  hoch: '<path d="M6 15l6-6 6 6"/>',
+  runter: '<path d="M6 9l6 6 6-6"/>',
+  stern: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+  /* Module */
+  ernaehrung: '<path d="M12 7c-3-3-8-1-8 4 0 5 4 10 8 9 4 1 8-4 8-9 0-5-5-7-8-4z"/><path d="M12 7c0-2 1-4 3-4"/>',
+  verdauungstrakt: '<path d="M12 2v5c0 2-4 2-4 5 0 2 2 3 4 3s5 1 5 3-3 3-5 3-4 1-4 1"/><circle cx="12" cy="3" r="1"/>',
+  mund: '<path d="M3 11c3 4 15 4 18 0"/><path d="M3 11c3-2 6-2 9 0 3-2 6-2 9 0"/><path d="M8 14v2M12 15v2M16 14v2"/>',
+  magen: '<path d="M9 3v4c0 2-4 3-4 8a6 6 0 0 0 11 3c1-2 3-2 4-1"/><path d="M9 7c3 0 6 1 6 4"/>',
+  darm: '<path d="M5 5h14v4H7v4h12v4H5"/><path d="M5 17v3"/>',
+  pankreas: '<path d="M3 13c2-4 6-5 9-4s7 0 9-2c0 5-4 8-9 8-3 0-5 1-7 3-2-1-3-3-2-5z"/>',
+  leber: '<path d="M3 9c3-3 10-4 18-2-1 6-5 11-11 11-4 0-7-4-7-9z"/><path d="M13 7v9"/>',
+  enzym: '<path d="M4 12a6 6 0 0 1 10-4.5L10 12l4 4.5A6 6 0 0 1 4 12z"/><circle cx="18" cy="12" r="3"/>',
+  /* Übungsmodi */
+  karten: '<rect x="3" y="6" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v10"/>',
+  check: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8l1.5 1.5L12 7M8 14l1.5 1.5L12 13M14 8h3M14 14h3"/>',
+  stift: '<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>',
+  blitz: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+  lupe: '<circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/>',
+  bild: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/>',
+  broetchen: '<path d="M3 15c0-5 4-9 9-9s9 4 9 9v1H3z"/><path d="M8 10l2 3M12 9v4M16 10l-2 3"/>',
+  fehler: '<path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/>',
+  wiederholen: '<path d="M4 12a8 8 0 0 1 14-5l2 2"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5l-2-2"/><path d="M4 20v-5h5"/>',
+  /* Awards */
+  skalpell: '<path d="M4 20l9-9"/><path d="M13 11l6-6c1 3 0 6-3 8z"/>',
+  stethoskop: '<path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v3a4 4 0 0 0 8 0v-2"/><circle cx="18" cy="12" r="2"/>',
+  klinge: '<path d="M5 19L17 7c2-2 3 1 2 2L9 19z"/><path d="M11 13l2 2"/>',
+  pfeil: '<path d="M4 18l6-6 4 4 6-8"/><path d="M15 8h5v5"/>',
+  kalender: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/><path d="M8 14h2M12 14h2M16 14h0"/>',
+  aehre: '<path d="M12 21V8"/><path d="M12 8c-3 0-4-2-4-4 3 0 4 2 4 4zM12 8c3 0 4-2 4-4-3 0-4 2-4 4z"/><path d="M12 13c-3 0-4-2-4-4 3 0 4 2 4 4zM12 13c3 0 4-2 4-4-3 0-4 2-4 4z"/>',
+  tropfen: '<path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/><path d="M9 14a3 3 0 0 0 3 3"/>',
+  krone: '<path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/>',
+  spritze: '<path d="M14 4l6 6M17 7l-9 9-3 1 1-3 9-9M4 20l2-2M11 10l3 3"/>',
+  tor: '<path d="M4 21V10a8 8 0 0 1 16 0v11"/><path d="M8 21v-9a4 4 0 0 1 8 0v9"/>',
+  kreislauf: '<path d="M4 12a8 8 0 0 1 13-6"/><path d="M17 2v4h-4"/><path d="M20 12a8 8 0 0 1-13 6"/><path d="M7 22v-4h4"/>',
+  zahn: '<path d="M7 3c-3 0-4 3-3 6l2 11c.5 1 2 1 2.5 0L10 14h4l1.5 6c.5 1 2 1 2.5 0l2-11c1-3 0-6-3-6-2 0-3 1-5 1S9 3 7 3z"/>',
+  welle: '<path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M2 17c2-4 4-4 6 0s4 4 6 0 4-4 6 0" opacity=".5"/>',
+  mikrovilli: '<path d="M4 20h16"/><path d="M6 20V9a1 1 0 0 1 2 0v11M10 20V6a1 1 0 0 1 2 0v14M14 20V8a1 1 0 0 1 2 0v12M18 20v-9"/>',
+  kleeblatt: '<circle cx="9" cy="9" r="3"/><circle cx="15" cy="9" r="3"/><circle cx="9" cy="15" r="3"/><circle cx="15" cy="15" r="3"/><path d="M15 15l5 6"/>',
+  narr: '<path d="M4 18l2-10 6 4 6-4 2 10z"/><circle cx="6" cy="6" r="1.5"/><circle cx="18" cy="6" r="1.5"/><circle cx="12" cy="9" r="1.5"/>'
+};
+
+LT.icon = function (name, klasse) {
+  return '<svg class="' + (klasse || '') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' + (LT.ICONS[name] || LT.ICONS.stern) + '</svg>';
+};
+
+/* ---- js/20-speicher.js ---- */
+/* Speicher: localStorage + Spielstand-Datei. Es werden KEINE personenbezogenen Daten
+   und KEINE Freitexte aus Operatoraufgaben gespeichert. */
+(function () {
+  var SCHLUESSEL = 'verdauung-lerntool';
+  var FORMATVERSION = 1;
+  // „Salz“ für die Prüfsumme. Schützt nur gegen Handänderungen in der Datei, nicht gegen
+  // jemanden, der den Quelltext liest. Nicht ändern, sonst werden alte Dateien abgelehnt.
+  var SALZ = 'PEBK-Verdauung-2026';
+
+  function leer() {
+    return {
+      v: FORMATVERSION,
+      form: null,            // 'w' | 'm' | 'n' – nur für die Anrede der Ränge und Awards
+      xp: 0,
+      erstellt: LT.iso(),
+      geaendert: LT.iso(),
+      laeufe: [],            // Modulchecks: {m: Modul-ID, t: Zeitpunkt, p: Prozent}
+      leitner: {},           // Karten-ID → {f: Fach 1–5, t: Tag der letzten Wiederholung}
+      falsch: {},            // Aufgaben-ID → Modul-ID („Meine Fehler“)
+      awards: {},            // Award-ID → Zeitpunkt
+      tage: [],              // Tage, an denen geübt wurde (JJJJ-MM-TT)
+      serie: 0, serieMax: 0, // richtige Antworten in Folge
+      quizSerieMax: 0,
+      reihenfolgeOk: 0,      // fehlerfrei gelöste Reihenfolgeaufgaben
+      operatoren: {},        // Operator-ID → Zeitpunkt des Bestehens (kein Text!)
+      diagnosen: [],         // IDs richtig gelöster Diagnosefälle
+      enzymBest: 0,
+      aprilscherz: false,
+      gesichert: null        // Zeitpunkt der letzten Sicherung als Datei
+    };
+  }
+
+  /** Alte Formate schrittweise auf das aktuelle heben. Neue Version → neuen Schritt ergänzen. */
+  var MIGRATIONEN = {
+    // 1: function (d) { d.neuesFeld = ...; d.v = 2; return d; }
+  };
+  function migrieren(d) {
+    while (d.v < FORMATVERSION) {
+      if (!MIGRATIONEN[d.v]) throw new Error('Keine Migration von Version ' + d.v);
+      d = MIGRATIONEN[d.v](d);
+    }
+    // fehlende Felder mit Standardwerten auffüllen
+    var basis = leer();
+    Object.keys(basis).forEach(function (k) { if (d[k] === undefined) d[k] = basis[k]; });
+    return d;
+  }
+
+  function gueltig(d) {
+    return d && typeof d === 'object' && typeof d.v === 'number' && Array.isArray(d.laeufe) &&
+      typeof d.awards === 'object' && typeof d.xp === 'number';
+  }
+
+  LT.speicherOk = true;
+  LT.laden = function () {
+    try {
+      var roh = localStorage.getItem(SCHLUESSEL);
+      if (roh) {
+        var d = JSON.parse(roh);
+        if (gueltig(d)) return migrieren(d);
+      }
+    } catch (e) { LT.speicherOk = false; }
+    return leer();
+  };
+
+  LT.S = LT.laden();
+
+  LT.speichern = function () {
+    LT.S.geaendert = LT.iso();
+    try { localStorage.setItem(SCHLUESSEL, JSON.stringify(LT.S)); LT.speicherOk = true; }
+    catch (e) { LT.speicherOk = false; }
+  };
+
+  LT.zuruecksetzen = function () {
+    LT.S = leer();
+    try { localStorage.removeItem(SCHLUESSEL); } catch (e) { /* egal */ }
+  };
+
+  function pruefsumme(daten) { return LT.hash(JSON.stringify(daten) + SALZ, 7); }
+
+  /** Spielstand als JSON-Datei herunterladen */
+  LT.exportieren = function () {
+    var daten = JSON.parse(JSON.stringify(LT.S));
+    var datei = {
+      app: 'verdauung-lerntool', formatversion: FORMATVERSION, gespeichert: LT.iso(),
+      daten: daten, pruefsumme: pruefsumme(daten)
+    };
+    var blob = new Blob([JSON.stringify(datei, null, 1)], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'verdauung-spielstand-' + LT.tag() + '.json';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    LT.S.gesichert = LT.iso();
+    LT.speichern();
+  };
+
+  /** Datei prüfen. Liefert {ok, meldung, daten, gespeichert} – übernimmt noch nichts. */
+  LT.dateiPruefen = function (text) {
+    var datei;
+    try { datei = JSON.parse(text); } catch (e) { return { ok: false, meldung: 'Das ist keine gültige Spielstand-Datei.' }; }
+    if (!datei || datei.app !== 'verdauung-lerntool' || !datei.daten) {
+      return { ok: false, meldung: 'Diese Datei gehört nicht zu diesem Lerntool.' };
+    }
+    if (datei.formatversion > FORMATVERSION) {
+      return { ok: false, meldung: 'Die Datei stammt aus einer neueren Version des Lerntools. Bitte nutze die aktuelle Version.' };
+    }
+    if (pruefsumme(datei.daten) !== datei.pruefsumme) {
+      return { ok: false, meldung: 'Die Prüfsumme stimmt nicht. Die Datei wurde verändert oder ist beschädigt.' };
+    }
+    if (!gueltig(datei.daten)) return { ok: false, meldung: 'Die Datei ist unvollständig.' };
+    var daten;
+    try { daten = migrieren(datei.daten); } catch (e) { return { ok: false, meldung: 'Die Datei kann nicht umgewandelt werden.' }; }
+    return { ok: true, daten: daten, gespeichert: datei.gespeichert };
+  };
+
+  LT.uebernehmen = function (daten) { LT.S = daten; LT.speichern(); };
+
+  /** Prüfcode für die Nachweis-Ansicht: 8 Zeichen aus Rang-relevanten Daten */
+  LT.pruefcode = function (S) {
+    S = S || LT.S;
+    var kern = JSON.stringify({ xp: S.xp, a: S.awards, l: S.laeufe.map(function (l) { return [l.m, l.t, l.p]; }) });
+    var h = LT.hash(kern + SALZ, 21).toUpperCase().replace(/[01]/g, function (c) { return c === '0' ? 'Q' : 'L'; });
+    return h.slice(0, 4) + '-' + h.slice(4, 8);
+  };
+})();
+
+/* ---- js/25-text.js ---- */
+/* Text aus den Inhaltsdateien darstellen.
+   [[Begriff]] bzw. [[Begriff|Anzeige]] → antippbarer Fachbegriff. Beim ERSTEN Auftreten
+   im aktuellen Modul wird der deutsche Begriff in Klammern ergänzt (Fachbegriff-Regel). */
+(function () {
+  var glossarIndex = {};
+  Object.keys(LT.D.glossar).forEach(function (k) { glossarIndex[k.toLowerCase()] = k; });
+
+  LT.kontext = { modul: null, gesehen: {} };
+  /** Beim Betreten eines Moduls aufrufen: Fachbegriffe gelten wieder als „neu“. */
+  LT.modulKontext = function (modulId) { LT.kontext = { modul: modulId, gesehen: {} }; };
+
+  LT.glossarEintrag = function (begriff) {
+    var k = glossarIndex[String(begriff).toLowerCase()];
+    return k ? { begriff: k, eintrag: LT.D.glossar[k] } : null;
+  };
+
+  /** Inline-Text (ohne Absätze) */
+  LT.txt = function (roh, optionen) {
+    optionen = optionen || {};
+    var s = LT.esc(roh || '');
+    s = s.replace(/\[\[(.+?)\]\]/g, function (_, innen) {
+      var teile = innen.split('|');
+      var g = LT.glossarEintrag(teile[0].trim());
+      var anzeige = (teile[1] || teile[0]).trim();
+      if (!g) return anzeige;
+      var zusatz = '';
+      if (!optionen.ohneKlammer && !LT.kontext.gesehen[g.begriff]) {
+        LT.kontext.gesehen[g.begriff] = true;
+        zusatz = ' (' + LT.esc(g.eintrag.deutsch) + ')';
+      }
+      return '<button type="button" class="begriff" data-begriff="' + LT.esc(g.begriff) + '">' + anzeige + '</button>' + zusatz;
+    });
+    s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    return s;
+  };
+
+  /** Mehrzeiliger Text: Leerzeile = neuer Absatz */
+  LT.absaetze = function (roh, optionen) {
+    return String(roh || '').split(/\n\s*\n/).map(function (a) {
+      return '<p>' + LT.txt(a.trim(), optionen).replace(/\n/g, '<br>') + '</p>';
+    }).join('');
+  };
+
+  /** „Lies nach: I care Anatomie, Physiologie, S. 205“ */
+  LT.quelleText = function (quellen) {
+    return (quellen || []).map(function (q) {
+      var m = /^(i-care|MKK) (S\. .+)$/.exec(q);
+      return m ? LT.D.buecher[m[1]] + ', ' + m[2] : q;
+    }).join('; ');
+  };
+  LT.liesNach = function (quellen) {
+    if (!quellen || !quellen.length) return '';
+    return '<p class="lies">' + LT.icon('buch') + '<span>Lies nach: ' + LT.esc(LT.quelleText(quellen)) + '</span></p>';
+  };
+
+  /* ---------- Dialog (Glossar, Bestätigungen, Award-Details) ---------- */
+  LT.dialog = function (titel, html, knoepfe) {
+    var d = LT.$('#dialog');
+    d.innerHTML = '<div class="d-innen"><div class="d-kopf"><h2 id="dialog-titel">' + titel + '</h2>' +
+      '<button type="button" class="icon-btn" data-schliessen aria-label="Schließen">' + LT.icon('kreuz') + '</button></div>' +
+      html + '<div class="reihe" data-knoepfe></div></div>';
+    var leiste = LT.$('[data-knoepfe]', d);
+    (knoepfe || []).forEach(function (k) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'btn ' + (k.klasse || ''); b.textContent = k.text;
+      b.addEventListener('click', function () { if (k.aktion() !== false) LT.dialogZu(); });
+      leiste.appendChild(b);
+    });
+    LT.$('[data-schliessen]', d).addEventListener('click', LT.dialogZu);
+    if (typeof d.showModal === 'function') d.showModal(); else d.setAttribute('open', '');
+  };
+  LT.dialogZu = function () {
+    var d = LT.$('#dialog');
+    if (typeof d.close === 'function' && d.open) d.close(); else d.removeAttribute('open');
+  };
+
+  LT.glossarZeigen = function (begriff) {
+    var g = LT.glossarEintrag(begriff);
+    if (!g) return;
+    LT.dialog(LT.esc(g.begriff),
+      '<p><b>Deutsch:</b> ' + LT.esc(g.eintrag.deutsch) + '</p>' +
+      (g.eintrag.erklaerung ? '<p>' + LT.txt(g.eintrag.erklaerung, { ohneKlammer: true }) + '</p>' : '') +
+      LT.liesNach(g.eintrag.quelle));
+  };
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.begriff');
+    if (b) { e.preventDefault(); LT.glossarZeigen(b.getAttribute('data-begriff')); }
+  });
+})();
+
+/* ---- js/30-fortschritt.js ---- */
+/* Fortschritt: XP, Ränge, bestandene Module, Freischaltung */
+(function () {
+  var E = LT.E = LT.D.einstellungen;
+
+  LT.form = function () { return LT.S.form || 'n'; };
+
+  /** Aktueller Rang, nächster Rang und Fortschritt dazwischen (0–1) */
+  LT.rang = function (xp) {
+    xp = xp == null ? LT.S.xp : xp;
+    var r = E.raenge, i = 0;
+    while (i + 1 < r.length && xp >= r[i + 1].xp) i++;
+    var naechster = r[i + 1] || null;
+    var anteil = naechster ? (xp - r[i].xp) / (naechster.xp - r[i].xp) : 1;
+    return { stufe: i, name: r[i][LT.form()], naechster: naechster && naechster[LT.form()], naechsterXp: naechster && naechster.xp, anteil: anteil };
+  };
+
+  /** XP gutschreiben. aktion = Name aus einstellungen.md (xp:) */
+  LT.xpDazu = function (aktion, anzahl) {
+    var n = (E.xp[aktion] || 0) * (anzahl == null ? 1 : anzahl);
+    LT.S.xp += Math.round(n);
+    return Math.round(n);
+  };
+
+  LT.modul = function (id) {
+    for (var i = 0; i < LT.D.module.length; i++) if (LT.D.module[i].id === id) return LT.D.module[i];
+    return null;
+  };
+  LT.moduleImBlock = function (nr) { return LT.D.module.filter(function (m) { return m.block === nr; }); };
+  LT.blockTitel = function (nr) {
+    var b = E.bloecke.filter(function (x) { return x.nr === nr; })[0];
+    return b ? b.titel : 'Block ' + nr;
+  };
+
+  LT.laeufeVon = function (id) { return LT.S.laeufe.filter(function (l) { return l.m === id; }); };
+  LT.bestes = function (id) {
+    return LT.laeufeVon(id).reduce(function (a, l) { return Math.max(a, l.p); }, -1);
+  };
+  LT.bestanden = function (id) { return LT.bestes(id) >= E.bestehensgrenze; };
+
+  /** Block 1 ist immer offen. Jeder weitere öffnet sich, wenn alle VORHANDENEN Module
+      (Status aktiv) des vorherigen Blocks bestanden sind. */
+  LT.blockOffen = function (nr) {
+    if (nr <= 1) return true;
+    if (!LT.blockOffen(nr - 1)) return false;
+    return LT.moduleImBlock(nr - 1).every(function (m) { return m.status !== 'aktiv' || LT.bestanden(m.id); });
+  };
+
+  /** Organmodule, die für eine Erkrankung noch fehlen */
+  LT.fehlendeOrgane = function (m) {
+    if (!m.organ) return [];
+    return m.organ.split(',').map(function (s) { return s.trim(); })
+      .filter(function (id) { return !LT.bestanden(id); })
+      .map(function (id) { var o = LT.modul(id); return o ? o.titel : id; });
+  };
+
+  LT.modulOffen = function (m) {
+    return m.status === 'aktiv' && LT.blockOffen(m.block) && LT.fehlendeOrgane(m).length === 0;
+  };
+
+  /** Heute als Übungstag vermerken */
+  LT.uebungstag = function () {
+    var t = LT.tag();
+    if (LT.S.tage.indexOf(t) < 0) { LT.S.tage.push(t); if (LT.S.tage.length > 400) LT.S.tage.shift(); }
+  };
+
+  /** Nach jeder bewerteten Aufgabe aufrufen. anteil: 0–1 (1 = vollständig richtig). */
+  LT.antwortErfassen = function (aufgabe, modulId, anteil) {
+    var richtig = anteil >= 1;
+    LT.uebungstag();
+    if (richtig) {
+      LT.S.serie += 1;
+      LT.S.serieMax = Math.max(LT.S.serieMax, LT.S.serie);
+      delete LT.S.falsch[aufgabe.id];
+    } else {
+      LT.S.serie = 0;
+      LT.S.falsch[aufgabe.id] = modulId;
+    }
+    if (aufgabe.typ === 'reihenfolge' && richtig) LT.S.reihenfolgeOk += 1;
+    return richtig;
+  };
+
+  /** Modulcheck abschließen. Liefert {prozent, bestanden, erstmals, xp} */
+  LT.laufBeenden = function (modulId, prozent) {
+    var warBestanden = LT.bestanden(modulId);
+    LT.S.laeufe.push({ m: modulId, t: LT.iso(), p: prozent });
+    var bestanden = prozent >= E.bestehensgrenze;
+    var xp = 0;
+    if (bestanden) xp += LT.xpDazu(warBestanden ? 'modul_bestanden' : 'modul_erstmals_bestanden');
+    return { prozent: prozent, bestanden: bestanden, erstmals: bestanden && !warBestanden, xp: xp };
+  };
+
+  /** Längste Serie aufeinanderfolgender Übungstage */
+  LT.laengsteTagesserie = function () {
+    var tage = LT.S.tage.slice().sort(), best = 0, lauf = 0, vorher = null;
+    tage.forEach(function (t) {
+      var d = new Date(t + 'T12:00:00');
+      lauf = (vorher && Math.round((d - vorher) / 864e5) === 1) ? lauf + 1 : 1;
+      best = Math.max(best, lauf);
+      vorher = d;
+    });
+    return best;
+  };
+})();
+
+/* ---- js/40-awards.js ---- */
+/* Awards: Regeln, Plakettengrafik, Prüfung, Animation.
+   Die Regeln stehen in inhalte/awards.md (Feld „regel:“). Jede Regel liefert
+   {ok: erreicht?, f: Fortschritt 0–1}. Alles wird nur auf dem Gerät geprüft. */
+(function () {
+  var S = function () { return LT.S; };
+  var grenze = function () { return LT.E.bestehensgrenze; };
+  var anteil = function (ist, soll) { return Math.max(0, Math.min(1, soll ? ist / soll : 0)); };
+  var stunde = function (l) { return new Date(l.t).getHours(); };
+
+  function alleOperatoren() {
+    var liste = [];
+    LT.D.module.forEach(function (m) { m.operatoren.forEach(function (o) { liste.push(o); }); });
+    return liste;
+  }
+
+  var REGELN = {
+    modul_uhrzeit: function (von, bis) {
+      var ok = S().laeufe.some(function (l) { var h = stunde(l); return h >= +von && h < +bis; });
+      return { ok: ok, f: ok ? 1 : 0 };
+    },
+    operatoren_afb: function (afb) {
+      var ops = alleOperatoren().filter(function (o) { return o.afb === afb; });
+      var geschafft = ops.filter(function (o) { return S().operatoren[o.id]; }).length;
+      return { ok: ops.length > 0 && geschafft === ops.length, f: anteil(geschafft, ops.length) };
+    },
+    modul_mehrfach: function (ids, anzahl, prozent) {
+      var teile = ids.split(',').map(function (id) {
+        return Math.min(+anzahl, LT.laeufeVon(id).filter(function (l) { return l.p >= +prozent; }).length);
+      });
+      var summe = teile.reduce(function (a, b) { return a + b; }, 0);
+      return { ok: teile.every(function (n) { return n >= +anzahl; }), f: anteil(summe, teile.length * anzahl) };
+    },
+    bloecke_bestanden: function (nr) {
+      var ms = LT.moduleImBlock(+nr);  // ALLE Module des Blocks, auch die in Vorbereitung
+      var n = ms.filter(function (m) { return LT.bestanden(m.id); }).length;
+      return { ok: ms.length > 0 && n === ms.length, f: anteil(n, ms.length) };
+    },
+    serie_richtig: function (n) { return { ok: S().serieMax >= +n, f: anteil(S().serieMax, +n) }; },
+    verbesserung: function (pp) {
+      var best = 0;
+      LT.D.module.forEach(function (m) {
+        var min = Infinity;
+        LT.laeufeVon(m.id).forEach(function (l) { best = Math.max(best, l.p - min); min = Math.min(min, l.p); });
+      });
+      return { ok: best >= +pp, f: anteil(best, +pp) };
+    },
+    tage_in_folge: function (n) { var t = LT.laengsteTagesserie(); return { ok: t >= +n, f: anteil(t, +n) }; },
+    unter_dann_ueber: function (unter, ueber) {
+      var ok = LT.D.module.some(function (m) {
+        var tief = false;
+        return LT.laeufeVon(m.id).some(function (l) { if (tief && l.p > +ueber) return true; if (l.p < +unter) tief = true; return false; });
+      });
+      return { ok: ok, f: ok ? 1 : 0 };
+    },
+    modul_prozent: function (id, p) { var b = LT.bestes(id); return { ok: b >= +p, f: anteil(Math.max(b, 0), +p) }; },
+    enzym_punkte: function (n) { return { ok: S().enzymBest >= +n, f: anteil(S().enzymBest, +n) }; },
+    karten_fach5: function (n) {
+      var k = Object.keys(S().leitner).filter(function (id) { return S().leitner[id].f >= 5; }).length;
+      return { ok: k >= +n, f: anteil(k, +n) };
+    },
+    diagnosen: function (n) { return { ok: S().diagnosen.length >= +n, f: anteil(S().diagnosen.length, +n) }; },
+    block_frei: function (nr) {
+      // mindestens ein echt bestandenes Modul im Block davor – sonst wäre ein leerer Block „geschafft“
+      var vorher = LT.moduleImBlock(+nr - 1).filter(function (m) { return m.status === 'aktiv'; });
+      var n = vorher.filter(function (m) { return LT.bestanden(m.id); }).length;
+      var ok = LT.blockOffen(+nr) && n > 0;
+      return { ok: ok, f: ok ? 1 : anteil(n, vorher.length) };
+    },
+    modul_abschluesse: function (n) {
+      var max = 0;
+      LT.D.module.forEach(function (m) { max = Math.max(max, LT.laeufeVon(m.id).length); });
+      return { ok: max >= +n, f: anteil(max, +n) };
+    },
+    reihenfolge_fehlerfrei: function (n) { return { ok: S().reihenfolgeOk >= +n, f: anteil(S().reihenfolgeOk, +n) }; },
+    xp: function (n) { return { ok: S().xp >= +n, f: anteil(S().xp, +n) }; },
+    quiz_serie: function (n) { return { ok: S().quizSerieMax >= +n, f: anteil(S().quizSerieMax, +n) }; },
+    freitag13: function (p) {
+      var ok = S().laeufe.some(function (l) { var d = new Date(l.t); return d.getDay() === 5 && d.getDate() === 13 && l.p >= +p; });
+      return { ok: ok, f: ok ? 1 : 0 };
+    },
+    aprilscherz: function () { return { ok: !!S().aprilscherz, f: S().aprilscherz ? 1 : 0 }; }
+  };
+
+  LT.awardStand = function (a) {
+    var fn = REGELN[a.regel[0]];
+    if (!fn) return { ok: false, f: 0 };
+    return fn.apply(null, a.regel.slice(1));
+  };
+  LT.awardName = function (a) { return a.name[LT.form()]; };
+
+  /** Neue Awards vergeben. Liefert die Liste der neu erreichten Awards. */
+  LT.neueAwards = [];
+  LT.awardsPruefen = function () {
+    var neu = [], weiter = true;
+    while (weiter) {           // mehrfach, weil Award-XP weitere Awards auslösen kann
+      weiter = false;
+      LT.D.awards.forEach(function (a) {
+        if (LT.S.awards[a.id]) return;
+        if (LT.awardStand(a).ok) {
+          LT.S.awards[a.id] = LT.iso();
+          LT.xpDazu('award');
+          neu.push(a); weiter = true;
+        }
+      });
+    }
+    LT.neueAwards = LT.neueAwards.concat(neu);
+    LT.speichern();
+    return neu;
+  };
+
+  /* ---------- Plakette als SVG (Stil der Garmin-Abzeichen) ---------- */
+  var gid = 0;
+  function formPfad(form) {
+    var pkte = [], i, n, r1, r2, w;
+    if (form === 'sechseck') {
+      for (i = 0; i < 6; i++) { w = Math.PI / 3 * i - Math.PI / 2; pkte.push([60 + 56 * Math.cos(w), 60 + 56 * Math.sin(w)]); }
+    } else if (form === 'zacken') {
+      n = 16; r1 = 57; r2 = 49;
+      for (i = 0; i < n * 2; i++) { w = Math.PI / n * i - Math.PI / 2; var r = i % 2 ? r2 : r1; pkte.push([60 + r * Math.cos(w), 60 + r * Math.sin(w)]); }
+    } else if (form === 'schild') {
+      return 'M60 4 L108 18 L108 58 C108 88 86 106 60 116 C34 106 12 88 12 58 L12 18 Z';
+    } else {
+      return null;
+    }
+    return 'M' + pkte.map(function (p) { return p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join('L') + 'Z';
+  }
+
+  LT.plakette = function (a, klasse) {
+    var id = 'pl' + (gid++), p = formPfad(a.form);
+    var aussen = p ? '<path d="' + p + '" fill="url(#' + id + 'a)" stroke="url(#' + id + 'a)" stroke-width="4" stroke-linejoin="round"/>'
+                   : '<circle cx="60" cy="60" r="57" fill="url(#' + id + 'a)"/>';
+    return '<svg class="' + (klasse || 'plakette') + '" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs>' +
+      '<linearGradient id="' + id + 'a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + a.farbe1 + '"/><stop offset="1" stop-color="' + a.farbe2 + '"/></linearGradient>' +
+      '<linearGradient id="' + id + 'b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + a.farbe2 + '"/><stop offset="1" stop-color="' + a.farbe1 + '"/></linearGradient></defs>' +
+      aussen +
+      '<circle cx="60" cy="60" r="41" fill="url(#' + id + 'b)" stroke="rgba(255,255,255,.65)" stroke-width="2.5"/>' +
+      '<circle cx="60" cy="60" r="36" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1" stroke-dasharray="2 3"/>' +
+      '<path d="M26 50a35 35 0 0 1 68 0c-19-8-49-8-68 0z" fill="#fff" opacity=".15"/>' +
+      '<g transform="translate(60 60) scale(1.9) translate(-12 -12)" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' +
+      (LT.ICONS[a.icon] || LT.ICONS.stern) + '</g></svg>';
+  };
+
+  /* ---------- Animation für neue Awards ---------- */
+  LT.awardsFeiern = function (fertig) {
+    var liste = LT.neueAwards.slice();
+    LT.neueAwards = [];
+    if (!liste.length) { if (fertig) fertig(); return; }
+    var a = liste.shift();
+    LT.neueAwards = liste;
+    LT.dialog('Neuer Award!',
+      '<div class="feier">' + LT.plakette(a, 'plakette gross') +
+      '<h3>' + LT.esc(LT.awardName(a)) + '</h3>' +
+      (a.fakt ? '<p class="fakt">' + LT.txt(a.fakt, { ohneKlammer: true }) + '</p>' + LT.liesNach(a.quelle) : '') +
+      '<p class="chip gold">+' + LT.E.xp.award + ' XP</p></div>',
+      [{ text: liste.length ? 'Nächster Award' : 'Weiter', klasse: 'primaer', aktion: function () { setTimeout(function () { LT.awardsFeiern(fertig); }, 50); } }]);
+    LT.ansage('Neuer Award: ' + LT.awardName(a));
+  };
+})();
+
+/* ---- js/60-ansichten.js ---- */
+/* Ansichten: Start, Modul, Awards, Glossar, Mehr (Spielstand, Nachweis, Datenschutz) */
+(function () {
+  var esc = LT.esc, icon = LT.icon;
+
+  /* ---------- Router ---------- */
+  LT.routen = [];
+  LT.route = function (muster, ansicht, nav) { LT.routen.push({ muster: muster, ansicht: ansicht, nav: nav || 'start' }); };
+  LT.gehe = function (pfad) { if (location.hash === '#' + pfad) LT.navigieren(); else location.hash = pfad; };
+  LT.aufraeumen = null;  // Funktion, die beim Verlassen einer Ansicht läuft (z. B. Timer stoppen)
+
+  LT.navigieren = function () {
+    if (LT.aufraeumen) { try { LT.aufraeumen(); } catch (e) { /* weiter */ } LT.aufraeumen = null; }
+    LT.dialogZu();
+    var pfad = (location.hash || '#/').slice(1) || '/';
+    if (!LT.S.form && ['/datenschutz', '/mehr/laden'].indexOf(pfad) < 0) pfad = '/willkommen';
+    for (var i = 0; i < LT.routen.length; i++) {
+      var m = LT.routen[i].muster.exec(pfad);
+      if (m) {
+        LT.$$('.leiste a').forEach(function (a) {
+          if (a.getAttribute('data-nav') === LT.routen[i].nav) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+        });
+        LT.routen[i].ansicht.apply(null, m.slice(1).map(decodeURIComponent));
+        LT.kopfAktualisieren();
+        var h1 = LT.$('#haupt h1');
+        LT.$('#haupt').focus({ preventScroll: true });
+        window.scrollTo(0, 0);
+        document.title = h1 && h1.textContent !== 'Verdauung lernen' ? h1.textContent + ' · Verdauung lernen' : 'Verdauung lernen';
+        return;
+      }
+    }
+    LT.gehe('/');
+  };
+
+  LT.zeige = function (html) { LT.$('#haupt').innerHTML = html; return LT.$('#haupt'); };
+
+  LT.kopfAktualisieren = function () {
+    var r = LT.rang();
+    LT.$('#rang-chip').innerHTML = LT.S.form ? '<b>' + esc(r.name) + '</b><span class="xpz">' + LT.zahl(LT.S.xp) + ' XP</span>' : '';
+  };
+
+  LT.seitenkopf = function (titel, zurueck, eyebrow) {
+    return '<div class="seitenkopf">' +
+      (zurueck ? '<a class="zurueck" href="#' + zurueck.pfad + '">' + icon('zurueck') + esc(zurueck.text) + '</a>' : '') +
+      (eyebrow ? '<p class="eyebrow">' + esc(eyebrow) + '</p>' : '') + '<h1>' + titel + '</h1></div>';
+  };
+
+  /* ---------- Willkommen / Formwahl ---------- */
+  LT.route(/^\/willkommen$/, function () {
+    var h = LT.zeige(
+      LT.seitenkopf('Willkommen!', null, 'Lerntool Verdauung') +
+      '<section class="karte stapel">' +
+      '<p>Hier lernst du alles über das Verdauungssystem, von den Nährstoffen bis zu den Erkrankungen. ' +
+      'Für richtige Antworten bekommst du XP, steigst im Rang auf und sammelst Awards.</p>' +
+      '<fieldset class="stapel" style="border:0;padding:0;margin:0"><legend><h2>Wie sollen wir deinen Rang nennen?</h2></legend>' +
+      '<div class="wahl">' +
+      '<label><input type="radio" name="form" value="w"> Praktikantin → … → Gesundheitsministerin</label>' +
+      '<label><input type="radio" name="form" value="m"> Praktikant → … → Gesundheitsminister</label>' +
+      '<label><input type="radio" name="form" value="n"> Praktikant:in → … → Gesundheitsminister:in</label>' +
+      '</div></fieldset>' +
+      '<p class="muted klein">Deine Wahl wird nur auf diesem Gerät gespeichert. Du kannst sie unter „Mehr“ jederzeit ändern.</p>' +
+      LT.datenschutzKurz() +
+      '<div class="reihe"><button class="btn primaer" id="los" type="button" disabled>Los geht’s</button>' +
+      '<a class="btn" href="#/mehr/laden">Ich habe schon einen Spielstand</a></div>' +
+      '</section>');
+    LT.$$('input[name=form]', h).forEach(function (r) {
+      r.addEventListener('change', function () { LT.$('#los').disabled = false; });
+    });
+    LT.$('#los').addEventListener('click', function () {
+      var w = LT.$('input[name=form]:checked', h);
+      if (!w) return;
+      LT.S.form = w.value;
+      LT.speichern();
+      LT.gehe('/');
+    });
+  }, 'start');
+
+  LT.datenschutzKurz = function () {
+    return '<div class="hinweis">' +
+      '<p><b>Datenschutz:</b> Das Lerntool speichert keinen Namen, keine Klasse und keinen Standort und sendet nichts ins Internet. ' +
+      'Dein Fortschritt bleibt nur in diesem Browser. Sichere ihn regelmäßig als Datei. <a href="#/datenschutz">Mehr erfahren</a></p></div>';
+  };
+
+  /* ---------- Startseite ---------- */
+  function modulKarte(m) {
+    var offen = LT.modulOffen(m), bestes = LT.bestes(m.id), bestanden = LT.bestanden(m.id);
+    var status;
+    if (m.status !== 'aktiv') status = '<span class="chip">in Vorbereitung</span>';
+    else if (!LT.blockOffen(m.block)) status = '<span class="chip">' + icon('schloss') + 'Block gesperrt</span>';
+    else if (!offen) status = '<span class="chip">' + icon('schloss') + 'erst ' + esc(LT.fehlendeOrgane(m).join(' + ')) + '</span>';
+    else if (bestanden) status = '<span class="chip ok">' + icon('haken') + 'bestanden · ' + bestes + ' %</span>';
+    else if (bestes >= 0) status = '<span class="chip">bestes Ergebnis ' + bestes + ' %</span>';
+    else status = '<span class="chip gold">neu</span>';
+    var inhalt = '<span class="ic" style="background:' + esc(m.farbe) + '">' + icon(m.icon) + '</span>' +
+      '<h3>' + esc(m.titel) + '</h3><p class="muted klein">' + esc(m.beschreibung) + '</p><div class="fuss">' + status + '</div>';
+    return offen ? '<a class="modul" href="#/modul/' + esc(m.id) + '">' + inhalt + '</a>'
+                 : '<div class="modul zu" aria-disabled="true">' + inhalt + '</div>';
+  }
+
+  LT.route(/^\/$/, function () {
+    var r = LT.rang();
+    var fehler = Object.keys(LT.S.falsch).length;
+    var html = LT.seitenkopf('Verdauung lernen', null, 'Dein Lernstand') +
+      '<section class="karte rangkarte" aria-label="Dein Rang">' +
+      '<div><p class="eyebrow">Rang</p><p class="stufe">' + esc(r.name) + '</p></div>' +
+      '<p class="muted" style="text-align:right">' + LT.zahl(LT.S.xp) + ' XP' +
+      (r.naechster ? '<br><span class="klein">noch ' + LT.zahl(r.naechsterXp - LT.S.xp) + ' XP bis ' + esc(r.naechster) + '</span>' : '') + '</p>' +
+      '<div class="balken" role="progressbar" aria-label="Fortschritt zum nächsten Rang" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' +
+      Math.round(r.anteil * 100) + '"><i style="width:' + (r.anteil * 100).toFixed(1) + '%"></i></div></section>' +
+      '<section class="modi" aria-label="Übergreifende Übungen">' +
+      '<a class="modus" href="#/fehler">' + icon('wiederholen') + '<div><b>Meine Fehler</b><span>' +
+      (fehler ? fehler + ' Aufgabe' + (fehler === 1 ? '' : 'n') + ' zum Wiederholen' : 'Zurzeit nichts zu wiederholen') + '</span></div></a>' +
+      '<a class="modus" href="#/quiz">' + icon('blitz') + '<div><b>Quiz auf Zeit</b><span>Freiwillig: Wie viele schaffst du in ' + LT.E.quiz_sekunden + ' Sekunden?</span></div></a>' +
+      '</section>';
+    LT.E.bloecke.forEach(function (b) {
+      var offen = LT.blockOffen(b.nr);
+      html += '<section aria-labelledby="block-' + b.nr + '"><div class="block-kopf"><h2 id="block-' + b.nr + '">' +
+        b.nr + ' · ' + esc(b.titel) + '</h2>' +
+        (offen ? '' : '<span class="chip">' + icon('schloss') + 'Bestehe erst alle Module aus Block ' + (b.nr - 1) + '</span>') +
+        '</div><div class="module">' + LT.moduleImBlock(b.nr).map(modulKarte).join('') + '</div></section>';
+    });
+    if (LT.S.laeufe.length && !LT.S.gesichert) {
+      html += '<div class="hinweis gold reihe zw"><span>Du hast deinen Spielstand noch nie als Datei gesichert.</span>' +
+        '<a class="btn klein" href="#/mehr">Jetzt sichern</a></div>';
+    }
+    if (!LT.speicherOk) {
+      html += '<div class="hinweis nein">Dein Browser erlaubt kein Speichern (z. B. privater Modus). Sichere deinen Spielstand deshalb unbedingt als Datei.</div>';
+    }
+    LT.zeige(html);
+  }, 'start');
+
+  /* ---------- Modulseite ---------- */
+  LT.modi = [];  // wird von den Aufgabentypen gefüllt: {id, titel, text, icon, verfuegbar(m)}
+  LT.modus = function (def) { LT.modi.push(def); };
+
+  LT.route(/^\/modul\/([^/]+)$/, function (id) {
+    var m = LT.modul(id);
+    if (!m || !LT.modulOffen(m)) { LT.gehe('/'); return; }
+    LT.modulKontext(m.id);
+    var laeufe = LT.laeufeVon(m.id);
+    var modi = LT.modi.filter(function (d) { return d.verfuegbar(m); });
+    LT.zeige(
+      LT.seitenkopf(esc(m.titel), { pfad: '/', text: 'Übersicht' }, 'Block ' + m.block + ' · ' + LT.blockTitel(m.block)) +
+      '<p>' + esc(m.beschreibung) + '</p>' +
+      '<div class="reihe">' +
+      (LT.bestanden(m.id) ? '<span class="chip ok">' + icon('haken') + 'bestanden</span>' : '<span class="chip">Bestehen ab ' + LT.E.bestehensgrenze + ' %</span>') +
+      (laeufe.length ? '<span class="chip">bestes Ergebnis ' + LT.bestes(m.id) + ' %</span><span class="chip">' + laeufe.length + '× abgeschlossen</span>' : '') +
+      '</div>' +
+      '<section aria-labelledby="modi-t"><h2 id="modi-t" class="sr-only">Übungen</h2><div class="modi">' +
+      modi.map(function (d) {
+        return '<a class="modus" href="#/modul/' + esc(m.id) + '/' + d.id + '">' + icon(d.icon) +
+          '<div><b>' + esc(d.titel) + '</b><span>' + esc(typeof d.text === 'function' ? d.text(m) : d.text) + '</span></div></a>';
+      }).join('') + '</div></section>' +
+      '<p class="lies">' + icon('buch') + '<span>Quellen: ' + esc(LT.quelleText(m.quellen.split(';').map(function (s) { return s.trim(); }))) + '</span></p>');
+  }, 'start');
+
+  /* ---------- Award-Wand ---------- */
+  LT.route(/^\/awards$/, function () {
+    var anzahl = Object.keys(LT.S.awards).length;
+    LT.zeige(LT.seitenkopf('Deine Awards', null, anzahl + ' von ' + LT.D.awards.length + ' erreicht') +
+      '<p class="muted">Tippe einen Award an: Jeder Award verrät dir einen Fachfakt aus den Büchern.</p>' +
+      '<div class="wand">' + LT.D.awards.map(function (a) {
+        var datum = LT.S.awards[a.id], stand = LT.awardStand(a);
+        var geheim = a.geheim && !datum;
+        return '<button type="button" class="award' + (datum ? '' : ' zu') + '" data-award="' + esc(a.id) + '">' +
+          LT.plakette(geheim ? { form: a.form, farbe1: '#888', farbe2: '#555', icon: 'info' } : a) +
+          (datum ? '' : '<span class="schloss">' + icon('schloss') + '</span>') +
+          '<span class="n">' + (geheim ? '???' : esc(LT.awardName(a))) + '</span>' +
+          (datum ? '<span class="d">' + LT.datum(datum) + '</span>'
+                 : (geheim ? '<span class="d">geheim</span>' : '<span class="mini" aria-hidden="true"><i style="width:' + Math.round(stand.f * 100) + '%"></i></span>' +
+                   '<span class="sr-only">Fortschritt ' + Math.round(stand.f * 100) + ' Prozent</span>')) +
+          '</button>';
+      }).join('') + '</div>');
+    LT.$$('.award').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var a = LT.D.awards.filter(function (x) { return x.id === b.getAttribute('data-award'); })[0];
+        var datum = LT.S.awards[a.id];
+        if (a.geheim && !datum) { LT.dialog('???', '<p>Dieser Award ist geheim. Vielleicht findest du ihn ja zufällig …</p>'); return; }
+        LT.dialog(esc(LT.awardName(a)),
+          '<div class="feier">' + LT.plakette(a, 'plakette gross' + (datum ? '' : ' grau')) +
+          '<p><b>So bekommst du ihn:</b> ' + esc(a.bedingung) + '</p>' +
+          (datum ? '<p class="chip ok">erreicht am ' + LT.datum(datum) + '</p>' : '<p class="chip">' + Math.round(LT.awardStand(a).f * 100) + ' % geschafft</p>') +
+          (a.fakt ? '<div class="hinweis gold"><p class="eyebrow">Fachfakt</p><p>' + LT.txt(a.fakt, { ohneKlammer: true }) + '</p>' + LT.liesNach(a.quelle) + '</div>' : '') +
+          '</div>');
+      });
+    });
+  }, 'awards');
+
+  /* ---------- Glossar ---------- */
+  LT.route(/^\/glossar$/, function () {
+    var begriffe = Object.keys(LT.D.glossar).sort(function (a, b) { return a.localeCompare(b, 'de'); });
+    LT.zeige(LT.seitenkopf('Glossar', null, begriffe.length + ' Fachbegriffe') +
+      '<div class="feld"><label for="gsuche">Suchen</label><input type="text" id="gsuche" autocomplete="off" placeholder="z. B. Pylorus oder Magenpförtner"></div>' +
+      '<dl class="glossar">' + begriffe.map(function (b) {
+        var g = LT.D.glossar[b];
+        return '<div class="g-eintrag" data-suche="' + esc((b + ' ' + g.deutsch).toLowerCase()) + '"><dt>' + esc(b) + ' <span class="muted">(' + esc(g.deutsch) + ')</span></dt>' +
+          '<dd>' + LT.txt(g.erklaerung, { ohneKlammer: true }) + LT.liesNach(g.quelle) + '</dd></div>';
+      }).join('') + '</dl>' + (begriffe.length ? '' : '<p class="muted">Das Glossar wird gerade aufgebaut.</p>'));
+    LT.$('#gsuche').addEventListener('input', function (e) {
+      var q = e.target.value.trim().toLowerCase();
+      LT.$$('.g-eintrag').forEach(function (el) { el.hidden = q && el.getAttribute('data-suche').indexOf(q) < 0; });
+    });
+  }, 'glossar');
+})();
+
+/* ---- js/70-mehr.js ---- */
+/* „Mehr“: Spielstand speichern/laden, Anleitung, Nachweis für die Lehrkraft, Datenschutz */
+(function () {
+  var esc = LT.esc, icon = LT.icon;
+
+  function rangName(daten) {
+    var formAlt = LT.S.form; LT.S.form = daten.form;
+    var n = LT.rang(daten.xp).name;
+    LT.S.form = formAlt;
+    return n;
+  }
+
+  var ANLEITUNG =
+    '<details class="karte flach"><summary><b>Wo landet meine Spielstand-Datei?</b></summary><div class="stapel" style="margin-top:10px">' +
+    '<p><b>iPad / iPhone:</b> Nach „Spielstand speichern“ fragt Safari, ob du die Datei laden willst. Tippe auf „Laden“. ' +
+    'Die Datei liegt dann in der App <i>Dateien</i> unter <i>Auf meinem iPad → Downloads</i> (bzw. <i>iCloud Drive → Downloads</i>). ' +
+    'Zum Laden wählst du sie dort wieder aus.</p>' +
+    '<p><b>Android:</b> Die Datei landet im Ordner <i>Downloads</i>. Du findest sie in der App <i>Dateien</i> bzw. <i>Eigene Dateien</i>.</p>' +
+    '<p><b>PC / Mac:</b> Die Datei landet im Ordner <i>Downloads</i>. Speichere sie am besten zusätzlich auf einem USB-Stick oder in deinem Schul-Cloudspeicher.</p>' +
+    '<p class="muted klein">Tipp: Behalte immer die neueste Datei. Das Datum steht im Dateinamen, z. B. <code>verdauung-spielstand-' + LT.tag() + '.json</code>.</p>' +
+    '</div></details>';
+
+  /* ---------- Übersicht „Mehr“ ---------- */
+  LT.route(/^\/mehr$/, function () {
+    var s = LT.S;
+    LT.zeige(LT.seitenkopf('Mehr', null, 'Spielstand & Einstellungen') +
+      '<section class="karte stapel" aria-labelledby="ss-t"><h2 id="ss-t">Spielstand</h2>' +
+      '<p>Dein Fortschritt wird automatisch in diesem Browser gespeichert. Wenn du den Browserverlauf löschst oder das Gerät wechselst, ist er aber weg. ' +
+      'Sichere ihn deshalb regelmäßig als Datei.</p>' +
+      '<p class="muted klein">' + (s.gesichert ? 'Zuletzt gesichert: ' + LT.datum(s.gesichert) + ', ' + LT.uhrzeit(s.gesichert) + ' Uhr' : 'Noch nie als Datei gesichert.') + '</p>' +
+      '<div class="reihe"><button class="btn primaer" id="export" type="button">' + icon('download') + 'Spielstand speichern</button>' +
+      '<a class="btn" href="#/mehr/laden">' + icon('upload') + 'Spielstand laden</a></div>' + ANLEITUNG + '</section>' +
+      '<section class="modi" aria-label="Weitere Bereiche">' +
+      '<a class="modus" href="#/nachweis">' + icon('auge') + '<div><b>Nachweis für die Lehrkraft</b><span>Rang, Awards und Prüfcode auf einen Blick</span></div></a>' +
+      '<a class="modus" href="#/datenschutz">' + icon('schild_ds') + '<div><b>Datenschutz</b><span>Was gespeichert wird und was nicht</span></div></a>' +
+      '</section>' +
+      '<section class="karte stapel" aria-labelledby="form-t"><h2 id="form-t">Anrede der Ränge</h2><div class="wahl">' +
+      [['w', 'weiblich (Praktikantin …)'], ['m', 'männlich (Praktikant …)'], ['n', 'neutral (Praktikant:in …)']].map(function (f) {
+        return '<label><input type="radio" name="form" value="' + f[0] + '"' + (s.form === f[0] ? ' checked' : '') + '> ' + f[1] + '</label>';
+      }).join('') + '</div></section>' +
+      '<section class="karte stapel" aria-labelledby="rs-t"><h2 id="rs-t">Neu anfangen</h2>' +
+      '<p class="muted">Löscht deinen gesamten Fortschritt in diesem Browser. Eine gesicherte Datei bleibt erhalten.</p>' +
+      '<div><button class="btn gefahr" id="reset" type="button">Fortschritt löschen</button></div></section>' +
+      '<p class="muted klein">Version vom ' + LT.datum(LT.D.erstellt) + (LT.D.variante === 'kurs' ? ' · Kursversion' : '') + '</p>');
+    LT.$('#export').addEventListener('click', function () {
+      LT.exportieren();
+      LT.ansage('Spielstand wurde als Datei gespeichert.');
+      LT.navigieren();
+    });
+    LT.$$('input[name=form]').forEach(function (r) {
+      r.addEventListener('change', function () { LT.S.form = r.value; LT.speichern(); LT.kopfAktualisieren(); LT.ansage('Anrede geändert.'); });
+    });
+    LT.$('#reset').addEventListener('click', function () {
+      LT.dialog('Wirklich alles löschen?', '<p>Dein Rang, deine XP, Awards und Karteikarten-Fächer werden in diesem Browser gelöscht. Das kann nicht rückgängig gemacht werden.</p>', [
+        { text: 'Abbrechen', aktion: function () {} },
+        { text: 'Ja, alles löschen', klasse: 'gefahr', aktion: function () { LT.zuruecksetzen(); LT.gehe('/'); } }
+      ]);
+    });
+  }, 'mehr');
+
+  /* ---------- Spielstand laden ---------- */
+  LT.route(/^\/mehr\/laden$/, function () {
+    var h = LT.zeige(LT.seitenkopf('Spielstand laden', { pfad: LT.S.form ? '/mehr' : '/willkommen', text: 'Zurück' }) +
+      '<section class="karte stapel"><p>Wähle deine Spielstand-Datei aus (<code>verdauung-spielstand-….json</code>). ' +
+      'Du siehst vorher, was darin steht, und entscheidest dann.</p>' +
+      '<div class="feld"><label for="datei">Datei auswählen</label><input type="file" id="datei" accept=".json,application/json"></div>' +
+      '<div id="vorschau" aria-live="polite"></div></section>' + ANLEITUNG);
+    LT.$('#datei', h).addEventListener('change', function (e) {
+      var f = e.target.files && e.target.files[0];
+      if (!f) return;
+      var leser = new FileReader();
+      leser.onload = function () { vorschau(LT.dateiPruefen(String(leser.result))); };
+      leser.readAsText(f);
+    });
+  }, 'mehr');
+
+  function vorschau(erg) {
+    var ziel = LT.$('#vorschau');
+    if (!erg.ok) { ziel.innerHTML = '<div class="hinweis nein">' + esc(erg.meldung) + '</div>'; return; }
+    var d = erg.daten, aktuell = LT.S;
+    var aelter = aktuell.laeufe.length && new Date(erg.gespeichert) < new Date(aktuell.geaendert);
+    ziel.innerHTML = '<div class="karte flach stapel"><h2>Vorschau</h2><table class="liste"><tbody>' +
+      '<tr><th scope="row">Gespeichert am</th><td>' + LT.datum(erg.gespeichert) + ', ' + LT.uhrzeit(erg.gespeichert) + ' Uhr</td></tr>' +
+      '<tr><th scope="row">Rang</th><td>' + esc(rangName(d)) + ' (' + LT.zahl(d.xp) + ' XP)</td></tr>' +
+      '<tr><th scope="row">Awards</th><td>' + Object.keys(d.awards).length + '</td></tr>' +
+      '<tr><th scope="row">Abgeschlossene Modulchecks</th><td>' + d.laeufe.length + '</td></tr></tbody></table>' +
+      (aelter ? '<div class="hinweis nein"><b>Achtung:</b> Diese Datei ist älter als dein aktueller Stand in diesem Browser (' +
+        LT.datum(aktuell.geaendert) + ', ' + LT.uhrzeit(aktuell.geaendert) + ' Uhr). Wenn du sie lädst, geht neuerer Fortschritt verloren.</div>' : '') +
+      (aktuell.laeufe.length ? '<p class="muted klein">Dein aktueller Stand: ' + esc(LT.rang().name) + ', ' + LT.zahl(aktuell.xp) + ' XP, ' +
+        Object.keys(aktuell.awards).length + ' Awards. Er wird ersetzt.</p>' : '') +
+      '<div class="reihe"><button class="btn primaer" id="uebernehmen" type="button">Spielstand übernehmen</button>' +
+      '<button class="btn" id="abbrechen" type="button">Abbrechen</button></div></div>';
+    LT.$('#uebernehmen').addEventListener('click', function () {
+      LT.uebernehmen(d);
+      LT.awardsPruefen(); LT.neueAwards = [];
+      LT.ansage('Spielstand geladen.');
+      LT.gehe('/');
+    });
+    LT.$('#abbrechen').addEventListener('click', function () { ziel.innerHTML = ''; LT.$('#datei').value = ''; });
+  }
+
+  /* ---------- Erinnerung ans Sichern (nach jedem Modulabschluss) ---------- */
+  LT.sichernErinnerung = function () {
+    return '<div class="hinweis gold stapel"><p><b>Denk ans Sichern!</b> Speichere deinen Spielstand als Datei, damit nichts verloren geht.</p>' +
+      '<div><button class="btn klein" type="button" data-export>' + icon('download') + 'Spielstand speichern</button></div></div>';
+  };
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-export]');
+    if (b) { LT.exportieren(); b.outerHTML = '<span class="chip ok">' + icon('haken') + 'gespeichert</span>'; }
+  });
+
+  /* ---------- Nachweis für die Lehrkraft (nur Bildschirm) ---------- */
+  LT.route(/^\/nachweis$/, function () {
+    var s = LT.S, r = LT.rang();
+    var erreichte = LT.D.awards.filter(function (a) { return s.awards[a.id]; })
+      .sort(function (a, b) { return s.awards[a.id] < s.awards[b.id] ? -1 : 1; });
+    var module = LT.D.module.filter(function (m) { return LT.laeufeVon(m.id).length; });
+    LT.zeige(LT.seitenkopf('Nachweis', { pfad: '/mehr', text: 'Mehr' }, 'Für die Lehrkraft') +
+      '<section class="karte stapel nachweis">' +
+      '<div class="reihe zw"><div><p class="eyebrow">Rang</p><p class="stufe" style="font-family:var(--f-display);font-size:1.6rem;font-weight:700">' + esc(r.name) + '</p>' +
+      '<p class="muted">' + LT.zahl(s.xp) + ' XP</p></div>' +
+      '<div style="text-align:right"><p class="eyebrow">Prüfcode</p><p class="pruefcode">' + LT.pruefcode() + '</p>' +
+      '<p class="muted klein">Stand: ' + LT.datum(LT.iso()) + ', ' + LT.uhrzeit(LT.iso()) + ' Uhr</p></div></div>' +
+      '<h2>Awards (' + erreichte.length + ')</h2>' +
+      (erreichte.length ? '<table class="liste"><thead><tr><th>Award</th><th>erreicht am</th></tr></thead><tbody>' +
+        erreichte.map(function (a) { return '<tr><td>' + esc(LT.awardName(a)) + '</td><td>' + LT.datum(s.awards[a.id]) + '</td></tr>'; }).join('') +
+        '</tbody></table>' : '<p class="muted">Noch keine Awards.</p>') +
+      '<h2>Module</h2>' +
+      (module.length ? '<table class="liste"><thead><tr><th>Modul</th><th>bestes Ergebnis</th><th>Durchgänge</th></tr></thead><tbody>' +
+        module.map(function (m) {
+          return '<tr><td>' + esc(m.titel) + '</td><td>' + LT.bestes(m.id) + ' %' + (LT.bestanden(m.id) ? ' ✓' : '') + '</td><td>' + LT.laeufeVon(m.id).length + '</td></tr>';
+        }).join('') + '</tbody></table>' : '<p class="muted">Noch kein Modulcheck abgeschlossen.</p>') +
+      '<p class="muted klein">Der Prüfcode wird aus Rang, Awards und Modulergebnissen berechnet. Ändert sich etwas daran, ändert sich auch der Code.</p>' +
+      '</section>');
+  }, 'mehr');
+
+  /* ---------- Datenschutz ---------- */
+  LT.route(/^\/datenschutz$/, function () {
+    LT.zeige(LT.seitenkopf('Datenschutz', { pfad: LT.S.form ? '/mehr' : '/willkommen', text: 'Zurück' }) +
+      '<section class="karte stapel">' +
+      '<h2>Kurz gesagt</h2><ul>' +
+      '<li>Du brauchst <b>kein Konto</b> und gibst <b>keinen Namen, keine Klasse und keinen Standort</b> an.</li>' +
+      '<li>Das Lerntool <b>sendet nichts ins Internet</b>. Es lädt keine Schriften, keine Bilder und keine Statistik-Dienste nach.</li>' +
+      '<li>Dein Fortschritt liegt <b>nur in diesem Browser</b> (localStorage) und in Dateien, die du selbst speicherst.</li>' +
+      '<li><b>Texte, die du in Operatoraufgaben schreibst, werden nie gespeichert.</b> Sie sind weg, sobald du die Aufgabe verlässt.</li>' +
+      '<li>Uhrzeit und Datum für manche Awards werden nur auf deinem Gerät geprüft.</li></ul>' +
+      '<h2>Was genau gespeichert wird</h2><ul>' +
+      '<li>deine gewählte Anrede (weiblich / männlich / neutral)</li>' +
+      '<li>XP, Ergebnisse der Modulchecks (Datum, Uhrzeit, Prozent)</li>' +
+      '<li>Fächer deiner Karteikarten, Kennungen falsch beantworteter Aufgaben („Meine Fehler“)</li>' +
+      '<li>erreichte Awards mit Datum, Übungstage, Bestwerte in den Spielen</li></ul>' +
+      '<p class="muted">Alles löschen kannst du unter „Mehr → Neu anfangen“.</p></section>');
+  }, 'mehr');
+})();
+
+/* ---- js/90-start.js ---- */
+/* Start: Thema (hell/dunkel), Navigation, erste Anzeige */
+(function () {
+  var THEMA = 'verdauung-thema';
+  function themaSetzen(t) {
+    if (t) document.documentElement.setAttribute('data-theme', t); else document.documentElement.removeAttribute('data-theme');
+    var dunkel = t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var b = LT.$('#thema-btn');
+    b.innerHTML = LT.icon(dunkel ? 'sonne' : 'mond');
+    b.setAttribute('aria-label', dunkel ? 'Hellen Modus einschalten' : 'Dunklen Modus einschalten');
+  }
+  var gespeichert = null;
+  try { gespeichert = localStorage.getItem(THEMA); } catch (e) { /* egal */ }
+  themaSetzen(gespeichert);
+  LT.$('#thema-btn').addEventListener('click', function () {
+    var dunkel = document.documentElement.getAttribute('data-theme') === 'dark' ||
+      (!document.documentElement.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var neu = dunkel ? 'light' : 'dark';
+    try { localStorage.setItem(THEMA, neu); } catch (e) { /* egal */ }
+    themaSetzen(neu);
+  });
+
+  LT.$$('.leiste .ni').forEach(function (s) { s.innerHTML = LT.icon(s.getAttribute('data-icon')); });
+
+  // Klick auf den abgedunkelten Hintergrund schließt den Dialog
+  LT.$('#dialog').addEventListener('click', function (e) { if (e.target === this) LT.dialogZu(); });
+
+  window.addEventListener('hashchange', LT.navigieren);
+  LT.navigieren();
+})();
+
+</script>
+</body>
+</html>

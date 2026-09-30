@@ -1,0 +1,37 @@
+/* Award-Wand, Plaketten, Feier-Animation, Glossar */
+.wand{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
+.award{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 8px 12px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.award:hover{background:var(--surface-2)}
+.award .plakette{width:88px;height:88px;transition:transform .25s ease}
+.award:hover .plakette{transform:scale(1.05) rotate(-3deg)}
+.award.zu .plakette{filter:grayscale(1) brightness(.8);opacity:.38}
+.award .schloss{position:absolute;top:60px;left:50%;transform:translateX(-50%);width:30px;height:30px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--line);display:grid;place-items:center}
+.award .schloss svg{width:16px;height:16px}
+.award .n{font-family:var(--f-display);font-weight:700;font-size:1.02rem;line-height:1.15}
+.award .d{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.mini{width:70%;height:5px;border-radius:99px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line)}
+.mini i{display:block;height:100%;background:var(--muted)}
+
+.feier{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.plakette.gross{width:150px;height:150px}
+.plakette.grau{filter:grayscale(1);opacity:.5}
+.feier .fakt{max-width:44ch}
+dialog[open] .feier .plakette.gross:not(.grau){animation:plakette-rein .9s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes plakette-rein{
+  0%{transform:scale(.2) rotate(-40deg);opacity:0;filter:drop-shadow(0 0 0 transparent)}
+  60%{transform:scale(1.12) rotate(6deg);opacity:1;filter:drop-shadow(0 0 18px var(--accent))}
+  100%{transform:scale(1) rotate(0);filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
+}
+@media (prefers-reduced-motion: reduce){
+  dialog[open] .feier .plakette.gross:not(.grau){animation:plakette-sanft .4s ease both}
+  @keyframes plakette-sanft{from{opacity:0}to{opacity:1}}
+}
+
+.glossar{margin:0;display:grid;gap:10px}
+.g-eintrag{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.g-eintrag dt{font-weight:700}
+.g-eintrag dd{margin:4px 0 0;display:flex;flex-direction:column;gap:4px}
+
+@media print{.nachweis{display:none}.nachweis-druck::after{content:"Der Nachweis wird nur auf dem Bildschirm angezeigt."}}

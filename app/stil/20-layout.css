@@ -1,0 +1,25 @@
+/* Kopf, Hauptbereich, untere Navigationsleiste */
+.kopf{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.kopf-innen{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.logo{font-family:var(--f-display);font-weight:700;font-size:1.25rem;text-decoration:none;letter-spacing:.01em;margin-right:auto}
+.logo span{color:var(--accent);margin-left:.25em}
+.rang-chip{display:flex;align-items:center;gap:8px;font-size:.85rem;min-width:0}
+.rang-chip b{font-family:var(--f-display);font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw}
+.rang-chip .xpz{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;flex:none}
+.icon-btn svg{width:20px;height:20px}
+
+main{max-width:980px;margin:0 auto;padding:20px 16px 8px;display:flex;flex-direction:column;gap:24px;outline:none}
+
+.leiste{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(4,1fr);
+  background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);height:calc(var(--leiste-h) + env(safe-area-inset-bottom))}
+.leiste a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;font-size:.78rem;font-weight:600;color:var(--muted)}
+.leiste a[aria-current="page"]{color:var(--accent)}
+.leiste .ni svg{width:24px;height:24px}
+@media (min-width:900px){
+  body{padding-bottom:24px}
+  .leiste{position:sticky;top:61px;bottom:auto;height:auto;max-width:980px;margin:0 auto;display:flex;gap:4px;background:transparent;border:0;padding:8px 16px 0}
+  .leiste a{flex-direction:row;gap:8px;padding:8px 14px;border-radius:10px;font-size:.95rem}
+  .leiste a[aria-current="page"]{background:var(--accent-soft);color:var(--fg)}
+  .leiste .ni svg{width:20px;height:20px}
+}
