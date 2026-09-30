@@ -8,7 +8,8 @@
     - steht der Stoff unter „nicht:“ des gewählten Enzyms, die Erklärung von dort,
     - sonst: „X wird nicht durch A gespalten, sondern durch B.“ + Erklärung von Enzym B.
   Format der Zeilen:  - Stoff => Erklärung
-  Geprüft gegen: i-care S. 209, 214, 223, 238, 239, 240 · MKK S. 359
+  Bewusst einfach gehalten: nur Alltagsbegriffe als Stoffe (keine Enzymvorstufen).
+  Geprüft gegen: i-care S. 209, 214, 223, 238, 239, 240
 -->
 
 modul: verdauung
@@ -16,70 +17,65 @@ einleitung: Du bist ein Verdauungsenzym! Wähle dein Enzym und tippe nur die Sto
 
 ## Enzym: Amylase
 ort: Mundspeichel und Pankreassaft
-info: Spaltet Stärke in den Zweifachzucker Maltose.
-quelle: i-care S. 214, 223, 238
+info: Spaltet Stärke.
+quelle: i-care S. 214, 238
 spaltet:
 - Stärke => Die Amylase spaltet den Vielfachzucker Stärke in den Zweifachzucker Maltose.
-- Glykogen => Laut Tabelle spaltet die Amylase als Glykosidase Kohlenhydrate wie Stärke und Glykogen.
 nicht:
-- Glukose => Glukose ist schon ein Einfachzucker und kann direkt resorbiert werden.
-- Zellulose => Zellulose ist ein Ballaststoff: ein Kohlenhydrat, das im Dünndarm nicht aufgeschlossen werden kann.
+- Glukose => Glukose ist schon ein Einfachzucker und kann direkt aufgenommen werden.
+- Zellulose => Zellulose ist ein Ballaststoff: Sie kann im Dünndarm nicht verdaut werden.
 
 ## Enzym: Pepsin
 ort: Magen
-info: Spaltet Eiweiße – aber erst, nachdem die Salzsäure sie denaturiert hat.
+info: Spaltet Eiweiße im Magen.
 quelle: i-care S. 209, 239
 spaltet:
-- Eiweiße => Das Enzym Pepsin spaltet Eiweiße und spielt so in der Proteinverdauung eine Rolle.
-- Pepsinogen => Pepsin kann Pepsinogen spalten und fördert so seine eigene Entstehung.
+- Eiweiße => Das Enzym Pepsin spaltet im Magen Eiweiße.
 nicht:
-- Aminosäuren => Aminosäuren sind die kleinsten Eiweißbausteine und werden direkt resorbiert.
+- Aminosäuren => Aminosäuren sind die kleinsten Eiweißbausteine und werden direkt aufgenommen.
 
 ## Enzym: Trypsin
 ort: Pankreassaft (aktiv erst im Dünndarm)
-info: Wichtigstes eiweißspaltendes Enzym des Pankreas. Es aktiviert auch die anderen Protease-Vorstufen.
-quelle: i-care S. 223; MKK S. 359
+info: Spaltet Eiweiße im Dünndarm.
+quelle: i-care S. 223, 240
 spaltet:
-- Eiweiße => Trypsin spaltet Peptidbindungen im Inneren des Eiweißmoleküls, dadurch entstehen kleinere Peptide.
-- Trypsinogen => Trypsin überführt seine eigene Vorstufe Trypsinogen in die aktive Form.
-- Chymotrypsinogen => Trypsin überführt Chymotrypsinogen in das aktive Chymotrypsin.
+- Eiweiße => Trypsin aus dem Pankreassaft spaltet im Dünndarm Eiweiße.
 nicht:
-- Aminosäuren => Aminosäuren sind die kleinsten Eiweißbausteine und werden direkt resorbiert.
+- Aminosäuren => Aminosäuren sind die kleinsten Eiweißbausteine und werden direkt aufgenommen.
 
 ## Enzym: Lipase
-ort: Magen (Magenlipase) und Pankreassaft (Pankreaslipase)
-info: Spaltet Fette. Die Pankreaslipase ist wichtiger als die Magenlipase.
-quelle: i-care S. 240; MKK S. 359
+ort: Magen und Pankreassaft
+info: Spaltet Fette.
+quelle: i-care S. 240
 spaltet:
-- Triglyzeride => Die Lipase spaltet von den Neutralfetten (Triglyzeriden) Fettsäuren ab.
-- Milchfett => Aus Milchfetten setzt die Magenlipase kurzkettige Fettsäuren frei.
+- Fette => Die Lipase spaltet die Nahrungsfette. Die Lipase aus dem Pankreas ist dabei wichtiger als die des Magens.
 nicht:
-- Fettsäuren => Fettsäuren sind bereits Spaltprodukte der Fette und werden von den Enterozyten aufgenommen.
-- Gallensäuren => Gallensäuren sind kein Nährstoff: Sie verteilen die Fette fein und bilden Mizellen.
+- Fettsäuren => Fettsäuren sind schon Bausteine der Fette und werden von den Darmzellen aufgenommen.
+- Gallensäuren => Gallensäuren sind kein Nährstoff: Sie verteilen die Fette nur fein.
 
 ## Enzym: Laktase
-ort: Bürstensaum des Dünndarms
+ort: Dünndarmschleimhaut
 info: Spaltet Milchzucker. Fehlt sie, entsteht eine Laktoseintoleranz.
 quelle: i-care S. 238–239
 spaltet:
-- Laktose => Die Laktase spaltet den Zweifachzucker Laktose („Milchzucker“) in Galaktose und Glukose.
+- Laktose => Die Laktase spaltet den Milchzucker (Laktose) in Einfachzucker.
 nicht:
-- Galaktose => Galaktose ist schon ein Einfachzucker und kann direkt resorbiert werden.
+- Galaktose => Galaktose ist schon ein Einfachzucker und kann direkt aufgenommen werden.
 
 ## Enzym: Maltase
-ort: Bürstensaum des Dünndarms
-info: Spaltet den Malzzucker, der beim Stärkeabbau entsteht.
+ort: Dünndarmschleimhaut
+info: Spaltet Malzzucker, der beim Abbau der Stärke entsteht.
 quelle: i-care S. 238
 spaltet:
-- Maltose => Die Maltase spaltet den Zweifachzucker Maltose („Malzzucker“) in 2 Glukosemoleküle.
+- Maltose => Die Maltase spaltet den Malzzucker (Maltose) in zwei Glukosemoleküle.
 nicht:
-- Glukose => Glukose ist schon ein Einfachzucker und kann direkt resorbiert werden.
+- Glukose => Glukose ist schon ein Einfachzucker und kann direkt aufgenommen werden.
 
 ## Enzym: Saccharase
-ort: Bürstensaum des Dünndarms
-info: Spaltet den Haushaltszucker.
+ort: Dünndarmschleimhaut
+info: Spaltet Haushaltszucker.
 quelle: i-care S. 238
 spaltet:
-- Saccharose => Die Saccharase spaltet den Zweifachzucker Saccharose („Rohrzucker“ oder „Rübenzucker“) in Glukose und Fruktose.
+- Saccharose => Die Saccharase spaltet den Rohr- bzw. Rübenzucker (Saccharose) in Glukose und Fruktose.
 nicht:
-- Fruktose => Fruktose ist schon ein Einfachzucker und kann direkt resorbiert werden.
+- Fruktose => Fruktose ist schon ein Einfachzucker und kann direkt aufgenommen werden.

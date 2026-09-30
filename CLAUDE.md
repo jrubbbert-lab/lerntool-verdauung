@@ -65,6 +65,9 @@ Planungsunterlagen: `planung/01_inhaltsuebersicht.md` (Buchseiten je Modul, Lüc
 - **Immer Fachbegriffe verwenden.** Beim ersten Auftreten in einem Modul steht der deutsche Begriff in Klammern dahinter. Technisch wird das über `[[Begriff]]` + `inhalte/glossar.md` gelöst; die App ergänzt die Klammer automatisch. Ein Glossar ist in der App antippbar.
 - Jede Aufgabe speichert ihre Quelle (Buch + gedruckte Seite). Die Rückmeldung zeigt „Lies nach: [Buch], S. xx“.
 - Abbildungen **nur aus i-care** (MKK-Bilder tragen Wasserzeichen mit der E-Mail der Lehrkraft und werden nicht verwendet). Beschriftungen werden abgedeckt. Jede verwendete Abbildung steht in `inhalte/abbildungen.md` (Buch, Seite, Abbildungsnummer, Fremdquelle).
+- **Schwierigkeit (Wunsch der Lehrkraft):** Keine Zahlenwerte abfragen (kJ/kcal, Prozent, pH, Liter, Gramm, Stunden, Millimeter, Abstände …). Zahlen dürfen nur als Zusatzinfo in Erklärungen oder Musterlösungen stehen.
+  - Keine Spezialbegriffe abfragen, die über das Grundverständnis hinausgehen (z. B. Somatostatin, ECL-Zellen, Enteropeptidase, Nukleasen, Nervennamen).
+  - Fragen kurz und alltagsnah formulieren, mit höchstens 3–4 klaren Antwortoptionen.
 - Figuren in Fallbeispielen und Operatoraufgaben:
   - **Robartina Müller** (20, Berufskolleg Gesundheit, Praktikum im Krankenhaus),
   - ihr Mitschüler **Alaa**,

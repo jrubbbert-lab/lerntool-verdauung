@@ -139,7 +139,7 @@ quelle: i-care S. 240; MKK S. 362
 nährstoff: Fett aus der Butter
 ort: Magen
 frage: Was passiert mit dem Fett im Magen?
-- [x] Die Magenlipase spaltet 15–30 % der Nahrungsfette.
+- [x] Die Magenlipase spaltet einen kleinen Teil der Fette.
 - [ ] Pepsin spaltet das gesamte Fett.
 - [ ] Im Magen passiert mit dem Fett gar nichts.
 erklärung: Fettreiche Speisen passieren den Magen am langsamsten.
@@ -161,7 +161,7 @@ frage: Welches Enzym spaltet den größten Teil der Nahrungsfette?
 - [x] die Lipase aus der Bauchspeicheldrüse (Pankreaslipase)
 - [ ] die Magenlipase
 - [ ] die Laktase
-erklärung: Die Pankreaslipase spaltet 70–85 % der Fette.
+erklärung: Die Pankreaslipase spaltet den größten Teil der Fette, die Magenlipase nur einen kleinen Teil.
 quelle: i-care S. 240–241
 
 ## Station

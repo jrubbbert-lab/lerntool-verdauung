@@ -3,13 +3,15 @@
 id: naehrstoffe
 block: 1
 nr: 1
-quellen: i-care S. 241–248; MKK S. 362
+quellen: i-care S. 214, 241–248; MKK S. 362
 beschreibung: Woraus besteht unsere Nahrung, und wie viel Energie steckt darin?
 icon: ernaehrung
 farbe: #2f9e6b
 
 <!--
-  Geprüft gegen: i-care S. 238, 241, 242, 243, 244, 245, 246, 247, 248 · MKK S. 362
+  Geprüft gegen: i-care S. 214, 241, 242, 243, 244, 246, 247, 248 · MKK S. 362
+  Schwierigkeit: Es werden KEINE Zahlenwerte abgefragt (kJ, Prozent, Liter, Gramm …).
+  Zahlen stehen höchstens als Zusatzinfo in Erklärungen und Musterlösungen.
   Hinweis: Den chemischen Aufbau der Nährstoffe beschreibt i-care in Kap. 1–2 (S. 28–36),
   das nicht in quellen/ liegt. Aufgaben dazu fehlen deshalb bewusst.
   Nicht verwendet: Die Umwandlung von Vitamin D auf i-care S. 242 („in der Leber in Vitamin D2“)
@@ -19,13 +21,18 @@ farbe: #2f9e6b
 <!-- =============================== KARTEIKARTEN =============================== -->
 
 ## Karteikarte
-vorne: Was sind die Hauptbestandteile der Nahrung, und warum heißen sie „Brennstoffe“?
-hinten: Kohlenhydrate, Proteine und Fette. Der Körper kann aus ihnen Energie in Form von ATP gewinnen. Außerdem liefern sie Bausteine für körpereigene Stoffe.
+vorne: Was sind die drei Hauptbestandteile der Nahrung?
+hinten: Kohlenhydrate, Proteine (Eiweiße) und Fette. Sie heißen auch „Brennstoffe“, weil der Körper aus ihnen Energie gewinnt.
+quelle: i-care S. 241
+
+## Karteikarte
+vorne: Was bedeutet [[essenziell]]?
+hinten: Lebensnotwendig: Der Körper kann den Stoff nicht oder nicht ausreichend selbst herstellen. Er muss deshalb mit der Nahrung aufgenommen werden.
 quelle: i-care S. 241
 
 ## Karteikarte
 vorne: Welche Nahrungsbestandteile sind [[essenziell]]?
-hinten: Vitamine, Mineralstoffe (Mengen- und Spurenelemente), bestimmte Fettsäuren und bestimmte Aminosäuren.
+hinten: Vitamine, Mineralstoffe, bestimmte Fettsäuren und bestimmte Aminosäuren.
 quelle: i-care S. 241
 
 ## Karteikarte
@@ -34,101 +41,95 @@ hinten: Die Vitamine E, D, K und A – Merkhilfe: die Supermarktkette „EDeKA�
 quelle: i-care S. 242
 
 ## Karteikarte
-vorne: Warum sollten fettlösliche Vitamine mit fetthaltiger Nahrung aufgenommen werden?
-hinten: Der Körper kann sie nur dann resorbieren. Im Darm sind sie nur über die Mizellenbildung in Gegenwart anderer Fette aufnehmbar.
+vorne: Warum sollte man fettlösliche Vitamine zusammen mit etwas Fett essen?
+hinten: Der Körper kann sie nur dann aufnehmen, wenn gleichzeitig Fett in der Nahrung ist.
 quelle: i-care S. 242; MKK S. 362
 
 ## Karteikarte
-vorne: Welches Vitamin kann der Körper als einziges in ausreichender Menge selbst herstellen?
-hinten: Vitamin D3. Sein Ausgangsstoff wird bei ausreichender Sonneneinstrahlung in der Haut aus Cholesterin gebildet.
+vorne: Welches Vitamin kann der Körper mithilfe von Sonnenlicht selbst herstellen?
+hinten: Vitamin D. Sein Ausgangsstoff wird bei ausreichender Sonneneinstrahlung in der Haut gebildet.
 quelle: i-care S. 242
 
 ## Karteikarte
 vorne: Warum müssen Veganer besonders auf Vitamin B12 achten?
-hinten: Vitamin B12 ist nur in tierischen Produkten enthalten. Veganer müssen es ggf. über Nahrungsergänzungsmittel aufnehmen.
+hinten: Vitamin B12 ist nur in tierischen Produkten enthalten.
 quelle: i-care S. 243
 
 ## Karteikarte
-vorne: Wer hat einen erhöhten Bedarf an Folsäure (Vitamin B9), und was kann ein Mangel bewirken?
-hinten: Schwangere. Ein Folsäuremangel kann beim Kind zu einem offenen Rücken (Spina bifida) führen.
+vorne: Warum ist Folsäure in der Schwangerschaft besonders wichtig?
+hinten: Der Bedarf ist erhöht. Ein Mangel kann beim Kind zu einem offenen Rücken (Spina bifida) führen.
 quelle: i-care S. 243
 
 ## Karteikarte
 vorne: Welche Krankheit entsteht bei einem Mangel an Vitamin C?
-hinten: Skorbut. Durch die gestörte Kollagensynthese kommt es u. a. zu Zahnausfall.
+hinten: Skorbut. Früher waren häufig Matrosen betroffen, die lange keine frischen Lebensmittel hatten.
 quelle: i-care S. 243
 
 ## Karteikarte
 vorne: Was ist der Unterschied zwischen Mengen- und Spurenelementen?
-hinten: Mengenelemente kommen in größerer Menge im Körper vor (z. B. Kalzium, Kalium, Natrium). Spurenelemente nur in geringen Mengen (z. B. Eisen, Jod, Fluor).
+hinten: Mengenelemente kommen in größerer Menge im Körper vor (z. B. Kalzium, Natrium). Spurenelemente nur in geringen Mengen (z. B. Eisen, Jod).
 quelle: i-care S. 243–244
 
 ## Karteikarte
-vorne: Welche Fettsäuren sind vor allem [[essenziell]], und wo kommen sie vor?
-hinten: Die Omega-6-Fettsäure Linolsäure und die Omega-3-Fettsäure Linolensäure. Sie kommen v. a. in pflanzlichen Ölen (Raps-, Oliven-, Nussöl) und in Fisch vor.
+vorne: Wo kommen die wichtigen [[essenziell|essenziellen]] Fettsäuren vor?
+hinten: Vor allem in pflanzlichen Ölen (z. B. Raps-, Oliven- oder Nussöl) und in Fisch.
 quelle: i-care S. 243
 
 ## Karteikarte
-vorne: Wie viele der 20 Aminosäuren sind [[essenziell]]?
-hinten: 8 Aminosäuren, z. B. Valin, Leucin und Tryptophan.
-quelle: i-care S. 243
-
-## Karteikarte
-vorne: Was ist der Grundumsatz, und unter welchen Bedingungen wird er bestimmt?
-hinten: Die Energie, die ein gesunder Erwachsener für seine lebenswichtigen Organfunktionen braucht. Bestimmung: liegend, in völliger Ruhe, bei normaler Körpertemperatur und 27–31 °C Außentemperatur, morgens 12–14 Stunden nach der letzten Mahlzeit.
+vorne: Was ist der Grundumsatz?
+hinten: Die Energie, die der Körper in völliger Ruhe braucht, um seine lebenswichtigen Organfunktionen aufrechtzuerhalten.
 quelle: i-care S. 244
 
 ## Karteikarte
 vorne: Was ist der Arbeitsumsatz?
-hinten: Grundumsatz plus die Energie für alle Aktivitäten und für das Wachstum. Bei schwerer körperlicher Arbeit kann er bis auf das 3-Fache des Grundumsatzes ansteigen.
+hinten: Grundumsatz plus die Energie für alle Aktivitäten, z. B. Bewegung und körperliche Arbeit.
 quelle: i-care S. 245
 
 ## Karteikarte
-vorne: Welche Brennwerte haben 1 g Kohlenhydrate, Fett, Eiweiß und Alkohol?
-hinten: Kohlenhydrate 17 kJ (4 kcal), Fett 39 kJ (9 kcal), Eiweiß 17 kJ (4 kcal), Alkohol 30 kJ (7 kcal).
-quelle: i-care S. 245
-
-## Karteikarte
-vorne: Wie rechnet man Kilokalorien in Kilojoule um?
-hinten: 1 kcal entspricht 4,2 kJ.
-quelle: i-care S. 245
-
-## Karteikarte
-vorne: Wie viele Ballaststoffe sollte man täglich mindestens zu sich nehmen?
-hinten: Mindestens 30 g.
+vorne: Welcher Nährstoff liefert pro Gramm am meisten Energie?
+hinten: Fett. Es liefert bei gleicher Menge mehr als doppelt so viel Energie wie Kohlenhydrate oder Eiweiß.
 quelle: i-care S. 246
 
 ## Karteikarte
-vorne: Was gibt die biologische Wertigkeit eines Nahrungseiweißes an?
-hinten: Wie viel körpereigenes Protein aus 100 g des Nahrungseiweißes gebildet werden kann. Vergleichseiweiß ist das Hühnereiweiß mit dem Wert 100.
+vorne: Was sind Ballaststoffe, und warum sind sie nützlich?
+hinten: Stoffe, die im Dünndarm nicht verdaut werden können, meist unverdauliche Vielfachzucker aus Getreide und Gemüse. Sie quellen auf und tragen zum Sättigungsgefühl bei.
+quelle: i-care S. 214
+
+## Karteikarte
+vorne: Was bedeutet eine hohe biologische Wertigkeit eines Nahrungseiweißes?
+hinten: Das Eiweiß ähnelt dem menschlichen Körpereiweiß stark. Der Körper kann daraus viel körpereigenes Protein bilden.
 quelle: i-care S. 246
 
 ## Karteikarte
-vorne: Wie viel Flüssigkeit sollte man unter normalen Umständen täglich trinken?
-hinten: Ungefähr 1,5 l – bei Hitze oder großer Anstrengung entsprechend mehr.
+vorne: Welche Getränke eignen sich am besten zum Durstlöschen?
+hinten: Wasser und ungesüßte Tees. Unverdünnte Säfte und Limonaden enthalten meist viel Zucker und damit Kalorien.
 quelle: i-care S. 248
 
 ## Karteikarte
 vorne: Welche Hormone steuern Hunger und Sättigung?
-hinten: Cholecystokinin gilt als „Sättigungshormon“, Ghrelin als „Hungerhormon“. Langfristig wirkt Leptin aus dem Fettgewebe: Es hemmt das Hungerzentrum.
+hinten: Cholecystokinin gilt als „Sättigungshormon“, Ghrelin als „Hungerhormon“.
 quelle: i-care S. 248
 
 ## Karteikarte
-vorne: Wie berechnet man den Body-Mass-Index (BMI)?
-hinten: Körpergewicht in kg geteilt durch das Quadrat der Körpergröße in m. Über 25: Übergewicht, über 30: [[Adipositas]].
+vorne: Was gibt der Body-Mass-Index (BMI) an?
+hinten: Das Körpergewicht im Verhältnis zur Körpergröße. Ein sehr hoher BMI spricht für Fettleibigkeit ([[Adipositas]]).
 quelle: i-care S. 244
+
+## Karteikarte
+vorne: Wie verändert sich der Energiebedarf im Alter?
+hinten: Er sinkt, weil der Muskelanteil abnimmt. Ältere Menschen brauchen aber genauso viele Nährstoffe wie jüngere.
+quelle: i-care S. 246
 
 <!-- =============================== SINGLE-CHOICE =============================== -->
 
 ## Single-Choice
 id: naehrstoffe-sc-brennwert-fett
-frage: Welchen Brennwert hat 1 g Fett?
-- [x] 39 kJ (9 kcal)
-- [ ] 17 kJ (4 kcal)
-- [ ] 30 kJ (7 kcal)
-- [ ] 4,2 kJ (1 kcal)
-erklärung: Fett hat den höchsten Brennwert – mehr als doppelt so viel wie Kohlenhydrate oder Eiweiß (je 17 kJ).
-quelle: i-care S. 245–246
+frage: Welcher Nährstoff hat den höchsten Brennwert, liefert also pro Gramm die meiste Energie?
+- [x] Fett
+- [ ] Kohlenhydrate
+- [ ] Eiweiß
+erklärung: Fette liefern bei gleicher Menge mehr als doppelt so viel Energie wie Kohlenhydrate oder Eiweiß.
+quelle: i-care S. 246
 
 ## Single-Choice
 id: naehrstoffe-sc-wasserloeslich
@@ -145,38 +146,36 @@ id: naehrstoffe-sc-nachtblind
 frage: Ein Mangel an welchem Vitamin kann zur Nachtblindheit führen?
 - [x] Vitamin A
 - [ ] Vitamin C
-- [ ] Vitamin K
-- [ ] Vitamin B9 (Folsäure)
+- [ ] Vitamin B12
 erklärung: Vitamin A ist Bestandteil des Sehfarbstoffs.
 quelle: i-care S. 242–243
 
 ## Single-Choice
 id: naehrstoffe-sc-bmi
-frage: Wie wird ein Body-Mass-Index über 30 bezeichnet?
-- [x] [[Adipositas]]
-- [ ] Übergewicht
+frage: Was bedeutet [[Adipositas]]?
+- [x] Fettleibigkeit
+- [ ] starke Abmagerung
+- [ ] Vitaminmangel
 - [ ] Normalgewicht
-- [ ] [[Kachexie]]
-erklärung: Über 25 spricht man von Übergewicht, über 30 von Fettleibigkeit (Adipositas).
-quelle: i-care S. 244
+erklärung: Starke Abmagerung heißt dagegen [[Kachexie]].
+quelle: i-care S. 244, 247
 
 ## Single-Choice
 id: naehrstoffe-sc-b12
-frage: Welche Personengruppe muss laut Buch besonders auf eine ausreichende Zufuhr von Vitamin B12 achten?
+frage: Welche Personengruppe muss laut Buch besonders auf Vitamin B12 achten?
 - [x] Veganer
 - [ ] Sportler
-- [ ] Kinder
 - [ ] Menschen, die viel Obst essen
 erklärung: Vitamin B12 ist nur in tierischen Produkten enthalten.
 quelle: i-care S. 243
 
 ## Single-Choice
-id: naehrstoffe-sc-trinken
-frage: Wie viel Flüssigkeit sollte man unter normalen Umständen pro Tag trinken?
-- [x] ungefähr 1,5 l
-- [ ] ungefähr 0,5 l
-- [ ] ungefähr 3 l
-- [ ] ungefähr 5 l
+id: naehrstoffe-sc-durst
+frage: Womit löscht man seinen Durst am besten?
+- [x] mit Wasser oder ungesüßtem Tee
+- [ ] mit Limonade
+- [ ] mit unverdünntem Saft
+erklärung: Limonaden und unverdünnte Säfte enthalten meist viel Zucker und damit auch Kalorien.
 quelle: i-care S. 248
 
 ## Single-Choice
@@ -184,69 +183,61 @@ id: naehrstoffe-sc-ghrelin
 frage: Welches Hormon wird als „Hungerhormon“ bezeichnet?
 - [x] Ghrelin
 - [ ] Cholecystokinin
-- [ ] Leptin
 - [ ] Insulin
-erklärung: Ghrelin aktiviert das Hungerzentrum. Cholecystokinin gilt als „Sättigungshormon“, Leptin und Insulin hemmen das Hungerzentrum.
+erklärung: Ghrelin aktiviert das Hungerzentrum im Gehirn. Cholecystokinin gilt als „Sättigungshormon“.
 quelle: i-care S. 248
 
 ## Single-Choice
 id: naehrstoffe-sc-grundumsatz
-frage: Unter welchen Bedingungen wird der Grundumsatz bestimmt?
-- [x] liegend, in völliger Ruhe, morgens 12–14 Stunden nach der letzten Mahlzeit
-- [ ] im Stehen direkt nach dem Frühstück
-- [ ] während leichter körperlicher Arbeit
-- [ ] abends nach dem Sport
+frage: Was beschreibt der Grundumsatz?
+- [x] die Energie, die der Körper in völliger Ruhe für lebenswichtige Organfunktionen braucht
+- [ ] die Energie, die man beim Sport verbraucht
+- [ ] die Energie, die in einer Mahlzeit steckt
 quelle: i-care S. 244
-
-## Single-Choice
-id: naehrstoffe-sc-kalium
-frage: Welches Mengenelement ist das wichtigste Kation innerhalb der Zelle?
-- [x] Kalium
-- [ ] Natrium
-- [ ] Kalzium
-- [ ] Chlorid
-erklärung: Natrium ist dagegen das wichtigste Kation außerhalb der Zellen.
-quelle: i-care S. 243
 
 ## Single-Choice
 id: naehrstoffe-sc-eisen
 frage: Zu welcher Gruppe gehört Eisen?
 - [x] zu den Spurenelementen
-- [ ] zu den Mengenelementen
-- [ ] zu den fettlöslichen Vitaminen
-- [ ] zu den essenziellen Aminosäuren
-erklärung: Eisen ist Bestandteil des roten Blutfarbstoffs (Hämoglobin). Der Bedarf ist in der Schwangerschaft erhöht.
+- [ ] zu den Vitaminen
+- [ ] zu den Fetten
+erklärung: Eisen ist Bestandteil des roten Blutfarbstoffs (Hämoglobin).
 quelle: i-care S. 244
 
 ## Single-Choice
-id: naehrstoffe-sc-kj
-frage: Wie viele Kilojoule entsprechen 1 Kilokalorie?
-- [x] 4,2 kJ
-- [ ] 1 kJ
-- [ ] 17 kJ
-- [ ] 42 kJ
-quelle: i-care S. 245
+id: naehrstoffe-sc-alkohol
+frage: Warum nehmen Menschen, die über längere Zeit viel Alkohol trinken, oft an Gewicht zu?
+- [x] Alkohol hat einen fast so hohen Brennwert wie Fett.
+- [ ] Alkohol enthält viele Vitamine.
+- [ ] Alkohol wird im Körper zu Ballaststoffen.
+quelle: i-care S. 246
 
 ## Single-Choice
 id: naehrstoffe-sc-kh-anteil
-frage: Welcher Anteil der zugeführten Energie sollte laut Tabelle aus Kohlenhydraten stammen?
-- [x] 55–60 %
-- [ ] 25–30 %
-- [ ] 10–15 %
-- [ ] 80–90 %
-erklärung: 25–30 % sollten aus Fetten stammen, 10–15 % aus Proteinen.
-quelle: i-care S. 245
+frage: Welcher Nährstoff sollte den größten Anteil unserer Nahrung ausmachen?
+- [x] Kohlenhydrate
+- [ ] Fette
+- [ ] Eiweiße
+erklärung: Dabei sollten Vielfachzucker wie Stärke überwiegen. Sie lassen den Blutzucker langsamer ansteigen als Einfachzucker.
+quelle: i-care S. 246
+
+## Single-Choice
+id: naehrstoffe-sc-veganer-eiweiss
+frage: Können Veganer ihren Bedarf an essenziellen Aminosäuren decken?
+- [x] Ja, wenn sie ihre pflanzlichen Lebensmittel sorgfältig zusammenstellen.
+- [ ] Nein, das ist ohne tierische Produkte unmöglich.
+- [ ] Ja, der Körper bildet alle Aminosäuren selbst.
+quelle: i-care S. 243
 
 <!-- =============================== MULTIPLE-CHOICE =============================== -->
 
 ## Multiple-Choice
 id: naehrstoffe-mc-essenziell
-frage: Welche Nahrungsbestandteile zählen zu den essenziellen Nahrungsbestandteilen?
+frage: Welche Nahrungsbestandteile sind essenziell?
 - [x] Vitamine
 - [x] Mineralstoffe
 - [x] bestimmte Fettsäuren
 - [x] bestimmte Aminosäuren
-- [ ] Glukose
 - [ ] Ballaststoffe
 quelle: i-care S. 241
 
@@ -258,7 +249,6 @@ frage: Welche Vitamine sind fettlöslich?
 - [x] Vitamin E
 - [x] Vitamin K
 - [ ] Vitamin C
-- [ ] Vitamin B12
 quelle: i-care S. 242
 
 ## Multiple-Choice
@@ -266,8 +256,6 @@ id: naehrstoffe-mc-spuren
 frage: Welche Mineralstoffe sind Spurenelemente?
 - [x] Eisen
 - [x] Jod
-- [x] Fluor
-- [x] Zink
 - [ ] Natrium
 - [ ] Kalzium
 quelle: i-care S. 243–244
@@ -275,32 +263,29 @@ quelle: i-care S. 243–244
 ## Multiple-Choice
 id: naehrstoffe-mc-bedarf
 frage: Wer hat einen erhöhten Energiebedarf?
-- [x] Kinder (im Verhältnis zu ihrem Körpergewicht)
 - [x] Schwangere
 - [x] stillende Frauen
+- [x] Menschen, die schwer körperlich arbeiten
 - [ ] ältere Menschen
-erklärung: Im Alter sinkt der Energiebedarf, weil der Muskelanteil und damit der Grundumsatz abnimmt. Ältere brauchen aber genauso viele Nährstoffe.
-quelle: i-care S. 246
+erklärung: Im Alter sinkt der Energiebedarf. Ältere brauchen aber genauso viele Nährstoffe.
+quelle: i-care S. 245–246
 
 ## Multiple-Choice
 id: naehrstoffe-mc-bmi
-frage: Welche Aussagen zu den Grenzen des BMI stehen im Buch?
-- [x] Der BMI ist nur auf Erwachsene anwendbar.
-- [x] Der BMI berücksichtigt nicht die Zusammensetzung des Körpers.
+frage: Welche Aussagen zum BMI stimmen?
+- [x] Er gibt das Gewicht im Verhältnis zur Körpergröße an.
+- [x] Er ist nur für Erwachsene geeignet.
 - [x] Muskulöse Menschen können einen hohen BMI haben, ohne übergewichtig zu sein.
-- [ ] Der BMI berücksichtigt bereits den Taillenumfang.
-erklärung: Zusätzlich zum BMI können das Verhältnis von Taillen- zu Hüftumfang und der Bauchumfang hilfreich sein.
+- [ ] Er misst den Fettanteil des Körpers genau.
 quelle: i-care S. 244
 
 ## Multiple-Choice
 id: naehrstoffe-mc-hunger
-frage: Was hemmt das Hungerzentrum?
-- [x] die Dehnung der Magenwand
-- [x] Cholecystokinin
-- [x] Glukose
-- [x] Leptin
-- [ ] Ghrelin
-- [ ] ein leerer, sich zusammenziehender Magen
+frage: Was macht satt, hemmt also das Hungergefühl?
+- [x] ein gefüllter, gedehnter Magen
+- [x] das „Sättigungshormon“ Cholecystokinin
+- [ ] das „Hungerhormon“ Ghrelin
+- [ ] ein leerer Magen
 quelle: i-care S. 248
 
 <!-- =============================== ZUORDNUNG =============================== -->
@@ -311,76 +296,68 @@ frage: Ordne jedem Vitaminmangel seine mögliche Folge zu.
 - Vitamin-A-Mangel => Nachtblindheit
 - Vitamin-C-Mangel => Skorbut
 - Vitamin-K-Mangel => erhöhte Blutungsneigung
-- Folsäuremangel in der Schwangerschaft => offener Rücken (Spina bifida) beim Kind
 quelle: i-care S. 243
 
 ## Zuordnung
-id: naehrstoffe-zu-brennwert
-frage: Ordne jedem Nährstoff seinen Brennwert pro Gramm zu.
-- Kohlenhydrate => 17 kJ (4 kcal)
-- Eiweiße => 17 kJ (4 kcal)
-- Fette => 39 kJ (9 kcal)
-- Alkohol => 30 kJ (7 kcal)
-quelle: i-care S. 245
+id: naehrstoffe-zu-vorkommen
+frage: Ordne jedem Vitamin zu, wo es vorkommt.
+- Vitamin C => Obst, Gemüse, Kartoffeln
+- Vitamin B12 => nur tierische Lebensmittel
+- Vitamin D => bildet der Körper mithilfe von Sonnenlicht
+quelle: i-care S. 242–243
 
 ## Zuordnung
 id: naehrstoffe-zu-mineral
-frage: Ordne jedem Mineralstoff eine seiner Funktionen zu.
+frage: Ordne jedem Mineralstoff eine seiner Aufgaben zu.
 - Kalzium => Baustein von Knochen und Zähnen
-- Kalium => wichtigstes Kation in der Zelle
-- Natrium => wichtigstes Kation außerhalb der Zellen
 - Jod => Bestandteil der Schilddrüsenhormone
 - Eisen => Bestandteil des roten Blutfarbstoffs
 quelle: i-care S. 243–244
 
 ## Zuordnung
-id: naehrstoffe-zu-hormone
-frage: Ordne jedem Hormon seine Rolle bei Hunger und Sättigung zu.
-- Cholecystokinin => „Sättigungshormon“ aus dem Dünndarm
-- Ghrelin => „Hungerhormon“, aktiviert das Hungerzentrum
-- Leptin => aus dem Fettgewebe, wirkt langfristig
-quelle: i-care S. 248
+id: naehrstoffe-zu-begriffe
+frage: Ordne jedem Begriff seine Bedeutung zu.
+- [[Adipositas]] => Fettleibigkeit
+- [[Kachexie]] => starke Abmagerung
+- [[Hypovitaminose]] => Vitaminmangelerkrankung
+quelle: i-care S. 243–244, 247
 
 <!-- =============================== REIHENFOLGE =============================== -->
 
 ## Reihenfolge
-id: naehrstoffe-rf-wertigkeit
-frage: Ordne die Lebensmittel nach der biologischen Wertigkeit ihres Eiweißes – vom höchsten zum niedrigsten Wert.
-1. Vollei
-2. Kartoffeln
-3. Rindfleisch
-4. Kuhmilch
-5. Reis
-6. Bohnen
-quelle: i-care S. 246
+id: naehrstoffe-rf-taetigkeit
+frage: Ordne die Tätigkeiten nach ihrem Energieverbrauch – vom niedrigsten zum höchsten.
+1. Schlafen
+2. Spazierengehen
+3. gemächliches Laufen
+4. schnelles Laufen
+quelle: i-care S. 245
 
 ## Reihenfolge
-id: naehrstoffe-rf-taetigkeit
-frage: Ordne die Tätigkeiten nach ihrem ungefähren Energieverbrauch pro Stunde – vom niedrigsten zum höchsten.
-1. Schlafen
-2. Spazierengehen (3 km/h)
-3. Schwimmen (30 m/min)
-4. Radfahren im Flachland (20 km/h)
-5. gemächliches Laufen (8 km/h)
-6. schnelles Laufen (15 km/h)
-quelle: i-care S. 245
+id: naehrstoffe-rf-satt
+frage: Wie entsteht das Sättigungsgefühl beim Essen? Bring die Schritte in die richtige Reihenfolge.
+1. Die Nahrung füllt den Magen.
+2. Die Magenwand wird gedehnt.
+3. Dehnungsrezeptoren in der Magenwand werden erregt.
+4. Über den N. vagus wird das Hungerzentrum im Gehirn gehemmt.
+quelle: i-care S. 248
 
 <!-- =============================== LÜCKENTEXT =============================== -->
 
 ## Lückentext
 id: naehrstoffe-lt-bmi
-text: Bei einem BMI über {{25|fünfundzwanzig}} spricht man von Übergewicht, bei einem BMI über {{30|dreißig}} von Fettleibigkeit ([[Adipositas]]).
+text: Der BMI gibt das Körpergewicht im Verhältnis zur {{Körpergröße|Größe}} an. Starkes Übergewicht nennt man Fettleibigkeit oder {{Adipositas}}.
 quelle: i-care S. 244
 
 ## Lückentext
 id: naehrstoffe-lt-edeka
-text: Die fettlöslichen Vitamine merkt man sich mit dem Namen einer Supermarktkette: {{EDeKA|Edeka}}. Der Körper kann sie nur resorbieren, wenn sie gleichzeitig mit {{fettreicher|fetthaltiger}} Nahrung aufgenommen werden.
+text: Die fettlöslichen Vitamine merkt man sich mit dem Namen einer Supermarktkette: {{EDeKA|Edeka}}. Der Körper kann sie nur aufnehmen, wenn gleichzeitig {{Fett|Fette}} in der Nahrung ist.
 quelle: i-care S. 242
 
 ## Lückentext
-id: naehrstoffe-lt-mengen
-text: Täglich sollte man mindestens {{30|dreißig}} g Ballaststoffe zu sich nehmen. Die optimale Proteinzufuhr liegt bei {{1|einem|ein}} g pro Kilogramm Körpergewicht. Schwangere sollten täglich ungefähr {{300|dreihundert}} kcal zusätzlich zu sich nehmen.
-quelle: i-care S. 246
+id: naehrstoffe-lt-b12
+text: Vitamin {{B12|B 12}} ist nur in tierischen Produkten enthalten. Deshalb müssen {{Veganer|Veganerinnen}} besonders darauf achten.
+quelle: i-care S. 243
 
 <!-- =============================== OPERATOREN =============================== -->
 
@@ -389,15 +366,14 @@ id: naehrstoffe-op-essenziell
 operator: beschreiben
 afb: I
 fall: Alaa liest auf einer Müslipackung „mit essenziellen Nährstoffen“. Er fragt Robartina in der Pause: „Was heißt eigentlich essenziell – und welche Stoffe sind das?“
-auftrag: Beschreibe, was essenzielle Nahrungsbestandteile sind, und nenne die vier Gruppen mit je einem Beispiel aus dem Buch.
-mindestlänge: 300
+auftrag: Beschreibe, was essenzielle Nahrungsbestandteile sind, und nenne die vier Gruppen.
+mindestlänge: 250
 kriterien:
 - Ich erkläre, dass der Körper diese Stoffe nicht oder nicht ausreichend selbst herstellen kann.
 - Ich erkläre, dass sie deshalb mit der Nahrung aufgenommen werden müssen.
-- Ich nenne Vitamine und Mineralstoffe (Mengen- und Spurenelemente).
+- Ich nenne Vitamine und Mineralstoffe.
 - Ich nenne bestimmte Fettsäuren und bestimmte Aminosäuren.
-- Ich nenne zu jeder Gruppe ein passendes Beispiel.
-musterlösung: Essenzielle Nahrungsbestandteile sind Stoffe, die der Körper nicht oder nicht in ausreichender Menge selbst herstellen kann. Weil sie lebensnotwendig sind, müssen sie mit der Nahrung aufgenommen werden. Dazu gehören: **Vitamine** (z. B. Vitamin C), **Mineralstoffe**, also Mengenelemente (z. B. Kalzium) und Spurenelemente (z. B. Eisen), **bestimmte Fettsäuren** (z. B. die Omega-3-Fettsäure Linolensäure) und **bestimmte Aminosäuren** (z. B. Tryptophan – 8 der 20 Aminosäuren sind essenziell).
+musterlösung: Essenzielle Nahrungsbestandteile sind Stoffe, die der Körper nicht oder nicht in ausreichender Menge selbst herstellen kann. Weil sie lebensnotwendig sind, müssen sie mit der Nahrung aufgenommen werden. Dazu gehören **Vitamine** (z. B. Vitamin C), **Mineralstoffe** (z. B. Kalzium oder Eisen), **bestimmte Fettsäuren** (z. B. aus pflanzlichen Ölen und Fisch) und **bestimmte Aminosäuren**.
 quelle: i-care S. 241, 243–244
 
 ## Operator
@@ -406,14 +382,13 @@ operator: erläutern
 afb: II
 fall: Robartinas Mitschüler Alaa ernährt sich seit Kurzem vegan, also ohne Fleisch, Fisch, Milchprodukte und Eier. Frau Abda sagt zu ihm: „Das kann man gut machen – aber du musst bei zwei Dingen besonders aufpassen.“
 auftrag: Erläutere, worauf Alaa bei einer veganen Ernährung laut Buch besonders achten muss und warum.
-mindestlänge: 400
+mindestlänge: 350
 kriterien:
 - Ich nenne Vitamin B12 und erkläre, dass es nur in tierischen Produkten enthalten ist.
 - Ich nenne mögliche Nahrungsergänzungsmittel.
 - Ich nenne die essenziellen Aminosäuren und dass sie vor allem in tierischen Produkten vorkommen.
 - Ich erkläre, dass der Bedarf durch eine geeignete Zusammenstellung pflanzlicher Lebensmittel gedeckt werden kann.
-- Ich verwende die Fachbegriffe korrekt.
-musterlösung: **Vitamin B12:** Vitamin B12 (Cobalamin) ist nur in tierischen Produkten enthalten. Veganer müssen deshalb besonders darauf achten, dass sie – ggf. über Nahrungsergänzungsmittel – genügend Vitamin B12 aufnehmen. **Essenzielle Aminosäuren:** 8 der 20 Aminosäuren kann der Körper nicht selbst bilden. Sie kommen vor allem in tierischen Produkten (Fleisch, Milchprodukte, Eier) vor. Der Bedarf lässt sich aber bei einer geeigneten Zusammenstellung auch über pflanzliche Lebensmittel decken. Veganer müssen ihre Mahlzeiten deshalb sorgfältig zusammenstellen, damit kein Mangel an essenziellen Aminosäuren entsteht.
+musterlösung: **Vitamin B12** ist nur in tierischen Produkten enthalten. Veganer müssen deshalb darauf achten, dass sie – ggf. über Nahrungsergänzungsmittel – genügend Vitamin B12 aufnehmen. **Essenzielle Aminosäuren** kann der Körper nicht selbst bilden. Sie kommen vor allem in tierischen Produkten vor. Der Bedarf lässt sich aber auch über pflanzliche Lebensmittel decken, wenn man sie geeignet kombiniert. Veganer müssen ihre Mahlzeiten deshalb sorgfältig zusammenstellen.
 quelle: i-care S. 243
 
 ## Operator
@@ -422,14 +397,14 @@ operator: beurteilen
 afb: III
 fall: Frau M. (82) liegt auf Robartinas Station. Sie isst seit Tagen sehr wenig, weil ihre Zahnprothese drückt, und hat sichtbar abgenommen. Robartina meint zu Alaa: „Ältere Menschen verbrauchen doch sowieso weniger Energie. Dann ist es nicht so schlimm, wenn sie wenig isst.“
 auftrag: Beurteile Robartinas Aussage mithilfe der Informationen aus dem Buch.
-mindestlänge: 500
+mindestlänge: 400
 kriterien:
-- Ich bestätige, dass der Energiebedarf im Alter sinkt, und begründe das mit dem geringeren Muskelanteil und Grundumsatz.
+- Ich bestätige, dass der Energiebedarf im Alter sinkt.
 - Ich erkläre, dass ältere Menschen trotzdem genauso viele Nährstoffe benötigen.
-- Ich nenne Probleme wie Zahnprothesen oder schwierige Selbstversorgung, die zu Untergewicht oder Mangelerscheinungen führen können.
-- Ich nenne mögliche Maßnahmen (z. B. hochkalorische Nahrungsergänzungen bei Kachexie).
+- Ich nenne Probleme wie Zahnprothesen, die zu Untergewicht oder Mangelerscheinungen führen können.
+- Ich nenne mögliche Maßnahmen (z. B. hochkalorische Nahrungsergänzungen bei starker Abmagerung).
 - Ich komme zu einem begründeten Urteil über Robartinas Aussage.
-musterlösung: Robartina hat teilweise recht: Im Alter **sinkt der Energiebedarf**, weil der Muskelanteil abnimmt und sich dadurch der Grundumsatz verringert. Ältere Menschen kommen deshalb mit weniger Kalorien aus. Sie benötigen aber **genauso viele Nährstoffe** wie jüngere, deshalb ist eine abwechslungsreiche und vollwertige Kost wichtig. Viele ältere Menschen haben zudem Schwierigkeiten bei der Selbstversorgung oder **wegen Zahnprothesen beim Essen**. Das kann zu **Untergewicht oder Mangelerscheinungen** führen – genau das zeichnet sich bei Frau M. ab. Pflegende sollen gute Voraussetzungen für eine ausgewogene Ernährung und ausreichende Energie- und Flüssigkeitszufuhr schaffen. Bei unzureichender Ernährung und starker Abmagerung ([[Kachexie]]) können hochkalorische Nahrungsergänzungen angeboten werden. **Urteil:** Robartinas Schlussfolgerung ist falsch. Der geringere Energiebedarf rechtfertigt nicht, dass Frau M. kaum isst. Ihr drohen eine Mangelernährung und weiterer Gewichtsverlust, deshalb sollte das Problem mit der Prothese gelöst und ihre Ernährung beobachtet werden.
+musterlösung: Robartina hat teilweise recht: Im Alter **sinkt der Energiebedarf**, weil der Muskelanteil abnimmt. Ältere Menschen benötigen aber **genauso viele Nährstoffe** wie jüngere. Viele haben zudem Schwierigkeiten beim Essen, z. B. **wegen Zahnprothesen**. Das kann zu **Untergewicht oder Mangelerscheinungen** führen – genau das zeichnet sich bei Frau M. ab. Bei starker Abmagerung ([[Kachexie]]) können hochkalorische Nahrungsergänzungen angeboten werden. **Urteil:** Robartinas Schlussfolgerung ist falsch. Frau M. drohen Mangelernährung und weiterer Gewichtsverlust. Das Problem mit der Prothese sollte gelöst und ihre Ernährung beobachtet werden.
 quelle: i-care S. 246–247
 
 <!-- =============================== FEHLERFAHNDUNG =============================== -->
@@ -437,10 +412,10 @@ quelle: i-care S. 246–247
 ## Fehlerfahndung
 id: naehrstoffe-ff-frau-m
 titel: Robartinas Pflegebericht: Ernährung von Frau M.
-bericht: Frau M. (82) isst seit einigen Tagen sehr wenig. Ich habe ihr erklärt, dass ältere Menschen weniger Nährstoffe brauchen als jüngere. Sie soll täglich ungefähr 0,5 l trinken. Wegen ihrer starken Abmagerung habe ich mit Frau Abda besprochen, ob wir hochkalorische Nahrungsergänzungen anbieten. Als Quelle für Vitamin C habe ich ihr Butter empfohlen, weil Vitamin C fettlöslich ist.
+bericht: Frau M. (82) isst seit einigen Tagen sehr wenig. Ich habe ihr erklärt, dass ältere Menschen weniger Nährstoffe brauchen als jüngere. Zum Trinken habe ich ihr Limonade gebracht, weil sie den Durst am besten löscht. Wegen ihrer starken Abmagerung habe ich mit Frau Abda besprochen, ob wir hochkalorische Nahrungsergänzungen anbieten. Als Quelle für Vitamin C habe ich ihr Butter empfohlen, weil Vitamin C fettlöslich ist.
 fehler:
 - weniger Nährstoffe => genauso viele Nährstoffe (nur weniger Energie) || genauso viel|gleich viel|genau so viel|die gleichen
-- 0,5 l => ungefähr 1,5 l || 1,5|anderthalb|eineinhalb|1.5
+- Limonade => Wasser oder ungesüßter Tee || wasser|tee
 - fettlöslich => wasserlöslich || wasserlöslich
-erklärung: Im Alter sinkt der Energiebedarf, ältere Menschen benötigen aber genauso viele Nährstoffe. Unter normalen Umständen sollten täglich ungefähr 1,5 l getrunken werden. Vitamin C ist ein wasserlösliches Vitamin; es kommt in Obst, Gemüse und Kartoffeln vor.
+erklärung: Im Alter sinkt der Energiebedarf, ältere Menschen benötigen aber genauso viele Nährstoffe. Zum Durstlöschen eignen sich Wasser und ungesüßte Tees; Limonaden enthalten viel Zucker. Vitamin C ist wasserlöslich und kommt in Obst, Gemüse und Kartoffeln vor.
 quelle: i-care S. 242, 246, 248
