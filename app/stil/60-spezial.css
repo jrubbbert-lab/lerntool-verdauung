@@ -28,6 +28,10 @@ mark{background:var(--accent-soft);color:inherit;padding:0 3px;border-radius:4px
 .teil{position:absolute;transform:translateY(-50%);white-space:nowrap;border:2px solid var(--accent);background:var(--surface);color:var(--fg);
   border-radius:999px;padding:.5rem .95rem;font-weight:700;min-height:44px;box-shadow:var(--shadow)}
 .teil:hover{background:var(--accent-soft)}
+.teil.neu{animation:teil-rein .35s ease both}
+.teil.geht{opacity:0;transition:opacity .6s ease}
+@keyframes teil-rein{from{opacity:0;transform:translateY(-50%) scale(.6)}to{opacity:1;transform:translateY(-50%) scale(1)}}
+.teil{font-size:1.05rem}
 .teil.weg{transform:translateY(-50%) scale(.2);opacity:0;transition:transform .25s ease,opacity .25s ease}
 .teil.falsch{border-color:var(--bad)}
 .spielfeld.ruhig{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start;padding:14px;height:auto;min-height:200px}

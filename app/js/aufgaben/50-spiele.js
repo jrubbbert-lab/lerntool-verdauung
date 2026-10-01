@@ -52,15 +52,17 @@
 
     var spielen = function (m, enzym, ruhig) {
       var ziele = enzym.spaltet.map(function (p) { return p.links; });
-      var falle = [];
-      ENZ.enzyme.forEach(function (e) { if (e !== enzym) e.spaltet.forEach(function (p) { falle.push(p.links); }); });
-      enzym.nicht.forEach(function (p) { falle.push(p.links); });
+      // Fallen: nur die eigenen „nicht:“-Einträge des Enzyms. Lebensmittel enthalten oft mehrere
+      // Nährstoffe (Ei: Fett UND Eiweiß) – deshalb dürfen die Ziele anderer Enzyme keine Fallen sein.
+      // Nur wenn ein Enzym keine „nicht:“-Liste hat, werden die Ziele der anderen Enzyme genutzt.
+      var falle = enzym.nicht.map(function (p) { return p.links; });
+      if (!falle.length) ENZ.enzyme.forEach(function (e) { if (e !== enzym) e.spaltet.forEach(function (p) { falle.push(p.links); }); });
       falle = falle.filter(function (f, i, a) { return a.indexOf(f) === i && !ziele.some(function (z) { return norm(z) === norm(f); }); });
-      var punkte = 0, fehler = 0, rest = LT.E.enzym_sekunden, pause = false, teile = [], raf, uhr, nachschub, zaehler = 0, bahnen = [];
+      var punkte = 0, fehler = 0, rest = LT.E.enzym_sekunden, pause = false, teile = [], raf, uhr, nachschub, zaehler = 0, MAX = 7;
 
       var h = LT.zeige(LT.seitenkopf('Du bist: ' + esc(enzym.name), { pfad: '/modul/' + m.id + '/enzym', text: 'Enzym-Spiel' }, 'Enzym-Spiel') +
         '<div class="reihe zw"><span class="chip" role="timer" id="e-zeit">' + rest + ' s</span><span class="chip ok" id="e-punkte">0 Punkte</span></div>' +
-        '<p class="muted klein">Tippe nur auf Stoffe, die ' + esc(enzym.name) + ' spalten kann.</p>' +
+        '<p class="muted klein">Tippe nur auf Lebensmittel, in denen etwas steckt, das ' + esc(enzym.name) + ' spalten kann.</p>' +
         '<div class="spielfeld' + (ruhig ? ' ruhig' : '') + '" id="feld" role="group" aria-label="Spielfeld"></div>' +
         '<div id="e-info" aria-live="assertive"></div>');
       var feld = LT.$('#feld', h);
@@ -70,16 +72,15 @@
         do {   // im ruhigen Modus keinen Stoff doppelt zeigen
           istZiel = Math.random() < 0.45 || !falle.length;
           name = istZiel ? ziele[Math.floor(Math.random() * ziele.length)] : falle[Math.floor(Math.random() * falle.length)];
-        } while (ruhig && ++versuche < 12 && teile.some(function (t) { return t.name === name; }));
+        } while (++versuche < 12 && teile.some(function (t) { return t.name === name; }));   // nichts doppelt
         var b = document.createElement('button');
         b.type = 'button'; b.className = 'teil'; b.textContent = name;
         b.setAttribute('data-id', ++zaehler);
-        // Feste Bahnen, damit sich die Stoffe nicht überlappen; die zuletzt benutzten Bahnen bleiben frei
-        var frei = [0, 1, 2, 3, 4, 5].filter(function (b) { return bahnen.indexOf(b) < 0; });
-        var bahn = frei[Math.floor(Math.random() * frei.length)];
-        bahnen.push(bahn); if (bahnen.length > 3) bahnen.shift();
-        var t = { el: b, name: name, ziel: istZiel, x: 100, y: 9 + bahn * 16.4, v: 100 / (7000 + Math.random() * 2000) };
-        if (!ruhig) { b.style.top = t.y + '%'; b.style.left = '100%'; }
+        // Kreuz und quer: zufällige Startposition und Richtung, Abprallen am Rand, begrenzte Lebensdauer
+        var winkel = Math.random() * Math.PI * 2, tempo = 0.006 + Math.random() * 0.006;   // % pro ms
+        var t = { el: b, name: name, ziel: istZiel, x: 5 + Math.random() * 65, y: 8 + Math.random() * 80,
+                  vx: Math.cos(winkel) * tempo, vy: Math.sin(winkel) * tempo, leben: 6000 + Math.random() * 3000 };
+        if (!ruhig) { b.style.left = t.x + '%'; b.style.top = t.y + '%'; b.classList.add('neu'); }
         b.addEventListener('click', function () { treffer(t); });
         feld.appendChild(b);
         teile.push(t);
@@ -100,7 +101,7 @@
           pause = true;
           t.el.classList.add('falsch');
           var e = erklaerung(enzym, t.name);
-          LT.$('#e-info', h).innerHTML = '<div class="rueck nein"><b>' + icon('kreuz') + esc(t.name) + ' kannst du nicht spalten</b><p>' +
+          LT.$('#e-info', h).innerHTML = '<div class="rueck nein"><b>' + icon('kreuz') + esc(t.name) + ' passt nicht zu ' + esc(enzym.name) + '</b><p>' +
             LT.txt(e.text) + '</p>' + LT.liesNach(e.quelle) +
             '<div><button class="btn primaer" type="button" id="e-weiter">Weiter spielen</button></div></div>';
           var w = LT.$('#e-weiter', h);
@@ -118,10 +119,17 @@
       function bewegen(jetzt) {
         var dt = jetzt - letzte; letzte = jetzt;
         if (!pause) {
+          var breite = feld.clientWidth || 1;
           teile.slice().forEach(function (t) {
-            t.x -= t.v * dt;
-            t.el.style.left = t.x + '%';
-            if (t.x < -30) entfernen(t);
+            var w = t.el.offsetWidth / breite * 100;
+            t.x += t.vx * dt; t.y += t.vy * dt; t.leben -= dt;
+            if (t.x < 0) { t.x = 0; t.vx = Math.abs(t.vx); }
+            if (t.x + w > 100) { t.x = 100 - w; t.vx = -Math.abs(t.vx); }
+            if (t.y < 7) { t.y = 7; t.vy = Math.abs(t.vy); }
+            if (t.y > 93) { t.y = 93; t.vy = -Math.abs(t.vy); }
+            t.el.style.left = t.x + '%'; t.el.style.top = t.y + '%';
+            if (t.leben < 600) t.el.classList.add('geht');
+            if (t.leben <= 0) entfernen(t);
           });
         }
         raf = requestAnimationFrame(bewegen);
@@ -130,7 +138,7 @@
       if (ruhig) { for (var i = 0; i < 6; i++) neuesTeil(); var erstes = LT.$('.teil', feld); if (erstes) erstes.focus(); }
       else {
         neuesTeil();
-        nachschub = setInterval(function () { if (!pause) neuesTeil(); }, 1100);
+        nachschub = setInterval(function () { if (!pause && teile.length < MAX) neuesTeil(); }, 900);
         raf = requestAnimationFrame(bewegen);
       }
       uhr = setInterval(function () {
