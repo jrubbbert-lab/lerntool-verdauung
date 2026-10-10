@@ -299,3 +299,63 @@ quelle: i-care S. 192
 deutsch: Blinddarm
 erklärung: Erster Abschnitt des Dickdarms mit dem Wurmfortsatz (Appendix vermiformis).
 quelle: i-care S. 188
+
+## Dentin
+deutsch: Zahnbein
+erklärung: Sehr harte Substanz, aus der der eigentliche Zahn besteht.
+quelle: i-care S. 200
+
+## Dysphagie
+deutsch: Schluckstörung
+erklärung: Leitsymptom vieler Erkrankungen der Speiseröhre. Eine länger bestehende Schluckstörung sollte endoskopisch abgeklärt werden.
+quelle: MKK S. 353
+
+## Epiglottis
+deutsch: Kehldeckel
+erklärung: Legt sich beim Schlucken auf den Eingang des Kehlkopfs und verschließt ihn.
+quelle: i-care S. 198, 202
+
+## Gingiva
+deutsch: Zahnfleisch
+erklärung: Überzieht den Kieferknochen und den Zahnhals.
+quelle: i-care S. 199
+
+## Karies
+deutsch: „Zahnfäule“
+erklärung: Bakterien im Mund bauen Zucker ab und bilden Säure, die den Zahnschmelz angreift.
+quelle: i-care S. 201
+
+## Ösophagusvarizen
+deutsch: Krampfadern in der Speiseröhre
+erklärung: Entstehen bei Pfortaderhochdruck. Sie können plötzlich einreißen und lebensbedrohlich bluten.
+quelle: i-care S. 204
+
+## Palatum
+deutsch: Gaumen
+erklärung: Trennt die Mundhöhle von der Nasenhöhle. Vorn liegt der harte, hinten der weiche Gaumen.
+quelle: i-care S. 201
+
+## Parotis
+deutsch: Ohrspeicheldrüse
+erklärung: Größte Speicheldrüse. Sie liegt vor dem Ohr und mündet in den Mundvorhof.
+quelle: i-care S. 195
+
+## Pulpa
+deutsch: Zahnmark
+erklärung: Bindegewebe mit Blutgefäßen und Nerven in der Zahnhöhle. Es versorgt den Zahn.
+quelle: i-care S. 200
+
+## Reflux
+deutsch: Rückfluss
+erklärung: Magensäure fließt in die Speiseröhre zurück. Betroffene spüren ein schmerzhaftes Brennen (Sodbrennen).
+quelle: i-care S. 204; MKK S. 353
+
+## Refluxösophagitis
+deutsch: Entzündung der Speiseröhre durch Rückfluss von Magensaft
+erklärung: Entsteht, wenn häufig Magensaft in die Speiseröhre zurückfließt.
+quelle: i-care S. 204
+
+## Uvula
+deutsch: Zäpfchen
+erklärung: Sitzt am Ende des Gaumensegels.
+quelle: i-care S. 202
