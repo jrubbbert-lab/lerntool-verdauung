@@ -424,3 +424,28 @@ quelle: i-care S. 220
 deutsch: Durchbruch
 erklärung: Bei einem Darmdurchbruch können Bakterien in die Bauchhöhle gelangen und eine Bauchfellentzündung verursachen.
 quelle: i-care S. 220
+
+## endokrin
+deutsch: nach innen (ins Blut) abgebend
+erklärung: Endokrine Drüsen geben ihre Hormone ins Blut ab, z. B. der hormonbildende Teil des Pankreas.
+quelle: i-care S. 221
+
+## exokrin
+deutsch: nach außen abgebend
+erklärung: Exokrine Drüsen geben ihre Stoffe z. B. in den Verdauungstrakt ab, wie der Teil des Pankreas, der den Verdauungssaft bildet.
+quelle: i-care S. 221
+
+## Glukagon
+deutsch: blutzuckersteigerndes Hormon
+erklärung: Wird in den Langerhans-Inseln des Pankreas gebildet. Gegenspieler des Insulins.
+quelle: MKK S. 367–368
+
+## Insulin
+deutsch: blutzuckersenkendes Hormon
+erklärung: Wird in den Langerhans-Inseln des Pankreas gebildet. Es ist das einzige blutzuckersenkende Hormon des Körpers.
+quelle: MKK S. 367–368
+
+## Pankreatitis
+deutsch: Entzündung der Bauchspeicheldrüse
+erklärung: Die Verdauungsenzyme werden schon im Pankreas aktiv und greifen das Organ an („Selbstverdauung“). Häufige Ursachen sind Gallensteine und Alkoholmissbrauch.
+quelle: i-care S. 224; MKK S. 367
