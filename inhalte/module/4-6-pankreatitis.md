@@ -7,6 +7,6 @@ organ: pankreas
 quellen: MKK S. 367; i-care S. 222
 beschreibung: Entzündung der Bauchspeicheldrüse.
 icon: pankreas
-farbe: #d0a21a
+farbe: #6C887C
 
 <!-- Aufgaben folgen hier. Vorlage siehe README.md -->

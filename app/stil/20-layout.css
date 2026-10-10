@@ -1,8 +1,12 @@
 /* Kopf, Hauptbereich, untere Navigationsleiste */
-.kopf{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.kopf{position:sticky;top:0;z-index:20;background:var(--kopf-bg);color:var(--kopf-fg);border-bottom:3px solid var(--pebk4)}
 .kopf-innen{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
-.logo{font-family:var(--f-display);font-weight:700;font-size:1.25rem;text-decoration:none;letter-spacing:.01em;margin-right:auto}
-.logo span{color:var(--accent);margin-left:.25em}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:1.25rem;text-decoration:none;margin-right:auto;color:var(--kopf-fg);min-width:0}
+.logo span{color:var(--pebk2);margin-left:.25em}
+.logo img{height:34px;width:auto;background:#fff;border-radius:8px;padding:3px 6px;flex:none}
+.kopf .rang-chip .xpz{color:var(--pebk2)}
+.kopf .icon-btn{background:transparent;border-color:rgba(255,255,255,.35);color:var(--kopf-fg)}
+.kopf :focus-visible{outline-color:#fff}
 .rang-chip{display:flex;align-items:center;gap:8px;font-size:.85rem;min-width:0}
 .rang-chip b{font-family:var(--f-display);font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw}
 .rang-chip .xpz{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -19,13 +23,15 @@ main{max-width:980px;margin:0 auto;padding:20px 16px 8px;display:flex;flex-direc
 .leiste .ni svg{width:24px;height:24px}
 @media (min-width:900px){
   body{padding-bottom:24px}
-  .leiste{position:sticky;top:61px;bottom:auto;height:auto;max-width:980px;margin:0 auto;display:flex;gap:4px;background:var(--bg);border:0;padding:8px 16px;z-index:19}
+  .leiste{position:sticky;top:63px;bottom:auto;height:auto;max-width:980px;margin:0 auto;display:flex;gap:4px;background:var(--bg);border:0;padding:8px 16px;z-index:19}
   .leiste a{flex-direction:row;gap:8px;padding:8px 14px;border-radius:10px;font-size:.95rem}
   .leiste a[aria-current="page"]{background:var(--accent-soft);color:var(--fg)}
   .leiste .ni svg{width:20px;height:20px}
 }
 @media (max-width:440px){
   .logo{font-size:1.05rem}
+  .logo span{display:none}
+  .logo img{height:30px}
   .rang-chip b{max-width:none;font-size:.95rem}
   .rang-chip .xpz{display:none}
 }

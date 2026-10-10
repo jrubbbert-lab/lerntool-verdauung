@@ -1,28 +1,35 @@
-/* Farben, Schriften, Hell/Dunkel – Palette aus dem Prototyp übernommen */
+/* Farben und Schriften im PEBK-Design (Paul-Ehrlich-Berufskolleg Dortmund).
+   Quelle der Werte: offizielle PEBK-PowerPoint-Vorlage (Theme) und Logo.
+     Dunkelgrün #2A473B · Mittelgrün #4DAF8E · Hellgrün #CCE4D8 · Graugrün #6C887C · Logo-Grün #1BA57E
+     Schrift: Calibri (auf Geräten ohne Calibri: Carlito bzw. Systemschrift) */
 :root{
-  --bg:#eef1f5; --surface:#ffffff; --surface-2:#f3f5f8; --line:#d3d9e2;
-  --fg:#141b25; --muted:#556275; --accent:#a8680a; --accent-fg:#ffffff; --accent-soft:#f8e7c6;
+  --bg:#f2f6f4; --surface:#ffffff; --surface-2:#eaf2ee; --line:#cddbd4;
+  --fg:#0f1a15; --muted:#4d6157; --accent:#2A473B; --accent-fg:#ffffff; --accent-soft:#CCE4D8; --akzent2:#1BA57E;
+  --kopf-bg:#2A473B; --kopf-fg:#ffffff;
   --ok:#17784e; --ok-soft:#dcf1e6; --bad:#b3312f; --bad-soft:#f8dfdf; --info-soft:#e2ecfa;
-  --shadow:0 1px 2px rgba(20,27,37,.06),0 6px 20px rgba(20,27,37,.07);
-  --f-display:"Avenir Next Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
-  --f-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --radius:16px; --leiste-h:64px;
+  --pebk1:#CFE6DA; --pebk2:#BBDDCD; --pebk3:#62B799; --pebk4:#1BA57E;
+  --shadow:0 1px 2px rgba(15,26,21,.06),0 6px 20px rgba(15,26,21,.07);
+  --f-display:Calibri,Carlito,"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-body:Calibri,Carlito,"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --radius:14px; --leiste-h:64px;
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0e1319; --surface:#161d26; --surface-2:#1d2631; --line:#2c3845;
-  --fg:#e7ecf2; --muted:#9aa7b8; --accent:#f2b544; --accent-fg:#1b1305; --accent-soft:#3a2e17;
-  --ok:#4cc38a; --ok-soft:#173327; --bad:#ef6b6b; --bad-soft:#3a1d1f; --info-soft:#1a2a40;
+  --bg:#0c1511; --surface:#14211b; --surface-2:#1a2b23; --line:#2b4136;
+  --fg:#e8f1ec; --muted:#9db3a8; --accent:#4DAF8E; --accent-fg:#09110E; --accent-soft:#21392e; --akzent2:#4DAF8E;
+  --kopf-bg:#1b2f27; --kopf-fg:#ffffff;
+  --ok:#5fd09b; --ok-soft:#173a2b; --bad:#ef6b6b; --bad-soft:#3a1d1f; --info-soft:#1a2a40;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0e1319; --surface:#161d26; --surface-2:#1d2631; --line:#2c3845;
-  --fg:#e7ecf2; --muted:#9aa7b8; --accent:#f2b544; --accent-fg:#1b1305; --accent-soft:#3a2e17;
-  --ok:#4cc38a; --ok-soft:#173327; --bad:#ef6b6b; --bad-soft:#3a1d1f; --info-soft:#1a2a40;
+  --bg:#0c1511; --surface:#14211b; --surface-2:#1a2b23; --line:#2b4136;
+  --fg:#e8f1ec; --muted:#9db3a8; --accent:#4DAF8E; --accent-fg:#09110E; --accent-soft:#21392e; --akzent2:#4DAF8E;
+  --kopf-bg:#1b2f27; --kopf-fg:#ffffff;
+  --ok:#5fd09b; --ok-soft:#173a2b; --bad:#ef6b6b; --bad-soft:#3a1d1f; --info-soft:#1a2a40;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
 
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:18px;line-height:1.5;
   padding-bottom:calc(var(--leiste-h) + env(safe-area-inset-bottom) + 24px)}
 h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
 h1{font-size:clamp(1.8rem,5.5vw,2.6rem)}

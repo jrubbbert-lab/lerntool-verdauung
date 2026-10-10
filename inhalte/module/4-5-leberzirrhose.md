@@ -7,6 +7,6 @@ organ: leber
 quellen: MKK S. 371–372; i-care S. 228
 beschreibung: Der narbige Umbau der Leber.
 icon: leber
-farbe: #9c4a2f
+farbe: #6C887C
 
 <!-- Aufgaben folgen hier. Vorlage siehe README.md -->

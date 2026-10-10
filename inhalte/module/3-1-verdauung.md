@@ -6,7 +6,7 @@ nr: 1
 quellen: i-care S. 197, 214, 223, 238–241; MKK S. 359, 361–362
 beschreibung: Wie Enzyme Kohlenhydrate, Eiweiße und Fette zerlegen.
 icon: enzym
-farbe: #1f8fa3
+farbe: #3d8f74
 
 <!--
   Geprüft gegen: i-care S. 197, 209, 214, 223, 238, 239, 240 · MKK S. 359, 361, 362

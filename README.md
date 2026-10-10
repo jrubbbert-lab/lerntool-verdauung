@@ -544,6 +544,15 @@ Die Git-Autorenangaben dieses Projekts sind neutral eingestellt („Lerntool Ver
 
 ---
 
+## Design
+
+Das Tool ist im **PEBK-Design** gestaltet (Farben und Schrift aus der offiziellen PowerPoint-Vorlage).
+- Die Farben stehen in `app/stil/10-grundlagen.css`.
+- Das Schullogo liegt als `app/pebk-logo.png` im Projekt und wird beim Bauen in die Kopfleiste eingebettet. Wenn du die Datei löschst, wird ohne Logo gebaut.
+- Die Farbe eines Moduls änderst du im Modulkopf mit `farbe: #2A473B`.
+
+---
+
 ## 13. Datenschutz
 
 - Kein Login, keine Namen, keine Klassen, kein Standort. Das Tool lädt nichts aus dem Internet nach. Eine Content-Security-Policy blockiert jede Verbindung nach außen.

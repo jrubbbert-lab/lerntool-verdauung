@@ -544,6 +544,13 @@ def html_erzeugen(daten):
     skript = "\n".join(f"/* ---- {os.path.relpath(p, APP)} ---- */\n" + open(p, encoding="utf-8").read()
                        for p in js_dateien())
     json_text = json.dumps(daten, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    # Schullogo (optional): app/pebk-logo.png wird eingebettet. Datei löschen = kein Logo.
+    logo_pfad = os.path.join(APP, "pebk-logo.png")
+    logo = ""
+    if os.path.exists(logo_pfad):
+        logo = ('<img alt="PEBK – Paul-Ehrlich-Berufskolleg" src="data:image/png;base64,'
+                + base64.b64encode(open(logo_pfad, "rb").read()).decode() + '">')
+    vorlage = vorlage.replace("<!--LOGO-->", logo)
     html = (vorlage.replace("/*__STIL__*/", stil)
                    .replace("/*__DATEN__*/", "window.INHALT=" + json_text + ";")
                    .replace("/*__SKRIPT__*/", skript))

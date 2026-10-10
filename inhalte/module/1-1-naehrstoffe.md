@@ -6,7 +6,7 @@ nr: 1
 quellen: i-care S. 214, 238–248; MKK S. 361–362
 beschreibung: Woraus besteht unsere Nahrung, und wie viel Energie steckt darin?
 icon: ernaehrung
-farbe: #2f9e6b
+farbe: #1b8a69
 
 <!--
   Geprüft gegen: i-care S. 214, 241, 242, 243, 244, 246, 247, 248 · MKK S. 362

@@ -7,7 +7,7 @@ organ: leber
 quellen: MKK S. 371; i-care S. 229–231
 beschreibung: Entzündung der Leber.
 icon: leber
-farbe: #9c4a2f
+farbe: #6C887C
 status: in Vorbereitung
 
 <!-- LÜCKE: Virushepatitis A–E (MKK 13.10.4) fehlt in quellen/. Lehrkraft liefert Kapitel nach. -->

@@ -7,7 +7,7 @@ organ: naehrstoffe
 quellen: i-care S. 244–247
 beschreibung: Übergewicht und Body-Mass-Index.
 icon: ernaehrung
-farbe: #2f9e6b
+farbe: #6C887C
 status: in Vorbereitung
 
 <!-- LÜCKE: Ursachen, Folgen und Therapie fehlen in quellen/. Lehrkraft liefert Kapitel nach. -->

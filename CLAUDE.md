@@ -111,6 +111,13 @@ Praktikantin → Famulantin → PJlerin → Assistenzärztin → Oberärztin →
 - **Neutral mit Doppelpunkt** (Praktikant:in).
 - Award-Namen passen sich der Form ebenfalls an.
 
+## Design (PEBK-Corporate-Design)
+- Farben aus der offiziellen PEBK-PowerPoint-Vorlage: Dunkelgrün `#2A473B` (Kopfleiste, Knöpfe), Mittelgrün `#4DAF8E`, Hellgrün `#CCE4D8`, Graugrün `#6C887C`, Logo-Grün `#1BA57E`. Definiert in `app/stil/10-grundlagen.css`.
+- Schrift: Calibri (Ersatz: Carlito bzw. Systemschrift) – nichts wird nachgeladen.
+- Logo: `app/pebk-logo.png` wird beim Build in die Kopfleiste eingebettet. Datei löschen = Build ohne Logo.
+- Parallelogramm-Motiv (wie im Logo) über den Seitenüberschriften.
+- Modulfarben je Block in Grüntönen (`farbe:` im Modulkopf). Award-Plaketten bleiben bunt (Garmin-Stil).
+
 ## Awards
 - Stil der Garmin-Abzeichen: runde, sechseckige oder gezackte Plaketten mit Farbverlauf und Icon. Referenz: `referenz/prototyp-anatomie-abzeichen.html` (nur Design, nicht als Code-Basis).
 - Nicht erreichte Awards: grau mit Schloss und Fortschrittsbalken. Erreichte Awards: mit Datum. Am Modulende erscheinen neue Awards mit Animation.

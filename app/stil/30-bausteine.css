@@ -1,6 +1,4 @@
 /* Wiederverwendbare Bausteine */
-.kopf{background:var(--bg)}
-@supports (background:color-mix(in srgb,red 50%,blue)){.kopf{background:color-mix(in srgb,var(--bg) 88%,transparent)}}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid var(--line);background:var(--surface);
   border-radius:12px;padding:.55rem 1rem;font-weight:600;text-decoration:none;text-align:center}
@@ -25,7 +23,7 @@
 .chip svg{width:14px;height:14px}
 
 .balken{height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line)}
-.balken i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .6s ease}
+.balken i{display:block;height:100%;background:var(--akzent2);border-radius:99px;transition:width .6s ease}
 
 /* Kopf einer Seite */
 .seitenkopf{display:flex;flex-direction:column;gap:6px}
@@ -81,3 +79,8 @@ table.liste{width:100%;border-collapse:collapse;font-size:.95rem}
 table.liste th,table.liste td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
 table.liste th{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .pruefcode{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.6rem;letter-spacing:.12em;font-weight:700}
+
+/* PEBK-Motiv: vier Parallelogramme wie im Logo, über jeder Seitenüberschrift */
+.seitenkopf::before{content:"";display:block;width:92px;height:12px;margin-bottom:4px;transform:skewX(-32deg);transform-origin:left bottom;
+  background:linear-gradient(90deg,var(--pebk1) 0 22%,transparent 22% 26%,var(--pebk2) 26% 48%,transparent 48% 52%,var(--pebk3) 52% 74%,transparent 74% 78%,var(--pebk4) 78% 100%)}
+.seitenkopf:has(.zurueck)::before{display:none}

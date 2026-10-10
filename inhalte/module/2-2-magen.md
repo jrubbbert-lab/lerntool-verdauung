@@ -6,7 +6,7 @@ nr: 2
 quellen: i-care S. 205–210; MKK S. 353–357
 beschreibung: Magensaft, Magenschleimhaut und Magenentleerung.
 icon: magen
-farbe: #c9820f
+farbe: #2A473B
 
 <!--
   Geprüft gegen: i-care S. 205, 207, 208, 209, 210 · MKK S. 354, 355, 356, 357

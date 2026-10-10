@@ -7,6 +7,6 @@ organ: magen
 quellen: MKK S. 356–357
 beschreibung: Bösartiger Tumor des Magens.
 icon: magen
-farbe: #c9820f
+farbe: #6C887C
 
 <!-- Aufgaben folgen hier. Vorlage siehe README.md -->

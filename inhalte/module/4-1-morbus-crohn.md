@@ -7,6 +7,6 @@ organ: duenndarm, dickdarm
 quellen: MKK S. 366
 beschreibung: Chronisch-entzündliche Darmerkrankung.
 icon: darm
-farbe: #7a52c7
+farbe: #6C887C
 
 <!-- Aufgaben folgen hier. Vorlage siehe README.md -->
