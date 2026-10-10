@@ -18,7 +18,52 @@
   LT.xpDazu = function (aktion, anzahl) {
     var n = (E.xp[aktion] || 0) * (anzahl == null ? 1 : anzahl);
     LT.S.xp += Math.round(n);
+    LT.rangBeobachten();
     return Math.round(n);
+  };
+
+  /* ---------- Rangaufstieg: erscheint sofort als Dialog ---------- */
+  var rangOffen = false, nachRang = [], rangUhr = null;
+  LT.zeitLaeuft = false;   // true, solange Quiz auf Zeit oder Enzym-Spiel läuft (dann erst danach feiern)
+
+  function rangFaellig() { return LT.rang().stufe > (LT.S.rangGesehen || 0); }
+
+  /** Zeigt den Aufstieg, falls einer ansteht. fertig() läuft nach dem Schließen (oder sofort, wenn nichts ansteht). */
+  LT.rangFeiern = function (fertig) {
+    if (rangOffen) { if (fertig) nachRang.push(fertig); return; }
+    if (!rangFaellig()) { if (fertig) fertig(); return; }
+    var r = LT.rang(), d = LT.$('#dialog');
+    LT.S.rangGesehen = r.stufe;
+    LT.speichern();
+    rangOffen = true;
+    if (fertig) nachRang.push(fertig);
+    LT.dialog('Neuer Rang!',
+      '<div class="feier rang-feier"><div class="rangmarke">' + LT.icon('stern') + '</div>' +
+      '<p class="eyebrow">Du bist aufgestiegen</p>' +
+      '<p class="rangname">' + LT.esc(r.name) + '</p>' +
+      '<p class="chip gold">' + LT.zahl(LT.S.xp) + ' XP</p>' +
+      (r.naechster ? '<p class="muted">Nächster Rang: ' + LT.esc(r.naechster) + ' ab ' + LT.zahl(r.naechsterXp) + ' XP</p>'
+        : '<p class="muted">Das ist der höchste Rang. Glückwunsch!</p>') + '</div>',
+      [{ text: 'Weiter', klasse: 'primaer', aktion: function () {} }]);
+    LT.ansage('Neuer Rang: ' + r.name);
+    LT.kopfAktualisieren();
+    var zu = function () {
+      d.removeEventListener('close', zu);
+      rangOffen = false;
+      var liste = nachRang; nachRang = [];
+      setTimeout(function () { liste.forEach(function (f) { f(); }); }, 50);
+    };
+    d.addEventListener('close', zu);
+  };
+
+  /** Prüft nach jedem XP-Gewinn, ob ein Aufstieg ansteht, und zeigt ihn, sobald kein Dialog offen ist. */
+  LT.rangBeobachten = function () {
+    if (rangUhr || !rangFaellig()) return;
+    rangUhr = setInterval(function () {
+      if (!rangFaellig()) { clearInterval(rangUhr); rangUhr = null; return; }
+      if (LT.zeitLaeuft || rangOffen || LT.$('#dialog').open) return;
+      LT.rangFeiern();
+    }, 300);
   };
 
   LT.modul = function (id) {

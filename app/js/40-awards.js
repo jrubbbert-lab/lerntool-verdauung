@@ -142,6 +142,9 @@
 
   /* ---------- Animation für neue Awards ---------- */
   LT.awardsFeiern = function (fertig) {
+    LT.rangFeiern(function () { awardsZeigen(fertig); });   // ein Rangaufstieg kommt zuerst
+  };
+  function awardsZeigen(fertig) {
     var liste = LT.neueAwards.slice();
     LT.neueAwards = [];
     if (!liste.length) { if (fertig) fertig(); return; }
@@ -154,5 +157,5 @@
       '<p class="chip gold">+' + LT.E.xp.award + ' XP</p></div>',
       [{ text: liste.length ? 'Nächster Award' : 'Weiter', klasse: 'primaer', aktion: function () { setTimeout(function () { LT.awardsFeiern(fertig); }, 50); } }]);
     LT.ansage('Neuer Award: ' + LT.awardName(a));
-  };
+  }
 })();

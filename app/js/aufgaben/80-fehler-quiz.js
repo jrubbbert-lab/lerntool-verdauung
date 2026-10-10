@@ -84,6 +84,7 @@
       if (rest <= 0) ende();
     }, 1000);
     LT.aufraeumen = function () { clearInterval(timer); };
+    LT.zeitLaeuft = true;
 
     function frage() {
       if (k >= reihe.length) { reihe = LT.mischen(pool); k = 0; }
@@ -109,7 +110,7 @@
     }
 
     function ende() {
-      clearInterval(timer); LT.aufraeumen = null;
+      clearInterval(timer); LT.aufraeumen = null; LT.zeitLaeuft = false;
       LT.speichern();
       LT.awardsPruefen();
       LT.ergebnisSeite({

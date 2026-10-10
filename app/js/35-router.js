@@ -33,6 +33,7 @@
 
   LT.navigieren = function () {
     if (LT.aufraeumen) { try { LT.aufraeumen(); } catch (e) { /* weiter */ } LT.aufraeumen = null; }
+    LT.zeitLaeuft = false;
     LT.dialogZu();
     var pfad = LT.pfad || '/';
     if (!LT.S.form && ['/datenschutz', '/mehr/laden'].indexOf(pfad) < 0) pfad = '/willkommen';

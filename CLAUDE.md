@@ -110,6 +110,7 @@ Praktikantin → Famulantin → PJlerin → Assistenzärztin → Oberärztin →
 - **Keine Auswahl beim Start** (Wunsch der Lehrkraft): Standard ist die weibliche Form. Unter „Mehr“ lässt sich die Anrede auf männlich / neutral umstellen; die Wahl wird nur lokal gespeichert.
 - **Neutral mit Doppelpunkt** (Praktikant:in).
 - Award-Namen passen sich der Form ebenfalls an.
+- **Rangaufstieg erscheint sofort als großer Dialog** („Neuer Rang!“), nicht erst auf der Ergebnisseite. Ausnahme: Im Quiz auf Zeit und im Enzym-Spiel erscheint er direkt nach der Runde. Steht gleichzeitig ein Award an, kommt der Rang zuerst.
 
 ## Design (PEBK-Corporate-Design)
 - Farben aus der offiziellen PEBK-PowerPoint-Vorlage: Dunkelgrün `#2A473B` (Kopfleiste, Knöpfe), Mittelgrün `#4DAF8E`, Hellgrün `#CCE4D8`, Graugrün `#6C887C`, Logo-Grün `#1BA57E`. Definiert in `app/stil/10-grundlagen.css`.

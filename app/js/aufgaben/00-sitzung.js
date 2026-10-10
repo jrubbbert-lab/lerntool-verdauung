@@ -73,14 +73,7 @@
 
   /** Ergebnisseite nach einer Sitzung */
   LT.ergebnisSeite = function (opt) {
-    var r = LT.rang(), aufstieg = '';
-    if (r.stufe > (LT.S.rangGesehen || 0)) {
-      aufstieg = '<div class="hinweis gold aufstieg"><p class="eyebrow">Neuer Rang</p><p class="stufe">' + esc(r.name) + '</p>' +
-        '<p>Glückwunsch, du bist aufgestiegen!</p></div>';
-      LT.S.rangGesehen = r.stufe;
-      LT.speichern();
-    }
-    LT.zeige(LT.seitenkopf(esc(opt.titel), opt.zurueck, opt.eyebrow) + aufstieg +
+    LT.zeige(LT.seitenkopf(esc(opt.titel), opt.zurueck, opt.eyebrow) +
       '<section class="karte stapel ergebnis" aria-live="polite">' + opt.html + '</section>' +
       (opt.falsch && opt.falsch.length ? '<section class="stapel"><h2>Das solltest du wiederholen</h2><ul class="wiederholen">' +
         opt.falsch.map(function (e) {

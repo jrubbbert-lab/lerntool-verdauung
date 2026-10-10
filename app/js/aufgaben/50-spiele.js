@@ -149,10 +149,11 @@
         if (rest <= 0) ende();
       }, 1000);
       LT.aufraeumen = stopp;
+      LT.zeitLaeuft = true;
       function stopp() { clearInterval(uhr); clearInterval(nachschub); cancelAnimationFrame(raf); }
 
       function ende() {
-        stopp(); LT.aufraeumen = null;
+        stopp(); LT.aufraeumen = null; LT.zeitLaeuft = false;
         var rekord = punkte > LT.S.enzymBest;
         LT.S.enzymBest = Math.max(LT.S.enzymBest, punkte);
         var xp = LT.xpDazu('enzym_treffer', punkte);
