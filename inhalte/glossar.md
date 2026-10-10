@@ -359,3 +359,28 @@ quelle: i-care S. 204
 deutsch: Zäpfchen
 erklärung: Sitzt am Ende des Gaumensegels.
 quelle: i-care S. 202
+
+## Diarrhö
+deutsch: Durchfall
+erklärung: Wässrige Stühle, z. B. bei einer Dünndarmentzündung.
+quelle: MKK S. 358
+
+## Enteritis
+deutsch: Dünndarmentzündung
+erklärung: Das Dünndarmepithel sondert sehr viel Gewebswasser ab. Die Folge sind wässrige Durchfälle. Ursachen sind z. B. Infektionen.
+quelle: MKK S. 358
+
+## Ileus
+deutsch: Darmverschluss
+erklärung: Nicht verwechseln mit dem Ileum, einem Abschnitt des Dünndarms!
+quelle: i-care S. 213
+
+## Krypten
+deutsch: Vertiefungen der Darmschleimhaut
+erklärung: Liegen im Dünndarm zwischen den Zotten und dienen vor allem der Erneuerung des Schleimhautepithels.
+quelle: i-care S. 210
+
+## Mesenterium
+deutsch: Gekröse des Dünndarms
+erklärung: Fächerförmige Aufhängung aus Bauchfell, die Jejunum und Ileum beweglich mit der hinteren Bauchwand verbindet.
+quelle: i-care S. 213
