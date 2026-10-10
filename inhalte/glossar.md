@@ -384,3 +384,43 @@ quelle: i-care S. 210
 deutsch: Gekröse des Dünndarms
 erklärung: Fächerförmige Aufhängung aus Bauchfell, die Jejunum und Ileum beweglich mit der hinteren Bauchwand verbindet.
 quelle: i-care S. 213
+
+## Appendix vermiformis
+deutsch: Wurmfortsatz
+erklärung: Dünner, blind endender Fortsatz des Blinddarms. In seiner Wand liegt Lymphgewebe.
+quelle: i-care S. 215
+
+## Appendektomie
+deutsch: operative Entfernung des Wurmfortsatzes
+erklärung: Wird bei einer Appendizitis durchgeführt.
+quelle: i-care S. 215
+
+## Defäkation
+deutsch: Stuhlentleerung
+erklärung: Setzt ein, wenn sich der innere und der äußere Schließmuskel entspannen.
+quelle: i-care S. 220
+
+## Fäzes
+deutsch: Stuhl
+erklärung: Entsteht im Dickdarm, indem dem Speisebrei Wasser entzogen wird und Bakterien den Darminhalt zersetzen.
+quelle: i-care S. 215
+
+## Flatulenz
+deutsch: Blähungen
+erklärung: Vermehrte Darmgase, z. B. bei sehr ballaststoffreicher Kost.
+quelle: i-care S. 220
+
+## Kontinenz
+deutsch: Fähigkeit, den Stuhl zu halten
+erklärung: Dafür sorgen vor allem der innere und der äußere Schließmuskel des Afters.
+quelle: i-care S. 219
+
+## Obstipation
+deutsch: Verstopfung
+erklärung: Wird durch wenig Bewegung, geringe Flüssigkeitszufuhr und ballaststoffarme Ernährung begünstigt.
+quelle: i-care S. 220
+
+## Perforation
+deutsch: Durchbruch
+erklärung: Bei einem Darmdurchbruch können Bakterien in die Bauchhöhle gelangen und eine Bauchfellentzündung verursachen.
+quelle: i-care S. 220
