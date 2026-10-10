@@ -107,7 +107,7 @@ Stand der Inhalte:
 
 ## Ränge und Formen
 Praktikantin → Famulantin → PJlerin → Assistenzärztin → Oberärztin → Chefärztin → Gesundheitsministerin (nach XP).
-- Beim ersten Start wählen die SuS die Form: weiblich / männlich / neutral. Die Wahl wird nur lokal gespeichert.
+- **Keine Auswahl beim Start** (Wunsch der Lehrkraft): Standard ist die weibliche Form. Unter „Mehr“ lässt sich die Anrede auf männlich / neutral umstellen; die Wahl wird nur lokal gespeichert.
 - **Neutral mit Doppelpunkt** (Praktikant:in).
 - Award-Namen passen sich der Form ebenfalls an.
 

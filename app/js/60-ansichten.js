@@ -2,31 +2,19 @@
 (function () {
   var esc = LT.esc, icon = LT.icon;
 
-  /* ---------- Willkommen / Formwahl ---------- */
+  /* ---------- Willkommen ---------- */
   LT.route(/^\/willkommen$/, function () {
     var h = LT.zeige(
       LT.seitenkopf('Willkommen!', null, 'Lerntool Verdauung') +
       '<section class="karte stapel">' +
       '<p>Hier lernst du alles über das Verdauungssystem, von den Nährstoffen bis zu den Erkrankungen. ' +
       'Für richtige Antworten bekommst du XP, steigst im Rang auf und sammelst Awards.</p>' +
-      '<fieldset class="stapel" style="border:0;padding:0;margin:0"><legend><h2>Wie sollen wir deinen Rang nennen?</h2></legend>' +
-      '<div class="wahl">' +
-      '<label><input type="radio" name="form" value="w"> Praktikantin → … → Gesundheitsministerin</label>' +
-      '<label><input type="radio" name="form" value="m"> Praktikant → … → Gesundheitsminister</label>' +
-      '<label><input type="radio" name="form" value="n"> Praktikant:in → … → Gesundheitsminister:in</label>' +
-      '</div></fieldset>' +
-      '<p class="muted klein">Deine Wahl wird nur auf diesem Gerät gespeichert. Du kannst sie unter „Mehr“ jederzeit ändern.</p>' +
       LT.datenschutzKurz() +
-      '<div class="reihe"><button class="btn primaer" id="los" type="button" disabled>Los geht’s</button>' +
+      '<div class="reihe"><button class="btn primaer" id="los" type="button">Los geht’s</button>' +
       '<a class="btn" href="#/mehr/laden">Ich habe schon einen Spielstand</a></div>' +
       '</section>');
-    LT.$$('input[name=form]', h).forEach(function (r) {
-      r.addEventListener('change', function () { LT.$('#los').disabled = false; });
-    });
     LT.$('#los').addEventListener('click', function () {
-      var w = LT.$('input[name=form]:checked', h);
-      if (!w) return;
-      LT.S.form = w.value;
+      LT.S.form = 'w';   // keine Auswahl beim Start; änderbar unter „Mehr“
       LT.speichern();
       LT.gehe('/');
     });
