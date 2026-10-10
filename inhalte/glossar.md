@@ -214,3 +214,88 @@ quelle: i-care S. 205; MKK S. 359
 deutsch: Neutralfette
 erklärung: Hauptanteil der Nahrungsfette (etwa 90 %). Sie bestehen aus 1 Glyzerinmolekül und 3 Fettsäuren.
 quelle: MKK S. 362; i-care S. 240
+
+## Abdomen
+deutsch: Bauch
+erklärung: Der Teil des Körpers, der die Bauch- und Beckenhöhle enthält.
+quelle: i-care S. 189
+
+## Appendizitis
+deutsch: „Blinddarmentzündung“
+erklärung: Entzündung des Wurmfortsatzes. Häufigste Ursache eines akuten Abdomens.
+quelle: i-care S. 189
+
+## Aszites
+deutsch: „Bauchwassersucht“
+erklärung: Erhöhte Flüssigkeitsmenge im Bauchraum, z. B. bei einer Leberzirrhose.
+quelle: i-care S. 190
+
+## Digestion
+deutsch: Verdauung
+erklärung: Der Abbau der Nahrung in aufnehmbare Bestandteile – mechanisch und chemisch.
+quelle: MKK S. 344
+
+## Ileum
+deutsch: Krummdarm
+erklärung: Dritter und letzter Abschnitt des Dünndarms.
+quelle: i-care S. 188
+
+## intraperitoneal
+deutsch: in der Bauchfellhöhle gelegen
+erklärung: Intraperitoneale Organe sind vollständig vom Bauchfell überzogen und über ein Gekröse beweglich befestigt, z. B. Magen, Leber und Milz.
+quelle: i-care S. 189–191
+
+## Jejunum
+deutsch: Leerdarm
+erklärung: Zweiter Abschnitt des Dünndarms.
+quelle: i-care S. 188
+
+## Kolon
+deutsch: Grimmdarm
+erklärung: Größter Abschnitt des Dickdarms.
+quelle: i-care S. 188
+
+## Meso
+deutsch: Gekröse
+erklärung: Bindegewebsstrang, über den intraperitoneale Organe an der Bauchwand befestigt sind. Darin verlaufen Blutgefäße und Nerven. Beim Dünndarm heißt es Mesenterium.
+quelle: i-care S. 190
+
+## Ösophagus
+deutsch: Speiseröhre
+erklärung: Verbindet die Mundhöhle bzw. den Rachen mit dem Magen.
+quelle: i-care S. 188, 205
+
+## Pankreas
+deutsch: Bauchspeicheldrüse
+erklärung: Bildet den Pankreassaft mit Verdauungsenzymen und Hormone wie Insulin.
+quelle: i-care S. 188, 223
+
+## Peritoneum
+deutsch: Bauchfell
+erklärung: Glatte Haut, die die Bauch- und Beckenhöhle auskleidet und die Organe überzieht.
+quelle: i-care S. 189
+
+## Peritonitis
+deutsch: Bauchfellentzündung
+erklärung: Oft lebensbedrohliche Entzündung des Bauchfells, z. B. nach dem Durchbruch eines Darmabschnitts.
+quelle: MKK S. 345; i-care S. 190
+
+## Rektum
+deutsch: Mastdarm
+erklärung: Letzter Abschnitt des Darms vor dem Analkanal.
+quelle: i-care S. 188
+
+## retroperitoneal
+deutsch: hinter dem Bauchfell gelegen
+erklärung: Retroperitoneale Organe liegen der hinteren Rumpfwand direkt an. Das Bauchfell bedeckt nur ihre Vorderseite, z. B. bei Nieren und Bauchspeicheldrüse.
+quelle: i-care S. 191
+
+## Submukosa
+deutsch: Bindegewebsschicht
+erklärung: Schicht zwischen Mukosa und Muskularis. Sie enthält Blutgefäße und ein Nervengeflecht.
+quelle: i-care S. 192
+
+## Zäkum
+deutsch: Blinddarm
+erklärung: Erster Abschnitt des Dickdarms mit dem Wurmfortsatz (Appendix vermiformis).
+quelle: i-care S. 188
