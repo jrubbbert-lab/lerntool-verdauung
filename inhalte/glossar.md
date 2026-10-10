@@ -449,3 +449,58 @@ quelle: MKK S. 367–368
 deutsch: Entzündung der Bauchspeicheldrüse
 erklärung: Die Verdauungsenzyme werden schon im Pankreas aktiv und greifen das Organ an („Selbstverdauung“). Häufige Ursachen sind Gallensteine und Alkoholmissbrauch.
 quelle: i-care S. 224; MKK S. 367
+
+## Hepar
+deutsch: Leber
+erklärung: Zentrales Stoffwechselorgan im rechten Oberbauch. Sie entgiftet, bildet die Galle und speichert Nährstoffe.
+quelle: i-care S. 224
+
+## Hepatozyten
+deutsch: Leberzellen
+erklärung: Sie sind in den Leberläppchen strahlenförmig um die Zentralvene angeordnet und bilden unter anderem die Galle.
+quelle: i-care S. 225
+
+## Albumin
+deutsch: Bluteiweiß
+erklärung: Plasmaprotein, das die Leber bildet. Es hält die Flüssigkeit in den Blutgefäßen und transportiert Stoffe im Blut.
+quelle: i-care S. 231
+
+## First-Pass-Effekt
+deutsch: Veränderung beim ersten Durchgang durch die Leber
+erklärung: Geschluckte Arzneistoffe gelangen über die Pfortader zuerst in die Leber und werden dort umgebaut. Manche verlieren dadurch an Wirkung.
+quelle: i-care S. 234
+
+## Bilirubin
+deutsch: Gallenfarbstoff
+erklärung: Abbauprodukt des roten Blutfarbstoffs. Es wird mit der Galle in den Darm abgegeben; seine Abbauprodukte färben den Stuhl braun.
+quelle: i-care S. 235
+
+## Ikterus
+deutsch: Gelbsucht
+erklärung: Gelbliche Verfärbung von Haut, Schleimhäuten und Augen, weil sich Bilirubin ablagert.
+quelle: i-care S. 235
+
+## enterohepatischer Kreislauf
+deutsch: Kreislauf zwischen Darm und Leber
+erklärung: Der größte Teil der Gallensäuren wird im Darm wieder aufgenommen, gelangt über die Pfortader zur Leber und wird erneut verwendet.
+quelle: i-care S. 235
+
+## Cholelithiasis
+deutsch: Gallensteinleiden
+erklärung: Gallensteine können entstehen, wenn die Galle zu viel Cholesterin enthält. Meist verursachen sie keine Beschwerden.
+quelle: i-care S. 237; MKK S. 360
+
+## Cholezystitis
+deutsch: Gallenblasenentzündung
+erklärung: Ernsthafte Komplikation des Gallensteinleidens. Die Beschwerden ähneln einer Gallenkolik, zusätzlich besteht Fieber.
+quelle: MKK S. 361
+
+## Hepatitis
+deutsch: Leberentzündung
+erklärung: Ursachen sind zum Beispiel Viren, Alkohol, Gifte oder Medikamente.
+quelle: MKK S. 371
+
+## Leberzirrhose
+deutsch: narbiger Umbau der Leber
+erklärung: Leberzellen sterben ab und werden durch Bindegewebe ersetzt. Die Struktur der Leberläppchen wird dabei zerstört.
+quelle: i-care S. 229
