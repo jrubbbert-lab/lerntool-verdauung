@@ -300,11 +300,6 @@ deutsch: Blinddarm
 erklärung: Erster Abschnitt des Dickdarms mit dem Wurmfortsatz (Appendix vermiformis).
 quelle: i-care S. 188
 
-## Dentin
-deutsch: Zahnbein
-erklärung: Sehr harte Substanz, aus der der eigentliche Zahn besteht.
-quelle: i-care S. 200
-
 ## Dysphagie
 deutsch: Schluckstörung
 erklärung: Leitsymptom vieler Erkrankungen der Speiseröhre. Eine länger bestehende Schluckstörung sollte endoskopisch abgeklärt werden.
@@ -314,16 +309,6 @@ quelle: MKK S. 353
 deutsch: Kehldeckel
 erklärung: Legt sich beim Schlucken auf den Eingang des Kehlkopfs und verschließt ihn.
 quelle: i-care S. 198, 202
-
-## Gingiva
-deutsch: Zahnfleisch
-erklärung: Überzieht den Kieferknochen und den Zahnhals.
-quelle: i-care S. 199
-
-## Karies
-deutsch: „Zahnfäule“
-erklärung: Bakterien im Mund bauen Zucker ab und bilden Säure, die den Zahnschmelz angreift.
-quelle: i-care S. 201
 
 ## Ösophagusvarizen
 deutsch: Krampfadern in der Speiseröhre
@@ -339,11 +324,6 @@ quelle: i-care S. 201
 deutsch: Ohrspeicheldrüse
 erklärung: Größte Speicheldrüse. Sie liegt vor dem Ohr und mündet in den Mundvorhof.
 quelle: i-care S. 195
-
-## Pulpa
-deutsch: Zahnmark
-erklärung: Bindegewebe mit Blutgefäßen und Nerven in der Zahnhöhle. Es versorgt den Zahn.
-quelle: i-care S. 200
 
 ## Reflux
 deutsch: Rückfluss

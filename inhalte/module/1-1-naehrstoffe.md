@@ -309,7 +309,7 @@ quelle: i-care S. 242–243
 ## Zuordnung
 id: naehrstoffe-zu-mineral
 frage: Ordne jedem Mineralstoff eine seiner Aufgaben zu.
-- Kalzium => Baustein von Knochen und Zähnen
+- Kalzium => Baustein der Knochen
 - Jod => Bestandteil der Schilddrüsenhormone
 - Eisen => Bestandteil des roten Blutfarbstoffs
 quelle: i-care S. 243–244

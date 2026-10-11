@@ -5,7 +5,7 @@
   /* ---------- Willkommen ---------- */
   LT.route(/^\/willkommen$/, function () {
     var h = LT.zeige(
-      LT.seitenkopf('Willkommen!', null, 'Lerntool Verdauung') +
+      LT.seitenkopf('Willkommen!', null, 'Lerntool Verdauungssystem') +
       '<section class="karte stapel">' +
       '<p>Hier lernst du alles über das Verdauungssystem, von den Nährstoffen bis zu den Erkrankungen. ' +
       'Für richtige Antworten bekommst du XP, steigst im Rang auf und sammelst Awards.</p>' +
@@ -45,7 +45,7 @@
   LT.route(/^\/$/, function () {
     var r = LT.rang();
     var fehler = Object.keys(LT.S.falsch).length;
-    var html = LT.seitenkopf('Verdauung lernen', null, 'Dein Lernstand') +
+    var html = LT.seitenkopf('Verdauungssystem', null, 'Dein Lernstand') +
       '<section class="karte rangkarte" aria-label="Dein Rang">' +
       '<div><p class="eyebrow">Rang</p><p class="stufe">' + esc(r.name) + '</p></div>' +
       '<p class="muted" style="text-align:right">' + LT.zahl(LT.S.xp) + ' XP' +

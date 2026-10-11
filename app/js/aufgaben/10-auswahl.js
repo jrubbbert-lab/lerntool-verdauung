@@ -25,7 +25,7 @@
           '<span class="kennung">' + (mehrfach ? 'Mehrere Antworten möglich' : 'Wähle genau eine Antwort') + '</span></legend>' +
           opts.map(function (x, k) {
             return '<label class="opt"><input type="' + (mehrfach ? 'checkbox' : 'radio') + '" name="' + gruppe + '" value="' + k + '"> <span>' +
-              LT.txt(x.o.text) + '</span></label>';
+              LT.txt(x.o.text, { ohneKlammer: true }) + '</span></label>';
           }).join('') + '</fieldset>';
         var inputs = LT.$$('input', el);
         return {

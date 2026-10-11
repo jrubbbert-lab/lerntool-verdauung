@@ -196,7 +196,7 @@ id: duenndarm-sc-enteritis
 frage: Was ist das typische Zeichen einer Dünndarmentzündung ([[Enteritis]])?
 - [x] wässrige Durchfälle
 - [ ] Sodbrennen
-- [ ] Zahnschmerzen
+- [ ] Kopfschmerzen
 quelle: MKK S. 358
 
 ## Single-Choice
@@ -232,7 +232,7 @@ frage: Was vergrößert die Oberfläche der Dünndarmschleimhaut?
 - [x] Falten
 - [x] Zotten
 - [x] Mikrovilli
-- [ ] Zähne
+- [ ] Haare
 quelle: i-care S. 210; MKK S. 358
 
 ## Multiple-Choice

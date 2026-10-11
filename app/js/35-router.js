@@ -48,7 +48,7 @@
         var h1 = LT.$('#haupt h1');
         LT.$('#haupt').focus({ preventScroll: true });
         window.scrollTo(0, 0);
-        document.title = h1 && h1.textContent !== 'Verdauung lernen' ? h1.textContent + ' · Verdauung lernen' : 'Verdauung lernen';
+        document.title = h1 && h1.textContent !== 'Verdauungssystem' ? h1.textContent + ' · Verdauungssystem' : 'Verdauungssystem';
         return;
       }
     }

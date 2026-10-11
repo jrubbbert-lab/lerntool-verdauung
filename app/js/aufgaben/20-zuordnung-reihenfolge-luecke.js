@@ -10,7 +10,7 @@
       var paare = LT.mischen(a.paare);
       el.innerHTML = '<p class="frage">' + LT.txt(a.frage) + '</p><div class="zuordnung">' +
         paare.map(function (p, k) {
-          return '<div class="zrow"><label for="z' + k + '">' + LT.txt(p.links) + '</label>' +
+          return '<div class="zrow"><label for="z' + k + '">' + LT.txt(p.links, { ohneKlammer: true }) + '</label>' +
             '<select id="z' + k + '"><option value="">– bitte wählen –</option>' +
             rechts.map(function (r) { return '<option value="' + esc(r) + '">' + esc(r.replace(/\[\[(.+?)(\|(.+?))?\]\]/g, function (_, x, __, y) { return y || x; })) + '</option>'; }).join('') +
             '</select></div>';

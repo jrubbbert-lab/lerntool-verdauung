@@ -253,13 +253,13 @@ id: gut-gekaut
 name: Gut gekaut ist halb verdaut
 geheim: nein
 regel: modul_prozent mundhoehle 100
-bedingung: Schaffe das Modul Mundhöhle und Speiseröhre mit 100 %.
+bedingung: Schaffe das Modul Mundhöhle und Ösophagus mit 100 %.
 fakt: Brot schmeckt beim langen Kauen süßlich, weil die Amylase des Speichels Malzzucker (Maltose) von der Stärke abspaltet.
 quelle: i-care S. 197
 form: zacken
 farbe1: #f07c5a
 farbe2: #b03a1e
-icon: zahn
+icon: mund
 
 ## Peristaltik-Profi
 id: peristaltik-profi

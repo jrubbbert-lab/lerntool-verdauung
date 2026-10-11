@@ -260,7 +260,7 @@ frage: Welche Beschwerden gehören zu einer akuten Pankreatitis?
 - [x] heftige Oberbauchschmerzen
 - [x] Übelkeit
 - [x] Erbrechen
-- [ ] Zahnschmerzen
+- [ ] Sehstörungen
 quelle: MKK S. 367
 
 ## Multiple-Choice

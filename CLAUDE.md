@@ -75,7 +75,7 @@ Planungsunterlagen: `planung/01_inhaltsuebersicht.md` (Buchseiten je Modul, Lüc
 
 ## Module (4 Blöcke, nacheinander freigeschaltet)
 1. **Grundlagen:** Nährstoffe; Aufgaben und Aufbau des Verdauungssystems
-2. **Organe:** Mundhöhle und Speiseröhre; Magen; Dünndarm; Dickdarm; Pankreas; Leber und Gallenblase
+2. **Organe:** Mundhöhle und Ösophagus; Magen; Dünndarm; Dickdarm; Pankreas; Leber und Gallenblase
 3. **Physiologie:** Verdauung der Nährstoffe
 4. **Erkrankungen:** Morbus Crohn (→ Dünndarm/Dickdarm); Adipositas (→ Nährstoffe); Hepatitis (→ Leber und Gallenblase); Diabetes mellitus (→ Pankreas); Leberzirrhose (→ Leber und Gallenblase); Pankreatitis (→ Pankreas); Magenkarzinom (→ Magen)
 
