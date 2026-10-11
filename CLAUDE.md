@@ -23,6 +23,7 @@ Planungsunterlagen: `planung/01_inhaltsuebersicht.md` (Buchseiten je Modul, Lüc
 - Build-Ausgaben:
   - `docs/index.html` ist die **öffentliche Version** für GitHub Pages, **ohne Buchabbildungen**.
   - `dist/lerntool-verdauung-kurs.html` ist die **Kursversion mit Abbildungen** (`python3 build.py --kursversion`). Sie ist nur für den geschlossenen Kurs und nicht in Git.
+- **Veröffentlicht:** Repository `jrubbbert-lab/lerntool-verdauung` (öffentlich), GitHub Pages aus `main` / Ordner `docs`: https://jrubbbert-lab.github.io/lerntool-verdauung/ – Aktualisieren: `python3 build.py`, committen, `git push`. Die Seite ist ein bis zwei Minuten später aktuell.
 - Git von Anfang an. `quellen/`, `inhalte/bilder/`, `dist/` und `referenz/` kommen **nie** ins Repository (Urheberrecht; das Repo ist öffentlich).
 - Das Repo liegt in einem Google-Drive-Ordner. Nicht parallel auf zwei Rechnern arbeiten, GitHub dient als Backup.
 - Mobile first, barrierearm (Tastatur, Kontrast AA, `prefers-reduced-motion`), Hell- und Dunkelmodus.
