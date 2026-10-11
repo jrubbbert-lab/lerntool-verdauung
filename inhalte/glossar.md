@@ -17,12 +17,12 @@ quelle: i-care S. 244
 
 ## Amylase
 deutsch: stärkespaltendes Enzym
-erklärung: Enzym im Mundspeichel und im Pankreassaft. Es spaltet Stärke in den Zweifachzucker Maltose.
+erklärung: Enzym im Mundspeichel und im Pankreassaft. Es spaltet Stärke in das [[Disaccharide|Disaccharid]] Maltose.
 quelle: i-care S. 238; MKK S. 351
 
 ## Antrum
 deutsch: Vorraum des Pförtners
-erklärung: Abschnitt des Magens zwischen Magenkörper und Pylorus (Antrum pyloricum).
+erklärung: Abschnitt des Magens zwischen [[Korpus]] und Pylorus (Antrum pyloricum).
 quelle: MKK S. 354
 
 ## Chylomikronen
@@ -42,12 +42,12 @@ quelle: i-care S. 205, 240
 
 ## Denaturierung
 deutsch: Strukturveränderung der Eiweiße
-erklärung: Die Salzsäure des Magensafts zerstört die räumliche Struktur von Eiweißen, damit Enzyme sie leichter angreifen können.
+erklärung: Die Salzsäure des Magensafts zerstört die räumliche Struktur von [[Proteine|Proteinen]], damit Enzyme sie leichter angreifen können.
 quelle: i-care S. 209, 239
 
 ## Disaccharide
 deutsch: Zweifachzucker
-erklärung: Zucker aus zwei Bausteinen, z. B. Maltose, Laktose und Saccharose. Sie werden am Bürstensaum in Einfachzucker gespalten.
+erklärung: Zucker aus zwei Bausteinen, z. B. Maltose, Laktose und Saccharose. Sie werden am Bürstensaum in [[Monosaccharide]] gespalten.
 quelle: MKK S. 361; i-care S. 238
 
 ## Duodenum
@@ -57,7 +57,7 @@ quelle: i-care S. 188, 214
 
 ## Emulgierung
 deutsch: feine Verteilung der Fette
-erklärung: Fette werden durch Kauen, Magen- und Darmbewegungen und die Gallensäuren möglichst fein im Nahrungsbrei verteilt, damit Enzyme sie erreichen.
+erklärung: Fette werden durch Kauen, Magen- und Darmbewegungen und die Gallensäuren möglichst fein im [[Chymus]] verteilt, damit Enzyme sie erreichen.
 quelle: i-care S. 240
 
 ## Enterozyten
@@ -87,7 +87,7 @@ quelle: MKK S. 370–371; i-care S. 241
 
 ## Glukose
 deutsch: Traubenzucker
-erklärung: Einfachzucker. Wichtigste Energiequelle des Körpers.
+erklärung: Ein [[Monosaccharide|Monosaccharid]]. Wichtigste Energiequelle des Körpers.
 quelle: MKK S. 370; i-care S. 241
 
 ## Glykogen
@@ -107,7 +107,7 @@ quelle: i-care S. 247
 
 ## Kardia
 deutsch: Mageneingang
-erklärung: Übergang von der Speiseröhre zum Magen, auch Magenmund genannt.
+erklärung: Übergang vom [[Ösophagus]] zum Magen, auch Magenmund genannt.
 quelle: i-care S. 205; MKK S. 354
 
 ## Korpus
@@ -122,7 +122,7 @@ quelle: MKK S. 354; i-care S. 208
 
 ## Laktose
 deutsch: Milchzucker
-erklärung: Zweifachzucker, der durch die Laktase in Galaktose und Glukose gespalten wird.
+erklärung: [[Disaccharide|Disaccharid]], das durch die Laktase in Galaktose und Glukose gespalten wird.
 quelle: i-care S. 238
 
 ## Lipase
@@ -137,7 +137,7 @@ quelle: i-care S. 243
 
 ## Maltose
 deutsch: Malzzucker
-erklärung: Zweifachzucker, der bei der Spaltung der Stärke durch die Amylase entsteht. Die Maltase spaltet ihn in zwei Glukosemoleküle.
+erklärung: [[Disaccharide|Disaccharid]], das bei der Spaltung der Stärke durch die Amylase entsteht. Die Maltase spaltet es in zwei Glukosemoleküle.
 quelle: i-care S. 238
 
 ## Mikrovilli
@@ -147,7 +147,7 @@ quelle: i-care S. 210; MKK S. 358
 
 ## Mizellen
 deutsch: Gallensäure-Hüllen um Fettbestandteile
-erklärung: Winzige Partikel aus Gallensäuren und Fettbestandteilen. Sie stellen den Kontakt zur Darmschleimhaut her.
+erklärung: Winzige Partikel aus Gallensäuren und Fettbestandteilen. Sie stellen den Kontakt zur Darmmukosa her.
 quelle: i-care S. 240–241; MKK S. 359
 
 ## Monosaccharide
@@ -157,7 +157,7 @@ quelle: MKK S. 361; i-care S. 238
 
 ## Mukosa
 deutsch: Schleimhautschicht
-erklärung: Innerste Schicht der Wand von Speiseröhre, Magen und Darm (Tunica mucosa).
+erklärung: Innerste Schicht der Wand von [[Ösophagus]], Magen und Darm (Tunica mucosa).
 quelle: i-care S. 192
 
 ## Muskularis
@@ -167,7 +167,7 @@ quelle: i-care S. 192; MKK S. 354
 
 ## Pepsin
 deutsch: eiweißspaltendes Enzym des Magens
-erklärung: Entsteht aus Pepsinogen. Spaltet Eiweiße in gröbere Bruchstücke.
+erklärung: Entsteht aus Pepsinogen. Spaltet [[Proteine]] in gröbere Bruchstücke.
 quelle: MKK S. 354–355
 
 ## Pepsinogen
@@ -202,7 +202,7 @@ quelle: i-care S. 210, 214
 
 ## Saccharose
 deutsch: Rohr- bzw. Rübenzucker
-erklärung: Zweifachzucker, den die Saccharase in Glukose und Fruktose spaltet.
+erklärung: [[Disaccharide|Disaccharid]], das die Saccharase in Glukose und Fruktose spaltet.
 quelle: i-care S. 238
 
 ## Sphinkter
@@ -222,7 +222,7 @@ quelle: i-care S. 189
 
 ## Appendizitis
 deutsch: „Blinddarmentzündung“
-erklärung: Entzündung des Wurmfortsatzes. Häufigste Ursache eines akuten Abdomens.
+erklärung: Entzündung der [[Appendix vermiformis|Appendix]]. Häufigste Ursache eines akuten Abdomens.
 quelle: i-care S. 189
 
 ## Aszites
@@ -242,7 +242,7 @@ quelle: i-care S. 188
 
 ## intraperitoneal
 deutsch: in der Bauchfellhöhle gelegen
-erklärung: Intraperitoneale Organe sind vollständig vom Bauchfell überzogen und über ein Gekröse beweglich befestigt, z. B. Magen, Leber und Milz.
+erklärung: Intraperitoneale Organe sind vollständig vom [[Peritoneum]] überzogen und über ein Gekröse beweglich befestigt, z. B. Magen, Leber und Milz.
 quelle: i-care S. 189–191
 
 ## Jejunum
@@ -277,7 +277,7 @@ quelle: i-care S. 189
 
 ## Peritonitis
 deutsch: Bauchfellentzündung
-erklärung: Oft lebensbedrohliche Entzündung des Bauchfells, z. B. nach dem Durchbruch eines Darmabschnitts.
+erklärung: Oft lebensbedrohliche Entzündung des [[Peritoneum|Peritoneums]], z. B. nach dem Durchbruch eines Darmabschnitts.
 quelle: MKK S. 345; i-care S. 190
 
 ## Rektum
@@ -287,7 +287,7 @@ quelle: i-care S. 188
 
 ## retroperitoneal
 deutsch: hinter dem Bauchfell gelegen
-erklärung: Retroperitoneale Organe liegen der hinteren Rumpfwand direkt an. Das Bauchfell bedeckt nur ihre Vorderseite, z. B. bei Nieren und Bauchspeicheldrüse.
+erklärung: Retroperitoneale Organe liegen der hinteren Rumpfwand direkt an. Das [[Peritoneum]] bedeckt nur ihre Vorderseite, z. B. bei Nieren und [[Pankreas]].
 quelle: i-care S. 191
 
 ## Submukosa
@@ -297,12 +297,12 @@ quelle: i-care S. 192
 
 ## Zäkum
 deutsch: Blinddarm
-erklärung: Erster Abschnitt des Dickdarms mit dem Wurmfortsatz (Appendix vermiformis).
+erklärung: Erster Abschnitt des Dickdarms mit der [[Appendix vermiformis]].
 quelle: i-care S. 188
 
 ## Dysphagie
 deutsch: Schluckstörung
-erklärung: Leitsymptom vieler Erkrankungen der Speiseröhre. Eine länger bestehende Schluckstörung sollte endoskopisch abgeklärt werden.
+erklärung: Leitsymptom vieler Erkrankungen des [[Ösophagus]]. Eine länger bestehende [[Dysphagie]] sollte endoskopisch abgeklärt werden.
 quelle: MKK S. 353
 
 ## Epiglottis
@@ -327,12 +327,12 @@ quelle: i-care S. 195
 
 ## Reflux
 deutsch: Rückfluss
-erklärung: Magensäure fließt in die Speiseröhre zurück. Betroffene spüren ein schmerzhaftes Brennen (Sodbrennen).
+erklärung: Magensäure fließt in den [[Ösophagus]] zurück. Betroffene spüren ein schmerzhaftes Brennen (Sodbrennen).
 quelle: i-care S. 204; MKK S. 353
 
 ## Refluxösophagitis
 deutsch: Entzündung der Speiseröhre durch Rückfluss von Magensaft
-erklärung: Entsteht, wenn häufig Magensaft in die Speiseröhre zurückfließt.
+erklärung: Entsteht, wenn häufig Magensaft in den [[Ösophagus]] zurückfließt.
 quelle: i-care S. 204
 
 ## Uvula
@@ -357,17 +357,17 @@ quelle: i-care S. 213
 
 ## Krypten
 deutsch: Vertiefungen der Darmschleimhaut
-erklärung: Liegen im Dünndarm zwischen den Zotten und dienen vor allem der Erneuerung des Schleimhautepithels.
+erklärung: Liegen im Dünndarm zwischen den Zotten und dienen vor allem der Erneuerung des Mukosaepithels.
 quelle: i-care S. 210
 
 ## Mesenterium
 deutsch: Gekröse des Dünndarms
-erklärung: Fächerförmige Aufhängung aus Bauchfell, die Jejunum und Ileum beweglich mit der hinteren Bauchwand verbindet.
+erklärung: Fächerförmige Aufhängung aus [[Peritoneum]], die Jejunum und Ileum beweglich mit der hinteren Bauchwand verbindet.
 quelle: i-care S. 213
 
 ## Appendix vermiformis
 deutsch: Wurmfortsatz
-erklärung: Dünner, blind endender Fortsatz des Blinddarms. In seiner Wand liegt Lymphgewebe.
+erklärung: Dünner, blind endender Fortsatz des [[Zäkum|Zäkums]]. In seiner Wand liegt Lymphgewebe.
 quelle: i-care S. 215
 
 ## Appendektomie
@@ -377,12 +377,12 @@ quelle: i-care S. 215
 
 ## Defäkation
 deutsch: Stuhlentleerung
-erklärung: Setzt ein, wenn sich der innere und der äußere Schließmuskel entspannen.
+erklärung: Setzt ein, wenn sich der innere und der äußere [[Sphinkter]] entspannen.
 quelle: i-care S. 220
 
 ## Fäzes
 deutsch: Stuhl
-erklärung: Entsteht im Dickdarm, indem dem Speisebrei Wasser entzogen wird und Bakterien den Darminhalt zersetzen.
+erklärung: Entsteht im Dickdarm, indem dem [[Chymus]] Wasser entzogen wird und Bakterien den Darminhalt zersetzen.
 quelle: i-care S. 215
 
 ## Flatulenz
@@ -392,7 +392,7 @@ quelle: i-care S. 220
 
 ## Kontinenz
 deutsch: Fähigkeit, den Stuhl zu halten
-erklärung: Dafür sorgen vor allem der innere und der äußere Schließmuskel des Afters.
+erklärung: Dafür sorgen vor allem der innere und der äußere [[Sphinkter]] des Afters.
 quelle: i-care S. 219
 
 ## Obstipation
@@ -402,7 +402,7 @@ quelle: i-care S. 220
 
 ## Perforation
 deutsch: Durchbruch
-erklärung: Bei einem Darmdurchbruch können Bakterien in die Bauchhöhle gelangen und eine Bauchfellentzündung verursachen.
+erklärung: Bei einem Darmdurchbruch können Bakterien in die Bauchhöhle gelangen und eine [[Peritonitis]] verursachen.
 quelle: i-care S. 220
 
 ## endokrin
@@ -482,5 +482,15 @@ quelle: MKK S. 371
 
 ## Leberzirrhose
 deutsch: narbiger Umbau der Leber
-erklärung: Leberzellen sterben ab und werden durch Bindegewebe ersetzt. Die Struktur der Leberläppchen wird dabei zerstört.
+erklärung: [[Hepatozyten]] sterben ab und werden durch Bindegewebe ersetzt. Die Struktur der Leberläppchen wird dabei zerstört.
 quelle: i-care S. 229
+
+## Proteine
+deutsch: Eiweiße
+erklärung: Nährstoffe aus Aminosäuren. Sie werden im Magen und im Dünndarm zu Aminosäuren abgebaut.
+quelle: i-care S. 240
+
+## Gastritis
+deutsch: Magenschleimhautentzündung
+erklärung: Entzündung der Mukosa des Magens. Bei der Behandlung werden häufig Medikamente eingesetzt, die die Bildung der Salzsäure hemmen.
+quelle: i-care S. 209

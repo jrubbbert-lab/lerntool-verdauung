@@ -17,16 +17,16 @@ farbe: #2A473B
 
 ## Karteikarte
 vorne: Welche Hauptaufgaben hat der Dünndarm?
-hinten: Er verdaut den Speisebrei zu Ende und nimmt die Nährstoffe auf ([[Resorption]]).
+hinten: Er verdaut den [[Chymus]] zu Ende. Außerdem findet hier die [[Resorption]] der Nährstoffe statt.
 quelle: i-care S. 210; MKK S. 357
 
 ## Karteikarte
 vorne: Aus welchen drei Abschnitten besteht der Dünndarm?
-hinten: [[Duodenum]] (Zwölffingerdarm), [[Jejunum]] (Leerdarm) und [[Ileum]] (Krummdarm).
+hinten: [[Duodenum]], [[Jejunum]] und [[Ileum]].
 quelle: i-care S. 210
 
 ## Karteikarte
-vorne: Woher hat der Zwölffingerdarm seinen Namen?
+vorne: Woher hat das [[Duodenum]] seinen deutschen Namen „Zwölffingerdarm“?
 hinten: Seine Länge entspricht etwa der Breite von zwölf aneinandergelegten Fingern.
 quelle: i-care S. 212
 
@@ -37,27 +37,27 @@ quelle: i-care S. 212
 
 ## Karteikarte
 vorne: Woher stammen die meisten Verdauungsenzyme im Dünndarm?
-hinten: Aus der Bauchspeicheldrüse. Für die Aufnahme der Fette ist außerdem die Galle notwendig.
+hinten: Aus dem [[Pankreas]]. Für die Resorption der Fette ist außerdem die Galle notwendig.
 quelle: i-care S. 210
 
 ## Karteikarte
-vorne: Warum ist die Schleimhaut des Dünndarms so stark gefaltet?
-hinten: Damit eine möglichst große Oberfläche für die Aufnahme der Nährstoffe zur Verfügung steht.
+vorne: Warum ist die [[Mukosa]] des Dünndarms so stark gefaltet?
+hinten: Damit eine möglichst große Oberfläche für die Resorption der Nährstoffe zur Verfügung steht.
 quelle: i-care S. 210; MKK S. 357
 
 ## Karteikarte
 vorne: Wodurch wird die Oberfläche des Dünndarms vergrößert?
-hinten: Durch ringförmige Falten, fingerförmige Zotten, [[Krypten]] und die [[Mikrovilli]] der Darmzellen.
+hinten: Durch ringförmige Falten, fingerförmige Zotten, [[Krypten]] und die [[Mikrovilli]] der Enterozyten.
 quelle: i-care S. 210; MKK S. 358
 
 ## Karteikarte
 vorne: Was sind Zotten?
-hinten: Kleine, fingerförmige Ausstülpungen der Dünndarmschleimhaut. Jede Zotte hat eigene Blut- und Lymphgefäße, über die die aufgenommenen Nährstoffe abtransportiert werden.
+hinten: Kleine, fingerförmige Ausstülpungen der Dünndarmmukosa. Jede Zotte hat eigene Blut- und Lymphgefäße, über die die resorbierten Nährstoffe abtransportiert werden.
 quelle: i-care S. 210
 
 ## Karteikarte
 vorne: Was sind [[Enterozyten]]?
-hinten: Die Zellen der Dünndarmschleimhaut, die die Nährstoffe aufnehmen. Ihre [[Mikrovilli]] bilden den Bürstensaum.
+hinten: Die Zellen der Dünndarmmukosa, die die Nährstoffe resorbieren. Ihre [[Mikrovilli]] bilden den Bürstensaum.
 quelle: i-care S. 212; MKK S. 358
 
 ## Karteikarte
@@ -67,12 +67,12 @@ quelle: i-care S. 210
 
 ## Karteikarte
 vorne: Welche Aufgabe haben die Becherzellen im Dünndarm?
-hinten: Sie bilden Schleim. Er schützt die Schleimhaut und lässt den Speisebrei besser gleiten.
+hinten: Sie bilden Schleim. Er schützt die [[Mukosa]] und lässt den [[Chymus]] besser gleiten.
 quelle: i-care S. 212
 
 ## Karteikarte
 vorne: Welche Aufgabe hat das Sekret der Drüsen im Duodenum (Brunner-Drüsen)?
-hinten: Es ist basisch und hilft, den sauren Speisebrei aus dem Magen zu neutralisieren. So schützt es die Dünndarmschleimhaut.
+hinten: Es ist basisch und hilft, den sauren [[Chymus]] aus dem Magen zu neutralisieren. So schützt es die Dünndarmmukosa.
 quelle: i-care S. 212
 
 ## Karteikarte
@@ -92,17 +92,17 @@ quelle: i-care S. 213
 
 ## Karteikarte
 vorne: Welche Bewegungen macht der Dünndarm?
-hinten: Misch- und Pendelbewegungen durchmischen den Speisebrei mit den Verdauungssäften. Transportbewegungen befördern ihn in Richtung Dickdarm.
+hinten: Misch- und Pendelbewegungen durchmischen den [[Chymus]] mit den Verdauungssäften. Transportbewegungen befördern ihn in Richtung Dickdarm.
 quelle: i-care S. 214
 
 ## Karteikarte
-vorne: Was nimmt der Dünndarm außer Zucker, Aminosäuren und Fetten noch auf?
+vorne: Was resorbiert der Dünndarm außer Zucker, Aminosäuren und Fetten noch?
 hinten: Vitamine, Elektrolyte und Wasser.
 quelle: i-care S. 214
 
 ## Karteikarte
 vorne: Was passiert mit den Gallensäuren am Ende des Dünndarms?
-hinten: Sie werden wieder aufgenommen, gelangen über das Blut zurück zur Leber und werden wiederverwendet (enterohepatischer Kreislauf).
+hinten: Sie werden wieder resorbiert, gelangen über das Blut zurück zur Leber und werden wiederverwendet (enterohepatischer Kreislauf).
 quelle: i-care S. 214
 
 ## Karteikarte
@@ -119,10 +119,10 @@ quelle: MKK S. 358
 
 ## Single-Choice
 id: duenndarm-sc-aufgabe
-frage: Wo findet die Aufnahme der Nährstoffe hauptsächlich statt?
+frage: Wo findet die Resorption der Nährstoffe hauptsächlich statt?
 - [x] im Dünndarm
 - [ ] im Magen
-- [ ] in der Speiseröhre
+- [ ] im Ösophagus
 quelle: i-care S. 210
 
 ## Single-Choice
@@ -143,7 +143,7 @@ quelle: i-care S. 212–213
 
 ## Single-Choice
 id: duenndarm-sc-zotten
-frage: Wie heißen die fingerförmigen Ausstülpungen der Dünndarmschleimhaut?
+frage: Wie heißen die fingerförmigen Ausstülpungen der Dünndarmmukosa?
 - [x] Zotten
 - [ ] Krypten
 - [ ] Falten
@@ -153,7 +153,7 @@ quelle: i-care S. 210
 ## Single-Choice
 id: duenndarm-sc-oberflaeche
 frage: Warum hat der Dünndarm Falten, Zotten und Mikrovilli?
-- [x] um die Oberfläche für die Aufnahme der Nährstoffe zu vergrößern
+- [x] um die Oberfläche für die Resorption der Nährstoffe zu vergrößern
 - [ ] um die Nahrung zu zerkleinern
 - [ ] um Salzsäure zu bilden
 quelle: i-care S. 210
@@ -185,7 +185,7 @@ quelle: i-care S. 213
 
 ## Single-Choice
 id: duenndarm-sc-buerstensaum
-frage: Was bilden die [[Mikrovilli]] der Darmzellen zusammen?
+frage: Was bilden die [[Mikrovilli]] der Enterozyten zusammen?
 - [x] den Bürstensaum
 - [ ] die Zotten
 - [ ] das Gekröse
@@ -203,16 +203,16 @@ quelle: MKK S. 358
 id: duenndarm-sc-ballast
 frage: Was geschieht mit Ballaststoffen im Dünndarm?
 - [x] Sie können nicht verdaut werden und gelangen weiter in den Dickdarm.
-- [ ] Sie werden vollständig aufgenommen.
+- [ ] Sie werden vollständig resorbiert.
 - [ ] Sie werden in Aminosäuren gespalten.
 quelle: i-care S. 214
 
 ## Single-Choice
 id: duenndarm-sc-speed
-frage: Welcher Speisebrei wird am schnellsten durch den Dünndarm transportiert?
-- [x] kohlenhydratreicher Speisebrei
-- [ ] fettreicher Speisebrei
-- [ ] Jeder Speisebrei ist gleich schnell.
+frage: Welcher [[Chymus]] wird am schnellsten durch den Dünndarm transportiert?
+- [x] kohlenhydratreicher Chymus
+- [ ] fettreicher Chymus
+- [ ] Jeder Chymus ist gleich schnell.
 quelle: i-care S. 214
 
 <!-- =============================== MULTIPLE-CHOICE =============================== -->
@@ -228,7 +228,7 @@ quelle: i-care S. 210
 
 ## Multiple-Choice
 id: duenndarm-mc-oberflaeche
-frage: Was vergrößert die Oberfläche der Dünndarmschleimhaut?
+frage: Was vergrößert die Oberfläche der Dünndarmmukosa?
 - [x] Falten
 - [x] Zotten
 - [x] Mikrovilli
@@ -237,7 +237,7 @@ quelle: i-care S. 210; MKK S. 358
 
 ## Multiple-Choice
 id: duenndarm-mc-aufnahme
-frage: Was wird im Dünndarm aufgenommen?
+frage: Was wird im Dünndarm resorbiert?
 - [x] die Bausteine der Nährstoffe
 - [x] Vitamine
 - [x] Wasser
@@ -255,7 +255,7 @@ quelle: i-care S. 214
 
 ## Multiple-Choice
 id: duenndarm-mc-neutral
-frage: Was neutralisiert den sauren Speisebrei im Duodenum?
+frage: Was neutralisiert den sauren [[Chymus]] im Duodenum?
 - [x] das basische Sekret der Drüsen im Duodenum
 - [x] die Galle
 - [x] der Pankreassaft
@@ -266,7 +266,7 @@ quelle: i-care S. 212
 id: duenndarm-mc-enzyme
 frage: Wo werden die Nährstoffe im Dünndarm gespalten?
 - [x] im Darmlumen durch die Enzyme des Pankreassafts
-- [x] am Bürstensaum durch Enzyme der Darmschleimhaut
+- [x] am Bürstensaum durch Enzyme der Darmmukosa
 - [ ] in der Gallenblase
 quelle: i-care S. 214
 
@@ -283,16 +283,16 @@ quelle: i-care S. 210
 ## Zuordnung
 id: duenndarm-zu-strukturen
 frage: Ordne jeder Struktur ihre Beschreibung zu.
-- Zotten => fingerförmige Ausstülpungen der Schleimhaut
+- Zotten => fingerförmige Ausstülpungen der Mukosa
 - [[Krypten]] => Vertiefungen zwischen den Zotten
-- [[Mikrovilli]] => feine Fortsätze der Darmzellen
+- [[Mikrovilli]] => feine Fortsätze der Enterozyten
 quelle: i-care S. 210
 
 ## Zuordnung
 id: duenndarm-zu-bausteine
 frage: Welche Bausteine entstehen im Dünndarm aus den Nährstoffen?
-- Kohlenhydrate => Einfachzucker
-- Eiweiße => Aminosäuren
+- Kohlenhydrate => Monosaccharide
+- Proteine => Aminosäuren
 - Fette => Fettsäuren
 quelle: i-care S. 214
 
@@ -300,7 +300,7 @@ quelle: i-care S. 214
 
 ## Reihenfolge
 id: duenndarm-rf-abschnitte
-frage: Bring die Stationen in die Reihenfolge, die der Speisebrei durchläuft.
+frage: Bring die Stationen in die Reihenfolge, die der [[Chymus]] durchläuft.
 1. Magen
 2. [[Duodenum]]
 3. [[Jejunum]]
@@ -310,7 +310,7 @@ quelle: i-care S. 210, 212–213
 
 ## Reihenfolge
 id: duenndarm-rf-groesse
-frage: Ordne die Strukturen der Dünndarmschleimhaut von groß nach klein.
+frage: Ordne die Strukturen der Dünndarmmukosa von groß nach klein.
 1. Falten
 2. Zotten
 3. Mikrovilli
@@ -320,7 +320,7 @@ quelle: i-care S. 210
 id: duenndarm-rf-resorption
 frage: Wie gelangt ein Nährstoff aus dem Darm ins Blut? Bring die Schritte in die richtige Reihenfolge.
 1. Enzyme spalten den Nährstoff in kleine Bausteine.
-2. Die Darmzellen der Zotten nehmen die Bausteine auf.
+2. Die Enterozyten der Zotten resorbieren die Bausteine.
 3. Die Bausteine gehen in die Blutgefäße der Zotte über.
 4. Das Blut transportiert sie zur Leber.
 quelle: i-care S. 189, 210, 214
@@ -334,7 +334,7 @@ quelle: i-care S. 212
 
 ## Lückentext
 id: duenndarm-lt-zotten
-text: Die Schleimhaut des Dünndarms bildet fingerförmige {{Zotten}}. Dadurch wird die {{Oberfläche}} für die Aufnahme der Nährstoffe vergrößert.
+text: Die Mukosa des Dünndarms bildet fingerförmige {{Zotten}}. Dadurch wird die {{Oberfläche}} für die Resorption der Nährstoffe vergrößert.
 quelle: i-care S. 210
 
 ## Lückentext
@@ -355,24 +355,24 @@ kriterien:
 - Ich nenne Duodenum, Jejunum und Ileum in der richtigen Reihenfolge.
 - Ich nenne, dass Galle und Pankreassaft ins Duodenum abgegeben werden.
 - Ich nenne die Verdauung der Nahrung als Aufgabe.
-- Ich nenne die Aufnahme der Nährstoffe (Resorption) als Aufgabe.
-musterlösung: Der Dünndarm beginnt am Magenpförtner und mündet in den Dickdarm. Er besteht aus drei Abschnitten: dem **Duodenum** (Zwölffingerdarm), dem **Jejunum** (Leerdarm) und dem **Ileum** (Krummdarm). In das Duodenum werden **Galle und Pankreassaft** abgegeben. Im Dünndarm wird die Nahrung **verdaut**, also in ihre einzelnen Bestandteile zerlegt. Außerdem findet hier hauptsächlich die **Aufnahme der Nährstoffe** (Resorption) statt.
+- Ich nenne die Resorption der Nährstoffe als Aufgabe.
+musterlösung: Der Dünndarm beginnt am Pylorus und mündet in den Dickdarm. Er besteht aus drei Abschnitten: dem **Duodenum** (Zwölffingerdarm), dem **Jejunum** (Leerdarm) und dem **Ileum** (Krummdarm). In das Duodenum werden **Galle und Pankreassaft** abgegeben. Im Dünndarm wird die Nahrung **verdaut**, also in ihre einzelnen Bestandteile zerlegt. Außerdem findet hier hauptsächlich die **Resorption der Nährstoffe** (Resorption) statt.
 quelle: i-care S. 210, 212
 
 ## Operator
 id: duenndarm-op-oberflaeche
 operator: erläutern
 afb: II
-fall: Im Unterricht zeigt die Lehrerin ein Bild der Dünndarmschleimhaut. Alaa wundert sich: „Warum ist die Wand innen nicht einfach glatt? Das wäre doch viel einfacher.“
-auftrag: Erläutere, warum die Dünndarmschleimhaut Falten, Zotten und Mikrovilli besitzt.
+fall: Im Unterricht zeigt die Lehrerin ein Bild der Dünndarmmukosa. Alaa wundert sich: „Warum ist die Wand innen nicht einfach glatt? Das wäre doch viel einfacher.“
+auftrag: Erläutere, warum die Dünndarmmukosa Falten, Zotten und Mikrovilli besitzt.
 mindestlänge: 300
 kriterien:
 - Ich nenne Falten, Zotten und Mikrovilli.
 - Ich erkläre, dass sie die Oberfläche stark vergrößern.
-- Ich erkläre, dass so mehr Schleimhaut mit dem Speisebrei in Kontakt kommt.
-- Ich erkläre den Zusammenhang mit der Aufnahme der Nährstoffe.
+- Ich erkläre, dass so mehr Mukosa mit dem Chymus in Kontakt kommt.
+- Ich erkläre den Zusammenhang mit der Resorption der Nährstoffe.
 - Ich nenne die Blut- und Lymphgefäße der Zotten für den Abtransport.
-musterlösung: Der Dünndarm hat die Aufgabe, die Nährstoffe aufzunehmen. Dafür braucht er eine sehr große Oberfläche. Die Schleimhaut ist deshalb in ringförmige **Falten** gelegt. Auf ihnen sitzen kleine, fingerförmige **Zotten**. Die Darmzellen der Zotten tragen wiederum feine Fortsätze, die **Mikrovilli**, die zusammen den Bürstensaum bilden. Falten, Zotten und Mikrovilli **vergrößern die Oberfläche** stark, sodass möglichst viel Schleimhaut mit dem Speisebrei in Kontakt kommt und viele Nährstoffe aufgenommen werden können. Jede Zotte besitzt eigene **Blut- und Lymphgefäße**, über die die aufgenommenen Nährstoffe abtransportiert werden.
+musterlösung: Der Dünndarm hat die Aufgabe, die Nährstoffe zu resorbieren. Dafür braucht er eine sehr große Oberfläche. Die Mukosa ist deshalb in ringförmige **Falten** gelegt. Auf ihnen sitzen kleine, fingerförmige **Zotten**. Die Enterozyten der Zotten tragen wiederum feine Fortsätze, die **Mikrovilli**, die zusammen den Bürstensaum bilden. Falten, Zotten und Mikrovilli **vergrößern die Oberfläche** stark, sodass möglichst viel Mukosa mit dem Chymus in Kontakt kommt und viele Nährstoffe resorbiert werden können. Jede Zotte besitzt eigene **Blut- und Lymphgefäße**, über die die resorbierten Nährstoffe abtransportiert werden.
 quelle: i-care S. 210; MKK S. 358
 
 ## Operator
@@ -383,9 +383,9 @@ fall: Bei einer Patientin sind durch eine Erkrankung des Dünndarms die Zotten s
 auftrag: Beurteile Alaas Aussage.
 mindestlänge: 300
 kriterien:
-- Ich erkläre die Aufgabe der Zotten (Oberflächenvergrößerung, Aufnahme der Nährstoffe).
-- Ich leite ab, dass bei verkümmerten Zotten weniger Nährstoffe aufgenommen werden.
+- Ich erkläre die Aufgabe der Zotten (Oberflächenvergrößerung, Resorption der Nährstoffe).
+- Ich leite ab, dass bei verkümmerten Zotten weniger Nährstoffe resorbiert werden.
 - Ich erkläre, dass die Patientin deshalb trotz normaler Ernährung abnehmen kann.
 - Ich komme zu einem begründeten Urteil über Alaas Aussage.
-musterlösung: Die **Zotten** vergrößern die Oberfläche des Dünndarms und nehmen mit ihren Darmzellen die Nährstoffe auf. Über ihre Blut- und Lymphgefäße werden die Nährstoffe abtransportiert. Sind die Zotten zurückgebildet, ist die **Oberfläche viel kleiner**. Dann können **weniger Nährstoffe aufgenommen** werden, auch wenn genug gegessen wird. Die Nährstoffe bleiben im Darm und werden ausgeschieden. Die Folge können Gewichtsverlust und Mangelerscheinungen sein. **Urteil:** Alaas Aussage ist falsch. Es kommt nicht nur darauf an, wie viel jemand isst, sondern auch darauf, ob der Dünndarm die Nährstoffe aufnehmen kann.
+musterlösung: Die **Zotten** vergrößern die Oberfläche des Dünndarms und resorbieren mit ihren Enterozyten die Nährstoffe. Über ihre Blut- und Lymphgefäße werden die Nährstoffe abtransportiert. Sind die Zotten zurückgebildet, ist die **Oberfläche viel kleiner**. Dann können **weniger Nährstoffe resorbiert** werden, auch wenn genug gegessen wird. Die Nährstoffe bleiben im Darm und werden ausgeschieden. Die Folge können Gewichtsverlust und Mangelerscheinungen sein. **Urteil:** Alaas Aussage ist falsch. Es kommt nicht nur darauf an, wie viel jemand isst, sondern auch darauf, ob der Dünndarm die Nährstoffe aufnehmen kann.
 quelle: i-care S. 210; MKK S. 362

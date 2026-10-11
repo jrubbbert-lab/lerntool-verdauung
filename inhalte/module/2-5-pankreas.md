@@ -4,7 +4,7 @@ id: pankreas
 block: 2
 nr: 5
 quellen: i-care S. 221–224; MKK S. 359, 367–368
-beschreibung: Die Bauchspeicheldrüse und ihre Verdauungsenzyme.
+beschreibung: Das Pankreas und seine Verdauungsenzyme.
 icon: pankreas
 farbe: #2A473B
 
@@ -29,7 +29,7 @@ quelle: i-care S. 221
 
 ## Karteikarte
 vorne: Wo liegt das Pankreas?
-hinten: Im Oberbauch hinter dem Magen. Sein Kopf liegt im Bogen des Zwölffingerdarms, sein Schwanz reicht bis zur Milz.
+hinten: Im Oberbauch hinter dem Magen. Sein Kopf liegt im Bogen des [[Duodenum|Duodenums]], sein Schwanz reicht bis zur Milz.
 quelle: i-care S. 221
 
 ## Karteikarte
@@ -49,31 +49,31 @@ quelle: i-care S. 221
 
 ## Karteikarte
 vorne: Wohin wird der Pankreassaft abgegeben?
-hinten: In den Zwölffingerdarm ([[Duodenum]]).
+hinten: In das [[Duodenum]].
 quelle: i-care S. 221, 223
 
 ## Karteikarte
 vorne: Welche Nährstoffe können die Enzyme des Pankreassafts spalten?
-hinten: Eiweiße, Kohlenhydrate und Fette.
+hinten: [[Proteine]], Kohlenhydrate und Fette.
 quelle: i-care S. 221, 223
 
 ## Karteikarte
 vorne: Warum ist der Pankreassaft basisch, und wozu ist das gut?
-hinten: Er enthält Bikarbonat. So wird der saure Speisebrei aus dem Magen im Dünndarm neutralisiert.
+hinten: Er enthält Bikarbonat. So wird der saure [[Chymus]] aus dem Magen im Dünndarm neutralisiert.
 quelle: i-care S. 223
 
 ## Karteikarte
-vorne: Warum muss der saure Speisebrei im Dünndarm neutralisiert werden?
+vorne: Warum muss der saure [[Chymus]] im Dünndarm neutralisiert werden?
 hinten: Die Enzyme des Pankreassafts können bei saurem pH-Wert nicht arbeiten.
 quelle: MKK S. 359
 
 ## Karteikarte
-vorne: Warum gibt das Pankreas die eiweißspaltenden Enzyme als inaktive Vorstufen ab?
-hinten: Damit sich die Bauchspeicheldrüse nicht selbst verdaut. Erst im Dünndarm werden die Enzyme aktiv.
+vorne: Warum gibt das Pankreas die proteinspaltenden Enzyme als inaktive Vorstufen ab?
+hinten: Damit sich das [[Pankreas]] nicht selbst verdaut. Erst im Dünndarm werden die Enzyme aktiv.
 quelle: i-care S. 223
 
 ## Karteikarte
-vorne: Welches eiweißspaltende Enzym des Pankreas ist besonders wichtig?
+vorne: Welches proteinspaltende Enzym des Pankreas ist besonders wichtig?
 hinten: Das Trypsin. Es entsteht im Dünndarm aus seiner Vorstufe und aktiviert dann die anderen Vorstufen.
 quelle: i-care S. 223
 
@@ -130,7 +130,7 @@ quelle: i-care S. 221
 ## Single-Choice
 id: pankreas-sc-wohin
 frage: Wohin gibt das Pankreas seinen Verdauungssaft ab?
-- [x] in den Zwölffingerdarm
+- [x] in das Duodenum
 - [ ] in den Magen
 - [ ] in den Dickdarm
 quelle: i-care S. 221
@@ -141,7 +141,7 @@ frage: Wie ist der Pankreassaft beschaffen?
 - [x] basisch
 - [ ] stark sauer
 - [ ] fettig
-erklärung: Er enthält Bikarbonat und neutralisiert so den sauren Speisebrei aus dem Magen.
+erklärung: Er enthält Bikarbonat und neutralisiert so den sauren [[Chymus]] aus dem Magen.
 quelle: i-care S. 223
 
 ## Single-Choice
@@ -154,7 +154,7 @@ quelle: MKK S. 367
 
 ## Single-Choice
 id: pankreas-sc-vorstufen
-frage: Warum bildet das Pankreas seine eiweißspaltenden Enzyme als inaktive Vorstufen?
+frage: Warum bildet das Pankreas seine proteinspaltenden Enzyme als inaktive Vorstufen?
 - [x] damit es sich nicht selbst verdaut
 - [ ] damit der Saft besser schmeckt
 - [ ] damit die Enzyme im Magen wirken können
@@ -230,7 +230,7 @@ quelle: i-care S. 221
 ## Multiple-Choice
 id: pankreas-mc-spalten
 frage: Welche Nährstoffe können die Enzyme des Pankreassafts spalten?
-- [x] Eiweiße
+- [x] Proteine
 - [x] Kohlenhydrate
 - [x] Fette
 - [ ] Vitamine
@@ -277,7 +277,7 @@ quelle: i-care S. 221; MKK S. 367
 ## Zuordnung
 id: pankreas-zu-enzyme
 frage: Ordne jedem Enzym des Pankreassafts zu, was es spaltet.
-- Trypsin => Eiweiße
+- Trypsin => Proteine
 - [[Amylase]] => Stärke
 - [[Lipase]] => Fette
 quelle: i-care S. 223
@@ -287,7 +287,7 @@ id: pankreas-zu-hormone
 frage: Ordne jedem Stoff aus dem Pankreas seine Wirkung zu.
 - [[Insulin]] => senkt den Blutzucker
 - [[Glukagon]] => steigert den Blutzucker
-- Bikarbonat => neutralisiert den sauren Speisebrei
+- Bikarbonat => neutralisiert den sauren Chymus
 quelle: MKK S. 367; i-care S. 223
 
 ## Zuordnung
@@ -295,14 +295,14 @@ id: pankreas-zu-begriffe
 frage: Ordne jedem Begriff seine Bedeutung zu.
 - [[exokrin]] => gibt Stoffe nach außen ab, z. B. in den Darm
 - [[endokrin]] => gibt Hormone ins Blut ab
-- [[Pankreatitis]] => Entzündung der Bauchspeicheldrüse
+- [[Pankreatitis]] => Entzündung des Pankreas
 quelle: i-care S. 221, 224
 
 <!-- =============================== REIHENFOLGE =============================== -->
 
 ## Reihenfolge
 id: pankreas-rf-teile
-frage: Ordne die Teile des Pankreas vom Zwölffingerdarm bis zur Milz.
+frage: Ordne die Teile des Pankreas vom [[Duodenum]] bis zur Milz.
 1. Pankreaskopf
 2. Pankreaskörper
 3. Pankreasschwanz
@@ -310,9 +310,9 @@ quelle: i-care S. 221
 
 ## Reihenfolge
 id: pankreas-rf-aktivierung
-frage: Wie werden die eiweißspaltenden Enzyme des Pankreas aktiv? Bring die Schritte in die richtige Reihenfolge.
+frage: Wie werden die proteinspaltenden Enzyme des Pankreas aktiv? Bring die Schritte in die richtige Reihenfolge.
 1. Das Pankreas bildet inaktive Vorstufen der Enzyme.
-2. Die Vorstufen gelangen mit dem Pankreassaft in den Zwölffingerdarm.
+2. Die Vorstufen gelangen mit dem Pankreassaft in das Duodenum.
 3. Dort wird die Vorstufe des Trypsins in Trypsin umgewandelt.
 4. Trypsin aktiviert die anderen Vorstufen.
 quelle: i-care S. 223
@@ -323,7 +323,7 @@ frage: Wie kann ein Gallenstein eine Pankreatitis auslösen? Bring die Schritte 
 1. Ein Gallenstein verstopft den gemeinsamen Ausgang von Gallengang und Pankreasgang.
 2. Der Pankreassaft kann nicht mehr abfließen und staut sich zurück.
 3. Die Enzyme greifen die Zellen des Pankreas an.
-4. Die Bauchspeicheldrüse entzündet sich.
+4. Das Pankreas entzündet sich.
 quelle: i-care S. 224
 
 <!-- =============================== LÜCKENTEXT =============================== -->
@@ -335,12 +335,12 @@ quelle: i-care S. 221
 
 ## Lückentext
 id: pankreas-lt-saft
-text: Der Pankreassaft ist {{basisch|alkalisch}}. Er neutralisiert den {{sauren|saure}} Speisebrei aus dem Magen.
+text: Der Pankreassaft ist {{basisch|alkalisch}}. Er neutralisiert den {{sauren|saure}} Chymus aus dem Magen.
 quelle: i-care S. 223
 
 ## Lückentext
 id: pankreas-lt-entzuendung
-text: Eine Entzündung der Bauchspeicheldrüse heißt {{Pankreatitis}}. Häufige Ursachen sind {{Gallensteine}} und Alkoholmissbrauch.
+text: Eine Entzündung des Pankreas heißt {{Pankreatitis}}. Häufige Ursachen sind {{Gallensteine}} und Alkoholmissbrauch.
 quelle: MKK S. 367
 
 <!-- =============================== OPERATOREN =============================== -->
@@ -349,37 +349,37 @@ quelle: MKK S. 367
 id: pankreas-op-aufgaben
 operator: beschreiben
 afb: I
-fall: Alaa lernt für eine Klassenarbeit und sagt zu Robartina: „Die Bauchspeicheldrüse ist doch nur für den Zucker da, oder?“
+fall: Alaa lernt für eine Klassenarbeit und sagt zu Robartina: „Das Pankreas ist doch nur für den Zucker da, oder?“
 auftrag: Beschreibe die beiden Hauptaufgaben des Pankreas.
 mindestlänge: 250
 kriterien:
 - Ich nenne die Bildung des Pankreassafts mit Verdauungsenzymen.
-- Ich nenne, dass die Enzyme Eiweiße, Kohlenhydrate und Fette spalten.
+- Ich nenne, dass die Enzyme Proteine, Kohlenhydrate und Fette spalten.
 - Ich nenne die Bildung der Hormone Insulin und Glukagon.
 - Ich nenne, dass diese Hormone den Blutzuckerspiegel steuern.
-musterlösung: Das Pankreas (die Bauchspeicheldrüse) hat zwei Hauptaufgaben. Erstens bildet es den **Pankreassaft**, der in den Zwölffingerdarm abgegeben wird. Er enthält **Enzyme**, die Eiweiße, Kohlenhydrate und Fette spalten. Dieser Teil heißt exokrines Pankreas. Zweitens bildet das Pankreas die **Hormone Insulin und Glukagon**, die ins Blut abgegeben werden und den **Blutzuckerspiegel** steuern. Dieser Teil heißt endokrines Pankreas.
+musterlösung: Das Pankreas hat zwei Hauptaufgaben. Erstens bildet es den **Pankreassaft**, der in das Duodenum abgegeben wird. Er enthält **Enzyme**, die Proteine, Kohlenhydrate und Fette spalten. Dieser Teil heißt exokrines Pankreas. Zweitens bildet das Pankreas die **Hormone Insulin und Glukagon**, die ins Blut abgegeben werden und den **Blutzuckerspiegel** steuern. Dieser Teil heißt endokrines Pankreas.
 quelle: i-care S. 221
 
 ## Operator
 id: pankreas-op-selbstschutz
 operator: erläutern
 afb: II
-fall: Im Unterricht fragt Alaa: „Wenn die Bauchspeicheldrüse Enzyme bildet, die Eiweiß zerlegen – warum zerlegt sie sich dann nicht selbst? Sie besteht doch auch aus Eiweiß.“
+fall: Im Unterricht fragt Alaa: „Wenn das Pankreas Enzyme bildet, die Protein zerlegen – warum zerlegt es sich dann nicht selbst? Es besteht doch auch aus Protein.“
 auftrag: Erläutere, wie sich das Pankreas vor seinen eigenen Enzymen schützt.
 mindestlänge: 300
 kriterien:
-- Ich erkläre, dass die eiweißspaltenden Enzyme als inaktive Vorstufen gebildet werden.
+- Ich erkläre, dass die proteinspaltenden Enzyme als inaktive Vorstufen gebildet werden.
 - Ich erkläre, dass sie erst im Dünndarm aktiv werden.
 - Ich nenne das Trypsin, das die anderen Vorstufen aktiviert.
 - Ich erkläre, dass so eine Selbstverdauung verhindert wird.
-musterlösung: Die eiweißspaltenden Enzyme des Pankreas werden nicht in ihrer aktiven Form gebildet, sondern als **inaktive Vorstufen**. In dieser Form können sie das Pankreas nicht angreifen. Sie gelangen mit dem Pankreassaft in den Zwölffingerdarm und werden **erst dort aktiv**: Zuerst wird die Vorstufe des **Trypsins** in Trypsin umgewandelt. Trypsin aktiviert dann die anderen Vorstufen. So wird verhindert, dass sich die Bauchspeicheldrüse **selbst verdaut**.
+musterlösung: Die proteinspaltenden Enzyme des Pankreas werden nicht in ihrer aktiven Form gebildet, sondern als **inaktive Vorstufen**. In dieser Form können sie das Pankreas nicht angreifen. Sie gelangen mit dem Pankreassaft in das Duodenum und werden **erst dort aktiv**: Zuerst wird die Vorstufe des **Trypsins** in Trypsin umgewandelt. Trypsin aktiviert dann die anderen Vorstufen. So wird verhindert, dass sich das Pankreas **selbst verdaut**.
 quelle: i-care S. 223; MKK S. 359
 
 ## Operator
 id: pankreas-op-alkohol
 operator: beurteilen
 afb: III
-fall: Herr D. wird mit heftigen Oberbauchschmerzen, die gürtelförmig in den Rücken ziehen, aufgenommen. Er hat Übelkeit und erbricht. Die Ärztin vermutet eine akute Pankreatitis. Herr D. trinkt seit Jahren viel Alkohol und sagt: „Mit dem Alkohol hat das nichts zu tun. Der geht doch auf die Leber, nicht auf die Bauchspeicheldrüse.“
+fall: Herr D. wird mit heftigen Oberbauchschmerzen, die gürtelförmig in den Rücken ziehen, aufgenommen. Er hat Übelkeit und erbricht. Die Ärztin vermutet eine akute Pankreatitis. Herr D. trinkt seit Jahren viel Alkohol und sagt: „Mit dem Alkohol hat das nichts zu tun. Der geht doch auf die Leber, nicht auf das Pankreas.“
 auftrag: Beurteile die Aussage von Herrn D. mithilfe der Informationen aus dem Buch.
 mindestlänge: 350
 kriterien:

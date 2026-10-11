@@ -72,7 +72,7 @@ name: Gastroenterologin / Gastroenterologe / Gastroenterolog:in
 geheim: nein
 regel: bloecke_bestanden 2
 bedingung: Bestehe alle Organmodule.
-fakt: Jede länger bestehende Schluckstörung (Dysphagie) sollte endoskopisch abgeklärt werden.
+fakt: Jede länger bestehende [[Dysphagie]] sollte endoskopisch abgeklärt werden.
 quelle: MKK S. 353
 form: schild
 farbe1: #2f9e6b
@@ -85,7 +85,7 @@ name: 21er Klinge
 geheim: nein
 regel: serie_richtig 21
 bedingung: Beantworte 21 Aufgaben in Folge richtig.
-fakt: Durchbricht ein Geschwür die Magen- oder Duodenalwand (Perforation), gelangt Speisebrei in die Peritonealhöhle. Es drohen ein akutes Abdomen und eine lebensgefährliche Peritonitis.
+fakt: Durchbricht ein Geschwür die Magen- oder Duodenalwand (Perforation), gelangt [[Chymus]] in die Peritonealhöhle. Es drohen ein akutes Abdomen und eine lebensgefährliche Peritonitis.
 quelle: MKK S. 357
 form: zacken
 farbe1: #b9c3cf
@@ -163,7 +163,7 @@ name: Zottenkönigin / Zottenkönig / Zottenkönig:in
 geheim: nein
 regel: modul_mehrfach duenndarm 2 80
 bedingung: Schaffe das Modul Dünndarm zweimal mit mindestens 80 %.
-fakt: Auf einem Quadratmillimeter Dünndarmschleimhaut sitzen bis zu 40 Zotten. Jede Zotte besitzt eigene kleine Blut- und Lymphgefäße.
+fakt: Auf einem Quadratmillimeter Dünndarmmukosa sitzen bis zu 40 Zotten. Jede Zotte besitzt eigene kleine Blut- und Lymphgefäße.
 quelle: i-care S. 210
 form: zacken
 farbe1: #f2b544
@@ -254,7 +254,7 @@ name: Gut gekaut ist halb verdaut
 geheim: nein
 regel: modul_prozent mundhoehle 100
 bedingung: Schaffe das Modul Mundhöhle und Ösophagus mit 100 %.
-fakt: Brot schmeckt beim langen Kauen süßlich, weil die Amylase des Speichels Malzzucker (Maltose) von der Stärke abspaltet.
+fakt: Brot schmeckt beim langen Kauen süßlich, weil die Amylase des Speichels [[Maltose]] von der Stärke abspaltet.
 quelle: i-care S. 197
 form: zacken
 farbe1: #f07c5a
@@ -267,7 +267,7 @@ name: Peristaltik-Profi
 geheim: nein
 regel: reihenfolge_fehlerfrei 10
 bedingung: Löse zehn Reihenfolgeaufgaben ohne Fehler.
-fakt: Im Magen laufen etwa alle 20 Sekunden peristaltische Wellen in Richtung Pylorus und durchmischen den Speisebrei.
+fakt: Im Magen laufen etwa alle 20 Sekunden peristaltische Wellen in Richtung Pylorus und durchmischen den [[Chymus]].
 quelle: MKK S. 355
 form: sechseck
 farbe1: #e57aa6
@@ -319,7 +319,7 @@ name: Aprilscherz
 geheim: ja
 regel: aprilscherz
 bedingung: Durchschaue am 1. April die Scherzfrage.
-fakt: Ein zäher Schleimfilm mit puffernden Bikarbonat-Ionen schützt die Magenschleimhaut vor Salzsäure und Pepsin und verhindert so eine Selbstverdauung.
+fakt: Ein zäher Schleimfilm mit puffernden Bikarbonat-Ionen schützt die Magenmukosa vor Salzsäure und Pepsin und verhindert so eine Selbstverdauung.
 quelle: MKK S. 355
 form: zacken
 farbe1: #ff6fb5

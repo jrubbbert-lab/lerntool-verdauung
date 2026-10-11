@@ -21,7 +21,7 @@ farbe: #1b8a69
 
 ## Karteikarte
 vorne: Welche Aufgabe hat das Verdauungssystem?
-hinten: Es versorgt den Körper mit Nährstoffen: Es zerkleinert die Nahrung, zerlegt sie mit Enzymen in kleine Bausteine, nimmt diese über die Darmschleimhaut auf und scheidet Unverdauliches mit dem Stuhl aus.
+hinten: Es versorgt den Körper mit Nährstoffen: Es zerkleinert die Nahrung, zerlegt sie mit Enzymen in kleine Bausteine, resorbiert diese über die Darmmukosa und scheidet Unverdauliches mit dem Stuhl aus.
 quelle: i-care S. 188
 
 ## Karteikarte
@@ -41,52 +41,52 @@ quelle: i-care S. 188
 
 ## Karteikarte
 vorne: Nenne die Organe des Verdauungstrakts in der Reihenfolge, die die Nahrung durchläuft.
-hinten: Mundhöhle, Speiseröhre ([[Ösophagus]]), Magen ([[Gaster]]), Dünndarm, Dickdarm.
+hinten: Mundhöhle, [[Ösophagus]], Magen ([[Gaster]]), Dünndarm, Dickdarm.
 quelle: i-care S. 188
 
 ## Karteikarte
 vorne: Aus welchen drei Abschnitten besteht der Dünndarm?
-hinten: [[Duodenum]] (Zwölffingerdarm), [[Jejunum]] (Leerdarm) und [[Ileum]] (Krummdarm).
+hinten: [[Duodenum]], [[Jejunum]] und [[Ileum]].
 quelle: i-care S. 188
 
 ## Karteikarte
 vorne: Welche Abschnitte gehören zum Dickdarm?
-hinten: Blinddarm ([[Zäkum]]) mit Wurmfortsatz, [[Kolon]] (Grimmdarm) und [[Rektum]] (Mastdarm).
+hinten: [[Zäkum]] mit [[Appendix vermiformis|Appendix]], [[Kolon]] und [[Rektum]].
 quelle: i-care S. 188
 
 ## Karteikarte
 vorne: Welche Organe gehören zum oberen Verdauungstrakt?
-hinten: Mundhöhle, Speiseröhre, Magen und Duodenum.
+hinten: Mundhöhle, [[Ösophagus]], Magen und Duodenum.
 quelle: i-care S. 189
 
 ## Karteikarte
 vorne: Welche Organe bilden die Verdauungssäfte?
-hinten: Die Speicheldrüsen, die Bauchspeicheldrüse ([[Pankreas]]) und die Leber. Auch der Magen bildet mit dem Magensaft einen Verdauungssaft.
+hinten: Die Speicheldrüsen, das [[Pankreas]] und die Leber. Auch der Magen bildet mit dem Magensaft einen Verdauungssaft.
 quelle: i-care S. 188–189
 
 ## Karteikarte
 vorne: Welche besondere Rolle spielt die Leber?
-hinten: Nahezu alle Stoffe, die im Darm aufgenommen werden, erreichen als erstes Organ die Leber. Sie entscheidet, ob die Stoffe verbraucht, gespeichert, umgewandelt oder abgebaut werden.
+hinten: Nahezu alle Stoffe, die im Darm resorbiert werden, erreichen als erstes Organ die Leber. Sie entscheidet, ob die Stoffe verbraucht, gespeichert, umgewandelt oder abgebaut werden.
 quelle: i-care S. 189
 
 ## Karteikarte
 vorne: Was ist das [[Peritoneum]]?
-hinten: Das Bauchfell: eine glatte Haut, die die Bauch- und Beckenhöhle auskleidet und die Organe überzieht.
+hinten: Das [[Peritoneum]]: eine glatte Haut, die die Bauch- und Beckenhöhle auskleidet und die Organe überzieht.
 quelle: i-care S. 189
 
 ## Karteikarte
 vorne: Was bedeutet [[intraperitoneal]]? Nenne Beispiele.
-hinten: Das Organ liegt in der Bauchfellhöhle und ist vollständig vom Bauchfell überzogen, z. B. Magen, Leber und Milz.
+hinten: Das Organ liegt in der Bauchfellhöhle und ist vollständig vom [[Peritoneum]] überzogen, z. B. Magen, Leber und Milz.
 quelle: i-care S. 189–190
 
 ## Karteikarte
 vorne: Was bedeutet [[retroperitoneal]]? Nenne Beispiele.
-hinten: Das Organ liegt hinter dem Bauchfell an der hinteren Rumpfwand. Nur seine Vorderseite ist vom Bauchfell bedeckt, z. B. bei den Nieren und der Bauchspeicheldrüse.
+hinten: Das Organ liegt hinter dem [[Peritoneum]] an der hinteren Rumpfwand. Nur seine Vorderseite ist vom Peritoneum bedeckt, z. B. bei den Nieren und dem [[Pankreas]].
 quelle: i-care S. 191
 
 ## Karteikarte
 vorne: Was ist das Gekröse ([[Meso]]), und wozu dient es?
-hinten: Ein vom Bauchfell überzogener Bindegewebsstrang, der intraperitoneale Organe mit der Bauchwand verbindet. Darin verlaufen Blutgefäße und Nerven. Es gibt den Organen Bewegungsfreiheit.
+hinten: Ein vom [[Peritoneum]] überzogener Bindegewebsstrang, der intraperitoneale Organe mit der Bauchwand verbindet. Darin verlaufen Blutgefäße und Nerven. Es gibt den Organen Bewegungsfreiheit.
 quelle: i-care S. 190
 
 ## Karteikarte
@@ -95,8 +95,8 @@ hinten: Sie sorgt dafür, dass die Organe gut aneinander vorbeigleiten können.
 quelle: i-care S. 190
 
 ## Karteikarte
-vorne: Aus welchen drei Schichten besteht die Wand von Speiseröhre, Magen und Darm (von innen nach außen)?
-hinten: [[Mukosa]] (Schleimhautschicht), [[Submukosa]] (Bindegewebsschicht) und [[Muskularis]] (Muskelschicht).
+vorne: Aus welchen drei Schichten besteht die Wand von [[Ösophagus]], Magen und Darm (von innen nach außen)?
+hinten: [[Mukosa]], [[Submukosa]] und [[Muskularis]].
 quelle: i-care S. 192
 
 ## Karteikarte
@@ -111,7 +111,7 @@ quelle: i-care S. 189
 
 ## Karteikarte
 vorne: Was ist die häufigste Ursache eines akuten Abdomens?
-hinten: Eine „Blinddarmentzündung“ ([[Appendizitis]]).
+hinten: Eine [[Appendizitis]].
 quelle: i-care S. 189
 
 ## Karteikarte
@@ -126,7 +126,7 @@ id: aufbau-sc-anfang-ende
 frage: Wo beginnt und wo endet der Verdauungstrakt?
 - [x] Er beginnt an der Mundhöhle und endet am After.
 - [ ] Er beginnt am Magen und endet am Dünndarm.
-- [ ] Er beginnt an der Speiseröhre und endet am Magen.
+- [ ] Er beginnt am Ösophagus und endet am Magen.
 quelle: i-care S. 188
 
 ## Single-Choice
@@ -164,7 +164,7 @@ quelle: MKK S. 344
 
 ## Single-Choice
 id: aufbau-sc-leber
-frage: Welches Organ erreichen fast alle im Darm aufgenommenen Stoffe als Erstes?
+frage: Welches Organ erreichen fast alle im Darm resorbierten Stoffe als Erstes?
 - [x] die Leber
 - [ ] das Herz
 - [ ] die Nieren
@@ -189,7 +189,7 @@ quelle: i-care S. 189
 ## Single-Choice
 id: aufbau-sc-retro
 frage: Welches dieser Organe liegt [[retroperitoneal]]?
-- [x] die Bauchspeicheldrüse
+- [x] das Pankreas
 - [ ] der Magen
 - [ ] die Leber
 erklärung: Magen und Leber liegen intraperitoneal.
@@ -198,7 +198,7 @@ quelle: i-care S. 190–191
 ## Single-Choice
 id: aufbau-sc-akut
 frage: Was ist die häufigste Ursache eines akuten Abdomens?
-- [x] eine „Blinddarmentzündung“ ([[Appendizitis]])
+- [x] eine Appendizitis
 - [ ] eine Erkältung
 - [ ] ein Vitaminmangel
 quelle: i-care S. 189
@@ -208,7 +208,7 @@ id: aufbau-sc-unverdaulich
 frage: Was passiert mit den unverdaulichen Bestandteilen der Nahrung?
 - [x] Sie werden mit dem Stuhl ausgeschieden.
 - [ ] Sie werden in der Leber gespeichert.
-- [ ] Sie werden im Magen aufgenommen.
+- [ ] Sie werden im Magen resorbiert.
 quelle: i-care S. 188
 
 ## Single-Choice
@@ -225,7 +225,7 @@ quelle: i-care S. 189
 id: aufbau-mc-saefte
 frage: Welche Organe bilden Verdauungssäfte?
 - [x] die Speicheldrüsen
-- [x] die Bauchspeicheldrüse
+- [x] das Pankreas
 - [x] die Leber
 - [ ] die Milz
 - [ ] die Nieren
@@ -246,7 +246,7 @@ id: aufbau-mc-aufgaben
 frage: Welche Aufgaben hat das Verdauungssystem?
 - [x] die Nahrung zerkleinern
 - [x] die Nahrung mit Enzymen zerlegen
-- [x] die Nährstoffbausteine aufnehmen
+- [x] die Nährstoffbausteine resorbieren
 - [x] Unverdauliches ausscheiden
 - [ ] den Körper mit Sauerstoff versorgen
 quelle: i-care S. 188
@@ -273,7 +273,7 @@ quelle: i-care S. 190–191
 id: aufbau-mc-oben
 frage: Welche Organe zählen zum oberen Verdauungstrakt?
 - [x] Mundhöhle
-- [x] Speiseröhre
+- [x] Ösophagus
 - [x] Magen
 - [ ] Dickdarm
 - [ ] Rektum
@@ -303,8 +303,8 @@ quelle: i-care S. 192
 id: aufbau-zu-lage
 frage: Ordne jedem Begriff seine Bedeutung zu.
 - [[Peritoneum]] => Bauchfell
-- [[intraperitoneal]] => vollständig vom Bauchfell überzogen
-- [[retroperitoneal]] => nur an der Vorderseite vom Bauchfell bedeckt
+- [[intraperitoneal]] => vollständig vom Peritoneum überzogen
+- [[retroperitoneal]] => nur an der Vorderseite vom Peritoneum bedeckt
 quelle: i-care S. 189–191
 
 ## Zuordnung
@@ -321,7 +321,7 @@ quelle: MKK S. 344
 id: aufbau-rf-weg
 frage: Bring die Organe in die Reihenfolge, die die Nahrung durchläuft.
 1. Mundhöhle
-2. Speiseröhre
+2. Ösophagus
 3. Magen
 4. Dünndarm
 5. Dickdarm
@@ -342,7 +342,7 @@ id: aufbau-rf-verdauung
 frage: Was macht das Verdauungssystem mit der Nahrung? Bring die Schritte in die richtige Reihenfolge.
 1. Die Nahrung wird mechanisch zerkleinert.
 2. Enzyme zerlegen sie in kleine Bausteine.
-3. Die Bausteine werden über die Darmschleimhaut aufgenommen.
+3. Die Bausteine werden über die Darmmukosa resorbiert.
 4. Unverdauliches wird mit dem Stuhl ausgeschieden.
 quelle: i-care S. 188
 
@@ -363,12 +363,12 @@ quelle: i-care S. 188
 
 ## Lückentext
 id: aufbau-lt-bauchfell
-text: Die Bauch- und Beckenhöhle ist mit dem {{Bauchfell|Peritoneum}} ausgekleidet. Organe, die vollständig davon überzogen sind, liegen {{intraperitoneal}}.
+text: Die Bauch- und Beckenhöhle ist mit dem {{Peritoneum|Bauchfell}} ausgekleidet. Organe, die vollständig davon überzogen sind, liegen {{intraperitoneal}}.
 quelle: i-care S. 189
 
 ## Lückentext
 id: aufbau-lt-aufgabe
-text: Das Verdauungssystem zerkleinert die Nahrung zuerst mechanisch und zerlegt sie dann mithilfe von {{Enzymen|Enzyme}}. Die Bausteine werden über die {{Darmschleimhaut|Schleimhaut}} aufgenommen.
+text: Das Verdauungssystem zerkleinert die Nahrung zuerst mechanisch und zerlegt sie dann mithilfe von {{Enzymen|Enzyme}}. Die Bausteine werden über die {{Darmmukosa|Mukosa|Darmschleimhaut|Schleimhaut}} resorbiert.
 quelle: i-care S. 188
 
 <!-- =============================== OPERATOREN =============================== -->
@@ -381,11 +381,11 @@ fall: Robartina soll einer Patientin vor einer Magenspiegelung erklären, wie de
 auftrag: Beschreibe den Weg der Nahrung durch den Verdauungstrakt. Nenne dabei die Abschnitte des Dünndarms.
 mindestlänge: 250
 kriterien:
-- Ich nenne Mundhöhle, Speiseröhre und Magen in der richtigen Reihenfolge.
+- Ich nenne Mundhöhle, Ösophagus und Magen in der richtigen Reihenfolge.
 - Ich nenne die drei Abschnitte des Dünndarms (Duodenum, Jejunum, Ileum).
 - Ich nenne den Dickdarm mit Kolon und Rektum.
 - Ich verwende die Fachbegriffe korrekt.
-musterlösung: Die Nahrung gelangt aus der **Mundhöhle** über die **Speiseröhre** (Ösophagus) in den **Magen** (Gaster). Von dort wird sie in den **Dünndarm** weitergegeben. Er besteht aus drei Abschnitten: dem **Duodenum** (Zwölffingerdarm), dem **Jejunum** (Leerdarm) und dem **Ileum** (Krummdarm). Danach folgt der **Dickdarm** mit dem Blinddarm, dem **Kolon** (Grimmdarm) und dem **Rektum** (Mastdarm). Der Verdauungstrakt endet am After.
+musterlösung: Die Nahrung gelangt aus der **Mundhöhle** über den **Ösophagus** in den **Magen** (Gaster). Von dort wird sie in den **Dünndarm** weitergegeben. Er besteht aus drei Abschnitten: dem **Duodenum** (Zwölffingerdarm), dem **Jejunum** (Leerdarm) und dem **Ileum** (Krummdarm). Danach folgt der **Dickdarm** mit dem Zäkum, dem **Kolon** (Grimmdarm) und dem **Rektum** (Mastdarm). Der Verdauungstrakt endet am After.
 quelle: i-care S. 188
 
 ## Operator
@@ -396,12 +396,12 @@ fall: Im Unterricht hat Alaa die Begriffe „intraperitoneal“ und „retroperi
 auftrag: Erläutere den Unterschied zwischen intraperitonealer und retroperitonealer Lage und nenne je ein Beispiel.
 mindestlänge: 350
 kriterien:
-- Ich erkläre, was das Bauchfell (Peritoneum) ist.
-- Ich erkläre, dass intraperitoneale Organe vollständig vom Bauchfell überzogen sind.
+- Ich erkläre, was das Peritoneum ist.
+- Ich erkläre, dass intraperitoneale Organe vollständig vom Peritoneum überzogen sind.
 - Ich erkläre, dass sie über ein Gekröse beweglich befestigt sind.
-- Ich erkläre, dass retroperitoneale Organe hinter dem Bauchfell liegen und nur vorn bedeckt sind.
+- Ich erkläre, dass retroperitoneale Organe hinter dem Peritoneum liegen und nur vorn bedeckt sind.
 - Ich nenne je ein passendes Beispiel.
-musterlösung: Das **Bauchfell** (Peritoneum) ist eine glatte Haut, die die Bauch- und Beckenhöhle auskleidet und die Organe überzieht. **Intraperitoneale** Organe liegen in der Bauchfellhöhle und sind vollständig vom Bauchfell überzogen, z. B. der Magen. Sie sind über ein **Gekröse** (Meso) beweglich an der hinteren Rumpfwand befestigt; darin verlaufen ihre Blutgefäße und Nerven. **Retroperitoneale** Organe liegen dagegen hinter dem Bauchfell direkt an der hinteren Rumpfwand, z. B. die Bauchspeicheldrüse. Das Bauchfell bedeckt nur ihre Vorderseite, deshalb sind sie wesentlich weniger beweglich.
+musterlösung: Das **Peritoneum** ist eine glatte Haut, die die Bauch- und Beckenhöhle auskleidet und die Organe überzieht. **Intraperitoneale** Organe liegen in der Bauchfellhöhle und sind vollständig vom Peritoneum überzogen, z. B. der Magen. Sie sind über ein **Gekröse** (Meso) beweglich an der hinteren Rumpfwand befestigt; darin verlaufen ihre Blutgefäße und Nerven. **Retroperitoneale** Organe liegen dagegen hinter dem Peritoneum direkt an der hinteren Rumpfwand, z. B. das Pankreas. Das Peritoneum bedeckt nur ihre Vorderseite, deshalb sind sie wesentlich weniger beweglich.
 quelle: i-care S. 189–191
 
 ## Operator
@@ -413,11 +413,11 @@ auftrag: Beurteile Alaas Vorschlag mithilfe der Informationen aus dem Buch.
 mindestlänge: 350
 kriterien:
 - Ich erkenne die Zeichen eines akuten Abdomens (starke plötzliche Schmerzen, Erbrechen, brettharte Bauchdecke).
-- Ich nenne mögliche Ursachen, z. B. eine Blinddarmentzündung.
+- Ich nenne mögliche Ursachen, z. B. eine Appendizitis.
 - Ich erkläre, dass einige dieser Ursachen lebensbedrohlich sind.
 - Ich begründe, dass die Ursache schnell gefunden werden muss.
 - Ich komme zu einem begründeten Urteil über Alaas Vorschlag.
-musterlösung: Herr B. hat sehr starke, plötzlich aufgetretene Bauchschmerzen, er erbricht, und seine Bauchdecke ist bretthart angespannt. Das sind die Zeichen eines **akuten Abdomens**, eines häufigen Notfalls. Die häufigste Ursache ist eine „Blinddarmentzündung“ (Appendizitis). Es kommen aber auch andere Erkrankungen infrage, z. B. eine Entzündung der Bauchspeicheldrüse oder des Bauchfells, ein Darmverschluss oder ein durchgebrochenes Magengeschwür. Weil einige dieser Erkrankungen **lebensbedrohlich** sind, muss die Ursache **möglichst schnell** gefunden werden. **Urteil:** Alaas Vorschlag ist falsch und gefährlich. Abwarten kann Herrn B. das Leben kosten. Robartina und Alaa müssen sofort die zuständige Pflegefachkraft bzw. den Arzt informieren.
+musterlösung: Herr B. hat sehr starke, plötzlich aufgetretene Bauchschmerzen, er erbricht, und seine Bauchdecke ist bretthart angespannt. Das sind die Zeichen eines **akuten Abdomens**, eines häufigen Notfalls. Die häufigste Ursache ist eine Appendizitis. Es kommen aber auch andere Erkrankungen infrage, z. B. eine Entzündung des Pankreas oder des Peritoneums, ein Ileus oder ein durchgebrochenes Magengeschwür. Weil einige dieser Erkrankungen **lebensbedrohlich** sind, muss die Ursache **möglichst schnell** gefunden werden. **Urteil:** Alaas Vorschlag ist falsch und gefährlich. Abwarten kann Herrn B. das Leben kosten. Robartina und Alaa müssen sofort die zuständige Pflegefachkraft bzw. den Arzt informieren.
 quelle: i-care S. 189
 
 <!-- =============================== FEHLERFAHNDUNG =============================== -->
@@ -425,11 +425,11 @@ quelle: i-care S. 189
 ## Fehlerfahndung
 id: aufbau-ff-nachtdienst
 titel: Robartinas Bericht: Herr B. hat Bauchschmerzen
-bericht: 02:10 Uhr: Herr B. klagt über sehr starke Bauchschmerzen, die plötzlich begonnen haben. Seine Bauchdecke ist bretthart. Ich habe das als harmlos eingeschätzt und abgewartet. Frau Abda erklärte mir später, dass die häufigste Ursache solcher Beschwerden eine Entzündung der Speiseröhre ist. Sie zeigte mir auch ein Schaubild: Das Bauchfell heißt in der Fachsprache Abdomen. Die Nahrung gelangt vom Magen zuerst in den Dickdarm.
+bericht: 02:10 Uhr: Herr B. klagt über sehr starke Bauchschmerzen, die plötzlich begonnen haben. Seine Bauchdecke ist bretthart. Ich habe das als harmlos eingeschätzt und abgewartet. Frau Abda erklärte mir später, dass die häufigste Ursache solcher Beschwerden eine Entzündung des Ösophagus ist. Sie zeigte mir auch ein Schaubild: Das Bauchfell heißt in der Fachsprache Abdomen. Die Nahrung gelangt vom Magen zuerst in den Dickdarm.
 fehler:
 - als harmlos eingeschätzt und abgewartet => als Notfall erkannt und sofort gemeldet || notfall|sofort|gemeldet|arzt|informiert
-- Entzündung der Speiseröhre => „Blinddarmentzündung“ (Appendizitis) || blinddarm|appendizitis|wurmfortsatz
+- Entzündung des Ösophagus => Appendizitis || blinddarm|appendizitis|wurmfortsatz
 - Abdomen => Peritoneum || peritoneum
 - Dickdarm => Dünndarm (Duodenum) || dünndarm|duodenum|zwölffingerdarm
-erklärung: Plötzliche, sehr starke Bauchschmerzen mit brettharter Bauchdecke sprechen für ein akutes Abdomen, einen Notfall. Häufigste Ursache ist die Appendizitis. Das Bauchfell heißt Peritoneum; Abdomen bedeutet Bauch. Vom Magen gelangt die Nahrung in den Dünndarm.
+erklärung: Plötzliche, sehr starke Bauchschmerzen mit brettharter Bauchdecke sprechen für ein akutes Abdomen, einen Notfall. Häufigste Ursache ist die Appendizitis. Das Bauchfell heißt in der Fachsprache Peritoneum; Abdomen bedeutet Bauch. Vom Magen gelangt die Nahrung in den Dünndarm.
 quelle: i-care S. 188–189

@@ -31,7 +31,7 @@ quelle: i-care S. 224
 
 ## Karteikarte
 vorne: Welche Hauptaufgaben hat die Leber?
-hinten: Sie steht im Mittelpunkt des Kohlenhydrat-, Eiweiß- und Fettstoffwechsels, entgiftet den Körper, bildet die Galle, bildet Plasmaproteine und dient als Speicherorgan.
+hinten: Sie steht im Mittelpunkt des Kohlenhydrat-, Protein- und Fettstoffwechsels, entgiftet den Körper, bildet die Galle, bildet Plasmaproteine und dient als Speicherorgan.
 quelle: i-care S. 224
 
 ## Karteikarte
@@ -61,7 +61,7 @@ quelle: i-care S. 225
 
 ## Karteikarte
 vorne: Wie ist ein Leberläppchen aufgebaut?
-hinten: Es ist annähernd sechseckig, ähnlich einer Bienenwabe. In der Mitte liegt die Zentralvene, um sie herum sind die Leberzellen strahlenförmig angeordnet.
+hinten: Es ist annähernd sechseckig, ähnlich einer Bienenwabe. In der Mitte liegt die Zentralvene, um sie herum sind die [[Hepatozyten]] strahlenförmig angeordnet.
 quelle: i-care S. 225
 
 ## Karteikarte
@@ -75,7 +75,7 @@ hinten: Sie wandelt die Glukose in Fettsäuren um.
 quelle: i-care S. 230
 
 ## Karteikarte
-vorne: Welche wichtigen Eiweiße des Blutes bildet die Leber?
+vorne: Welche wichtigen [[Proteine]] des Blutes bildet die Leber?
 hinten: Plasmaproteine, zum Beispiel [[Albumin]] und die Gerinnungsfaktoren. Für die Gerinnungsfaktoren braucht die Leber Vitamin K.
 quelle: i-care S. 231
 
@@ -91,12 +91,12 @@ quelle: i-care S. 234
 
 ## Karteikarte
 vorne: Wozu dient die Galle?
-hinten: Sie verteilt das Fett aus der Nahrung fein im Speisebrei, sodass die Verdauungsenzyme es besser angreifen können. Außerdem werden mit der Galle Abbauprodukte ausgeschieden.
+hinten: Sie verteilt das Fett aus der Nahrung fein im [[Chymus]], sodass die Verdauungsenzyme es besser angreifen können. Außerdem werden mit der Galle Abbauprodukte ausgeschieden.
 quelle: i-care S. 234
 
 ## Karteikarte
 vorne: Was passiert mit den Gallensäuren, nachdem sie im Darm bei der Fettverdauung geholfen haben?
-hinten: Der größte Teil wird aus dem Darm wieder aufgenommen und gelangt über die Pfortader zurück zur Leber. Dort werden sie erneut für die Galle verwendet ([[enterohepatischer Kreislauf]]).
+hinten: Der größte Teil wird aus dem Darm wieder resorbiert und gelangt über die Pfortader zurück zur Leber. Dort werden sie erneut für die Galle verwendet ([[enterohepatischer Kreislauf]]).
 quelle: i-care S. 235
 
 ## Karteikarte
@@ -116,7 +116,7 @@ quelle: i-care S. 236–237
 
 ## Karteikarte
 vorne: Wann entleert sich die Gallenblase?
-hinten: Wenn fettreicher Speisebrei in den Dünndarm gelangt. Dort wird ein Verdauungshormon (Cholecystokinin) ausgeschüttet, und die Gallenblase zieht sich zusammen.
+hinten: Wenn fettreicher [[Chymus]] in den Dünndarm gelangt. Dort wird ein Verdauungshormon (Cholecystokinin) ausgeschüttet, und die Gallenblase zieht sich zusammen.
 quelle: i-care S. 237
 
 ## Karteikarte
@@ -302,7 +302,7 @@ frage: Ordne jedem Stoff die passende Aussage zu.
 - Ammoniak => wird in der Leber zu Harnstoff entgiftet
 - Bilirubin => entsteht beim Abbau des roten Blutfarbstoffs
 - Glykogen => Speicherform der Glukose
-- Gallensäuren => verteilen das Fett fein im Speisebrei
+- Gallensäuren => verteilen das Fett fein im Chymus
 quelle: i-care S. 224, 234–235
 
 ## Zuordnung
@@ -319,11 +319,11 @@ quelle: i-care S. 224–225, 235, 237
 ## Reihenfolge
 id: leber-rf-galle
 frage: Welchen Weg nimmt die Galle, die in der Gallenblase gespeichert wird? Bring die Schritte in die richtige Reihenfolge.
-1. Die Leberzellen bilden die Galle.
+1. Die Hepatozyten bilden die Galle.
 2. Die Galle verlässt die Leber über die Gallengänge.
 3. Über den Gallenblasengang gelangt sie in die Gallenblase und wird dort eingedickt.
 4. Bei Bedarf zieht sich die Gallenblase zusammen.
-5. Die Galle fließt in den Zwölffingerdarm.
+5. Die Galle fließt in das Duodenum.
 quelle: i-care S. 236–237
 
 ## Reihenfolge
@@ -386,12 +386,12 @@ fall: Frau Abda bittet Robartina, in der nächsten Praxisanleitung kurz vorzuste
 auftrag: Beschreibe die Aufgaben der Leber.
 mindestlänge: 250
 kriterien:
-- Ich nenne den Stoffwechsel der Kohlenhydrate, Eiweiße und Fette.
+- Ich nenne den Stoffwechsel der Kohlenhydrate, Proteine und Fette.
 - Ich nenne die Entgiftung, zum Beispiel von Ammoniak oder Medikamenten.
 - Ich nenne die Bildung der Galle.
 - Ich nenne die Bildung von Plasmaproteinen wie Albumin oder Gerinnungsfaktoren.
 - Ich nenne die Speicherfunktion, zum Beispiel für Glykogen, Vitamine oder Eisen.
-musterlösung: Die Leber (Hepar) steht im Mittelpunkt des **Kohlenhydrat-, Eiweiß- und Fettstoffwechsels**, weil die im Darm aufgenommenen Nährstoffe (außer den Fetten) sie als erstes Organ erreichen. Sie **entgiftet** den Körper: Stoffe wie Ammoniak oder Medikamente wandelt sie so um, dass sie über die Niere oder die Galle ausgeschieden werden können. Sie **bildet die Galle** und ist damit an der Fettverdauung beteiligt. Außerdem bildet sie wichtige **Plasmaproteine** wie Albumin und die Gerinnungsfaktoren. Schließlich ist sie ein **Speicherorgan**, zum Beispiel für Glukose in Form von Glykogen, für Vitamine und für Eisen.
+musterlösung: Die Leber (Hepar) steht im Mittelpunkt des **Kohlenhydrat-, Protein- und Fettstoffwechsels**, weil die im Darm resorbierten Nährstoffe (außer den Fetten) sie als erstes Organ erreichen. Sie **entgiftet** den Körper: Stoffe wie Ammoniak oder Medikamente wandelt sie so um, dass sie über die Niere oder die Galle ausgeschieden werden können. Sie **bildet die Galle** und ist damit an der Fettverdauung beteiligt. Außerdem bildet sie wichtige **Plasmaproteine** wie Albumin und die Gerinnungsfaktoren. Schließlich ist sie ein **Speicherorgan**, zum Beispiel für Glukose in Form von Glykogen, für Vitamine und für Eisen.
 quelle: i-care S. 224
 
 ## Operator
@@ -420,8 +420,8 @@ mindestlänge: 300
 kriterien:
 - Ich stelle klar, dass die Leber die Galle bildet und nicht die Gallenblase.
 - Ich beschreibe, dass die Gallenblase die Galle nur speichert und eindickt.
-- Ich erkläre, dass die Galle auch ohne Gallenblase von der Leber direkt in den Zwölffingerdarm fließt.
+- Ich erkläre, dass die Galle auch ohne Gallenblase von der Leber direkt in das Duodenum fließt.
 - Ich folgere, dass die Fettverdauung weiterhin möglich ist.
 - Ich komme zu einem begründeten Urteil über Alaas Aussage.
-musterlösung: Alaas Aussage ist **nicht richtig**. Die Galle wird von den **Leberzellen gebildet**, und zwar unabhängig von der Nahrungsaufnahme. Die Gallenblase **speichert** nur einen Teil der Galle zwischen den Mahlzeiten und **dickt ihn ein**. Auch bei gesunden Menschen fließt ein Teil der Galle direkt von der Leber über den Gallengang in den Zwölffingerdarm. Nach der Entfernung der Gallenblase gelangt die Galle weiterhin auf diesem Weg in den Darm, die **Fettverdauung bleibt also möglich**. Es fehlt lediglich der Vorrat an eingedickter Galle, der sonst bei Bedarf abgegeben wird. Laut Buch können die meisten Menschen nach einer Übergangszeit auch ohne Gallenblase normal essen. Ein lebenslanges Fettverbot lässt sich damit nicht begründen.
+musterlösung: Alaas Aussage ist **nicht richtig**. Die Galle wird von den **Hepatozyten gebildet**, und zwar unabhängig von der Nahrungsaufnahme. Die Gallenblase **speichert** nur einen Teil der Galle zwischen den Mahlzeiten und **dickt ihn ein**. Auch bei gesunden Menschen fließt ein Teil der Galle direkt von der Leber über den Gallengang in das Duodenum. Nach der Entfernung der Gallenblase gelangt die Galle weiterhin auf diesem Weg in den Darm, die **Fettverdauung bleibt also möglich**. Es fehlt lediglich der Vorrat an eingedickter Galle, der sonst bei Bedarf abgegeben wird. Laut Buch können die meisten Menschen nach einer Übergangszeit auch ohne Gallenblase normal essen. Ein lebenslanges Fettverbot lässt sich damit nicht begründen.
 quelle: i-care S. 234, 236–237; MKK S. 361

@@ -22,7 +22,7 @@ farbe: #1b8a69
 
 ## Karteikarte
 vorne: Was sind die drei Hauptbestandteile der Nahrung?
-hinten: Kohlenhydrate, Proteine (Eiweiße) und Fette. Sie heißen auch „Brennstoffe“, weil der Körper aus ihnen Energie gewinnt.
+hinten: Kohlenhydrate, [[Proteine]] und Fette. Sie heißen auch „Brennstoffe“, weil der Körper aus ihnen Energie gewinnt.
 quelle: i-care S. 241
 
 ## Karteikarte
@@ -42,7 +42,7 @@ quelle: i-care S. 242
 
 ## Karteikarte
 vorne: Warum sollte man fettlösliche Vitamine zusammen mit etwas Fett essen?
-hinten: Der Körper kann sie nur dann aufnehmen, wenn gleichzeitig Fett in der Nahrung ist.
+hinten: Der Körper kann sie nur dann resorbieren, wenn gleichzeitig Fett in der Nahrung ist.
 quelle: i-care S. 242; MKK S. 362
 
 ## Karteikarte
@@ -87,17 +87,17 @@ quelle: i-care S. 245
 
 ## Karteikarte
 vorne: Welcher Nährstoff liefert pro Gramm am meisten Energie?
-hinten: Fett. Es liefert bei gleicher Menge mehr als doppelt so viel Energie wie Kohlenhydrate oder Eiweiß.
+hinten: Fett. Es liefert bei gleicher Menge mehr als doppelt so viel Energie wie Kohlenhydrate oder Protein.
 quelle: i-care S. 246
 
 ## Karteikarte
 vorne: Was sind Ballaststoffe, und warum sind sie nützlich?
-hinten: Stoffe, die im Dünndarm nicht verdaut werden können, meist unverdauliche Vielfachzucker aus Getreide und Gemüse. Sie quellen auf und tragen zum Sättigungsgefühl bei.
+hinten: Stoffe, die im Dünndarm nicht verdaut werden können, meist unverdauliche [[Polysaccharide]] aus Getreide und Gemüse. Sie quellen auf und tragen zum Sättigungsgefühl bei.
 quelle: i-care S. 214
 
 ## Karteikarte
-vorne: Was bedeutet eine hohe biologische Wertigkeit eines Nahrungseiweißes?
-hinten: Das Eiweiß ähnelt dem menschlichen Körpereiweiß stark. Der Körper kann daraus viel körpereigenes Protein bilden.
+vorne: Was bedeutet eine hohe biologische Wertigkeit eines Nahrungsproteins?
+hinten: Das Protein ähnelt dem menschlichen Körperprotein stark. Der Körper kann daraus viel körpereigenes Protein bilden.
 quelle: i-care S. 246
 
 ## Karteikarte
@@ -127,8 +127,8 @@ id: naehrstoffe-sc-brennwert-fett
 frage: Welcher Nährstoff hat den höchsten Brennwert, liefert also pro Gramm die meiste Energie?
 - [x] Fett
 - [ ] Kohlenhydrate
-- [ ] Eiweiß
-erklärung: Fette liefern bei gleicher Menge mehr als doppelt so viel Energie wie Kohlenhydrate oder Eiweiß.
+- [ ] Protein
+erklärung: Fette liefern bei gleicher Menge mehr als doppelt so viel Energie wie Kohlenhydrate oder Protein.
 quelle: i-care S. 246
 
 ## Single-Choice
@@ -217,8 +217,8 @@ id: naehrstoffe-sc-kh-anteil
 frage: Welcher Nährstoff sollte den größten Anteil unserer Nahrung ausmachen?
 - [x] Kohlenhydrate
 - [ ] Fette
-- [ ] Eiweiße
-erklärung: Dabei sollten Vielfachzucker wie Stärke überwiegen. Sie lassen den Blutzucker langsamer ansteigen als Einfachzucker.
+- [ ] Proteine
+erklärung: Dabei sollten [[Polysaccharide]] wie Stärke überwiegen. Sie lassen den Blutzucker langsamer ansteigen als [[Monosaccharide]].
 quelle: i-care S. 246
 
 ## Single-Choice
@@ -351,7 +351,7 @@ quelle: i-care S. 244
 
 ## Lückentext
 id: naehrstoffe-lt-edeka
-text: Die fettlöslichen Vitamine merkt man sich mit dem Namen einer Supermarktkette: {{EDeKA|Edeka}}. Der Körper kann sie nur aufnehmen, wenn gleichzeitig {{Fett|Fette}} in der Nahrung ist.
+text: Die fettlöslichen Vitamine merkt man sich mit dem Namen einer Supermarktkette: {{EDeKA|Edeka}}. Der Körper kann sie nur resorbieren, wenn gleichzeitig {{Fett|Fette}} in der Nahrung ist.
 quelle: i-care S. 242
 
 ## Lückentext
@@ -426,81 +426,81 @@ quelle: i-care S. 242, 246, 248
 
 ## Karteikarte
 vorne: Welche drei Gruppen von Kohlenhydraten unterscheidet man?
-hinten: Einfachzucker ([[Monosaccharide]]), Zweifachzucker ([[Disaccharide]]) und Vielfachzucker ([[Polysaccharide]]).
+hinten: [[Monosaccharide]], [[Disaccharide]] und [[Polysaccharide]].
 quelle: i-care S. 238; MKK S. 361
 
 ## Karteikarte
-vorne: Nenne drei Einfachzucker ([[Monosaccharide]]).
+vorne: Nenne drei [[Monosaccharide]].
 hinten: Glukose (Traubenzucker), Fruktose (Fruchtzucker) und Galaktose.
 quelle: i-care S. 238; MKK S. 361–362, 370
 
 ## Karteikarte
-vorne: Nenne drei Zweifachzucker ([[Disaccharide]]).
+vorne: Nenne drei [[Disaccharide]].
 hinten: Maltose (Malzzucker), Laktose (Milchzucker) und Saccharose (Rohr- bzw. Rübenzucker).
 quelle: i-care S. 238; MKK S. 361
 
 ## Karteikarte
-vorne: Nenne einen wichtigen Vielfachzucker ([[Polysaccharide|Polysaccharid]]) und wo er vorkommt.
+vorne: Nenne ein wichtiges [[Polysaccharide|Polysaccharid]] und wo es vorkommt.
 hinten: Stärke, z. B. in Kartoffeln und Reis. Sie ist die häufigste Form der Kohlenhydrate in unserer Nahrung.
 quelle: MKK S. 361; i-care S. 238
 
 ## Karteikarte
-vorne: Warum lassen Vielfachzucker den Blutzucker langsamer ansteigen als Einfachzucker?
-hinten: Vielfachzucker müssen erst verdaut und zu Einfachzuckern abgebaut werden, bevor sie ins Blut gelangen. Einfachzucker wie Glukose gelangen sehr schnell ins Blut.
+vorne: Warum lassen [[Polysaccharide]] den Blutzucker langsamer ansteigen als [[Monosaccharide]]?
+hinten: [[Polysaccharide]] müssen erst verdaut und zu [[Monosaccharide|Monosacchariden]] abgebaut werden, bevor sie ins Blut gelangen. [[Monosaccharide]] wie Glukose gelangen sehr schnell ins Blut.
 quelle: i-care S. 246
 
 ## Karteikarte
-vorne: Aus welchen Einfachzuckern bestehen Maltose, Laktose und Saccharose?
+vorne: Aus welchen [[Monosaccharide|Monosacchariden]] bestehen Maltose, Laktose und Saccharose?
 hinten: Maltose: Glukose + Glukose. Laktose: Galaktose + Glukose. Saccharose: Glukose + Fruktose.
 quelle: i-care S. 238
 
 ## Single-Choice
 id: naehrstoffe-sc-kh-glukose
 frage: Zu welcher Gruppe gehört Glukose (Traubenzucker)?
-- [x] Einfachzucker ([[Monosaccharide]])
-- [ ] Zweifachzucker ([[Disaccharide]])
-- [ ] Vielfachzucker ([[Polysaccharide]])
+- [x] [[Monosaccharide]]
+- [ ] [[Disaccharide]]
+- [ ] [[Polysaccharide]]
 quelle: i-care S. 238; MKK S. 361
 
 ## Single-Choice
 id: naehrstoffe-sc-kh-staerke
 frage: Zu welcher Gruppe gehört Stärke?
-- [x] Vielfachzucker ([[Polysaccharide]])
-- [ ] Zweifachzucker ([[Disaccharide]])
-- [ ] Einfachzucker ([[Monosaccharide]])
+- [x] [[Polysaccharide]]
+- [ ] [[Disaccharide]]
+- [ ] [[Monosaccharide]]
 erklärung: Stärke kommt z. B. in Kartoffeln und Reis vor.
 quelle: i-care S. 238; MKK S. 361
 
 ## Single-Choice
 id: naehrstoffe-sc-kh-laktose
-frage: Milchzucker (Laktose) ist ein …
-- [x] Zweifachzucker ([[Disaccharide|Disaccharid]])
-- [ ] Einfachzucker ([[Monosaccharide|Monosaccharid]])
-- [ ] Vielfachzucker ([[Polysaccharide|Polysaccharid]])
+frage: [[Laktose]] ist ein …
+- [x] [[Disaccharide|Disaccharid]]
+- [ ] [[Monosaccharide|Monosaccharid]]
+- [ ] [[Polysaccharide|Polysaccharid]]
 erklärung: Laktose besteht aus Galaktose und Glukose.
 quelle: i-care S. 238; MKK S. 361
 
 ## Single-Choice
 id: naehrstoffe-sc-kh-aufnahme
-frage: In welcher Form können Kohlenhydrate aus dem Darm ins Blut aufgenommen werden?
-- [x] nur als Einfachzucker
-- [ ] nur als Zweifachzucker
-- [ ] nur als Vielfachzucker
-erklärung: Zweifach- und Vielfachzucker müssen deshalb erst in Einfachzucker zerlegt werden.
+frage: In welcher Form können Kohlenhydrate aus dem Darm ins Blut resorbiert werden?
+- [x] nur als Monosaccharide
+- [ ] nur als Disaccharide
+- [ ] nur als Polysaccharide
+erklärung: Di- und [[Polysaccharide]] müssen deshalb erst in [[Monosaccharide]] zerlegt werden.
 quelle: i-care S. 238; MKK S. 361
 
 ## Single-Choice
 id: naehrstoffe-sc-kh-sport
 frage: Einer Läuferin geht kurz vor dem Ziel die Kraft aus. Was hilft am schnellsten?
-- [x] ein Getränk mit Traubenzucker (Glukose)
+- [x] ein Getränk mit Glukose
 - [ ] eine Portion Kartoffeln (Stärke)
 - [ ] ein Vollkornbrot (Ballaststoffe)
-erklärung: Glukose ist ein Einfachzucker und lässt den Blutzucker rasch ansteigen. Stärke muss erst verdaut werden.
+erklärung: Glukose ist ein [[Monosaccharide|Monosaccharid]] und lässt den Blutzucker rasch ansteigen. Stärke muss erst verdaut werden.
 quelle: i-care S. 246, 248
 
 ## Multiple-Choice
 id: naehrstoffe-mc-kh-einfach
-frage: Welche dieser Zucker sind Einfachzucker?
+frage: Welche dieser Zucker sind [[Monosaccharide]]?
 - [x] Glukose
 - [x] Fruktose
 - [x] Galaktose
@@ -510,7 +510,7 @@ quelle: i-care S. 238
 
 ## Multiple-Choice
 id: naehrstoffe-mc-kh-zweifach
-frage: Welche dieser Zucker sind Zweifachzucker?
+frage: Welche dieser Zucker sind [[Disaccharide]]?
 - [x] Maltose
 - [x] Laktose
 - [x] Saccharose
@@ -521,11 +521,11 @@ quelle: i-care S. 238; MKK S. 361
 ## Zuordnung
 id: naehrstoffe-zu-kh-gruppe
 frage: Ordne jedem Zucker seine Gruppe zu.
-- Glukose => Einfachzucker
-- Fruktose => Einfachzucker
-- Saccharose => Zweifachzucker
-- Laktose => Zweifachzucker
-- Stärke => Vielfachzucker
+- Glukose => Monosaccharide
+- Fruktose => Monosaccharide
+- Saccharose => Disaccharide
+- Laktose => Disaccharide
+- Stärke => Polysaccharide
 quelle: i-care S. 238; MKK S. 361
 
 ## Zuordnung
@@ -548,17 +548,17 @@ quelle: MKK S. 361; i-care S. 238
 ## Reihenfolge
 id: naehrstoffe-rf-kh-abbau
 frage: Stärke wird bei der Verdauung schrittweise zerlegt. Bring die Stufen in die richtige Reihenfolge.
-1. Vielfachzucker (Stärke)
-2. Zweifachzucker (Maltose)
-3. Einfachzucker (Glukose)
+1. Polysaccharide (Stärke)
+2. Disaccharide (Maltose)
+3. Monosaccharide (Glukose)
 quelle: i-care S. 238
 
 ## Lückentext
 id: naehrstoffe-lt-kh
-text: Stärke ist ein {{Vielfachzucker|Polysaccharid}}. Milchzucker ist ein {{Zweifachzucker|Disaccharid}}. Traubenzucker ist ein {{Einfachzucker|Monosaccharid}} und gelangt sehr schnell ins Blut.
+text: Stärke ist ein {{Polysaccharid|Vielfachzucker}}. Laktose ist ein {{Disaccharid|Zweifachzucker}}. Glukose ist ein {{Monosaccharid|Einfachzucker}} und gelangt sehr schnell ins Blut.
 quelle: i-care S. 238, 246; MKK S. 370
 
 ## Lückentext
 id: naehrstoffe-lt-ballast
-text: Ballaststoffe sind meistens unverdauliche {{Vielfachzucker|Polysaccharide}}. Sie kommen vor allem in {{pflanzlichen}} Lebensmitteln vor, z. B. in Getreide und Gemüse.
+text: Ballaststoffe sind meistens unverdauliche {{Polysaccharide|Vielfachzucker}}. Sie kommen vor allem in {{pflanzlichen}} Lebensmitteln vor, z. B. in Getreide und Gemüse.
 quelle: i-care S. 214

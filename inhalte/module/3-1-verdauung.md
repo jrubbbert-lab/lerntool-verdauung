@@ -4,7 +4,7 @@ id: verdauung
 block: 3
 nr: 1
 quellen: i-care S. 197, 214, 223, 238–241; MKK S. 359, 361–362
-beschreibung: Wie Enzyme Kohlenhydrate, Eiweiße und Fette zerlegen.
+beschreibung: Wie Enzyme Kohlenhydrate, Proteine und Fette zerlegen.
 icon: enzym
 farbe: #3d8f74
 
@@ -17,13 +17,13 @@ farbe: #3d8f74
 <!-- =============================== KARTEIKARTEN =============================== -->
 
 ## Karteikarte
-vorne: In welcher Form können Kohlenhydrate vom Darm aufgenommen werden?
-hinten: Nur als Einfachzucker ([[Monosaccharide]]), z. B. Glukose.
+vorne: In welcher Form können Kohlenhydrate vom Darm resorbiert werden?
+hinten: Nur als [[Monosaccharide]], z. B. Glukose.
 quelle: i-care S. 238
 
 ## Karteikarte
 vorne: In welcher Form kommen Kohlenhydrate in der Nahrung am häufigsten vor?
-hinten: Als Stärke, einem Vielfachzucker.
+hinten: Als Stärke, einem [[Polysaccharide|Polysaccharid]].
 quelle: i-care S. 238
 
 ## Karteikarte
@@ -33,32 +33,32 @@ quelle: i-care S. 238
 
 ## Karteikarte
 vorne: Was spaltet die Laktase?
-hinten: [[Laktose]] (Milchzucker) in Einfachzucker.
+hinten: [[Laktose]] in [[Monosaccharide]].
 quelle: i-care S. 238
 
 ## Karteikarte
 vorne: Was passiert bei einer Laktoseintoleranz?
-hinten: Es wird zu wenig Laktase gebildet. Der Milchzucker gelangt unverdaut in den Dickdarm und wird dort von Bakterien abgebaut. Das kann Blähungen, Bauchschmerzen und Durchfall verursachen.
+hinten: Es wird zu wenig Laktase gebildet. Die [[Laktose]] gelangt unverdaut in den Dickdarm und wird dort von Bakterien abgebaut. Das kann [[Flatulenz]], Bauchschmerzen und [[Diarrhö]] verursachen.
 quelle: i-care S. 239
 
 ## Karteikarte
-vorne: Was ist der erste Schritt der Eiweißverdauung?
-hinten: Die Salzsäure im Magen verändert die Struktur der Eiweiße ([[Denaturierung]]).
+vorne: Was ist der erste Schritt der Proteinverdauung?
+hinten: Die Salzsäure im Magen verändert die Struktur der [[Proteine]] ([[Denaturierung]]).
 quelle: i-care S. 239
 
 ## Karteikarte
-vorne: Wo findet der Hauptteil der Eiweißverdauung statt?
-hinten: Im Dünndarm, mithilfe der eiweißspaltenden Enzyme ([[Proteasen]]) aus dem Pankreassaft.
+vorne: Wo findet der Hauptteil der Proteinverdauung statt?
+hinten: Im Dünndarm, mithilfe der proteinspaltenden Enzyme ([[Proteasen]]) aus dem Pankreassaft.
 quelle: i-care S. 239–240
 
 ## Karteikarte
-vorne: Welche Bausteine entstehen am Ende der Eiweißverdauung?
+vorne: Welche Bausteine entstehen am Ende der Proteinverdauung?
 hinten: Aminosäuren (und sehr kurze Ketten aus zwei oder drei Aminosäuren).
 quelle: i-care S. 240
 
 ## Karteikarte
-vorne: Warum bildet das Pankreas seine eiweißspaltenden Enzyme zunächst als inaktive Vorstufen?
-hinten: Damit sich die Bauchspeicheldrüse nicht selbst verdaut. Erst im Dünndarm werden die Enzyme aktiv.
+vorne: Warum bildet das Pankreas seine proteinspaltenden Enzyme zunächst als inaktive Vorstufen?
+hinten: Damit sich das [[Pankreas]] nicht selbst verdaut. Erst im Dünndarm werden die Enzyme aktiv.
 quelle: i-care S. 223; MKK S. 359
 
 ## Karteikarte
@@ -73,7 +73,7 @@ quelle: i-care S. 240
 
 ## Karteikarte
 vorne: Welche Rolle spielen die Gallensäuren bei der Fettverdauung?
-hinten: Sie legen sich um die Fetttröpfchen, verteilen das Fett fein und verpacken die Fettbausteine in [[Mizellen]]. So können die Fette verdaut und aufgenommen werden.
+hinten: Sie legen sich um die Fetttröpfchen, verteilen das Fett fein und verpacken die Fettbausteine in [[Mizellen]]. So können die Fette verdaut und resorbiert werden.
 quelle: i-care S. 240; MKK S. 359
 
 ## Karteikarte
@@ -83,11 +83,11 @@ quelle: MKK S. 359
 
 ## Karteikarte
 vorne: Wie gelangen die meisten Fettbausteine ins Blut?
-hinten: In den Darmzellen werden sie zu Fett-Eiweiß-Tröpfchen ([[Chylomikronen]]) verpackt und über die Lymphe in den Blutkreislauf transportiert.
+hinten: In den Enterozyten werden sie zu Fett-Protein-Tröpfchen ([[Chylomikronen]]) verpackt und über die Lymphe in den Blutkreislauf transportiert.
 quelle: i-care S. 240
 
 ## Karteikarte
-vorne: Wie gelangen Einfachzucker und Aminosäuren nach der Aufnahme weiter?
+vorne: Wie gelangen [[Monosaccharide]] und Aminosäuren nach der Resorption weiter?
 hinten: Mit dem Blut der Pfortader direkt zur Leber.
 quelle: i-care S. 239–240
 
@@ -98,17 +98,17 @@ quelle: i-care S. 240
 
 ## Karteikarte
 vorne: Warum ist der Pankreassaft basisch?
-hinten: Er enthält Bikarbonat. So wird der saure Speisebrei aus dem Magen im Dünndarm neutralisiert.
+hinten: Er enthält Bikarbonat. So wird der saure [[Chymus]] aus dem Magen im Dünndarm neutralisiert.
 quelle: i-care S. 223
 
 ## Karteikarte
-vorne: Wo wird der Speisebrei mit Pankreassaft und Galle vermischt?
-hinten: Im Zwölffingerdarm ([[Duodenum]]).
+vorne: Wo wird der [[Chymus]] mit Pankreassaft und Galle vermischt?
+hinten: Im [[Duodenum]].
 quelle: i-care S. 214
 
 ## Karteikarte
 vorne: Warum schmeckt Brot süßlich, wenn man es lange kaut?
-hinten: Die [[Amylase]] im Speichel spaltet Malzzucker (Maltose) von der Stärke im Brot ab.
+hinten: Die [[Amylase]] im Speichel spaltet [[Maltose]] von der Stärke im Brot ab.
 quelle: i-care S. 197
 
 ## Karteikarte
@@ -128,24 +128,24 @@ quelle: i-care S. 238
 
 ## Single-Choice
 id: verdauung-sc-form
-frage: In welcher Form können Kohlenhydrate aufgenommen werden?
-- [x] als Einfachzucker
-- [ ] als Zweifachzucker
-- [ ] als Vielfachzucker
+frage: In welcher Form können Kohlenhydrate resorbiert werden?
+- [x] als Monosaccharide
+- [ ] als Disaccharide
+- [ ] als Polysaccharide
 quelle: i-care S. 238
 
 ## Single-Choice
 id: verdauung-sc-eiweiss-beginn
-frage: Wo beginnt die Eiweißverdauung?
+frage: Wo beginnt die Proteinverdauung?
 - [x] im Magen
 - [ ] in der Mundhöhle
 - [ ] im Dickdarm
-erklärung: Die Salzsäure des Magensafts verändert die Eiweiße. Der Hauptteil der Eiweißverdauung findet aber im Dünndarm statt.
+erklärung: Die Salzsäure des Magensafts verändert die [[Proteine]]. Der Hauptteil der Proteinverdauung findet aber im Dünndarm statt.
 quelle: i-care S. 239
 
 ## Single-Choice
 id: verdauung-sc-eiweiss-haupt
-frage: Wo findet der Hauptteil der Eiweißverdauung statt?
+frage: Wo findet der Hauptteil der Proteinverdauung statt?
 - [x] im Dünndarm
 - [ ] im Magen
 - [ ] in der Mundhöhle
@@ -179,7 +179,7 @@ quelle: MKK S. 359
 ## Single-Choice
 id: verdauung-sc-pankreassaft
 frage: Wie ist der Pankreassaft beschaffen?
-- [x] basisch – er neutralisiert den sauren Speisebrei
+- [x] basisch – er neutralisiert den sauren Chymus
 - [ ] sehr sauer – wie der Magensaft
 - [ ] fettig – wie die Galle
 quelle: i-care S. 223
@@ -194,7 +194,7 @@ quelle: i-care S. 239
 
 ## Single-Choice
 id: verdauung-sc-leber
-frage: Wohin gelangen Einfachzucker und Aminosäuren zuerst, nachdem sie aufgenommen wurden?
+frage: Wohin gelangen [[Monosaccharide]] und Aminosäuren zuerst, nachdem sie resorbiert wurden?
 - [x] über die Pfortader zur Leber
 - [ ] direkt ins Gehirn
 - [ ] in den Dickdarm
@@ -212,15 +212,15 @@ quelle: i-care S. 238
 id: verdauung-sc-staerke-haeufig
 frage: In welcher Form kommen Kohlenhydrate in der Nahrung am häufigsten vor?
 - [x] als Stärke
-- [ ] als Milchzucker
-- [ ] als Traubenzucker
+- [ ] als Laktose
+- [ ] als Glukose
 quelle: i-care S. 238
 
 <!-- =============================== MULTIPLE-CHOICE =============================== -->
 
 ## Multiple-Choice
 id: verdauung-mc-eiweiss-enzyme
-frage: Welche Enzyme spalten Eiweiße?
+frage: Welche Enzyme spalten [[Proteine]]?
 - [x] Pepsin
 - [x] Trypsin
 - [ ] Amylase
@@ -248,8 +248,8 @@ quelle: i-care S. 240
 
 ## Multiple-Choice
 id: verdauung-mc-pfortader
-frage: Welche Stoffe gelangen nach der Aufnahme über die Pfortader zur Leber?
-- [x] Einfachzucker
+frage: Welche Stoffe gelangen nach der Resorption über die Pfortader zur Leber?
+- [x] Monosaccharide
 - [x] Aminosäuren
 - [ ] Chylomikronen
 erklärung: Chylomikronen gelangen über die Lymphe in den Blutkreislauf.
@@ -258,17 +258,17 @@ quelle: i-care S. 239–240
 ## Multiple-Choice
 id: verdauung-mc-laktose
 frage: Welche Beschwerden können bei einer Laktoseintoleranz auftreten?
-- [x] Blähungen
+- [x] Flatulenz
 - [x] Bauchschmerzen
-- [x] Durchfall
+- [x] Diarrhö
 - [ ] Fieber
 quelle: i-care S. 239
 
 ## Multiple-Choice
 id: verdauung-mc-pankreassaft
 frage: Welche Aussagen zum Pankreassaft stimmen?
-- [x] Er enthält Enzyme für Eiweiße, Kohlenhydrate und Fette.
-- [x] Er neutralisiert den sauren Speisebrei.
+- [x] Er enthält Enzyme für Proteine, Kohlenhydrate und Fette.
+- [x] Er neutralisiert den sauren Chymus.
 - [ ] Er wird in der Gallenblase gespeichert.
 - [ ] Er enthält Salzsäure.
 quelle: i-care S. 223
@@ -279,16 +279,16 @@ quelle: i-care S. 223
 id: verdauung-zu-enzym
 frage: Ordne jedem Enzym zu, was es spaltet.
 - [[Amylase]] => Stärke
-- [[Pepsin]] => Eiweiße
+- [[Pepsin]] => Proteine
 - [[Lipase]] => Fette
-- Laktase => Milchzucker
+- Laktase => Laktose
 quelle: i-care S. 238–240
 
 ## Zuordnung
 id: verdauung-zu-bausteine
 frage: Ordne jedem Nährstoff die Bausteine zu, die am Ende der Verdauung entstehen.
-- Kohlenhydrate => Einfachzucker
-- Eiweiße => Aminosäuren
+- Kohlenhydrate => Monosaccharide
+- Proteine => Aminosäuren
 - Fette => Fettsäuren
 quelle: i-care S. 214
 
@@ -297,7 +297,7 @@ id: verdauung-zu-organe
 frage: Ordne jedem Verdauungssaft das Organ zu, das ihn bildet.
 - Speichel => Speicheldrüsen
 - Magensaft => Magen
-- Pankreassaft => Bauchspeicheldrüse
+- Pankreassaft => Pankreas
 - Galle => Leber
 quelle: i-care S. 188, 209
 
@@ -307,17 +307,17 @@ quelle: i-care S. 188, 209
 id: verdauung-rf-staerke
 frage: Bring die Schritte der Stärkeverdauung in die richtige Reihenfolge.
 1. Die Amylase im Speichel beginnt, Stärke zu spalten.
-2. Die Amylase des Pankreassafts spaltet die Stärke im Dünndarm in Zweifachzucker.
-3. Enzyme der Darmschleimhaut spalten die Zweifachzucker in Einfachzucker.
-4. Die Einfachzucker gelangen mit dem Pfortaderblut zur Leber.
+2. Die Amylase des Pankreassafts spaltet die Stärke im Dünndarm in Disaccharide.
+3. Enzyme der Darmmukosa spalten die Disaccharide in Monosaccharide.
+4. Die Monosaccharide gelangen mit dem Pfortaderblut zur Leber.
 quelle: i-care S. 238–239
 
 ## Reihenfolge
 id: verdauung-rf-eiweiss
-frage: Bring die Schritte der Eiweißverdauung in die richtige Reihenfolge.
-1. Die Salzsäure des Magens verändert die Struktur der Eiweiße.
-2. Pepsin beginnt im Magen, die Eiweiße zu spalten.
-3. Enzyme aus dem Pankreas spalten die Eiweiße im Dünndarm weiter.
+frage: Bring die Schritte der Proteinverdauung in die richtige Reihenfolge.
+1. Die Salzsäure des Magens verändert die Struktur der Proteine.
+2. Pepsin beginnt im Magen, die Proteine zu spalten.
+3. Enzyme aus dem Pankreas spalten die Proteine im Dünndarm weiter.
 4. Die Aminosäuren gelangen über die Pfortader zur Leber.
 quelle: i-care S. 239–240
 
@@ -334,12 +334,12 @@ quelle: i-care S. 240
 
 ## Lückentext
 id: verdauung-lt-zucker
-text: Stärke wird von der {{Amylase}} gespalten. Kohlenhydrate können nur als {{Einfachzucker|Monosaccharide}} aufgenommen werden.
+text: Stärke wird von der {{Amylase}} gespalten. Kohlenhydrate können nur als {{Monosaccharide|Einfachzucker}} resorbiert werden.
 quelle: i-care S. 238
 
 ## Lückentext
 id: verdauung-lt-eiweiss
-text: Im Magen verändert die {{Salzsäure|HCl}} die Struktur der Eiweiße. Danach beginnt das Enzym {{Pepsin}}, die Eiweiße zu spalten.
+text: Im Magen verändert die {{Salzsäure|HCl}} die Struktur der Proteine. Danach beginnt das Enzym {{Pepsin}}, die Proteine zu spalten.
 quelle: i-care S. 239
 
 ## Lückentext
@@ -354,14 +354,14 @@ id: verdauung-op-pommes
 operator: beschreiben
 afb: I
 fall: Robartina isst in der Mittagspause Pommes und trinkt eine Cola. Alaa fragt: „Was passiert eigentlich mit der Stärke aus den Kartoffeln in deinem Körper?“
-auftrag: Beschreibe, wie die Stärke aus den Pommes verdaut und aufgenommen wird.
+auftrag: Beschreibe, wie die Stärke aus den Pommes verdaut und resorbiert wird.
 mindestlänge: 300
 kriterien:
 - Ich beschreibe, dass die Amylase im Mund beginnt, die Stärke zu spalten.
 - Ich beschreibe, dass die Amylase des Pankreassafts im Dünndarm den Hauptteil übernimmt.
-- Ich beschreibe, dass Enzyme der Darmschleimhaut die Zweifachzucker in Einfachzucker spalten.
-- Ich beschreibe den Weg der Einfachzucker über das Pfortaderblut zur Leber.
-musterlösung: **Stärke** ist ein Vielfachzucker. Die **Amylase** des Mundspeichels beginnt, sie zu spalten; wichtiger ist aber die Amylase des **Pankreassafts** im Dünndarm. Sie spaltet die Stärke in den Zweifachzucker Maltose. Enzyme am **Bürstensaum** der Dünndarmschleimhaut spalten die Maltose in **Glukose**, einen Einfachzucker. Die Einfachzucker werden in die Darmzellen aufgenommen und gelangen mit dem **Pfortaderblut** direkt zur **Leber**.
+- Ich beschreibe, dass Enzyme der Darmmukosa die Disaccharide in Monosaccharide spalten.
+- Ich beschreibe den Weg der Monosaccharide über das Pfortaderblut zur Leber.
+musterlösung: **Stärke** ist ein Polysaccharid. Die **Amylase** des Mundspeichels beginnt, sie zu spalten; wichtiger ist aber die Amylase des **Pankreassafts** im Dünndarm. Sie spaltet die Stärke in das Disaccharid Maltose. Enzyme am **Bürstensaum** der Dünndarmmukosa spalten die Maltose in **Glukose**, ein Monosaccharid. Die Monosaccharide werden in die Enterozyten resorbiert und gelangen mit dem **Pfortaderblut** direkt zur **Leber**.
 quelle: i-care S. 238–239
 
 ## Operator
@@ -376,7 +376,7 @@ kriterien:
 - Ich erkläre, dass die Gallensäuren die Fette fein verteilen.
 - Ich erkläre, dass die Lipasen die Fette dadurch besser spalten können.
 - Ich leite ab, dass bei Gallenmangel Fett schlechter verdaut wird und mit dem Stuhl ausgeschieden wird.
-musterlösung: Fette sind **nicht wasserlöslich** und klumpen zusammen. Dort erreichen die Verdauungsenzyme sie nur schlecht. Die **Gallensäuren** verbinden sich sowohl mit Wasser als auch mit Fett und verteilen die Fette deshalb sehr fein. Dabei entstehen winzige Teilchen (**Mizellen**). So können die fettspaltenden **Lipasen** gut angreifen, und die Fettbausteine können von der Darmschleimhaut aufgenommen werden. Fehlt die Galle, z. B. bei einer Abflussstörung, werden die Fette schlechter verdaut und aufgenommen. Das Fett bleibt im Darm und wird mit dem Stuhl ausgeschieden – es entstehen **Fettstühle**.
+musterlösung: Fette sind **nicht wasserlöslich** und klumpen zusammen. Dort erreichen die Verdauungsenzyme sie nur schlecht. Die **Gallensäuren** verbinden sich sowohl mit Wasser als auch mit Fett und verteilen die Fette deshalb sehr fein. Dabei entstehen winzige Teilchen (**Mizellen**). So können die fettspaltenden **Lipasen** gut angreifen, und die Fettbausteine können von der Darmmukosa resorbiert werden. Fehlt die Galle, z. B. bei einer Abflussstörung, werden die Fette schlechter verdaut und resorbiert. Das Fett bleibt im Darm und wird mit dem Stuhl ausgeschieden – es entstehen **Fettstühle**.
 quelle: i-care S. 240; MKK S. 359, 362
 
 ## Operator
@@ -388,8 +388,8 @@ auftrag: Beurteile Alaas Aussage auf der Grundlage der Informationen im Buch.
 mindestlänge: 350
 kriterien:
 - Ich erkläre die Ursache der Laktoseintoleranz (zu wenig Laktase).
-- Ich erkläre, warum Beschwerden entstehen (Milchzucker gelangt unverdaut in den Dickdarm).
+- Ich erkläre, warum Beschwerden entstehen (Laktose gelangt unverdaut in den Dickdarm).
 - Ich nenne lange gereiften Käse sowie Schaf- und Ziegenmilch als besser verträglich.
 - Ich komme zu einem begründeten Urteil über Alaas Aussage.
-musterlösung: Bei einer Laktoseintoleranz wird zu wenig oder **keine Laktase** gebildet. Der Milchzucker (Laktose) kann deshalb nicht gespalten werden. Er gelangt **unverdaut in den Dickdarm** und wird dort von Bakterien abgebaut. Das verursacht Blähungen, Bauchschmerzen und Durchfall. Laut Buch müssen Betroffene aber **nicht komplett auf Milchprodukte verzichten**: **Lange gereifter Käse** enthält meist keinen oder nur wenig Milchzucker, und **Schaf- und Ziegenmilch** sind oft besser verträglich als Kuhmilch. **Urteil:** Alaas Aussage ist zu streng. Er sollte laktosereiche Produkte meiden, kann aber laktosearme Milchprodukte oft vertragen.
+musterlösung: Bei einer Laktoseintoleranz wird zu wenig oder **keine Laktase** gebildet. Die Laktose kann deshalb nicht gespalten werden. Sie gelangt **unverdaut in den Dickdarm** und wird dort von Bakterien abgebaut. Das verursacht Flatulenz, Bauchschmerzen und Diarrhö. Laut Buch müssen Betroffene aber **nicht komplett auf Milchprodukte verzichten**: **Lange gereifter Käse** enthält meist keinen oder nur wenig Laktose, und **Schaf- und Ziegenmilch** sind oft besser verträglich als Kuhmilch. **Urteil:** Alaas Aussage ist zu streng. Er sollte laktosereiche Produkte meiden, kann aber laktosearme Milchprodukte oft vertragen.
 quelle: i-care S. 238–239

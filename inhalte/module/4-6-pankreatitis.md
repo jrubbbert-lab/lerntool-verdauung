@@ -5,7 +5,7 @@ block: 4
 nr: 6
 organ: pankreas
 quellen: MKK S. 367; i-care S. 222
-beschreibung: Entzündung der Bauchspeicheldrüse.
+beschreibung: Entzündung des Pankreas.
 icon: pankreas
 farbe: #6C887C
 

@@ -9,7 +9,7 @@
 -->
 
 modul: verdauung
-einleitung: Robartina frühstückt vor ihrer Frühschicht ein Brötchen mit Butter und Ei. Das Brötchen liefert vor allem **Stärke**, die Butter **Fett** und das Ei **Eiweiß**. Begleite einen dieser Nährstoffe auf seiner Reise durch den Verdauungstrakt und entscheide an jeder Station, was passiert.
+einleitung: Robartina frühstückt vor ihrer Frühschicht ein Brötchen mit Butter und Ei. Das Brötchen liefert vor allem **Stärke**, die Butter **Fett** und das Ei **Protein**. Begleite einen dieser Nährstoffe auf seiner Reise durch den Verdauungstrakt und entscheide an jeder Station, was passiert.
 
 <!-- ============================== STÄRKE ============================== -->
 
@@ -36,8 +36,8 @@ quelle: MKK S. 355, 361
 ## Station
 nährstoff: Stärke aus dem Brötchen
 ort: Dünndarm
-frage: Im Zwölffingerdarm kommt der Pankreassaft dazu. Was geschieht jetzt mit der Stärke?
-- [x] Die Amylase des Pankreassafts spaltet die Stärke in den Zweifachzucker Maltose.
+frage: Im [[Duodenum]] kommt der Pankreassaft dazu. Was geschieht jetzt mit der Stärke?
+- [x] Die Amylase des Pankreassafts spaltet die Stärke in das Disaccharid Maltose.
 - [ ] Das Trypsin spaltet die Stärke in Oligopeptide.
 - [ ] Die Laktase spaltet die Stärke in Galaktose.
 erklärung: Die Kohlenhydratverdauung durch die Amylase des Pankreassafts ist wesentlich wichtiger als die im Mund.
@@ -50,7 +50,7 @@ frage: Die Maltose kommt mit dem Bürstensaum des Dünndarmepithels in Kontakt. 
 - [x] Die Maltase spaltet die Maltose in zwei Glukosemoleküle.
 - [ ] Die Saccharase spaltet die Maltose in Glukose und Fruktose.
 - [ ] Die Maltose wird unverändert resorbiert.
-erklärung: Vom Dünndarmepithel können nur Einfachzucker aufgenommen werden.
+erklärung: Vom Dünndarmepithel können nur [[Monosaccharide]] resorbiert werden.
 quelle: i-care S. 238
 
 ## Station
@@ -60,33 +60,33 @@ frage: Wie geht es für die Glukose weiter?
 - [x] Transportproteine nehmen sie in die Enterozyten auf; mit dem Pfortaderblut gelangt sie zur Leber.
 - [ ] Sie wird in Chylomikronen verpackt und ins Lymphsystem abgegeben.
 - [ ] Sie bleibt im Darm und wird mit dem Stuhl ausgeschieden.
-erklärung: Einfachzucker können frei im Blut transportiert werden.
+erklärung: [[Monosaccharide]] können frei im Blut transportiert werden.
 quelle: i-care S. 239
 
 <!-- ============================== EIWEISS ============================== -->
 
 ## Station
-nährstoff: Eiweiß aus dem Ei
+nährstoff: Protein aus dem Ei
 ort: Mundhöhle
-frage: Robartina kaut das Ei. Wo beginnt die Verdauung des Eiweißes?
+frage: Robartina kaut das Ei. Wo beginnt die Verdauung des Proteins?
 - [x] erst im Magen
 - [ ] schon im Mund durch die Amylase
 - [ ] erst im Dickdarm
-erklärung: Der erste Schritt der Eiweißverdauung findet im Magen statt.
+erklärung: Der erste Schritt der Proteinverdauung findet im Magen statt.
 quelle: i-care S. 239
 
 ## Station
-nährstoff: Eiweiß aus dem Ei
+nährstoff: Protein aus dem Ei
 ort: Magen: Salzsäure
-frage: Was macht die Salzsäure des Magensafts mit dem Eiweiß?
+frage: Was macht die Salzsäure des Magensafts mit dem Protein?
 - [x] Sie denaturiert es: Seine räumliche Struktur wird zerstört, sodass Enzyme es leichter angreifen können.
 - [ ] Sie spaltet es vollständig in Aminosäuren.
 - [ ] Sie verpackt es in Mizellen.
-erklärung: Beim gekochten Ei ist das Eiweiß schon teilweise denaturiert – Proteine verändern ihre Struktur auch bei der Zubereitung, z. B. durch Kochen.
+erklärung: Beim gekochten Ei ist das Protein schon teilweise denaturiert – Proteine verändern ihre Struktur auch bei der Zubereitung, z. B. durch Kochen.
 quelle: i-care S. 209, 239
 
 ## Station
-nährstoff: Eiweiß aus dem Ei
+nährstoff: Protein aus dem Ei
 ort: Magen: Enzym
 frage: Welches Enzym greift im Magen die denaturierten Proteine an?
 - [x] Pepsin, das durch die Magensäure aus Pepsinogen entsteht
@@ -96,16 +96,16 @@ erklärung: Die Proteinverdauung durch Pepsin im Magen ist insgesamt weniger wic
 quelle: i-care S. 209, 239
 
 ## Station
-nährstoff: Eiweiß aus dem Ei
+nährstoff: Protein aus dem Ei
 ort: Dünndarm
-frage: Der Speisebrei erreicht den Dünndarm. Was passiert jetzt mit dem Eiweiß?
+frage: Der [[Chymus]] erreicht den Dünndarm. Was passiert jetzt mit dem Protein?
 - [x] Pepsin wird durch den hohen pH-Wert des Pankreassafts inaktiviert; die Proteasen des Pankreas spalten die Proteine in Oligopeptide.
 - [ ] Pepsin arbeitet im Dünndarm am stärksten weiter.
 - [ ] Die Gallensäuren spalten die Proteine in Aminosäuren.
 quelle: i-care S. 240
 
 ## Station
-nährstoff: Eiweiß aus dem Ei
+nährstoff: Protein aus dem Ei
 ort: Bürstensaum
 frage: Die Oligopeptide gelangen an den Bürstensaum. Was passiert dort?
 - [x] Oligopeptidasen zerlegen sie in Aminosäuren, Di- und Tripeptide.
@@ -114,7 +114,7 @@ frage: Die Oligopeptide gelangen an den Bürstensaum. Was passiert dort?
 quelle: i-care S. 240
 
 ## Station
-nährstoff: Eiweiß aus dem Ei
+nährstoff: Protein aus dem Ei
 ort: Blut
 frage: Wie geht es für die Aminosäuren weiter?
 - [x] Sie werden ins Blut abgegeben und über die Pfortader zur Leber transportiert.
@@ -129,7 +129,7 @@ quelle: i-care S. 240
 nährstoff: Fett aus der Butter
 ort: Mund und Magen
 frage: Wie wird das Fett aus der Butter auf die Verdauung vorbereitet?
-- [x] Durch das Kauen und die Bewegungen der Magenwand wird es fein im Nahrungsbrei verteilt (emulgiert).
+- [x] Durch das Kauen und die Bewegungen der Magenwand wird es fein im Chymus verteilt (emulgiert).
 - [ ] Die Salzsäure macht es wasserlöslich.
 - [ ] Die Amylase spaltet es schon im Mund vollständig.
 erklärung: Fette sind nicht wasserlöslich und klumpen sonst zusammen – dann erreichen die Enzyme sie nur schlecht.
@@ -158,7 +158,7 @@ quelle: i-care S. 240
 nährstoff: Fett aus der Butter
 ort: Dünndarm: Enzym
 frage: Welches Enzym spaltet den größten Teil der Nahrungsfette?
-- [x] die Lipase aus der Bauchspeicheldrüse (Pankreaslipase)
+- [x] die Lipase aus dem Pankreas (Pankreaslipase)
 - [ ] die Magenlipase
 - [ ] die Laktase
 erklärung: Die Pankreaslipase spaltet den größten Teil der Fette, die Magenlipase nur einen kleinen Teil.

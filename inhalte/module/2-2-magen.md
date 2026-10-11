@@ -4,7 +4,7 @@ id: magen
 block: 2
 nr: 2
 quellen: i-care S. 205–210; MKK S. 353–357
-beschreibung: Magensaft, Magenschleimhaut und Magenentleerung.
+beschreibung: Magensaft, Magenmukosa und Magenentleerung.
 icon: magen
 farbe: #2A473B
 
@@ -23,7 +23,7 @@ quelle: i-care S. 205
 
 ## Karteikarte
 vorne: Welche Aufgaben hat der Magen?
-hinten: Er vermischt die Nahrung mit Magensaft zum Speisebrei ([[Chymus]]), speichert ihn und gibt ihn portionsweise an den Dünndarm ab. Der saure Magensaft tötet außerdem Keime ab.
+hinten: Er vermischt die Nahrung mit Magensaft zum [[Chymus]], speichert ihn und gibt ihn portionsweise an den Dünndarm ab. Der saure Magensaft tötet außerdem Keime ab.
 quelle: i-care S. 205
 
 ## Karteikarte
@@ -33,22 +33,22 @@ quelle: i-care S. 205
 
 ## Karteikarte
 vorne: Nenne die Abschnitte des Magens.
-hinten: [[Kardia]] (Mageneingang), [[Fundus]] (Magengrund), [[Korpus]] (Magenkörper), [[Antrum]] und [[Pylorus]] (Magenpförtner).
+hinten: [[Kardia]], [[Fundus]], [[Korpus]], [[Antrum]] und [[Pylorus]].
 quelle: MKK S. 354; i-care S. 205
 
 ## Karteikarte
 vorne: Was ist der [[Pylorus]]?
-hinten: Der Magenpförtner. Hier sitzt ein Schließmuskel, der den Magen zum Dünndarm hin verschließt.
+hinten: Der Magenpförtner, also der Ausgang des Magens. Hier sitzt ein [[Sphinkter]], der den Magen zum Dünndarm hin verschließt.
 quelle: i-care S. 205; MKK S. 359
 
 ## Karteikarte
-vorne: Warum bildet die Magenschleimhaut Falten?
+vorne: Warum bildet die Magenmukosa Falten?
 hinten: Die Falten ermöglichen, dass sich die Magenwand dehnen kann. Im gefüllten Magen sind sie verstrichen.
 quelle: i-care S. 207
 
 ## Karteikarte
 vorne: Was ist das Besondere an der Muskelschicht des Magens?
-hinten: Sie besteht aus drei Schichten. So kann sich der Magen vielfältig zusammenziehen und den Speisebrei gut durchmischen.
+hinten: Sie besteht aus drei Schichten. So kann sich der Magen vielfältig zusammenziehen und den [[Chymus]] gut durchmischen.
 quelle: MKK S. 354
 
 ## Karteikarte
@@ -58,7 +58,7 @@ quelle: i-care S. 207
 
 ## Karteikarte
 vorne: Was bilden die Hauptzellen der Magendrüsen?
-hinten: [[Pepsinogen]], die Vorstufe des eiweißspaltenden Enzyms Pepsin.
+hinten: [[Pepsinogen]], die Vorstufe des proteinspaltenden Enzyms Pepsin.
 quelle: i-care S. 207
 
 ## Karteikarte
@@ -73,17 +73,17 @@ quelle: i-care S. 205, 209
 
 ## Karteikarte
 vorne: Welche Aufgaben hat die Salzsäure im Magen?
-hinten: Sie wandelt [[Pepsinogen]] in [[Pepsin]] um, verändert die Struktur der Eiweiße ([[Denaturierung]]) und wirkt gegen Bakterien.
+hinten: Sie wandelt [[Pepsinogen]] in [[Pepsin]] um, verändert die Struktur der [[Proteine]] ([[Denaturierung]]) und wirkt gegen Bakterien.
 quelle: i-care S. 209
 
 ## Karteikarte
 vorne: Warum verdaut sich der Magen nicht selbst?
-hinten: Ein zäher Schleimfilm kleidet den Magen aus und schützt die Schleimhaut vor Salzsäure und Pepsin.
+hinten: Ein zäher Schleimfilm kleidet den Magen aus und schützt die [[Mukosa]] vor Salzsäure und Pepsin.
 quelle: MKK S. 355
 
 ## Karteikarte
 vorne: Wofür wird der Intrinsic Factor gebraucht?
-hinten: Für die Aufnahme von Vitamin B12 aus der Nahrung.
+hinten: Für die Resorption von Vitamin B12 aus der Nahrung.
 quelle: i-care S. 207
 
 ## Karteikarte
@@ -97,13 +97,13 @@ hinten: Fettreiche Speisen. Kohlenhydratreiche Speisen verlassen den Magen am sc
 quelle: MKK S. 355
 
 ## Karteikarte
-vorne: Wie gelangt der Speisebrei aus dem Magen in den Dünndarm?
-hinten: Portionsweise: Wellenbewegungen laufen zum Magenausgang, der Pylorus öffnet sich kurz und eine kleine Menge tritt in den Zwölffingerdarm über.
+vorne: Wie gelangt der [[Chymus]] aus dem Magen in den Dünndarm?
+hinten: Portionsweise: Wellenbewegungen laufen zum [[Pylorus]], der Pylorus öffnet sich kurz und eine kleine Menge tritt in das [[Duodenum]] über.
 quelle: i-care S. 209
 
 ## Karteikarte
 vorne: Wie wirken Protonenpumpenhemmer?
-hinten: Sie sorgen dafür, dass weniger Salzsäure gebildet wird. Dadurch wird die Magenschleimhaut geschont.
+hinten: Sie sorgen dafür, dass weniger Salzsäure gebildet wird. Dadurch wird die Magenmukosa geschont.
 quelle: i-care S. 209
 
 ## Karteikarte
@@ -112,7 +112,7 @@ hinten: Das Bakterium Helicobacter pylori.
 quelle: i-care S. 209
 
 ## Karteikarte
-vorne: Wo findet die Aufnahme der Nährstoffe (Resorption) hauptsächlich statt – im Magen oder im Dünndarm?
+vorne: Wo findet die [[Resorption]] der Nährstoffe hauptsächlich statt – im Magen oder im Dünndarm?
 hinten: Im Dünndarm. Der Magen bereitet die Nahrung vor und gibt sie portionsweise weiter.
 quelle: i-care S. 205, 210
 
@@ -167,7 +167,7 @@ frage: Was bewirken Protonenpumpenhemmer?
 - [x] Es wird weniger Salzsäure gebildet.
 - [ ] Es wird mehr Salzsäure gebildet.
 - [ ] Der Magen entleert sich schneller.
-erklärung: Dadurch wird die Magenschleimhaut geschont, z. B. bei einer Magenschleimhautentzündung.
+erklärung: Dadurch wird die Magenmukosa geschont, z. B. bei einer [[Gastritis]].
 quelle: i-care S. 209
 
 ## Single-Choice
@@ -199,8 +199,8 @@ quelle: MKK S. 355
 ## Single-Choice
 id: magen-sc-intrinsic
 frage: Wofür ist der Intrinsic Factor notwendig?
-- [x] für die Aufnahme von Vitamin B12
-- [ ] für die Aufnahme von Vitamin C
+- [x] für die Resorption von Vitamin B12
+- [ ] für die Resorption von Vitamin C
 - [ ] für die Bildung des Magenschleims
 quelle: i-care S. 207
 
@@ -214,10 +214,10 @@ quelle: i-care S. 209
 
 ## Single-Choice
 id: magen-sc-falten
-frage: Wozu dienen die Falten der Magenschleimhaut?
+frage: Wozu dienen die Falten der Magenmukosa?
 - [x] Sie ermöglichen die Dehnung der Magenwand.
 - [ ] Sie bilden die Salzsäure.
-- [ ] Sie nehmen die Nährstoffe auf.
+- [ ] Sie resorbieren die Nährstoffe.
 quelle: i-care S. 207
 
 <!-- =============================== MULTIPLE-CHOICE =============================== -->
@@ -226,7 +226,7 @@ quelle: i-care S. 207
 id: magen-mc-salzsaeure
 frage: Welche Aufgaben hat die Salzsäure des Magensafts?
 - [x] Sie wandelt Pepsinogen in Pepsin um.
-- [x] Sie verändert die Struktur der Eiweiße.
+- [x] Sie verändert die Struktur der Proteine.
 - [x] Sie wirkt gegen Bakterien.
 - [ ] Sie spaltet Fette.
 quelle: i-care S. 209
@@ -234,12 +234,12 @@ quelle: i-care S. 209
 ## Multiple-Choice
 id: magen-mc-aufgaben
 frage: Welche Aufgaben hat der Magen?
-- [x] Er vermischt die Nahrung mit Magensaft zum Speisebrei.
-- [x] Er speichert den Speisebrei und gibt ihn portionsweise weiter.
+- [x] Er vermischt die Nahrung mit Magensaft zum Chymus.
+- [x] Er speichert den Chymus und gibt ihn portionsweise weiter.
 - [x] Sein saurer Magensaft tötet Keime ab.
 - [ ] Er bildet die Galle.
-- [ ] Er nimmt den Großteil der Nährstoffe ins Blut auf.
-erklärung: Die Galle bildet die Leber, die Nährstoffe werden hauptsächlich im Dünndarm aufgenommen.
+- [ ] Er resorbiert den Großteil der Nährstoffe.
+erklärung: Die Galle bildet die Leber, die Nährstoffe werden hauptsächlich im Dünndarm resorbiert.
 quelle: i-care S. 205, 210
 
 ## Multiple-Choice
@@ -254,10 +254,10 @@ quelle: MKK S. 354–355
 
 ## Multiple-Choice
 id: magen-mc-schutz
-frage: Was schützt die Magenschleimhaut vor der Selbstverdauung?
+frage: Was schützt die Magenmukosa vor der Selbstverdauung?
 - [x] ein zäher Schleimfilm
 - [x] Bikarbonat im Schleim, das die Säure abpuffert
-- [x] eine gute Durchblutung der Schleimhaut
+- [x] eine gute Durchblutung der Mukosa
 - [ ] besonders viel Pepsin
 quelle: MKK S. 355
 
@@ -267,7 +267,7 @@ frage: Was kann die Entstehung eines Magengeschwürs begünstigen?
 - [x] eine Besiedlung mit Helicobacter pylori
 - [x] Rauchen
 - [x] Stress
-- [ ] eine gute Durchblutung der Schleimhaut
+- [ ] eine gute Durchblutung der Mukosa
 erklärung: Eine gute Durchblutung schützt vor Geschwüren.
 quelle: MKK S. 356
 
@@ -278,7 +278,7 @@ frage: Welche Beschwerden zählen zu den typischen Magenbeschwerden (Dyspepsie)?
 - [x] Sodbrennen
 - [x] Übelkeit
 - [ ] Fieber
-- [ ] Durchfall
+- [ ] Diarrhö
 quelle: MKK S. 355
 
 <!-- =============================== ZUORDNUNG =============================== -->
@@ -305,36 +305,36 @@ id: magen-zu-begriffe
 frage: Ordne jedem Begriff seine Bedeutung zu.
 - [[Gaster]] => Magen
 - [[Chymus]] => Speisebrei
-- [[Denaturierung]] => Strukturveränderung der Eiweiße
+- [[Denaturierung]] => Strukturveränderung der Proteine
 quelle: i-care S. 205, 209
 
 <!-- =============================== REIHENFOLGE =============================== -->
 
 ## Reihenfolge
 id: magen-rf-weg
-frage: Bring die Stationen in die Reihenfolge, die der Speisebrei durchläuft.
-1. Speiseröhre
+frage: Bring die Stationen in die Reihenfolge, die der [[Chymus]] durchläuft.
+1. Ösophagus
 2. [[Kardia]]
 3. [[Korpus]]
 4. [[Pylorus]]
-5. Zwölffingerdarm
+5. Duodenum
 quelle: MKK S. 354
 
 ## Reihenfolge
 id: magen-rf-entleerung
 frage: Bring die Vorgänge vom Essen bis zur Magenentleerung in die richtige Reihenfolge.
-1. Der Speisebrei gelangt nach dem Schlucken in den Magen.
+1. Der Chymus gelangt nach dem Schlucken in den Magen.
 2. Die Magenwand erschlafft und macht Platz für die Nahrung.
-3. Wellenbewegungen durchmischen den Speisebrei.
-4. Der Pylorus öffnet sich kurz, eine kleine Portion tritt in den Zwölffingerdarm über.
+3. Wellenbewegungen durchmischen den Chymus.
+4. Der Pylorus öffnet sich kurz, eine kleine Portion tritt in das Duodenum über.
 quelle: MKK S. 355
 
 ## Reihenfolge
 id: magen-rf-eiweiss
-frage: Was passiert mit dem Eiweiß im Magen? Bring die Schritte in die richtige Reihenfolge.
+frage: Was passiert mit dem Protein im Magen? Bring die Schritte in die richtige Reihenfolge.
 1. Die Hauptzellen geben Pepsinogen ab.
 2. Die Salzsäure wandelt Pepsinogen in Pepsin um.
-3. Pepsin spaltet die Eiweiße.
+3. Pepsin spaltet die Proteine.
 quelle: i-care S. 207, 209
 
 <!-- =============================== LÜCKENTEXT =============================== -->
@@ -351,7 +351,7 @@ quelle: i-care S. 205
 
 ## Lückentext
 id: magen-lt-chymus
-text: Im Magen wird die Nahrung mit dem Magensaft zum Speisebrei vermischt. Erreicht eine Welle den Magenausgang, öffnet sich der Schließmuskel kurz, und eine kleine Menge gelangt in den {{Zwölffingerdarm|Duodenum}}. Größere Nahrungsbestandteile werden im Magen {{zurückgehalten|zurück gehalten}}.
+text: Im Magen wird die Nahrung mit dem Magensaft zum Chymus vermischt. Erreicht eine Welle den Pylorus, öffnet sich der Sphinkter kurz, und eine kleine Menge gelangt in das {{Duodenum|Zwölffingerdarm}}. Größere Nahrungsbestandteile werden im Magen {{zurückgehalten|zurück gehalten}}.
 quelle: i-care S. 209
 
 <!-- =============================== OPERATOREN =============================== -->
@@ -360,7 +360,7 @@ quelle: i-care S. 209
 id: magen-op-schleimhaut
 operator: beschreiben
 afb: I
-fall: Robartina hospitiert in der Endoskopie. Frau Abda zeigt ihr auf dem Bildschirm die Magenschleimhaut eines Patienten. Alaa fragt später: „Was machen eigentlich die ganzen Drüsen in der Magenschleimhaut?“
+fall: Robartina hospitiert in der Endoskopie. Frau Abda zeigt ihr auf dem Bildschirm die Magenmukosa eines Patienten. Alaa fragt später: „Was machen eigentlich die ganzen Drüsen in der Magenmukosa?“
 auftrag: Beschreibe für Alaa, welche Zellarten die Magendrüsen enthalten und was sie jeweils bilden.
 mindestlänge: 250
 kriterien:
@@ -368,23 +368,23 @@ kriterien:
 - Ich nenne die Hauptzellen und das Pepsinogen.
 - Ich nenne die Nebenzellen und den schützenden Schleim.
 - Ich verwende die Fachbegriffe korrekt.
-musterlösung: Die Magendrüsen bestehen aus verschiedenen Zellarten. Die **Belegzellen** bilden die Salzsäure, die den Magensaft sauer macht, und den Intrinsic Factor, der für die Aufnahme von Vitamin B12 nötig ist. Die **Hauptzellen** bilden Pepsinogen, die Vorstufe des eiweißspaltenden Pepsins. Die **Nebenzellen** stellen den schützenden Schleim her.
+musterlösung: Die Magendrüsen bestehen aus verschiedenen Zellarten. Die **Belegzellen** bilden die Salzsäure, die den Magensaft sauer macht, und den Intrinsic Factor, der für die Resorption von Vitamin B12 nötig ist. Die **Hauptzellen** bilden Pepsinogen, die Vorstufe des proteinspaltenden Pepsins. Die **Nebenzellen** stellen den schützenden Schleim her.
 quelle: i-care S. 207
 
 ## Operator
 id: magen-op-selbstschutz
 operator: erläutern
 afb: II
-fall: Ein Patient fragt Robartina beim Frühstück: „Wenn im Magen so starke Säure ist, dass sie sogar Eiweiße zerlegt – warum verdaut sich mein Magen dann nicht selbst?“ Robartina möchte ihm eine fachlich richtige Antwort geben.
-auftrag: Erläutere, wie sich die Magenschleimhaut vor Salzsäure und Pepsin schützt.
+fall: Ein Patient fragt Robartina beim Frühstück: „Wenn im Magen so starke Säure ist, dass sie sogar Proteine zerlegt – warum verdaut sich mein Magen dann nicht selbst?“ Robartina möchte ihm eine fachlich richtige Antwort geben.
+auftrag: Erläutere, wie sich die Magenmukosa vor Salzsäure und Pepsin schützt.
 mindestlänge: 350
 kriterien:
 - Ich nenne den zähen Schleim als Schutzfilm.
 - Ich nenne die Zellen, die den Schleim bilden.
 - Ich erkläre, dass das Bikarbonat im Schleim die Säure abpuffert.
-- Ich erkläre, dass Salzsäure und Pepsin die Schleimhaut sonst angreifen würden (Selbstverdauung).
+- Ich erkläre, dass Salzsäure und Pepsin die Mukosa sonst angreifen würden (Selbstverdauung).
 - Ich nenne die ausreichende Durchblutung als Voraussetzung.
-musterlösung: Der Magensaft enthält Salzsäure und das eiweißspaltende Pepsin. Beide würden auch die Zellen der Magenschleimhaut angreifen. Davor schützt ein zäher **Magenschleim**, den die Oberflächenzellen und besonders die **Nebenzellen** bilden. Er bildet einen geschlossenen Film, der den ganzen Magen auskleidet. Im Schleim befindet sich **Bikarbonat**, das die Säure abpuffert. So wird eine **Selbstverdauung** verhindert. Voraussetzung ist neben der intakten Schleimschicht eine **ausreichende Durchblutung** der Schleimhaut.
+musterlösung: Der Magensaft enthält Salzsäure und das proteinspaltende Pepsin. Beide würden auch die Zellen der Magenmukosa angreifen. Davor schützt ein zäher **Magenschleim**, den die Oberflächenzellen und besonders die **Nebenzellen** bilden. Er bildet einen geschlossenen Film, der den ganzen Magen auskleidet. Im Schleim befindet sich **Bikarbonat**, das die Säure abpuffert. So wird eine **Selbstverdauung** verhindert. Voraussetzung ist neben der intakten Schleimschicht eine **ausreichende Durchblutung** der Mukosa.
 quelle: MKK S. 354–355
 
 ## Operator
@@ -400,7 +400,7 @@ kriterien:
 - Ich nenne Rauchen und bestimmte Schmerzmittel als weitere Faktoren, die ein Geschwür begünstigen.
 - Ich nenne die Behandlung gegen Helicobacter (Protonenpumpenhemmer plus zwei Antibiotika).
 - Ich komme zu einem begründeten Urteil und beziehe mich auf Herrn S.
-musterlösung: Ein Protonenpumpenhemmer sorgt dafür, dass weniger Salzsäure gebildet wird. Die Schleimhaut wird geschont und kann besser abheilen. Ein Geschwür entsteht aber durch ein Ungleichgewicht zwischen schädigenden Faktoren und dem Schutz der Schleimhaut. Bei Herrn S. liegen mehrere schädigende Faktoren vor: Er ist mit **Helicobacter pylori** besiedelt, er **raucht** und nimmt regelmäßig **Schmerzmittel**, die ein Geschwür begünstigen können (nichtsteroidale Antiphlogistika). Bei Helicobacter wird eine Behandlung mit einem Protonenpumpenhemmer **und zwei Antibiotika** durchgeführt. Außerdem sollen auslösende Medikamente und Zigaretten abgesetzt werden. **Urteil:** Der Säureblocker allein reicht nicht aus. Herr S. braucht zusätzlich die Antibiotika und sollte auf das Rauchen und die Schmerzmittel verzichten – sonst drohen neue Geschwüre und Komplikationen wie Blutungen.
+musterlösung: Ein Protonenpumpenhemmer sorgt dafür, dass weniger Salzsäure gebildet wird. Die Mukosa wird geschont und kann besser abheilen. Ein Geschwür entsteht aber durch ein Ungleichgewicht zwischen schädigenden Faktoren und dem Schutz der Mukosa. Bei Herrn S. liegen mehrere schädigende Faktoren vor: Er ist mit **Helicobacter pylori** besiedelt, er **raucht** und nimmt regelmäßig **Schmerzmittel**, die ein Geschwür begünstigen können (nichtsteroidale Antiphlogistika). Bei Helicobacter wird eine Behandlung mit einem Protonenpumpenhemmer **und zwei Antibiotika** durchgeführt. Außerdem sollen auslösende Medikamente und Zigaretten abgesetzt werden. **Urteil:** Der Säureblocker allein reicht nicht aus. Herr S. braucht zusätzlich die Antibiotika und sollte auf das Rauchen und die Schmerzmittel verzichten – sonst drohen neue Geschwüre und Komplikationen wie Blutungen.
 quelle: MKK S. 356–357; i-care S. 209
 
 <!-- =============================== FEHLERFAHNDUNG =============================== -->
@@ -424,12 +424,12 @@ id: magen-bz-innen
 frage: Die Abbildung zeigt einen aufgeschnittenen Magen von vorn. Ordne jedem Marker den richtigen Begriff zu.
 bild: abb-9-16-magen-innen.jpg
 marker:
-- 48% 9% => Speiseröhre (Ösophagus)
-- 55% 25% => Mageneingang (Kardia)
-- 80% 22% => Magengrund (Fundus)
-- 68% 52% => Magenkörper (Korpus)
-- 62% 78% => Schleimhautfalten
-- 20% 72% => Magenpförtner (Pylorus) mit Magensphinkter
-- 6% 77% => Zwölffingerdarm (Duodenum)
-erklärung: Abb. 9.16 im Buch. Die Schleimhautfalten ermöglichen die Dehnung der Magenwand; im gefüllten Magen sind sie verstrichen.
+- 48% 9% => Ösophagus
+- 55% 25% => Kardia
+- 80% 22% => Fundus
+- 68% 52% => Korpus
+- 62% 78% => Mukosafalten
+- 20% 72% => Pylorus mit Magensphinkter
+- 6% 77% => Duodenum
+erklärung: Abb. 9.16 im Buch. Die Mukosafalten ermöglichen die Dehnung der Magenwand; im gefüllten Magen sind sie verstrichen.
 quelle: i-care S. 205, 207
