@@ -432,12 +432,20 @@ icon: tropfen
 
 ## 9. Spiele: Enzym-Spiel, Brötchen-Reise, Aprilscherz
 
+Dazu kommt das Geschicklichkeitsspiel **„Durch den Verdauungstrakt“** (siehe unten).
+
 - **`inhalte/spiele/enzym-spiel.md`:** ein Abschnitt `## Enzym: Name` pro Enzym.
   - Unter `spaltet:` stehen die Stoffe, die das Enzym spalten kann.
   - Unter `nicht:` stehen Fallen mit Erklärung.
   - Format: `- Stoff => Erklärung`.
 - **`inhalte/spiele/broetchen-reise.md`:** Jede `## Station` ist eine Single-Choice-Frage mit `nährstoff:` und `ort:`. Die Stationen erscheinen in der Reihenfolge der Datei.
 - **`inhalte/spiele/aprilscherz.md`:** Eine Single-Choice-Frage, die nur am 1. April vor jedem Modulcheck erscheint.
+- **`inhalte/spiele/trakt-spiel.md`:** Texte für das Spiel „Durch den Verdauungstrakt“. Die SuS steuern einen Bissen von der Mundhöhle bis zum After, an Sphinktern, Salzsäure und Enzymen vorbei.
+  - Jede `## Station` hat `id:`, `name:`, `fakt:` und `quelle:`. Der Fakt erscheint beim Erreichen der Station und am Ende in der Übersicht.
+  - Die `id:` bitte nicht ändern: Sie legt fest, zu welcher Stelle im Spiel der Text gehört.
+  - `modul:` im Kopf bestimmt, bei welchem Modul das Spiel erscheint (Standard: `aufbau`).
+  - Tempo, Abstände und Rhythmus der Sphinkter stehen im Programm (`app/js/aufgaben/55-trakt.js`, Listen `TORE`, `LAEUFER`, `SAEURE` am Anfang der Datei).
+  - Die XP für einen geschafften Durchgang stehen in `einstellungen.md` unter `trakt_geschafft`.
 
 ---
 

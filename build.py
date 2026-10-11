@@ -444,6 +444,10 @@ def lies_modul(pfad, glossar, kursversion):
 # ---------------------------------------------------------------------------
 ENZYM = {"id", "ort", "info", "quelle", "spaltet", "nicht"}
 STATION = {"id", "nährstoff", "ort", "frage", "erklärung", "quelle"}
+TRAKT = {"id", "name", "fakt", "quelle"}
+# Stationen, die app/js/aufgaben/55-trakt.js kennt
+TRAKT_STATIONEN = ("mund", "oesophagus_oben", "oesophagus", "oesophagus_unten", "magen", "pylorus", "duodenum",
+                   "duenndarm", "bauhin", "kolon", "anal_innen", "anal_aussen")
 
 
 def lies_spiele(glossar):
@@ -481,6 +485,20 @@ def lies_spiele(glossar):
                               "naehrstoff": a.get("nährstoff"), "ort": a.get("ort"), "frage": a.get("frage"),
                               "optionen": opts, "erklaerung": a.get("erklärung"), "quelle": pruefe_quelle(a)})
         spiele["reise"] = {"modul": kopf.get("modul"), "einleitung": kopf.get("einleitung"), "stationen": stationen}
+
+    pfad = os.path.join(ordner, "trakt-spiel.md")
+    if os.path.exists(pfad):
+        titel, kopf, abschnitte = lies_datei(pfad, lambda t: TRAKT if t == "station" else (
+            {"modul", "einleitung"} if t == "kopf" else None))
+        stationen = []
+        for a in abschnitte:
+            if a.get("id") not in TRAKT_STATIONEN:
+                fehler(a.ort("id"), f"Station „{a.get('id')}“ gibt es im Spiel nicht (erlaubt: {', '.join(TRAKT_STATIONEN)}).")
+            for f in ("name", "fakt"):
+                if not a.get(f):
+                    fehler(a.ort(), f"Station braucht „{f}:“.")
+            stationen.append({"id": a.get("id"), "name": a.get("name"), "fakt": a.get("fakt"), "quelle": pruefe_quelle(a)})
+        spiele["trakt"] = {"modul": kopf.get("modul"), "einleitung": kopf.get("einleitung"), "stationen": stationen}
 
     pfad = os.path.join(ordner, "aprilscherz.md")
     if os.path.exists(pfad):

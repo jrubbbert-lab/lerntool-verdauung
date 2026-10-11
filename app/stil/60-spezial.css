@@ -50,3 +50,19 @@ mark{background:var(--accent-soft);color:inherit;padding:0 3px;border-radius:4px
 .bildbox img{display:block;width:100%;height:auto}
 .marker{position:absolute;transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-fg);
   display:grid;place-items:center;font-weight:800;font-size:.9rem;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+
+/* Spiel „Durch den Verdauungstrakt“ */
+.trakt-hud{margin-bottom:6px}
+.trakt-leben{height:12px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);overflow:hidden;margin-bottom:8px}
+.trakt-leben span{display:block;height:100%;width:100%;background:linear-gradient(90deg,#1BA57E,#4DAF8E);transition:width .15s linear}
+.trakt-feld{display:flex;justify-content:center}
+.trakt-feld canvas{display:block;border-radius:16px;border:1px solid var(--line);touch-action:none;max-width:100%;user-select:none;-webkit-user-select:none}
+.trakt-steuer{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap}
+.trakt-steuer .mitte{display:flex;flex-direction:column;gap:6px}
+.trakt-steuer .btn{min-width:52px;min-height:44px;justify-content:center;touch-action:none;user-select:none;-webkit-user-select:none}
+.trakt-steuer #t-pause{margin-left:10px}
+.trakt-info{min-height:4.2em;margin-top:8px}
+.trakt-info p{margin:0;padding:10px 12px;border-radius:12px;background:var(--accent-soft)}
+.bissenwahl{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.bissenwahl .opt span{white-space:nowrap}
+.bissenwahl .emoji{font-size:1.4rem}

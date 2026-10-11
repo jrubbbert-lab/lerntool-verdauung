@@ -27,6 +27,7 @@ xp:
 - operator_bestanden => 30
 - quiz_richtig => 5
 - enzym_treffer => 1
+- trakt_geschafft => 20
 - award => 25
 
 <!-- Ränge. Format:  - ab XP => weiblich / männlich / neutral -->

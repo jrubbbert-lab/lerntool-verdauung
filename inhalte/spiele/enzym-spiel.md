@@ -138,7 +138,7 @@ nicht:
 - 🍭 Lutscher => Ein Lutscher besteht fast nur aus Zucker und enthält kein Fett.
 
 ## Enzym: Laktase
-ort: Dünndarmschleimhaut
+ort: Dünndarmmukosa
 info: Spaltet [[Laktose]]. Fehlt sie, entsteht eine Laktoseintoleranz.
 quelle: i-care S. 238, 239, 243, 249; MKK S. 361, 362
 spaltet:
@@ -165,7 +165,7 @@ nicht:
 - 🖤 schwarzer Kaffee => Kaffee ohne Milch enthält keine Laktose.
 
 ## Enzym: Saccharase
-ort: Dünndarmschleimhaut
+ort: Dünndarmmukosa
 info: Spaltet [[Saccharose]] (Kristallzucker).
 quelle: i-care S. 238, 243, 249; MKK S. 361, 362
 spaltet:

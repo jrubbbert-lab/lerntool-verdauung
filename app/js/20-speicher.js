@@ -26,6 +26,7 @@
       diagnosen: [],         // IDs richtig gelöster Diagnosefälle
       fehlerfahndung: {},    // Bericht-ID → Zeitpunkt der fehlerfreien Lösung
       enzymBest: 0,
+      traktBest: 0,          // Bestzeit im Spiel „Durch den Verdauungstrakt“ in Zehntelsekunden (0 = noch nie geschafft)
       aprilscherz: false,
       gesichert: null,       // Zeitpunkt der letzten Sicherung als Datei
       rangGesehen: 0         // höchste Rangstufe, deren Aufstieg schon angezeigt wurde

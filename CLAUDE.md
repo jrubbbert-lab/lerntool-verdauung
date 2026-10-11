@@ -1,5 +1,7 @@
 # Lerntool Verdauung – Regeln für Claude
 
+Titel in der App: **„Verdauungssystem“**.
+
 Digitales Lern-Tool zum Verdauungstrakt für SuS im Bildungsgang Gesundheit (Höhere Berufsfachschule und Berufliches Gymnasium) am Paul-Ehrlich-Berufskolleg Dortmund (NRW). Die Lehrkraft pflegt das Tool langfristig selbst und ergänzt Inhalte ohne Programmierkenntnisse.
 
 Planungsunterlagen: `planung/01_inhaltsuebersicht.md` (Buchseiten je Modul, Lücken, Abbildungen) und `planung/02_architektur-vorschlag.md` (Architektur, Entscheidungen).
@@ -62,12 +64,13 @@ Planungsunterlagen: `planung/01_inhaltsuebersicht.md` (Buchseiten je Modul, Lüc
 - **Einzige fachliche Quelle: die Bücher in `quellen/`.** Nichts erfinden.
   - `i-care` = *I care Anatomie, Physiologie*, Thieme 2020, Kap. 9, S. 188–249. Der Text ist per OCR im PDF enthalten; einige Seiten sind doppelt gescannt.
   - `MKK` = *Mensch Körper Krankheit*, Kap. 17, S. 343–374. Das PDF besteht nur aus Bildern. Seitenmarken „Seite NNN“ stehen im Bild, Text per macOS-Vision-OCR lesbar (siehe `werkzeuge/`).
-- **Immer Fachbegriffe verwenden.** Beim ersten Auftreten in einem Modul steht der deutsche Begriff in Klammern dahinter. Technisch wird das über `[[Begriff]]` + `inhalte/glossar.md` gelöst; die App ergänzt die Klammer automatisch. Ein Glossar ist in der App antippbar.
+- **Immer Fachbegriffe verwenden, nicht die deutschen Begriffe** (Duodenum statt Zwölffingerdarm, Pankreas, Ösophagus, Chymus, Mukosa, Proteine, Resorption, Sphinkter …). Deutsche Begriffe stehen nur noch in Übersetzungsaufgaben und im Glossar. Ausnahmen, die deutsch bleiben: Magen, Leber, Dünndarm, Dickdarm, Gallenblase, Mundhöhle, Stuhl, Fette, Stärke. In Zuordnungen und Antwortoptionen wird der deutsche Begriff nicht in Klammern ergänzt (er würde die Lösung verraten). Beim ersten Auftreten in einem Modul steht der deutsche Begriff sonst in Klammern dahinter. Technisch wird das über `[[Begriff]]` + `inhalte/glossar.md` gelöst; die App ergänzt die Klammer automatisch. Ein Glossar ist in der App antippbar.
 - Jede Aufgabe speichert ihre Quelle (Buch + gedruckte Seite). Die Rückmeldung zeigt „Lies nach: [Buch], S. xx“.
 - Abbildungen **nur aus i-care** (MKK-Bilder tragen Wasserzeichen mit der E-Mail der Lehrkraft und werden nicht verwendet). Beschriftungen werden abgedeckt. Jede verwendete Abbildung steht in `inhalte/abbildungen.md` (Buch, Seite, Abbildungsnummer, Fremdquelle).
 - **Schwierigkeit (Wunsch der Lehrkraft):** Keine Zahlenwerte abfragen (kJ/kcal, Prozent, pH, Liter, Gramm, Stunden, Millimeter, Abstände …). Zahlen dürfen nur als Zusatzinfo in Erklärungen oder Musterlösungen stehen.
   - Keine Spezialbegriffe abfragen, die über das Grundverständnis hinausgehen (z. B. Somatostatin, ECL-Zellen, Enteropeptidase, Nukleasen, Nervennamen).
   - Fragen kurz und alltagsnah formulieren, mit höchstens 3–4 klaren Antwortoptionen.
+- **Zähne sind kein Thema** (im Unterricht nicht behandelt): keine Aufgaben zu Zahnarten, Zahnaufbau oder Karies. Erlaubt ist nur, dass die Zähne die Nahrung mechanisch zerkleinern.
 - Figuren in Fallbeispielen und Operatoraufgaben:
   - **Robartina Müller** (20, Berufskolleg Gesundheit, Praktikum im Krankenhaus),
   - ihr Mitschüler **Alaa**,
@@ -97,13 +100,14 @@ Stand der Inhalte:
 5. Zuordnung
 6. Reihenfolge (tastaturbedienbar)
 7. Quiz auf Zeit (freiwillig, keine Voraussetzung für Modul-Awards)
-8. Enzym-Spiel (Amylase, Pepsin, Trypsin, Lipase, Laktase; nach Fehlklick eine kurze fachliche Erklärung)
+8. Enzym-Spiel (Amylase, Pepsin, Trypsin, Lipase, Laktase, Saccharase; viele verschiedene Lebensmittel je Enzym; nach Fehlklick eine kurze fachliche Erklärung). Lebensmittel, die nicht in den Büchern stehen, sind in `inhalte/spiele/enzym-spiel.md` als „auf Wunsch der Lehrkraft ergänzt“ markiert.
 9. Bildzuordnung (nur Kursversion)
 10. Fehlerfahndung im Pflegebericht von Robartina
 11. Diagnose-Detektivin (nur Krankheitsmodule)
-12. Die Reise eines Brötchens (Stärke, Eiweiß, Fett)
+12. Die Reise eines Brötchens (Stärke, Protein, Fett)
 13. Lückentext
 14. „Meine Fehler“ (wiederholt nur falsch beantwortete Aufgaben)
+15. „Durch den Verdauungstrakt“ (Geschicklichkeitsspiel im Modul Aufbau): Ein Bissen wird durch den Verdauungstrakt gesteuert; Sphinkter öffnen und schließen sich, die Salzsäure steigt und fällt. Bedienbar mit Pfeiltasten, Knöpfen und Finger. Texte in `inhalte/spiele/trakt-spiel.md`, Ablauf in `app/js/aufgaben/55-trakt.js`.
 
 ## Ränge und Formen
 Praktikantin → Famulantin → PJlerin → Assistenzärztin → Oberärztin → Chefärztin → Gesundheitsministerin (nach XP).
